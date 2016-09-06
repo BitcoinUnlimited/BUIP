@@ -1,0 +1,81 @@
+<pre>
+BUIP009: User-configurable public-key cryptography (let users choose from predefined cryptosystems)
+Status: Draft (call for input and discussion)
+Proposer: Simon Liu
+Revision: 1
+Submitted on: 2016-01-09
+</pre>
+'''Summary'''<br />
+<br />
+Add configuration option so users can choose a public-key cryptography system to use for key generation and transaction validation. This will enable the community to better safeguard their Bitcoins by being both prepared for and able to react swiftly to advances in cryptography and cryptanalysis.<br />
+<br />
+'''Background'''<br />
+<br />
+Bitcoin uses elliptic curve cryptography (ECC) to sign transactions so that network participants can verify funds are being spent by their rightful owners.<br />
+<br />
+Specifically, Bitcoin uses the Elliptic Curve Digital Signature Algorithm (ECDSA) with secp256k1 parameters (also known as a Koblitz curve), to generate a public/private key pair.<br />
+<br />
+In 2011, Bitcoin developers questioned [1] the use of secp256k1 instead of a more widely-used curve such as secp256r1.
+
+* &quot;The specific curve used is pretty unusual... I'm not losing much sleep over the theoretical possibility of an attack on secp256k1, but it is likely to be less widely implemented.&quot; -- Hal Finney
+* &quot;I discussed this with Satoshi. There is no particular reason why secp256k1 is used. It just happened to be around at the time.&quot; -- Mike Hearn
+* &quot;One plausible option for a future bitcoin-like system is to allow a selection from a numbered range of pre-selected curves.&quot; -- ByteCoin
+
+Today, Ethereum and Ripple also use ECDSA with secp256k1 but both are planning to add support for and even transition to another ECC based system, Ed25519 [2].
+
+* &quot;It is becoming increasingly understood that the specific kind of signature used by Bitcoin is far from optimal; ed25519 is increasingly recognized as a superior alternative particularly because of its simpler implementation, greater hardness against side-channel attacks and faster verification.&quot; -- Vitalik Buterin [3]
+* &quot;Ed25519 addresses many of the ongoing security concerns surrounding commonly used cryptosystems… and avoids several design constraints inherent to secp256k1 ECDSA.&quot; -- Ripple [4]
+
+Ed25519 makes use of Curve25519 which is widely deployed[5] and considered &quot;safe&quot; whereas secp256k1 is &quot;unsafe&quot;[6] due to an increased risk of error during implementation.<br />
+<br />
+However, in August 2015, the U.S. National Security Agency (NSA) released a policy statement [7] advising against investing resources into ECC but instead prepare for a transition to quantum resistant algorithms. This has resulted in much debate and speculation amongst cryptographers [8][9].<br />
+<br />
+Given the above, this BUIP recommends taking pragmatic and pro-active steps to safeguard users by adding flexibility and agility into the key generation and transaction validation processes.<br />
+<br />
+'''High Level Design '''<br />
+<br />
+Add a configuration option so users can choose a cryptosystem and when it starts and expires. The default will be to use Bitcoin's current system, ECDSA with secp256k1. For example, the following configuration would start generating keys with Ed25519 from block 500,000 with miners and other validators accepting keys from the old key system for another 100,000 blocks:
+
+Default,0-600000<br />
+Ed25519,500000​
+
+A different address prefix (version byte) could be used for keys created with different cryptosystems. This would result in addresses beginning with a leading symbol different from regular Bitcoin addresses which begin with 1, making them easily identifiable for humans. This would enable multiple cryptosystems to be used at the same time, rather than merely transition from one to another. If the Bitcoin community adopted this model, it would then be possible to transfer funds associated with a secp384r1 key to a Ed25519 key. Configuration might look like this:
+
+Default,0<br />
+Ed25519,500000<br />
+Secp384r1,500000​
+
+Today, OP_CHECKSIG only verifies ECDSA secp256k1 signatures. In future, it could verify different signature algorithms based upon the address prefix or an over-riding configuration option. It would also be possible to create new OP_CHECKSIG commands for different algorithms, but this would be at the expense of using up opcodes.<br />
+<br />
+This BUIP recommends adding support for a new cryptosystem and leaving it disabled by default. For example, Ed25519 would keep Bitcoin on par with its cryptocurrency peers and establish a process for adding and testing new algorithms. The choice of cryptosystem should be based upon input from the cryptographic community, taking into account the characteristics of potential candidates which are best suited for Bitcoin e.g. speed, signature size, available (patent-free) implementations.<br />
+<br />
+With a second cryptosystem already deployed, in the event of a vulnerability with secp256k1, miners and users could easily and rapidly switch over with a simple change to the configuration of their node or wallet. If the community had in fact adopted usage of multiple cryptosystems, a vulnerability discovered in one algorithm would not necessarily affect all Bitcoin users, as it would today.<br />
+<br />
+'''Links of interest:'''<br />
+<br />
+FourQ elliptic curve &quot;FourQ is around four to five times faster than the original NIST P-256 curve and between two and three times faster than curves that are currently under consideration as NIST alternatives, such as Curve25519&quot;<br />
+http://research.microsoft.com/en-us/projects/fourqlib/<br />
+<br />
+“A Riddle Wrapped in an Enigma” by Neal Koblitz and Alfred J. Menezes<br />
+https://eprint.iacr.org/2015/1018.pdf<br />
+<br />
+'''References:'''<br />
+<br />
+[1] https://bitcointalk.org/?topic=2699.0<br />
+<br />
+[2] http://ed25519.cr.yp.to/<br />
+<br />
+[3] https://blog.ethereum.org/2015/07/05/on-abstraction/<br />
+<br />
+[4] https://ripple.com/dev-blog/curves-with-a-twist/<br />
+<br />
+[5] http://ianix.com/pub/curve25519-deployment.html<br />
+<br />
+[6] http://safecurves.cr.yp.to/<br />
+<br />
+[7] https://www.nsa.gov/ia/programs/suiteb_cryptography/<br />
+<br />
+[8] https://www.schneier.com/blog/archives/2015/08/nsa_plans_for_a.html<br />
+<br />
+[9] http://blog.cryptographyengineering.com/2015/10/a-riddle-wrapped-in-curve.html
+

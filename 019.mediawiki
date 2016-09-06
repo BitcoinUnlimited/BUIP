@@ -1,0 +1,28 @@
+<pre>
+BUIP019: New Members for Election #1
+Proposer: Andrew Clifford
+Submitted on: 2016-04-29
+Status: passed
+</pre>
+'''Summary'''<br />
+<br />
+This BUIP lists the new membership applications for Bitcoin Unlimited which have been received since the previous BUIP voting day. New members are welcome to vote on the latest BUIPs as this vote will be considered as counted first, and if passed then membership takes immediate effect.<br />
+<br />
+1. [https://bitco.in/forum/members/563/ ''@jbreher'']<br />
+''https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-4#post-13358''<br />
+<br />
+
+2. [https://bitco.in/forum/members/23/ ''@sgbett'']<br />
+''https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-4#post-14118''<br />
+<br />
+
+3. [https://bitco.in/forum/members/833/ ''@jl777'']<br />
+''https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-4#post-14120''<br />
+<br />
+
+4. [https://bitco.in/forum/members/444/ ''@Roger_Murdock'']<br />
+''https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-4#post-14340''<br />
+<br />
+
+5. [https://bitco.in/forum/members/51/ ''@AdrianX'']<br />
+''https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-4#post-15542''<br />

@@ -1,0 +1,23 @@
+<pre>
+BUIP023: Miner block creation latency optimization
+Proposer: Andrew Stone
+Submitted: 2016-08-1
+Status: ??
+</pre>
+
+The mining of empty or pre-validation blocks are a mechanism that can naturally or artifically reduce the transaction capacity of the bitcoin network (see [http://www.bitcoinunlimited.info/1txn ''www.bitcoinunlimited.info/1txn'']). These blocks are mined when miners have received the headers of the next likely block but have not yet produced the next block template (a block template is a block that has not yet been mined -- its SHA256 does not meet the current difficulty).<br />
+<br />
+During this interval, the miner must download and validate the full block and generate and communicate the next block template to the mining pool software. By optimizing any of these 4 steps, the average transaction committment capacity of the network is increased since the proportion of empty blocks is decreased.<br />
+<br />
+This BUIP addresses the second two steps (generation and communication of the next block template) which will collectively be called &quot;miner block creation&quot;. Two areas will be examined.<br />
+<br />
+First the CreateNewBlock() function will be optimized -- in particular, it should be possible to skip validation of the transactions in the new block since they consist of transactions from the mempool. Transactions are validated when admitted to the mempool. But there may be more optimizations that become apparent as performance measurement tools are applied to the code.<br />
+<br />
+Second, the getblocktemplate RPC call will be deprecated (it will still be available, but the new interface is preferred) in favor of a binary protocol that organizes data in a type,length,value (TLV) format. Endian will be that of the sending node, and specified in the binary protocol header. This will avoid endian swaps for the common case where the bitcoin daemon and pool server share the same CPU architecture. This protocol will be capable of &quot;pushing&quot; new blocks to the pool as soon as a block is found, rather then relying on the RPC (remote procedure call) polling techniques, and separate event channels currently used.<br />
+<br />
+Extensions to this binary protocol that further optimise latency can be considered and implemented if they will be effective. For example, the pool software could provide the bitcoin daemon with the coinbase output, allowing the bitcoin daemon to create the full and exact binary block data required to pass to miners. This eliminates the step where the bitcoin pool parses the block, modifies it, and generates a new block.<br />
+<br />
+The bitcoin daemon could also provide a miner interface directly, rather then passing the block to the pool and having the pool pass the block to miners. This would save a network &quot;hop&quot; and data translation time.<br />
+<br />
+The &quot;client side&quot; (pool side) code will be provided as a shared library, and the open source pool software &quot;ckpool&quot; will be modified to show how a pool would take advantage of this new library/protocol.
+

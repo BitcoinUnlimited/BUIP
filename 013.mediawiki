@@ -1,0 +1,70 @@
+<pre>
+BUIP013: Upgrade alert system so that Bitcoin Unlimited can send message alerts to node
+Status: passed, closed
+Proposer: Simon Liu
+Revision: 3
+Submitted on: 2016-01-14 (rev 2. 25 Jan 2016, rev 3. 26 Jan 2016)
+</pre>
+''Summary''<br />
+<br />
+Bitcoin's alert system[1] allows messages to be broadcast to all nodes on the network. A node will verify the authenticity of a message before relaying the message to its peers and launch an external program to process the message.<br />
+<br />
+Valid messages are signed and verified with a specific ECDSA key-pair. The public key used to verify incoming messages can be found[2] in the Bitcoin source code. Only three people are known to hold the private key necessary to create and sign a valid message: Satoshi Nakamoto, Gavin Andresen and theymos.[3] There may be other people who also have a copy of the private key that we do not know of.<br />
+<br />
+Today, Bitcoin Unlimited (BU) nodes will receive messages sent by these key-holders. Although it is expected that the alert system is only to be used for network alerts which affect all clients, BU nodes may end up receiving messages meant for Bitcoin Core or Bitcoin Classic. Meanwhile, the BU project itself has no way to send alerts which are relevant to BU nodes.<br />
+<br />
+''Proposal''<br />
+<br />
+Firstly, given that the alert system can be abused to effectively DDoS the network, deactivate the alert system until it can be ascertained:
+
+<ul>
+<li><blockquote><p>How many individuals have access to the alert system's private key?</p></blockquote></li>
+<li><blockquote><p>Whether or not those individuals can provide a copy of the private key to the elected BU President or BU Developer, and if not, why not?</p></blockquote></li></ul>
+
+Secondly, the BU project should create a new ECDSA key-pair for the purpose of sending alerts to BU nodes:
+
+<ul>
+<li><blockquote><p>(Rev 3) Currently elected BU persons will determine who should have access to the private key which sends alerts on behalf of the BU project.</p></blockquote></li>
+<li><blockquote><p>The public key will be used by BU to validate BU alert messages. Non-BU software can also use this key to validate and relay the message if they so wish.</p></blockquote></li>
+<li><blockquote><p>(Rev 2) The public key for BU can be loaded from a config file, rather than hard-coding, so that a user can effectively subscribe to whatever alert messages they want, whether from BU or Classic/Core.</p></blockquote></li>
+<li><blockquote><p>Upon receipt of a valid alert message, add a prefix to enable BU node operators to quickly identify the source of a message e.g. &quot;BU &lt;message&gt;&quot;, &quot;BC &lt;message&gt;&quot;</p></blockquote></li>
+<li><blockquote><p>The BU alert system can be modified to only relay BU alert messages to BU nodes, identified by user-agent string. (Rev 3) This will avoid any issues related to non-BU nodes not understanding the alert message and potentially banning nodes for spam [7].</p></blockquote></li></ul>
+
+Thirdly, fix potential security issues with the existing alert code:
+
+<ul>
+<li><blockquote><p>To process the alert message, the C system() command[4] is used to launch an external application as configured by the alertNotify parameter. However, given the scenario, invoking system() is considered unsafe[5] by secure programming standards. The call should be replaced with fork and execve() on UNIX and by CreateProcess() on Windows.</p></blockquote></li>
+<li><blockquote><p>Alert messages could be further sanitized[6] by removing all non alphanumeric characters, so that a message consists of only characters between A-Z and 0-9. In this way, no assumptions are made about how a user's shell environment treats single quotes, helping to avoid potential issues if a user has misconfigured their alertNotify setting.</p></blockquote></li></ul>
+
+''BUIP Voting (Rev 3)<br />
+''<br />
+When voting for this BUIP, you can choose from two options. Please mark your vote accordingly.
+
+<ul>
+<li><blockquote><p>Option A</p></blockquote>
+<ul>
+<li><blockquote><p>Temporarily deactivate, study/discuss with other clients[7], implement fixes and reactivate.</p></blockquote></li></ul>
+</li>
+<li><blockquote><p>Option B</p></blockquote>
+<ul>
+<li><blockquote><p>Permanently deactivate. A new BUIP will be required to re-activate along with any changes.</p></blockquote></li></ul>
+</li></ul>
+
+''Links of Interest''<br />
+<br />
+How to send an alert message:<br />
+[https://gist.github.com/laanwj/0e689cfa37b52bcbbb44 ''https://gist.github.com/laanwj/0e689cfa37b52bcbbb44'']<br />
+<br />
+Alert class:<br />
+[https://github.com/bitcoin/bitcoin/blob/master/src/alert.cpp ''https://github.com/bitcoin/bitcoin/blob/master/src/alert.cpp'']<br />
+<br />
+''References''<br />
+[1] [https://en.bitcoin.it/wiki/Alert_system ''https://en.bitcoin.it/wiki/Alert_system'']<br />
+[2] ''https://github.com/bitcoin/bitcoin/...db6d83871164dc7d59dab/src/chainparams.cpp#L93''<br />
+[3] https://www.reddit.com/r/Bitcoin/comments/2dz9ri/why_in_the_world_does_theymos_have_the_private/cjuu360
+
+[4] ''https://github.com/bitcoin/bitcoin/blob/605c17844ea32b6d237db6d83871164dc7d59dab/src/util.cpp#L763''<br />
+[5] [https://www.securecoding.cert.org/confluence/pages/viewpage.action?pageId=2130132 ''https://www.securecoding.cert.org/confluence/pages/viewpage.action?pageId=2130132'']<br />
+[6] ''https://github.com/bitcoin/bitcoin/...3871164dc7d59dab/src/utilstrencodings.cpp#L25''<br />
+[7] ''https://github.com/bitcoinclassic/bitcoinclassic/issues/27#issuecomment-172995064''
+

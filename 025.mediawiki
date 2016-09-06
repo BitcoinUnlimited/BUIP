@@ -1,0 +1,34 @@
+<pre>
+BUIP025: BU "Bronze Sponsor" at Scaling Bitcoin, Milan, Italy
+Proposer: Andrew Clifford
+Status: passed
+Submitted: 2916-09-10
+</pre>
+
+Executive BUIP asking members for approval to spend BU funds.<br />
+<br />
+This BUIP proposes that BU becomes a &quot;bronze sponsor&quot; for the [https://scalingbitcoin.org/milan2016/ '''''Scaling Bitcoin'''''] conference in Milan, Italy. This will be the third &quot;Scaling Bitcoin&quot; conference and will be held October 8-9th. Although this conference series is arguably biased towards the &quot;small block&quot; perspective, the conferences have been well run and the talks have received wide exposure. Face-to-face meetings like this are important for sharing ideas and avoiding some of the &quot;harshness&quot; of on-line-only debates. As per the BU Articles, funds can only be allocated to sponsor this event if this BUIP is passed. Here are the details:<br />
+<br />
+''Cost:''<br />
+- $1000 less the amount in Directed donations.<br />
+- To be paid from BU Project fund (current balance of $2650)<br />
+<br />
+''Benefits:''<br />
+- Our Bitcoin Unlimited logo would be displayed on the conference website<br />
+- Two tickets would be reserved for BU members who want to attend<br />
+- Public show of support for the initiative.<br />
+- Opportunity to formally present Xthin and Xpedited to the dev community<br />
+<br />
+''Conference Website:''<br />
+[https://scalingbitcoin.org/milan2016/ ''https://scalingbitcoin.org/milan2016/'']<br />
+<br />
+''Directed donations address:''<br />
+'''3PhyFZZkvtAu4sMkhFVFJtVTz5c6nG6Bvd'''<br />
+'''If directed donations reach $1000 equivalent then no vote on the BUIP will be required.'''<br />
+<br />
+Thanks to [https://bitco.in/forum/members/29/ ''@Peter R''] for promoting this which is part of our ongoing attempt to win hearts and minds in the wider development community. Unlike the first two scaling conferences this one is being held at a time when Bitcoin's network effect has been arrested. It is a last throw of the dice to get real support for on-chain scaling.<br />
+<br />
+'''EDIT''': Ample funds are now received for BU Bronze-level sponsorship of this event.
+
+ 
+

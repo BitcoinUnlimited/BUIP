@@ -1,0 +1,25 @@
+<pre>
+BUIP011: Andrew Clifford for President
+Proponent: Andrew Clifford
+Status: closed, passed
+Submitted 2016-01-12
+</pre>
+
+I think that a lot of people will know my posts from bitcointalk, reddit, and now the excellent bitco.in/forum. As soon as I heard about Bitcoin I saw the potential benefits that a new non-fiat currency system could bring to the world. It’s been three years since and what I have strived to do is to use my knowledge to help Bitcoin succeed. Along the way I have learned so much more about economics, society, money, human nature, incentives, complex systems, the Bitcoin ecosystem, all from people who kindly spend their time informing others.<br />
+<br />
+Like others here I am also dismayed at how the Bitcoin Core developers have retreated away from ordinary users, rarely listening to them, even though the voice of the majority is clear on most issues. They no longer trust market forces to shape Bitcoin but want to micromanage many aspects of it. Bitcoin Unlimited is a refreshing return to its original principles that I fully support: main-chain scaling, real decentralization, 0-conf, user-friendly functions, trust in market forces, democratic decisions,<br />
+<br />
+My background is mainframe systems. This began when I started information technology work in 1981 developing accounting applications. From 1989 I worked as a consultant on financial trading systems in London including at an interdealer brokerage and then two investment banks. At one I spent many years as the technical manager for one of its top five applications which, at its peak, handled 1% of the shares traded in the world and US$10 billion of settling business per day. This front-office system and its satellite sub-systems held 300,000+ separate trading positions across 80 currencies and several markets and supported a large spectrum of equities-based instruments.<br />
+<br />
+I describe this here because in Bitcoinland this smacks of banksterism, and some may want to reject my candidacy for this sin [[File:media/image1.png]] For general info the people I knew in the IBs were just trying to get ahead in their own lives, and I was always an outsider anyway, as a consultant, never an employee.<br />
+<br />
+Needless to say it was a stressful role, and it became time to exit this rat-race completely. I made a mid-life change of focus in mid-2010 to write a book which is a decomposition of prehistoric and historic belief systems from an atheist perspective (they say there is a book in each of us waiting to be put onto paper – happy to have done it). This was completed soon before learning about Bitcoin in late-2012. I am not pushing my publication, just including the link for proof of identity. [http://www.amazon.com/Geologic-Model-Religion-Andrew-Clifford/dp/0957311400 ''http://www.amazon.com/Geologic-Model-Religion-Andrew-Clifford/dp/0957311400'']<br />
+<br />
+Bitcoin has since been a consuming passion, and many hours have been spent reading, researching and advising. Time well spent and not regretted.<br />
+<br />
+Below are two influential threads which I started to help Bitcoin usage by recommending the &quot;bits&quot; unit and XBT ISO code. Both were proposed earlier but had zero traction in the ecosystem until these:<br />
+[https://bitcointalk.org/index.php?topic=592691.0 '''''1,000,000 bits = 1 bitcoin. Future-proofing Bitcoin for common usage?''''']'''<br />
+'''[https://bitcointalk.org/index.php?topic=148229.0 '''''Campaign for XBT. A new ISO Currency Code is required for Bitcoin''''']<br />
+<br />
+If elected President I will do all I can to advance Bitcoin Unlimited. It is very much needed in the current climate, and I am sure this is just the start of significant progress into a bright future.
+

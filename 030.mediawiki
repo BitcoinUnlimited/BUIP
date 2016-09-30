@@ -1,0 +1,21 @@
+<pre>
+BUIP030: Website updates
+Proposer: Jerry Chan
+Submitted: 2016-09-29
+Status: ??
+</pre>
+
+Given the launch of the renewed adoption campaign after a successful Satoshi's Vision conference, it seems that we need to update the website as part of the outreach initiative in order to get the information out there about BU and what it stands for, the team members, and the roadmap ahead. This will serve the goal of reinforcing our commitment to the client, instilling confidence on the miners that they can depend on the quality of the developer team, and that we have a strategic vision for Bitcoin, and not just trying to solve a short term problem.<br />
+<br />
+Here are some bullet points for items<br />
+1) Clarify Vision, and commitment to work cooperatively with other Bitcoin implementation clients.<br />
+We believe in decentralization of clients, is the best way for the Bitcoin ecosystem to grow and strengthen. Much like how diversification of UNIX implementations allowed for the survival and eventual dominance of *NIX systems in the industry, Bitcoin must diversify to allow for different clients to develop independently, so that no one failure or bug in one client can ever severely affect the operation of the network.<br />
+<br />
+2) Add Developer and member Bios. This will allow for people to get to know the team and to feel more secure in the trust they put in us when they run our software. All executive positions MUST be fully transparent. Members may be pseudonymous but have public voting keys and at least member status (how long have they been a member etc)<br />
+<br />
+3) All BUIPs should be easily accessible on the website, with current voting status. Voting schedules should be easily accessible.<br />
+<br />
+4) List of current projects/subtask contracts (what others call bounties) that are outstanding and who is working on them. This allows for interested developers to instantly see what task force they can immediate help contributing to.<br />
+<br />
+5) Perhaps only partially related to outreach/website, is the notion that the installation of the client should be made easier. Currently it is a bit clunky for a new user to just download and run it. Perhaps a packaged version or dockerized container version would be easier to use.
+

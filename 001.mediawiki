@@ -1,0 +1,33 @@
+<pre>
+BUIP001: Extensions to the Bitcoin Client
+Proposer: Andrew Stone
+Status: closed, passe
+Submitted on: 2015-11-26
+</pre>
+The following extensions are proposed for the Bitcoin client:<br />
+<br />
+1. GUI: Creation of a “Bitcoin Unlimited” menu option and dialog box to access BU specific features. This menu option will appear just below the “options” option.<br />
+<br />
+2. Addition of an Unlimited Dialog / command line option to change the maximum size of a generated (mined) block. This will allow miners to use BU to generate large blocks. The default value will be 1000000 bytes (compatible with today's consensus).<br />
+<br />
+3. Addition of an Unlimited Dialog / command line option to change the default block “accept” size. Blocks larger than this (excessive blocks) will only be accepted if they are N deep in the blockchain. This will be 16MB by default. The largest message is limited to 10 times this size, to that creates an effective block size limit. This limitation was not removed entirely to stop people from DOSing BU by sending a fake infinitely sized block.<br />
+<br />
+4. Addition of an Unlimited Dialog / command line option to set the excessive block accept depth. This is the N parameter in the description of #3. The default value will be 4.<br />
+<br />
+5. Addition of traffic shaping. Traffic shaping, similar to what is merged into Bitcoin XT is added to the Unlimited menu and command line options. As blocks grow bigger, it is important that users can easily configure how much bandwidth should be used for Bitcoin. This allows the Bitcoin client to run unobtrusively in a home network. Although bandwidth-limited clients in theory increase the time it takes for a block to propagate through the network, this will only happen if their removal would partition the network – i.e. they are a critical node in the network topology. Additionally, they are valuable as another copy of the blockchain and to serve data to clients who do not need fast block propagation (essentially everyone but miners). And in practice, Matt Corollo's Bitcoin Relay Network is used for fast block propagation...<br />
+<br />
+6. Fix in the GUI's transaction notification – if lots of notifications are coming in, some will be skipped. This fixes the problem where if you end up receiving 1000+ transactions the visual notifications keep coming for a half hour after the actual notification.<br />
+<br />
+7. Client identifier changed to BitcoinUnlimited<br />
+<br />
+8. Block version changed to 0x40000007. This version would reflect BIP101 and OP_CHECKLOCKTIMEVERIFY support.<br />
+<br />
+9. Minimal branding changes -- replacing Unlimited with Core in key locations and adding new artwork. We want to rebrand, but do not want rebasing the code to be a headache. So a minimal approach was taken WRT branding.<br />
+<br />
+<br />
+A release will be made containing the above changes based off the Bitcoin Core 0.11 (.2) branch. Subsequent Bitcoin Unlimited releases will also include the above changes.<br />
+<br />
+These changes are functionally complete on the 0.11cfg_stats, and have been running on mainnet and testnet for several days. However, this branch will still get a final code review, hopefully by a different developer before release (you are NOT voting to include this branch &quot;AS IS&quot;).<br />
+<br />
+It is important that we make an initial, simple Bitcoin Unlimited release to get things going. Please do not bikeshed this proposal with small modifications and new features (for example, having a button that automatically tracks BIP101 block expansion). We can make things better in subsequent releases.
+

@@ -1,0 +1,53 @@
+<pre>
+BUIP022: XInv
+Proposer: Peter Tschipper
+Submitted on: 2016-07-30
+Status: ??
+</pre>
+
+'''Summary'''<br />
+<br />
+There are still a few areas where bandwidth savings can be significant and one of the largest consumers of bandwidth in the Bitcoin application happens during the sharing of inventory. Every time a transaction or block is received by a node it has to share that knowledge with every other peer it's connected with. Consider that a node with 125 connections generally has to send out 125 inventory messages (minus any that were received from already) for every transaction, resulting in a considerable use of outgoing bandwidth during each day. By using a similar approach to compressing Xthin's we can also compress inventory messages by 75% and by using other techniques of concatenation, savings can be 90% or higher depending on transaction rates.<br />
+<br />
+From here on we'll refer to inventory compression as XInv.<br />
+<br />
+<br />
+'''Design'''
+
+<ul>
+<li><blockquote><p>A simple design of using the first 64 bits of the transaction hash can be used rather than the full transaction hash. We know now by experience from Xthins' that 64 bits is a safe size to use and prevents any mempool hash collisions either now or in the future. We could go all the way to 32 bits however that would be a much more complicated design and problematic is several ways.</p></blockquote></li></ul>
+
+<ul>
+<li><blockquote><p>Keeping in mind that an inventory message today is 36 bytes in size. By going to 64 bit hashes the inventory message becomes just 12 bytes. With part of that 12 bytes being taken up by the 4 byte enumerated message type. There really isn't any need for a 4 byte message type; one byte would suffice and give us all the room we need for future growth and by doing so our inventory message becomes 9 bytes or just 25% of the original size.</p></blockquote></li></ul>
+
+<ul>
+<li><blockquote><p>Other savings involves the concatenation of inventory. Most inventory messages are sent out one a time. That's an enormous loss of bandwidth when you consider that each message has a 24 byte message header, a 20 byte IP header and requires a TCP ACK of at least 50 bytes. So by concatenating inventory together before sending, we can increase our bandwidth savings significantly. And the higher the transaction rate are the more we can concatenate. (This concatenation does happen to some extent today however it's not consistent and most inventory messages still go out one at a time).</p></blockquote></li></ul>
+
+<ul>
+<li><blockquote><p>As with Xthin's, XInv will use a service bit which will easily allow other projects to adopt and incorporate the technology. As a safeguard a service bit also give's us the benefit of being able to completely turn off XInv if needed or wanted.</p></blockquote></li></ul>
+
+'''Potential Issues<br />
+'''<br />
+''Hash Collisions'': We know from Xthins that hash collisions in the memory pool using 64 bit transactions hashes just don't happen today and will likely never happen in the future. But what would happen if there were one? In such a case the original, or first transaction, would propagate through the p2p network just as it normally does. The second transaction however would not propagate right away because any node receiving the XInv message would think it already has that transaction and wouldn't issue a GETDATA to retrieve it. However once the first transaction were mined and subsequently removed from the memory pool the second transaction could then propagate through the network. This scenario would be an extremely rare, if ever, event with an end result of a delay of propagation<br />
+<br />
+''Attack Scenarios'': Could someone attack by causing a hash collision? The attacker would need to get the transaction hash of any new transaction and then attempt to create another transaction with the same first 64 bit hash. But by the time they do so the original transaction would have propagated either entirely through the network or would certainly be far ahead. The attackers transaction would then be in waiting until the original transaction were mined and cleared from the memory pool. There's not much of an attack possible here but it would be good to hear feedback from others in our group as to what they think about this or other potential scenarios.<br />
+<br />
+<br />
+'''Backward Compatibility'''<br />
+<br />
+XInv will be backwardly compatible with older clients in that any client not supporting the XINV service bit will still receive inventory messages in the old format and the XINV client will still be able to process inventory messages form older nodes.<br />
+<br />
+'''Fall Back'''<br />
+<br />
+XInv can be entirely and easily turned off with a simple bitcoin.conf setting.<br />
+<br />
+'''Deployment'''<br />
+<br />
+This enhancement does not require a hard or soft fork.<br />
+<br />
+'''Copyright'''<br />
+<br />
+This document is placed in the public domain.
+
+ 
+

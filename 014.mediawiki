@@ -1,0 +1,51 @@
+<pre>
+BUIP014: Testing a Bitcoin Unlimited X-Relay Network for miners in mainland China
+Proponent: Andrew Clifford
+Status: Operational BUIP
+Submitted: 2016-03-03
+</pre>
+[[File:./media/china.gif|336x244px]]<br />
+<br />
+'''Donation address'''<br />
+<br />
+36XTMVtgJqqNYymsSvRonpUsbZRGkm1jvX<br />
+<br />
+'''Summary'''<br />
+<br />
+This Operational BUIP is to support the initiative to build and test Chinese mainland-based nodes for an alternative to the existing Relay Network. Every BU v0.12 node has Xtreme Thinblocks &amp; Xpress Validation enabled by default and while nodes can connect in a random fashion for multi-hop traffic, they can also be deliberately connected to optimize for single-hop traffic. This is important for routing newly mined blocks between the major miners, particularly so for miners which are on two sides of the Great Firewall.<br />
+<br />
+Phase I: Deployment<br />
+<br />
+Setup of two nodes on hosting providers in different cities, ideally where large hashing facilities operate.<br />
+<br />
+Phase II: Testing<br />
+<br />
+node-to-node performance statistics<br />
+a) within the firewall<br />
+b) through the firewall<br />
+<br />
+'''Donations'''<br />
+<br />
+BUIP014 will not be having a conventional membership vote. Its adoption stands or falls on the level of donations it attracts. If members and guests decide that the project benefits the decentralisation and growth of Bitcoin then funds are welcomed!<br />
+Thanks to [https://bitco.in/forum/members/29/ ''@Peter R''] for proposing this ''project.''<br />
+<br />
+Unused funds will be returned to donors on a pro-rata basis, or rolled forward for the next project if the donor agrees,<br />
+<br />
+'''Architecture'''<br />
+<br />
+''The X-Relay Network is to be detailed<br />
+''<br />
+'''Overview'''<br />
+''<br />
+By Peter Rizun''<br />
+<br />
+''Improving Block Propagation through the Great Firewall of China with X-technology<br />
+'''A Bitcoin Unlimited Initiative'''<br />
+<br />
+The release of'' [https://bitco.in/forum/threads/buip010-passed-xtreme-thinblocks.774/ ''''Xtreme Thin Blocks''''] ''and Xpress Validation in'' [https://bitco.in/forum/threads/announcing-bitcoinunlimited-v0-12-0-experimental-release.909/ ''''Bitcoin Unlimited (BU) 0.12''''] ''has provided new opportunities to significantly improve the propagation of blocks across Bitcoin's peer-to-peer network.'' [https://bitco.in/forum/members/619/ ''''@Peter Tschipper'''']'''s X-technology leverages the fact that most transactions included in a solved block are already known by most network nodes (common mempools). Rather than requesting the solved block verbatim, the receiving node images its mempool onto a Bloom filter that its sends with its get-data request. The transmitting node sends the block contents by hash for all the transactions imaged onto the Bloom filter, and in full otherwise.'' [https://www.reddit.com/r/Bitcoin/comments/47quzx/xtreme_thin_blocks_in_action_getting_rid_of/ ''''Empirical testing''''] ''shows that this technique reduces the total number of bytes transmitted by a factor of 15X under normal operating conditions.<br />
+<br />
+Nowhere is the efficient propagation of blocks more important than across the Great Firewall of China (GFC). For example,'' [https://np.reddit.com/r/btc/comments/3ygo96/blocksize_consensus_census/cye0bmt ''''experiments in the fall of 2015''''] ''by'' [https://bitco.in/forum/members/584/ ''''@jtoomim''''] ''showed that although 4MB blocks could often be communicated and verified in 7 seconds (per hop), when the block had to penetrate the GFC, this figure increased to between 15 to 150 seconds. Indeed, the difficulty in propagating blocks through the GFC is arguably one of the most significant bottlenecks to on-chain scaling.<br />
+<br />
+The goal of this project is to setup and maintain a small network of BU nodes across the world, with a particular focus on setting up nodes inside and outside of mainland China, and to perform experiments to quantify the improvements that X-technology permits. We suspect that the average amount of time required to communicate each megabyte of block information can be dramatically reduced. Should the results be positive, this small network of BU nodes could grow into an &quot;Xtreme Relay Network,&quot; eventually replacing the centralized and less-robust Fast Relay Network, and permitting an order-of-magntitude or greater increase in Bitcoin's transactional throughput.<br />
+<br />
+If you would like to contribute to this initiative, please consider donating to the project's wallet at 36XTMVtgJqqNYymsSvRonpUsbZRGkm1jvX. All funds are administered by theZerg, Peter R &amp; solex, in accordance with Article 3 of'' [http://www.bitcoinunlimited.info/articles ''''Bitcoin Unlimited's Articles of Federation'''']''.''

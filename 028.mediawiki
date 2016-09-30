@@ -1,0 +1,43 @@
+<pre>
+BUIP028: Candidacy for Secretary role - digitsu
+Proposer: Jerry Chan
+Submitted: 2016-09-03
+Status: ??
+</pre>
+BUIP028: Candidacy for Secretary role - digitsu<br />
+Hi fellow members,<br />
+<br />
+I know that my userid here may indicate that I'm a 'new member' but I've been in crypto since I bought my first bitcoins in 2013. I have largely been a holder and steered clear from getting involved in the community until the XT project split off in early 2015. It was then that I felt that market pressures have worked to centralize the Bitcoin development roadmap and that the Bitcoin that I believed in might not achieve its full potential without everyday folks like us with a day-job taking more of an active role in the community.<br />
+<br />
+<br />
+<br />
+My background is engineering, and have worked most of my professional career in financial technology in Wall Street banks. Not unlike Bitcoin, the software that financial institutions run on their trading floors are responsible for moving billions of dollars of risk a day, and you can imagine it can be a pretty high stress environment, but tends to hone one's critical thinking. I am very thankful for the lessons I learned while working &quot;in the system&quot;.<br />
+<br />
+<br />
+<br />
+I got interested in Bitcoin thanks to its economic implications, and its potential to revolutionize what is the conventional thinking in monetary theory. I maintain a blog that talks mostly on these topics at http://WallStreetTechnologist.com<br />
+<br />
+<br />
+<br />
+I was one of the earlier members (#41) though I haven't spent much time in the forums as much, spending more time on slack channels (Classic and BU) and twitter (@digitsu) instead. I am an organizer for the http://OnChainScaling.com virtual conferences, and I look forward to being able to contribute more to the community on an interactive basis.<br />
+<br />
+<br />
+<br />
+I firmly believe in a decentralized Bitcoin, which means that there should be power balances and fair choices that every user is free to make as an individual. Not just the illusion of free choice -- like choosing between 3 state-produced brands of soap in the former USSR. One of these choices is the nature of Bitcoin itself, and whether it should prioritize growth and market penetration vs conservative protectionism. I believe that Bitcoin is an experiment in money, and thus should aim to be the best in this regard. Money is a collective delusion, and its value is only dependant on the number of people valuing it over something else. Therefore, it is a network effect.<br />
+<br />
+<br />
+<br />
+Bitcoin's value, is therefore its network effect. To grow its value is to grow the network.<br />
+<br />
+<br />
+<br />
+The effort to grow and foster this network effect is analogous to growing its value, or market price. This can be accomplished by either making the existing market value(or appraise) the asset more than before, or by growing the size of the market itself. I believe that we have exhausted the limits of the former, and it is time to focus on the latter strategy.<br />
+<br />
+<br />
+<br />
+It is in these tumultuous but exciting times that I officially submit my application for the role of Secretary. I hope to be able to serve and honor the spirit of Satoshi's Bitcoin. I hope you will support me in this endeavour.<br />
+<br />
+<br />
+Jerry Chan (digitsu)<br />
+Thank you.
+

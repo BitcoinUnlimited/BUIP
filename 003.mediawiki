@@ -1,0 +1,20 @@
+<pre>
+BUIP003: Andrew Quentson (Aquent) for Secretary
+Proposer: Andrew Quentson
+Status: closed, passed
+Submitted on: 2015-12-30
+</pre>
+As you all know I have been a vocal supporter of bigger blocks since Gavin started his blog post series with many of my comments on reddit highly voted, some to triple digits, because I see the wisdom in Satoshi's vision. <br />
+<br />
+Bitcoin Unlimited is the most intuitive, clear, common sense approach to the blocksize debate as it decentralises the decision to peers, thus allowing for an emerging consensus to form. As such, I fully support BU and all the principles it stands for. <br />
+<br />
+That is why I re-designed the website with the particular help of [https://bitco.in/forum/members/22/ @Graphics] and very helpful detailed feedback from @Peter_R [https://bitco.in/forum/members/71/ @Zangelbert Bingledack] and others:http://aquentus.github.io/BitcoinUnlimitedWeb/bitcoinUnlimited/index.html<br />
+<br />
+As we can all imagine [https://bitco.in/forum/members/59/ @theZerg] is now extremely busy so he wanted me to show commitment to the project by running for Secretary before merging the website so that I could maintain the website and contribute in other duties. I had to think hard about whether I wished to take on this public position. After some consideration I have decided to announce my candidacy so that I can fully support the project in it's nascent stage and bring our vision to life.<br />
+<br />
+As such, in line with our constitution, I announce that I, Andrew Quentson, will run for the position of Secretary. My background in law is somewhat unusual and I believe beneficial to the position, but I have always had an interest in tech and design and have kept up codding as a hobby. I became interested in bitcoin in 2011, but did not become fully involved until 2014, some 2 years ago, when I announced mtgox had 200k bitcoins they were not at the time telling us about: https://www.reddit.com/r/Bitcoin/comments/1z37zw/mt_gox_has_at_least_200k_btc<br />
+<br />
+With a background in law I think I am fully suitable for the position of secretary as I can use my skills to set up a fair procedure, clear communication and effective persuasion. The additional skills of coding and web design will further allow me to maintain and develop the website so that it becomes a fully fledged community portal with wide contribution from all members. <br />
+<br />
+Whether I win the position or not I wish to conclude by saying that it has been a great pleasure and privilege to get to know you all and I hope this community and the relationships between us only strengthen further for the benefit of us all and the world.
+

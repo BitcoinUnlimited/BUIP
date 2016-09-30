@@ -1,0 +1,36 @@
+<pre>
+BUIP020: Implement bit-0 soft-forks (BIPs 9,68,112,113)
+Proposer: freetrader
+Submitted on: 2016-06-09
+Status: withdrawn
+</pre>
+'''Summary'''<br />
+<br />
+BIPs 68, 112 and 113 are currently being deployed through a soft-fork on version bit 0 [1].<br />
+The trajectory of support [2] indicates a likelihood that these BIPs will soon be activated by miners (i.e. reach 95% support).<br />
+<br />
+Once this happens, miners who do not support these BIPs will find their blocks orphaned.<br />
+<br />
+In the interests of Bitcoin Unlimited remaining compatible with Bitcoin Core miners, it is proposed to implement the deployment of these BIPs in the same manner as Core.<br />
+<br />
+'''Design'''<br />
+<br />
+The Core BIPs 9, 68, 112 and 113 should be sufficient as a specification of the BU implementation.<br />
+A new design is probably not needed as the Core implementation could be merged.<br />
+Nevertheless, a review of Core's design of their BIP implementations is probably advisable.<br />
+<br />
+'''Backward Compatibility'''<br />
+<br />
+Until activation of this soft-fork, the client would be compatible with previous versions.<br />
+<br />
+'''Deployment'''<br />
+<br />
+This should be identical to the soft fork deployment used by Core (i.e. use a conforming implementation of BIP9).<br />
+<br />
+'''Copyright'''<br />
+<br />
+This document is placed in the public domain.<br />
+<br />
+[1] ''https://bitcoin.org/en/release/v0.12.1#first-version-bits-bip9-softfork-deployment''<br />
+[2] [http://bitcoin.sipa.be/ver9-2k.png ''http://bitcoin.sipa.be/ver9-2k.png'']
+

@@ -1,0 +1,118 @@
+<pre>
+BUIP017: Datastream Compression
+Proposer: Peter Tschipper
+Submitted on: 03/20/2016
+Status: passed
+</pre>
+'''Summary'''<br />
+<br />
+Bandwidth is an issue for users that run nodes in regions where bandwidth is expensive and subject to caps, in addition network latency in some regions can also be quite high. By compressing data we can reduce the daily bandwidth use in a significant way while at the same time speed up the transmission of data throughout the network. This will encourage users to keep their nodes running longer and allow for more peer connections with less need for bandwidth throttling. In addition, it may also encourage people in areas of marginal internet connectivity to run nodes where in the past they would not be able to, while at the same time improving the performance for downloading historical blocks, bloom filters, xthins and transactions. Furthermore by bundling or concatenating transactions together we can achieve much higher compression and transmission rates than would normally be the case.<br />
+<br />
+<br />
+'''Design'''
+
+<ul>
+<li><blockquote><p>Using a service bit, compression and decompression can be turned on/off completely at both ends with a configuration setting. It is important to be able to easily turn off compression and decompression as a fall back mechanism. Using a service bit also makes the code fully compatible with any Nodes that do not currently support compression, since the service bit must be turned on, on both nodes for compressed data to be sent and decompressed at the other end. Therefore, nodes that do not present the correct service bit will receive data in standard uncompressed format.</p></blockquote></li></ul>
+
+<ul>
+<li><blockquote><p>All blocks will be compressed as they compress well enough, even below 500 bytes.</p></blockquote></li></ul>
+
+<ul>
+<li><blockquote><p>Transactions below 500 bytes do not compress well and will be sent uncompressed unless they can be further concatenated.</p></blockquote></li></ul>
+
+<ul>
+<li><blockquote><p>Multiple transaction requests that are in queue will be concatenated when possible. This further reduces bandwidth needs and speeds the transfer of large requests for many transactions, such as with MSG_FILTERED_BLOCK requests, or when the system gets busy and is flooded with transactions.</p></blockquote></li></ul>
+
+<ul>
+<li><blockquote><p>Although unlikely, if compression fails for any reason then blocks and transactions will be sent uncompressed. Therefore, even with compression turned on, a node has to be able to handle both compressed and uncompressed data from another peer.</p></blockquote></li></ul>
+
+<ul>
+<li><blockquote><p>By abstracting the compression and decompression code into class CDataStream, compression can in the future be applied easily to any additional datastream.</p></blockquote></li></ul>
+
+<ul>
+<li><blockquote><p>The compression library LZO1x does not compress to the extent that Zlib does but it is clearly the better performer, particularly as file sizes get larger, and at the same time providing very good compression.</p></blockquote></li></ul>
+
+'''Test Results'''<br />
+<br />
+Current test results show a 20% compression when blocks and transactions are compressed and up to 27% when concatenated. In addition there is decent performance improvement, particularly when there is latency on the network.<br />
+<br />
+range: data size range<br />
+ubytes: average size of uncompressed blocks<br />
+cbytes: average size of compressed blocks<br />
+ctime: average time to compress<br />
+dtime: average time to decompress<br />
+cmp%: compression percentage<br />
+datapoints: number of data points taken<br />
+<br />
+range ubytes cbytes ctime dtime cmp% datapoints<br />
+0-250b 215 189 0.001 0.000 12.41 79498<br />
+250-500b 440 405 0.001 0.000 7.82 11903<br />
+500-1KB 762 702 0.001 0.000 7.83 10448<br />
+1KB-10KB 4166 3561 0.001 0.000 14.51 50572<br />
+10KB-100KB 40820 31597 0.005 0.001 22.59 75555<br />
+100KB-200KB 146238 106320 0.015 0.001 27.30 25024<br />
+200KB-300KB 242913 175482 0.025 0.002 27.76 20450<br />
+300KB-400KB 343430 251760 0.034 0.003 26.69 2069<br />
+400KB-500KB 457448 343495 0.045 0.004 24.91 1889<br />
+500KB-600KB 540736 424255 0.056 0.007 21.54 90<br />
+600KB-700KB 647851 506888 0.063 0.007 21.76 59<br />
+700KB-800KB 749513 586551 0.073 0.007 21.74 48<br />
+800KB-900KB 859439 652166 0.086 0.008 24.12 39<br />
+900KB-1MB 952333 725191 0.089 0.009 23.85 78<br />
+<br />
+Compression results for transactions '''without''' concatenation<br />
+range: block size range<br />
+ubytes: average size of uncompressed transactions<br />
+cbytes: average size of compressed transactions<br />
+cmp%: compression percent<br />
+datapoints: number of data points taken<br />
+<br />
+range ubytes cbytes cmp% datapoints<br />
+0-250b 220 227 -3.16 23780<br />
+250-500b 356 354 0.68 20882<br />
+500-600b 534 505 5.29 2772<br />
+600-700 653 608 6.95 1853<br />
+700-800 757 649 14.22 578<br />
+800-900 822 758 7.77 661<br />
+900-1KB 954 862 9.69 906<br />
+1KB-10KB 2698 2222 17.64 3370<br />
+10KB-100KB 15463 12092 21.80 15429<br />
+<br />
+From the above table you can see that transactions don't compress well below 500 bytes. However, most transactions happen to be in the &lt; 500 byte range. So the next step is to apply bundling for those smaller transactions when there are multiple getdata requests in queue for a peer. Doing that yields some very good compression ratios on par with compressing blocks, which makes sense since blocks are, for the most part, composed of concatenated transactions.<br />
+<br />
+Some examples as follows:<br />
+<br />
+The best one seen so far was the following where 175 transactions were concatenated before being compressed. That yielded a 20% compression ratio, but that doesn't take into account the savings from the unneeded 174 message headers (24 bytes each) as well as 174 TCP ACK's of 52 bytes each which yields and additional 76*174=13224 bytes, making the overall bandwidth savings 32%.<br />
+<br />
+2015-11-18 01:09:09.002061 compressed data from 79890 to 67426 txcount:175<br />
+<br />
+However, most transaction aggregates right now are in the 2 to 10 transaction range. Such as the following:<br />
+<br />
+2015-11-17 21:08:28.469313 compressed data from 3199 to 2876 txcount:10<br />
+<br />
+But even here the savings of 10% is far better than the &quot;nothing&quot; we would get without bundling, but add to that the 76 byte * 9 transaction savings and we have a total 20% savings in bandwidth for transactions that otherwise would not be compressible and as transaction rates rise there will be more opportunity for this type of transaction compression and hence more and bigger savings in the future.<br />
+<br />
+From the data it is clear that bundling and then compressing transactions will be of great benefit as transactions rates rise and will save approx. 30% overall bandwidth through the direct result of compression as well as the savings of transaction headers and TCP ACK’s, while at the same time reducing overall network chatter.<br />
+<br />
+'''Backward Compatibility'''<br />
+<br />
+Lacking the correct service bit, older clients will continue to receive standard uncompressed data and will be fully compatible with this change.<br />
+<br />
+'''Fall Back'''<br />
+<br />
+It is important to be able to entirely and easily turn off compression and decompression as a fall back mechanism. This can be done with a simple bitcoin.conf setting.<br />
+<br />
+'''Deployment'''<br />
+<br />
+This enhancement does not require a hard or soft fork.<br />
+<br />
+'''Future Strategies'''<br />
+<br />
+In the future we could offer other compression libraries such as LXOx-99, Zlib or some other promising new compression algorithm. Although they would not be as fast as LZOx-1 they could offer higher compression rates for those that wish to save maximum bandwidth at the expense of additional time spent compressing and decompressing.<br />
+<br />
+'''Copyright'''<br />
+<br />
+This document is placed in the public domain.
+
+ 
+

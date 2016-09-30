@@ -1,0 +1,105 @@
+<pre>
+BUIP010: Xtreme Thinblocks
+Proposer: Peter Tschipper
+Submitted on: 2016-01-10
+Status: passed
+Edit 01/20/2016 - changed name to xtreme thinblocks and added 64 bit tx hashes
+Edit 01/23/2016 - removed the need to bump the max bloom filter size
+Edit 01/25/2016 - made additions to future strategies
+</pre>
+
+'''Summary'''<br />
+<br />
+In order to scale the Bitcoin network, a faster less bandwidth intensive method is needed in order to send larger blocks. The thinblock strategy is designed to speed up the relay of blocks by using the transactions that already exist in the requester's memory pool as a way to rebuild the block, rather than download it in its entirety. <br />
+<br />
+Differing from other thinblock strategies, “Xtreme Thinblocks” uses simple bloom filtering and a new class of transactions to ensure that almost all block requests only require a single round trip, which is essential for good performance on a system where transaction rates are steadily climbing and only a single threaded network layer exists. In addition, Xtreme Thinblocks uses a 64 bit transaction hash which further reduces thinblock size; in doing so a typical 1MB block can be reduced to a 10KB to 25KB thinblock.<br />
+<br />
+Thinblock Relay Network: During the testing of this implementation the need to download blocks only from a specified node was required while at the same time allowing transactions from all nodes into the memory pool. This feature will also allow anyone to easily setup their own “thinblock relay network”. (see section Testing for setup). This might be of benefit until the time comes that thinblocks are more widely supported.<br />
+<br />
+<br />
+'''Design'''<br />
+<br />
+For various reasons memory pools are not in perfect sync which makes it difficult to reconstruct blocks in a fast and reliable manner and with a single round trip. Creating a bloom filter at the time of sending the getdata request is an easy and fast way around that problem which allows the remote node to know with high certainty what transactions are missing in the requester’s memory pool and which need to be sent back in order to re-assemble the block.<br />
+<br />
+The reference implementation works in the following way:<br />
+<br />
+Node A is behind by one block and makes a thinblock request to Node B in the following way:
+
+1. Node A creates a bloom filter seeded with the contents of its memory pool.<br />
+2. Node A sends the bloom filter along with a getdata request to Node B.<br />
+3. Node B sends back a &quot;thinblock&quot; transaction which contains the block header information, all the transaction hashes that were contained in the block, and any transactions that do not match the bloom filter which Node A had sent.<br />
+4. Node A receives the &quot;thinblock&quot; and reconstructs the block using transactions that exist from its own memory pool as well as the transactions that were supplied in the thinblock.​
+
+In the unlikely event that there are transactions still missing, they will be re-requested as follows.
+
+5. If there are still any transactions missing then a &quot;CThinBlockTx&quot; transaction is sent from Node A. This contains a map of the missing transaction hashes seeded with null tx's.<br />
+6. Node B upon receiving the “CThinBlockTx” request will take the object and fill in the transaction blanks, getting the transactions from the block on disk rather than memory (in this way we can be sure the transactions can be accessed as they may already have been purged from memory or they may have been unannounced). Once the blanks are filled in the object is sent back to Node A and the block finally reconstructed.​
+
+Generally only one round trip is required to complete the block, but on occasion a transaction has to be re-requested initiating a second round trip.<br />
+<br />
+In addition to the above, the following functionalities and configurations will be needed.
+
+⦁ A new protocol version number​
+
+⦁ If the thinblocks feature is turned off then thinblocks will not be downloaded but requests for thinblocks will still be serviced.​
+
+⦁ The coinbase transaction will always be included in the thinblock, as it was discovered by “dagurval” from the XT project, that this was the most common transaction missing, roughly 80% of the time.​
+
+⦁ During startup when the memory pool has few transactions in it, or when a block is very small and has only 1 or 2 transactions a thinblock may end up being larger than the regular block. In that case a regular block will be returned to the requestor instead of a thinblock. This typically happens when a new block is mined just seconds after the previous one.​
+
+⦁ Bloom Size Decay algorithm: A useful phenomena occurs as the memory pools grow and get closer in sync; the bloom filter can be allowed to become less sparse. That means more false positives but because the memory pool has been “warmed up” there is now a very low likelihood of missing a transaction. This bears out in practice and a simple linear decay algorithm was developed which alters both the number of elements and the false positive rate. However, not knowing how far out of sync our pools are in practice means we can not calculate the with certainty the probability of a false positive and a memory pool miss which will result in a re-requested transaction, so we need to be careful in not cutting too fine a line. Using this approach significantly reduces the needed size of the bloom filter by 50%.​
+
+* A 64 bit transaction hash is used instead of the full 256 bit hash to further reduce thinblock size while still preventing hash collisions in the memory pool
+
+'''Testing'''<br />
+<br />
+In order to easily test this implementation it was necessary to create a way to download blocks/thinblocks exclusively from another test peer but at the same time allow transactions to be downloaded from all connected peers in order to keep the memory pools fully loaded. A new “bitcoin.conf” entry was created in order to easily activate this feature.
+
+connect-thinblock=&lt;ip&gt;​
+
+When this setting is used the node will connect to the IP address(es) specified and only download blocks or thinblocks from those IP addresses. However, transactions will still be downloaded from all connected peers regardless of this setting.<br />
+<br />
+Test Setup: To test this implementation it is necessary to run two nodes. One can be run normally with the second node being connected to the first using “connect-thinblock=&lt;ip:port&gt;” A note of caution: because you will likely not be able to run both nodes on port 8333 and will have to configure separate ports, you may end up not getting any inbound connections or very few. This can cause your memory pools to get out of sync by wide margins and as a result you may not see full benefits of thinblocks. Therefore when setting up on different ports you should also use the “connect=&lt;ip&gt;” feature to force connections to other nodes and ensure you are getting transactions into your memory pool and/or you should make sure that your requesting node be on port 8333 so that it's memory pool is more up to date as it will have more inbound connections.<br />
+<br />
+<br />
+'''Test Results'''<br />
+<br />
+The following results highlight how thinblock sizes compare to actual block sizes. When the memory pool is sufficiently &quot;warmed up&quot;, Xtreme Thinblocks are typically seen at 1/40 to 1/100th the size of regular blocks.<br />
+<br />
+2016-01-20 13:20:20 Send xthinblock size: 13484 vs block size: 949164 =&gt; tx hashes: 1657 transactions: 1<br />
+2016-01-20 13:49:12 Send xthinblock size: 25024 vs block size: 949173 =&gt; tx hashes: 3095 transactions: 1<br />
+2016-01-20 13:52:18 Send xthinblock size: 6494 vs block size: 749124 =&gt; tx hashes: 781 transactions: 1<br />
+2016-01-20 14:15:07 Send xthinblock size: 9846 vs block size: 934453 =&gt; tx hashes: 1035 transactions: 4<br />
+2016-01-20 14:30:05 Send xthinblock size: 13448 vs block size: 949092 =&gt; tx hashes: 1648 transactions: 1<br />
+<br />
+<br />
+<br />
+'''Backward Compatibility'''<br />
+<br />
+Although thinblocks can not be downloaded from older clients this change will still be compatible with older clients in that regular blocks will still be downloaded from them.<br />
+<br />
+<br />
+'''Fall Back'''<br />
+<br />
+Turning off thinblocks is a straightforward “bitcoin.conf” entry. By setting “use-thinblocks” to zero the downloading of thinblocks will be turned off. However we will still service requests for thinblocks.
+
+use-thinblocks=0​
+
+'''Deployment'''<br />
+<br />
+This enhancement does not require a hard or soft fork.<br />
+<br />
+<br />
+'''Future Strategies'''
+
+''<br />
+Datastream compression:'' Testing various compression libraries such as LZO-1x and Zlib have shown it is possible to further reduce block and transaction sizes by 20 to 30% without affecting response times which could also be applied to thinblocks.<br />
+<br />
+''Bloom Filters:'' There is further research that could be done to further reduce the size of Bloom Filters by either by compressing sparse filters or researching a better decay algorithm.<br />
+<br />
+''Tx Hashes:'' Further work could be done to reduce the size of the tx hashes and make a smaller thinblock. [https://bitco.in/forum/members/447/ @YarkoL] has come up with a framework that could be implemented in a phase 2.​
+
+'''Copyright'''<br />
+<br />
+This document is placed in the public domain.
+

@@ -1,0 +1,18 @@
+<pre>
+BUIP008: Vote Andrew Stone for Developer
+Proposer: Andrew Stone (thezerg)
+Submitted on: 2016-01-09
+Status: passed, closed
+</pre>
+Biography: I am Andrew Stone (theZerg on this forum and bitcointalk). I am a software developer with a Bachelor of Science from Yale University and with 20 years of experience in startup companies working in networking and defense related applications. Many of these companies have been successful, with cumulative acquisitions of over a half a billion dollars and funding in the 10s of millions. My work is focused in the high availability and communications area of tightly coupled distributed applications. Software that I have written is deployed in every major and many minor telecom providers worldwide, serving at least 10s of millions of customers (due to our licensing agreement, we do not receive any data for the majority of our installations -- the 2 installations we do receive data from serve 10s of millions of people). I have travelled to 4 continents to consult with companies seeking to build high availability products. <br />
+In work unrelated to telecommunications, I wrote a game development system when I was 16 years old (https://en.wikipedia.org/wiki/Game-Maker) which was important in creating the concepts of &quot;remixing&quot; and was used by quite a few kids who are well-known in the gaming industry today. Recently, I taught myself hardware design, produced an open source hardware Arduino-compatible LED driver called the Lightuino, sold 200+ units worldwide, and used it to create interior lighting prototypes for several BMW and one Rolls-Royce vehicle.<br />
+<br />
+Bitcoin:<br />
+I have been investing and posting about Bitcoin since 2012. Recently, I have become worried that the promise of Bitcoin as a P2P currency is being undermined either due to unsubstantiated fears (of network capacity, for example) or conflicts of interest by major contributors to the most popular client. I realised that if I wanted change, I was going to have to get explicitly involved.<br />
+<br />
+I have been instrumental in getting Bitcoin Unlimited from a vision to a reality, creating the first release and the initial web site. I also wrote the traffic shaping for XT (although Tom Zander significantly reworked the GUI portion and made other smaller changes). I have written (with others' significant contributions) the &quot;Bitcoin Unlimited Articles of Federation&quot;, which provides a guiding philosophy and an organizational system of checks an balances that attempts to make the take-over or subverting of this group difficult (http://www.bitcoinunlimited.info/articlesOfFederation). I have also written &quot;An Examination of Single-Transaction Blocks and Their Effect on Network Throughput and Block Size&quot; (http://www.bitcoinunlimited.info/1txn), an effort to put our ideas of emergent consensus on firm theoretical ground. I have a large body of open source software which you can look at at[http://www.github.com/gandrewstone www.github.com/gandrewstone].<br />
+<br />
+I hope to help guide the development of the Bitcoin Unlimited client for the next two years as it grows into a powerful force for returning to Satoshi's vision of Bitcoin.<br />
+<br />
+Thank you for your consideration.
+

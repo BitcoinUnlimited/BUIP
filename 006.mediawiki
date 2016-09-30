@@ -1,0 +1,140 @@
+<pre>
+BUIP006: Blocktorrent – a torrent-style block data transport
+Status: Draft (under discussion)
+Proposer: freetrader
+Revision: 0
+Submitted on: 2016-01-07
+</pre>
+'''''Background'''''<br />
+<br />
+On the bitcoin-dev mailing list, Jonathan Toomim proposed the &quot;blocktorrent&quot; concept to speed up new block propagation:
+
+http://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-September/011176.html
+
+A quick survey [1] on this forum showed strong interest for implementing such a mechanism in Bitcoin Unlimited due to potential improvement in block propagation speeds.<br />
+<br />
+Especially when faced with the future scenario of larger block sizes and under certain adverse network conditions existing today (packet/connection loss), the current protocol may be significantly out-performed by a more fine-grained p2p algorithm.<br />
+<br />
+The main problem with the current algorithm is that it requires a peer to have a full block before it can upload it to other peers. Breaking up blocks into smaller chunks and distributing these out of order in a Bittorrent-like fashion can potentially yield a great speed improvement.<br />
+<br />
+'''''Proposal'''''<br />
+<br />
+A torrent-style distribution of new block data (named 'blocktorrent) shall be implemented as an optional feature in addition to the existing p2p block distribution based on 'inv' and 'getdata' (henceforth referred to in this document as the 'standard p2p network protocol' - SPNP).<br />
+<br />
+The proposed blocktorrent protocol shall be referred to in this document as 'blocktorrent p2p network protocol - BPNP.<br />
+<br />
+BPNP shall be designed to augment the existing SPNP-based block propagation in cases where this is deemed beneficial from a propagation performance viewpoint (through configurable parameters describing block size and composition) or enforced by the node operator in lieu of SPNP.<br />
+<br />
+It shall be possible to completely disable BPNP so that the client remains 100% compatible with implementations not supporting BPNP.<br />
+<br />
+A peer shall be able to advertise its BPNP capabilities to other peers so that these can decide their optimal methods of exchanging data with it.<br />
+<br />
+'''''High level Design'''''<br />
+<br />
+''As this document is a draft, what follows are provisional high-level design ideas for further discussion and elaboration.''<br />
+<br />
+The existing p2p network code shall be altered such that it if BPNP is enabled, a set of BPNP-capable peers is established and used based on settings to be decided.<br />
+<br />
+''[Note: ''[https://bitco.in/forum/members/59/ ''@theZerg'']'' advised to create a transport plugin layer which would be able to accommodate various kinds of transports, including presumably the current SBNP, future BPNP, perhaps some more like SCTP-based transport etc. Such a plugin layer seems a wise architectural decision and I support it, but would prefer if it was address in a separate BUIP to cleanly distinguish the layering (and separate the implementation/testing). It would probably be good to serialize the BUIPs then, starting with the plugin transport layer one.]''<br />
+<br />
+There shall be a module (e.g. blocktorrent.cpp) which implements functionality needed for communicating with the BPNP-capable peers:
+</blockquote>
+<ul>
+<li><blockquote><p>management of peer states and network connections (TCP/UDP sockets)</p></blockquote></li>
+<li><blockquote><p>block assembly/disassembly routines for incoming/outgoing block data</p></blockquote></li>
+<li><blockquote><p>interfaces to existing block validation and generation routines</p></blockquote></li>
+<li><blockquote><p>a separate cache of mempool transactions with additional data fields used in the BPNP protocol (e.g. hashes)</p></blockquote></li>
+<li><blockquote><p>gathering of metrics on peer connection and block propagation, which may be used to optimize the protocol's performance (e.g. dynamic chunk sizes) or fallback to SBNP where this would be better (e.g. very small blocks)</p></blockquote></li></ul>
+
+<blockquote>''Control/data connections''<br />
+<br />
+Each logical BPNP peer connection shall consist of two separate network connections:<br />
+<br />
+- a TCP connection for handshake/control information<br />
+- a UDP socket for actual block (chunk) data transfer<br />
+<br />
+The control information and UDP message data formats remain to be specified in detail.<br />
+<br />
+''[Note: If advisable Google protobuf shall be used to define BPNP message formats and make the protocol more robust for future versioning.]''<br />
+<br />
+<br />
+''BPNP-capability advertisement''<br />
+<br />
+''This remains to be specified in detail.''<br />
+<br />
+The current intention is to use version bits to advertise BPNP support.<br />
+<br />
+Simultaneously, until version bits become part of the official reference client,<br />
+other forms of advertisement may be needed to bootstrap valid peer discovery.<br />
+This could include the user agent information or a query/response protocol after<br />
+successfully opening a control connection.<br />
+<br />
+<br />
+''Peer sets, discovery and connection/disconnection''<br />
+<br />
+''[NOTE: the description below contains a number of possible parameters and pools.<br />
+This may be vastly constrained an initial implementation to reduce complexity,<br />
+and subsequently refined. Please treat it as a set of ideas for now which are<br />
+subject to discussion!]''<br />
+<br />
+The set of BPNP peers is defined as the set of peers (identified by IP addresses) that the client knows or assumes are BPNP-capable. This set may explicitly be larger than the set of regular (SPNP) peers.<br />
+<br />
+''Optional'': Depending on a user-configurable parameter, this set may be restricted to<br />
+a subset of the set of regular peers known to SPNP. Such a parameter would be useful to explicitly limit the BPNP to be maximally the same as the SBNP, for certain comparative performance tests between SBNP/BPNP).<br />
+<br />
+Those members of the set of SBNP peers which advertise themselves as BPNP-capable shall form an initial set of eligible BPNP peers.<br />
+<br />
+There shall be a parameter limiting the maximum number of eligible BPNP peers (as obtained through discovery) which are retained in memory.<br />
+<br />
+If the configured maximum number of eligible BPNP peers is larger than the maximum number of SBNP peers, an yet-to-be-specified discovery protocol shall be run to find additional BPNP-capable peers. For now, in the remainder of this document it shall be assumed that such a discovery<br />
+protocol is available.<br />
+<br />
+Additionally, there shall be a parameter limiting the maximum number of active BPNP peers, i.e. those with established connections and indicating that they are able to actively provide block data via BPNP.<br />
+<br />
+When an active peer control connection is closed (either due to a controlled disconnect of the remote peer or due to a network timeout), the BPNP module shall consider the peer as temporarily disconnected and seek to re-open the connection.<br />
+<br />
+[TODO: decide if a reconnection attempt should be made in case of orderly disconnect of the remote. Perhaps rather not...]<br />
+<br />
+''Optional:'' If re-connection fails after a user-configurable number of retries (which may be 0), a new peer shall be chosen from the set of inactive eligible peers.<br />
+<br />
+If the connection to the new peer can be opened successful within a configurable number of retries, the failed peer is returned to the inactive eligible pool (&quot;swapped out&quot; for the newly activated peer) and its failure metrics are updated.<br />
+<br />
+''Optional:'' If a connection to an replacement peer cannot be established after a configurable number of retries, or if connection metrics for a peer indicate an excessive number or rate of unexpected disconnects, such a peer may be declared unreliable and deprioritised or removed completely from the eligible pool.<br />
+<br />
+''Optional:'' The BPNP protocol shall attempt to 'top up' the eligible pool when peers are removed from it. This could be controlled by some 'low water mark' parameter.<br />
+<br />
+<br />
+''Data Provisioning Algorithm''<br />
+<br />
+''Details to be worked out. ''<br />
+<br />
+Intention is to take the algorithm outlined by [https://bitco.in/forum/members/584/ @jtoomim] in his mail to bitcoin-dev as a rough starting guideline.<br />
+<br />
+The smallest sensible chunk granularity would presumably be single transactions, but in practice larger chunks would probably be more useful. Probably under parameter control or dynamic in response to performance metrics.<br />
+<br />
+<br />
+''Transaction Cache''<br />
+<br />
+''Details to be worked out.''<br />
+<br />
+<br />
+''Other options under consideration''<br />
+<br />
+This is mostly still a wish list based on input gathered so far.<br />
+<br />
+In addition to advertising BPNP-capability in a simple way, peers could advertise preference flags which could be used to:
+</blockquote>
+<ul>
+<li><blockquote><p>prioritize sending of data to high-bandwidth nodes and to avoid saturating low-bandwidth peers</p></blockquote></li>
+<li><blockquote><p>enable opportunistic transmission (do not wait for a request but send a defined amount of data straightaway in the assumption that the receiver can handle it)</p></blockquote></li></ul>
+
+<blockquote>Forward error correction could be employed in environments where packet loss is known to be a significant problem - i.e. introduce redundancy in to the data so that as long as enough packets get through the block can be reassembled.<br />
+<br />
+--<br />
+<br />
+[1] https://bitco.in/forum/threads/towards-faster-block-propagation-jtoomims-blocktorrent-proposal.742
+
+ 
+
+[[https://bitco.in/forum/threads/buip006-blocktorrent-–-a-torrent-style-block-data-transport.747/|#1]]
+</blockquote>

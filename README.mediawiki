@@ -44,7 +44,6 @@ This is the current list of submitted BUIPs.
 |freetrader
 |2016-01-07
 |Draft (under discussion)
-|0
 |-
 |[[007.mediawiki|BUIP007]]
 |Lee Adams (redditchampsys) for president
@@ -63,14 +62,12 @@ This is the current list of submitted BUIPs.
 |Simon Liu
 |Draft (call for input and discussion)
 |2016-01-09
-|1
 |-
 |[[010.mediawiki|BUIP010]]
 |Xtreme Thinblocks
 |Peter Tschipper
 |2016-01-10
 |passed
-|Edit 2016-01-20 changed name to xtreme thinblocks and added 64 bit tx hashes
 |-
 |[[011.mediawiki|BUIP011]]
 |Andrew Clifford for President
@@ -101,7 +98,6 @@ This is the current list of submitted BUIPs.
 |Simon Liu
 |2016-01-19
 |draft (call for input and discussion)
-|2 (2016-05-11)
 |-
 |[[016.mediawiki|BUIP016]]
 |Consensus with Classic on txn size limit

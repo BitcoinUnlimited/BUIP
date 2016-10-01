@@ -1,0 +1,189 @@
+Bitcoin Unlimited Improvement Proposal Archive and related documentation
+
+This is the current list of submitted BUIPs.
+
+{| class="wikitable sortable" style="width: auto; text-align: center; font-size: smaller; table-layout: fixed;"
+!Number
+!Title
+!Proposer
+!Submit
+!Status
+|-
+|[[001.mediawiki|BUIP001]]
+|Extensions to the Bitcoin Client
+|Andrew Stone
+|2015-11-26
+|closed, passed
+|-
+|[[002.mediawiki|BUIP002]]
+|Multi-BIP Scaling Enabler
+|Andrew Clifford
+|2015-12-30
+|passed
+|-
+|[[003.mediawiki|BUIP003]]
+|Andrew Quentson (Aquent) for Secretary
+|Andrew Quentson
+|2015-12-30
+|closed, passed
+|-
+|[[004.mediawiki|BUIP004]]
+|RBF/double spending support
+|Pete Waterland (inca)
+|2015-12-31
+|passed
+|-
+|[[005.mediawiki|BUIP005]]
+|Settings information via coinbase-txn & user-agent
+|Andrew Clifford
+|2015-12-31 (Revision 1, user-agent, 2016-01-07)
+|Passed
+|-
+|[[006.mediawiki|BUIP006]]
+|Blocktorrent – a torrent-style block data transport
+|freetrader
+|2016-01-07
+|Draft (under discussion)
+|0
+|-
+|[[007.mediawiki|BUIP007]]
+|Lee Adams (redditchampsys) for president
+|Lee Adams
+|2016-01-09
+|closed
+|-
+|[[008.mediawiki|BUIP008]]
+|Vote Andrew Stone for Developer
+|Andrew Stone (thezerg)
+|2016-01-09
+|passed, closed
+|-
+|[[009.mediawiki|BUIP009]]
+|User-configurable public-key cryptography (let users choose from predefined cryptosystems)
+|Simon Liu
+|Draft (call for input and discussion)
+|2016-01-09
+|1
+|-
+|[[010.mediawiki|BUIP010]]
+|Xtreme Thinblocks
+|Peter Tschipper
+|2016-01-10
+|passed
+|Edit 2016-01-20 changed name to xtreme thinblocks and added 64 bit tx hashes
+|-
+|[[011.mediawiki|BUIP011]]
+|Andrew Clifford for President
+|Andrew Clifford
+|2016-01-12
+|closed, passed
+|-
+|[[012.mediawiki|BUIP012]]
+|Vote Trevin Hofmann for President
+|Trevin Hofmann
+|2016-01-13
+|closed
+|-
+|[[013.mediawiki|BUIP013]]
+|Upgrade alert system so that Bitcoin Unlimited can send message alerts to node
+|Simon Liu
+|2016-01-14 (rev 2. 25 Jan 2016, rev 3. 26 Jan 2016)
+|passed, closed
+|-
+|[[014.mediawiki|BUIP014]]
+|Testing a Bitcoin Unlimited X-Relay Network for miners in mainland China
+|Andrew Clifford
+|2016-03-03
+|Operational BUIP
+|-
+|[[015.mediawiki|BUIP015]]
+|Decentralize mining with the FAIR PoW algorithm and an user-configurable PoW setting
+|Simon Liu
+|2016-01-19
+|draft (call for input and discussion)
+|2 (2016-05-11)
+|-
+|[[016.mediawiki|BUIP016]]
+|Consensus with Classic on txn size limit
+|Andrew Clifford
+|2016-01-20
+|passed
+|-
+|[[017.mediawiki|BUIP017]]
+|Datastream Compression
+|Peter Tschipper
+|03/20/2016
+|passed
+|-
+|[[018.mediawiki|BUIP018]]
+|Bitnodes Seeding and User-Configurable DNS Seeds
+|Simon Liu
+|2016-04-02
+|passed (merged)
+|-
+|[[019.mediawiki|BUIP019]]
+|New Members for Election #1
+|Andrew Clifford
+|2016-04-29
+|passed
+|-
+|[[020.mediawiki|BUIP020]]
+|Implement bit-0 soft-forks (BIPs 9,68,112,113)
+|freetrader
+|2016-06-09
+|withdrawn
+|-
+|[[021.mediawiki|BUIP021]]
+|Proposal for implementation of node performance testing and safe block size estimation and broadcast
+|Peter Waterland
+|2016-07-18
+|??
+|-
+|[[022.mediawiki|BUIP022]]
+|XInv
+|Peter Tschipper
+|2016-07-30
+|??
+|-
+|[[023.mediawiki|BUIP023]]
+|Miner block creation latency optimization
+|Andrew Stone
+|2016-08-1
+|??
+|-
+|[[024.mediawiki|BUIP024]]
+|Extension Blocks with Address Sharding
+|Andrew Stone
+|2016-08-03
+|??
+|-
+|[[025.mediawiki|BUIP025]]
+|BU "Bronze Sponsor" at Scaling Bitcoin, Milan, Italy
+|Andrew Clifford
+|2916-09-10
+|passed
+|-
+|[[027.mediawiki|BUIP027]]
+|Satoshi's Vision - Development &amp; Scaling Conference
+|Andrew Clifford
+|2016-09-31
+|passed
+|-
+|[[028.mediawiki|BUIP028]]
+|Candidacy for Secretary role - digitsu
+|Jerry Chan
+|2016-09-03
+|??
+|-
+|[[029.mediawiki|BUIP029]]
+|Vote Trevin Hofmann for Secretary
+|Trevin Hofmann
+|2016-09-06
+|??
+|-
+|[[030.mediawiki|BUIP030]]
+|Website updates
+|Jerry Chan
+|2016-09-29
+|??
+|}

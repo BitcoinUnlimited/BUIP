@@ -1,7 +1,7 @@
 <pre>
 BUIP020: Implement bit-0 soft-forks (BIPs 9,68,112,113)
 Proposer: freetrader
-Submitted on: 2016-06-09
+Submitted: 2016-06-09
 Status: withdrawn
 </pre>
 '''Summary'''<br />

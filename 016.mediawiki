@@ -1,7 +1,7 @@
 <pre>
 BUIP016: Consensus with Classic on txn size limit
 Proposer: Andrew Clifford
-Submitted on: 2016-01-20
+Submitted: 2016-01-20
 Status: passed
 revision 1: 21 Jan 2016 (no longer a simple 100kb limit for txns)
 </pre>

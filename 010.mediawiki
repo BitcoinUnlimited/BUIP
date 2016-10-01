@@ -1,11 +1,11 @@
 <pre>
 BUIP010: Xtreme Thinblocks
 Proposer: Peter Tschipper
-Submitted on: 2016-01-10
+Submitted: 2016-01-10
 Status: passed
-Edit 01/20/2016 - changed name to xtreme thinblocks and added 64 bit tx hashes
-Edit 01/23/2016 - removed the need to bump the max bloom filter size
-Edit 01/25/2016 - made additions to future strategies
+Edit 2016-01-20 changed name to xtreme thinblocks and added 64 bit tx hashes
+Edit 2016-01-23 removed the need to bump the max bloom filter size
+Edit 2016-01-25 made additions to future strategies
 </pre>
 
 '''Summary'''<br />

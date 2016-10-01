@@ -1,8 +1,8 @@
 <pre>
 BUIP004: RBF/double spending support
-Status: passed
-Submitted on: 2015-12-31
 Proposer: Pete Waterland (inca)
+Submitted: 2015-12-31
+Status: passed
 </pre>
 '''Background:'''<br />
 From the Articles of Federation IV: &quot;Since 0-confirmation transactions are practically useful for people, we encourage innovations that enhance their security without undermining other key properties of the Bitcoin network&quot;<br />

@@ -1,7 +1,7 @@
 <pre>
 BUIP008: Vote Andrew Stone for Developer
 Proposer: Andrew Stone (thezerg)
-Submitted on: 2016-01-09
+Submitted: 2016-01-09
 Status: passed, closed
 </pre>
 Biography: I am Andrew Stone (theZerg on this forum and bitcointalk). I am a software developer with a Bachelor of Science from Yale University and with 20 years of experience in startup companies working in networking and defense related applications. Many of these companies have been successful, with cumulative acquisitions of over a half a billion dollars and funding in the 10s of millions. My work is focused in the high availability and communications area of tightly coupled distributed applications. Software that I have written is deployed in every major and many minor telecom providers worldwide, serving at least 10s of millions of customers (due to our licensing agreement, we do not receive any data for the majority of our installations -- the 2 installations we do receive data from serve 10s of millions of people). I have travelled to 4 continents to consult with companies seeking to build high availability products. <br />

@@ -1,8 +1,8 @@
 <pre>
 BUIP025: BU "Bronze Sponsor" at Scaling Bitcoin, Milan, Italy
 Proposer: Andrew Clifford
-Status: passed
 Submitted: 2916-09-10
+Status: passed
 </pre>
 
 Executive BUIP asking members for approval to spend BU funds.<br />

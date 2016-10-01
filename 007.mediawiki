@@ -1,8 +1,8 @@
 <pre>
 BUIP007: Lee Adams (redditchampsys) for president
 Proposer: Lee Adams
+Submitted: 2016-01-09
 Status: closed
-Submitted on: Jan 9, 2016
 </pre>
 [https://uk.linkedin.com/in/lee-adams-3b03b29 About me]: I'm passionate about User Experience and Agile development. I got into bitcoin during the Apr 2013 price spike, because I was fed up with cash and wanted an alternative. The price rise was serendipitous as I had started to transfer funds [to mtGox!!] before the price really took off. I never really made any money, because I invested too much during the spike to 1000+. I am a developer (mainly in C#) and am also a Certified Scrum Master(c). <br />
 [https://www.reddit.com/r/Bitcoin/comments/3h9cq4/its_time_for_a_break_about_the_recent_mess/cu5ew1n <br />

@@ -1,8 +1,8 @@
 <pre>
 BUIP018: Bitnodes Seeding and User-Configurable DNS Seeds
 Proposer: Simon Liu
+Submitted: 2016-04-02
 Status: passed (merged)
-Submitted on: 2016-04-02
 </pre>
 ''''Summary''''<br />
 <br />

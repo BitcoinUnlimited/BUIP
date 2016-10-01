@@ -1,7 +1,7 @@
 <pre>
 BUIP017: Datastream Compression
 Proposer: Peter Tschipper
-Submitted on: 03/20/2016
+Submitted: 03/20/2016
 Status: passed
 </pre>
 '''Summary'''<br />

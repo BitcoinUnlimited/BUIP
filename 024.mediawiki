@@ -1,8 +1,8 @@
 <pre>
 BUIP024: Extension Blocks with Address Sharding
 Proposer: Andrew Stone
-Status: ??
 Submitted: 2016-08-03
+Status: ??
 </pre>
 
 Proposal for your critical review, I'm not formally submitting this yet. Please respond with any comments you may have.<br />

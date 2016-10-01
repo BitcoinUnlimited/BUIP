@@ -1,9 +1,9 @@
 <pre>
 BUIP013: Upgrade alert system so that Bitcoin Unlimited can send message alerts to node
-Status: passed, closed
 Proposer: Simon Liu
+Submitted: 2016-01-14 (rev 2. 25 Jan 2016, rev 3. 26 Jan 2016)
+Status: passed, closed
 Revision: 3
-Submitted on: 2016-01-14 (rev 2. 25 Jan 2016, rev 3. 26 Jan 2016)
 </pre>
 ''Summary''<br />
 <br />

@@ -1,7 +1,7 @@
 <pre>
 BUIP019: New Members for Election #1
 Proposer: Andrew Clifford
-Submitted on: 2016-04-29
+Submitted: 2016-04-29
 Status: passed
 </pre>
 '''Summary'''<br />

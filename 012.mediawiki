@@ -1,6 +1,6 @@
 <pre>
 BUIP012: Vote Trevin Hofmann for President
-Proponent: Trevin Hofmann
+Proposer: Trevin Hofmann
 Submitted: 2016-01-13
 Status: closed
 </pre>

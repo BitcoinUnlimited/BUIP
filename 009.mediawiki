@@ -1,9 +1,9 @@
 <pre>
 BUIP009: User-configurable public-key cryptography (let users choose from predefined cryptosystems)
-Status: Draft (call for input and discussion)
 Proposer: Simon Liu
+Status: Draft (call for input and discussion)
+Submitted: 2016-01-09
 Revision: 1
-Submitted on: 2016-01-09
 </pre>
 '''Summary'''<br />
 <br />

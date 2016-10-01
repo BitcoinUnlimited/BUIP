@@ -1,8 +1,8 @@
 <pre>
 BUIP001: Extensions to the Bitcoin Client
 Proposer: Andrew Stone
-Status: closed, passe
-Submitted on: 2015-11-26
+Submitted: 2015-11-26
+Status: closed, passed
 </pre>
 The following extensions are proposed for the Bitcoin client:<br />
 <br />

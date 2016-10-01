@@ -1,7 +1,7 @@
 <pre>
 BUIP021: Proposal for implementation of node performance testing and safe block size estimation and broadcast
 Proposer: Peter Waterland
-Date: 2016-07-18
+Submitted: 2016-07-18
 Status: ??
 </pre>
 '''Background:'''<br />

@@ -1,9 +1,8 @@
 <pre>
 BUIP005: Settings information via coinbase-txn & user-agent
 Proposer: Andrew Clifford
+Submitted: 2015-12-31 (Revision 1, user-agent, 2016-01-07)
 Status: Passed
-Submitted on: 2015-12-31
-Revision 1, user-agent, 2016-01-07
 </pre>
 '''Summary<br />
 '''<br />

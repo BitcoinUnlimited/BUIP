@@ -1,7 +1,7 @@
 <pre>
 BUIP022: XInv
 Proposer: Peter Tschipper
-Submitted on: 2016-07-30
+Submitted: 2016-07-30
 Status: ??
 </pre>
 

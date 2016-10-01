@@ -1,8 +1,8 @@
 <pre>
 BUIP002: Multi-BIP Scaling Enabler
 Proposer: Andrew Clifford
+Submitted: 2015-12-30
 Status: passed
-Submitted on: 2015-12-30
 </pre>
 
 '''Summary'''<br />

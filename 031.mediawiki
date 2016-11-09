@@ -1,0 +1,32 @@
+<pre>
+BUIP031: New Members for Election #2
+Proposer: Andrew Clifford (solex)
+Submitted on: 2016-09-30
+Voting date: 2016-10-05
+Status: passed
+</pre>
+<br />
+'''Summary'''<br />
+<br />
+This BUIP lists the new membership applications for Bitcoin Unlimited which have been received since the previous membership BUIP voting day. New members are welcome to vote on the latest BUIPs as this vote will be considered as counted first, and if passed then membership takes immediate effect.<br />
+<br />
+1. [https://bitco.in/forum/members/419/ ''@cliff'']<br />
+''https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-5#post-27994''<br />
+<br />
+2. [https://bitco.in/forum/members/206/ ''@Norway'']<br />
+''https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-5#post-28078''<br />
+<br />
+3. [https://bitco.in/forum/members/170/ ''@chriswilmer'']<br />
+''https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-5#post-28082''<br />
+<br />
+4. [https://bitco.in/forum/members/1615/ ''@tim potter'']<br />
+''https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-5#post-28223''<br />
+<br />
+<pre>
+------BEGIN BITCOIN SIGNED MESSAGE-----
+BUIP031 New Members for Election no2 cliff norway chriswilmer timpotter
+-----BEGIN BITCOIN SIGNATURE-----
+15TiujYmnHa33fjEnasBBm1eWcGx9YEXPL
+H0pF1urxChQxYs5y46Gtary8iKPmyv7q3nOXAVXkK7N+RIzoV3IYse3NM8/ASgxYcW/HRi9qgpKbN5+E+FQCjgw=
+-----END BITCOIN SIGNED MESSAGE-----
+</pre>

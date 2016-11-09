@@ -44,5 +44,4 @@ My personal view is that we should strongly support the continued safety of 0-co
 <br />
 EDIT: removed the breaking consensus line for A 2 as Rocks quite rightly pointed out it does not actually break consensus or alter block behaviour<br />
 <br />
-EDIT2: this probably needs to be stickied. [https://bitco.in/forum/members/1/ @Bloomie] do you have the power? [[File:media/image1.png|18x18px]]
 

@@ -4,7 +4,7 @@ Proposer: Andrew Clifford
 Submitted: 2016-03-03
 Status: Operational BUIP
 </pre>
-[[File:./media/china.gif|336x244px]]<br />
+<img src="https://raw.githubusercontent.com/sickpig/BUIP/new/buip031-to-036/media/china.gif" alt="China map">
 <br />
 '''Donation address'''<br />
 <br />
@@ -42,7 +42,7 @@ By Peter Rizun''<br />
 ''Improving Block Propagation through the Great Firewall of China with X-technology<br />
 '''A Bitcoin Unlimited Initiative'''<br />
 <br />
-The release of'' [https://bitco.in/forum/threads/buip010-passed-xtreme-thinblocks.774/ ''''Xtreme Thin Blocks''''] ''and Xpress Validation in'' [https://bitco.in/forum/threads/announcing-bitcoinunlimited-v0-12-0-experimental-release.909/ ''''Bitcoin Unlimited (BU) 0.12''''] ''has provided new opportunities to significantly improve the propagation of blocks across Bitcoin's peer-to-peer network.'' [https://bitco.in/forum/members/619/ ''''@Peter Tschipper'''']'''s X-technology leverages the fact that most transactions included in a solved block are already known by most network nodes (common mempools). Rather than requesting the solved block verbatim, the receiving node images its mempool onto a Bloom filter that its sends with its get-data request. The transmitting node sends the block contents by hash for all the transactions imaged onto the Bloom filter, and in full otherwise.'' [https://www.reddit.com/r/Bitcoin/comments/47quzx/xtreme_thin_blocks_in_action_getting_rid_of/ ''''Empirical testing''''] ''shows that this technique reduces the total number of bytes transmitted by a factor of 15X under normal operating conditions.<br />
+The release of'' [https://bitco.in/forum/threads/buip010-passed-xtreme-thinblocks.774/ ''''Xtreme Thin Blocks''''] ''and Xpress Validation in'' [https://bitco.in/forum/threads/announcing-bitcoinunlimited-v0-12-0-experimental-release.909/ ''''Bitcoin Unlimited (BU) 0.12''''] ''has provided new opportunities to significantly improve the propagation of blocks across Bitcoin's peer-to-peer network."[https://bitco.in/forum/members/619/ ''''@Peter Tschipper'''']"'s X-technology leverages the fact that most transactions included in a solved block are already known by most network nodes (common mempools). Rather than requesting the solved block verbatim, the receiving node images its mempool onto a Bloom filter that its sends with its get-data request. The transmitting node sends the block contents by hash for all the transactions imaged onto the Bloom filter, and in full otherwise.'' [https://www.reddit.com/r/Bitcoin/comments/47quzx/xtreme_thin_blocks_in_action_getting_rid_of/ ''''Empirical testing''''] ''shows that this technique reduces the total number of bytes transmitted by a factor of 15X under normal operating conditions.<br />
 <br />
 Nowhere is the efficient propagation of blocks more important than across the Great Firewall of China (GFC). For example,'' [https://np.reddit.com/r/btc/comments/3ygo96/blocksize_consensus_census/cye0bmt ''''experiments in the fall of 2015''''] ''by'' [https://bitco.in/forum/members/584/ ''''@jtoomim''''] ''showed that although 4MB blocks could often be communicated and verified in 7 seconds (per hop), when the block had to penetrate the GFC, this figure increased to between 15 to 150 seconds. Indeed, the difficulty in propagating blocks through the GFC is arguably one of the most significant bottlenecks to on-chain scaling.<br />
 <br />

@@ -182,4 +182,40 @@ This is the current list of submitted BUIPs.
 |Jerry Chan
 |2016-09-29
 |??
+|-
+|[[031.mediawiki|BUIP031]]
+|New Members for Election #2
+|Andrew Clifford (solex)
+|2016-09-30
+|passed
+|-
+|[[032.mediawiki|BUIP032]]
+|Vote Peter R for Secretary
+|Peter Rizun (Peter R)
+|2016-10-05
+|passed
+|-
+|[[033.mediawiki|BUIP033]]
+|Parallel Validation
+|Peter Tschipper
+|2016-10-22
+|??
+|-
+|[[034.mediawiki|BUIP034]]
+|Ecosystem Outreach for Onchain Scaling
+|Andrew Clifford (solex)
+|2016-10-23
+|??
+|-
+|[[035.mediawiki|BUIP035]]
+|New Bitcoin Unlimited Website
+|Peter Rizun (Peter R)
+|2016-11-04
+|??
+|-
+|[[036.mediawiki|BUIP036]]
+|New Members for Election #3
+|Andrew Clifford
+|2016-11-05
+|??
 |}

@@ -20,7 +20,7 @@ The binary format is similar to existing transaction format. However, the signat
 It has the following binary format:
 
 
-<code>
+<pre>
 Field Size | Description | Data type | Comments
 
 ================================================
@@ -34,7 +34,7 @@ Field Size | Description | Data type | Comments
 1+ | tx_out count | var_int | Number of Transaction outputs
 
 9+ | tx_out | tx_out[] | A list of 1 or more transaction outputs or destinations for coins
-</code>
+</pre>
 
 Transaction id (aka txid ) is computed by hashing the transaction, skipping over input's witness and metadata. See the inputs section for more details.<br />
 <br />
@@ -44,7 +44,7 @@ TxIn consists of the following fields:
 
 
 
-<code>
+<pre>
 Field Size | Description | Data type | Comments
 
 ===================================================
@@ -58,13 +58,13 @@ Field Size | Description | Data type | Comments
 1+ | metadata size | var_int | The size of the metadata field, in bytes
 
 ? | metadata | uint32_t | Optional metadata relative to this input
-</code>
+</pre>
 
 The OutPoint structure consists of the following fields:
 
 
 
-<code>
+<pre>
 Field Size | Description | Data type | Comments
 
 ===============================================
@@ -72,13 +72,13 @@ Field Size | Description | Data type | Comments
 32 | hash | char[32] | The hash of the referenced transaction
 
 4 | index | uint32_t | The index of the specific output in the transaction. The first output is 0, etc.
-</code>
+</pre>
 
 Witness consist of the following fields:
 
 
 
-<code>
+<pre>
 Field Size | Description | Data type | Comments
 
 ==================================================
@@ -86,7 +86,7 @@ Field Size | Description | Data type | Comments
 1+ | witness length | var_int | Witness length
 
 1+ | witness | uchar[] | Witness data
-</code>
+</pre>
 
 The witness field represent element that are on the stack before the redeem script starts to run.<br />
 <br />
@@ -99,7 +99,7 @@ This BUIP defines the following tags:
 
 
 
-<code>
+<pre>
 Tag | Description | Data type | Comments
 
 ========================================
@@ -107,7 +107,7 @@ Tag | Description | Data type | Comments
 10 | LockByBlock | uint32_t | BIP68/112/113 support
 
 11 | LockByTime | uint32_t | BIP68/112/113 support
-</code>
+</pre>
 
 Metadata tags are a BUIP039 extension point. The can be signaled with the InMD prefix.<br />
 <br />
@@ -121,7 +121,7 @@ TxOut consists of the following fields:
 
 
 
-<code>
+<pre>
 Field Size | Description | Data type | Comments
 
 ====================================================
@@ -133,7 +133,7 @@ Field Size | Description | Data type | Comments
 1+ | pk_script length | var_int | Length of the pk_script
 
 ? | pk_script | uchar[] | Usually contains the public key as a Bitcoin script setting up conditions to claim this output
-</code>
+</pre>
 
 This BUIP define 2 valid script versions, 0 aka P2KH and 1 aka P2SH.<br />
 <br />
@@ -149,7 +149,7 @@ Out script version are a BUIP039 extension point. They can be signaled with the 
 Legacy UTXO can be converted to this new format using the following procedure:
 
 
-<code>
+<pre>
 Script pattern | Version | Script
 
 =========================================================================
@@ -163,7 +163,7 @@ OP_DUP OP_HASH256 <pk_hash> OP_EQUALVERIFY OP_CHECKSIG | 0 | pk_hash
 OP_HASH160 <script_hash> OP_EQUAL | 1 | script_hash
 
 anything | 1 | double_sha256(anything)
-</code>
+</pre>
 
 NB: this may require output script to be duplicated in the witness to spend legacy UTXO. This will happen in a very minimal number of cases and is on purpose. Witness data can be put in cold storage while UTXO data need to be kept hot as normal node needs to query these data frequently when operating. Because of this, it is desirable to shift as much data as possible from the UTXO set to the witness data.<br />
 <br />

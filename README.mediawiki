@@ -199,23 +199,54 @@ This is the current list of submitted BUIPs.
 |Parallel Validation
 |Peter Tschipper
 |2016-10-22
-|??
+|passed
 |-
 |[[034.mediawiki|BUIP034]]
 |Ecosystem Outreach for Onchain Scaling
 |Andrew Clifford (solex)
 |2016-10-23
-|??
+|passed
 |-
 |[[035.mediawiki|BUIP035]]
 |New Bitcoin Unlimited Website
 |Peter Rizun (Peter R)
 |2016-11-04
-|??
+|passed
 |-
 |[[036.mediawiki|BUIP036]]
 |New Members for Election #3
 |Andrew Clifford
 |2016-11-05
-|??
+|passed
+|-
+|[[037.mediawiki|BUIP037]]
+|Hardfork SegWit
+|Amaury SECHET
+|2016-11-12
+|Draft
+|-
+|[[038.mediawiki|BUIP038]]
+|Revert "sticky gate"
+|Tom Harding
+|2016-11-27
+|Sponsor: freetrader
+|Draft
+|-
+|[[039.mediawiki|BUIP039]]
+|Upgrade via extension point
+|Amaury SECHET
+|2016-12-04
+|Draft
+|-
+|[[040.mediawiki|BUIP040]]
+|Emergent Consensus Parameters and Defaults for Large (>1MB) Blocks
+|Andrew Stone
+|2016-12-05
+|Draft
+|-
+|[[041.mediawiki|BUIP041]]
+|Prevent Minority Hash Power From Injecting Very Large Blocks
+|Andrew Stone
+|2016-12-07
+|Draft
 |}

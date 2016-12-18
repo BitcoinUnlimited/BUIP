@@ -1,0 +1,148 @@
+<pre>
+BUIP037: Hardfork SegWit
+Proposer: Amaury SECHET
+Submitted on: 2016-11-12
+Status: Draft
+</pre>
+
+'''Summary:'''<br />
+<br />
+There are various problem with the current transaction format, including malleability and quadratic hashing. SegWit proposes to add a new transaction format, which solves this problem but does so in a way that does not allow to spend existing UTXO. As a result, SegWit doesn't deliver on its promise. FlexTrans proposes an alternative way to solve these problems in a way that is compatible with existing UTXO, which allows us to eventually weed out the old transaction format.<br />
+<br />
+This BUIP proposes to adopt a strategy similar to FlexTrans but using implementation details more similar to SegWit. Doing so should allow actors in the ecosystem, who have already implemented SegWit, to support this BUIP with minimal effort.<br />
+<br />
+'''Specification:'''<br />
+<br />
+A new transaction format is introduced. It is recognized by its use of version '''7'''.<br />
+<br />
+The binary format is similar to existing transaction format. However, the signature script for each input is replaced by witness data.<br />
+<br />
+It has the following binary format:
+
+
+<pre>
+Field Size | Description | Data type | Comments
+
+
+4 | version | int32_t | Transaction data format version (in this case, 7)
+1+ | tx_in count | var_int | Number of Transaction inputs
+41+ | tx_in | tx_in[] | A list of 1 or more transaction inputs or sources for coins
+1+ | tx_out count | var_int | Number of Transaction outputs
+9+ | tx_out | tx_out[] | A list of 1 or more transaction outputs or destinations for coins
+</pre>
+
+Transaction id (aka txid ) is computed by hashing the transaction, skipping over input's witness and metadata. See the inputs section for more details.<br />
+<br />
+'''Inputs'''<br />
+<br />
+TxIn consists of the following fields:
+
+
+
+<pre>
+Field Size | Description | Data type | Comments
+
+36 | previous_output | outpoint | The previous output transaction reference, as an OutPoint structure
+1+ | witness count | var_int | Number of witness data
+? | witness | witness | Witness data
+1+ | metadata size | var_int | The size of the metadata field, in bytes
+? | metadata | uint32_t | Optional metadata relative to this input
+</pre>
+
+The OutPoint structure consists of the following fields:
+
+
+
+<pre>
+Field Size | Description | Data type | Comments
+
+32 | hash | char[32] | The hash of the referenced transaction
+4 | index | uint32_t | The index of the specific output in the transaction. The first output is 0, etc.
+</pre>
+
+Witness consist of the following fields:
+
+
+
+<pre>
+Field Size | Description | Data type | Comments
+
+1+ | witness length | var_int | Witness length
+1+ | witness | uchar[] | Witness data
+</pre>
+
+The witness field represent element that are on the stack before the redeem script starts to run.<br />
+<br />
+The metadata field is interpreted as follow:<br />
+The metadata field contains a set of entries. Each entry is made of a 1 byte tag, followed by a value, which size and interpretation depends on the tag. Tags must integer values between 0 and 127 and appear in order. One tag value cannot appear twice.<br />
+<br />
+Because the size of the metadata field is known by the parser, the parser can skip over remaining metadata when it encounter a tag with a value it doesn't know how to interpret.<br />
+<br />
+This BUIP defines the following tags:
+
+
+
+<pre>
+Tag | Description | Data type | Comments
+
+10 | LockByBlock | uint32_t | BIP68/112/113 support
+11 | LockByTime | uint32_t | BIP68/112/113 support
+</pre>
+
+Metadata tags are a BUIP039 extension point. The can be signaled with the InMD prefix.<br />
+<br />
+The signature process compute sighash as double_sha256(txid + previous_output + TxOut + metadata + hashType)<br />
+<br />
+TxOut needs to use the new format. When spending UTXO from older transaction, please refers to the conversion procedure in the Outputs section.<br />
+<br />
+'''Outputs'''<br />
+<br />
+TxOut consists of the following fields:
+
+
+
+<pre>
+Field Size | Description | Data type | Comments
+
+8 | value | int64_t | Transaction Value
+4 | script_version | int32_t | Script versioning capabilities
+1+ | pk_script length | var_int | Length of the pk_script
+? | pk_script | uchar[] | Usually contains the public key as a Bitcoin script setting up conditions to claim this output
+</pre>
+
+This BUIP define 2 valid script versions, 0 aka P2KH and 1 aka P2SH.<br />
+<br />
+For both version, we'll define OP_HASH as OP_HASH160 is the script length is 20 bytes and OP_HASH256 if the script length is 32bytes.<br />
+<br />
+If the version is 0, the following redeem script is executed to verify the signature:<br />
+OP_DUP OP_HASH <pk_script> OP_EQUALVERIFY OP_CHECKSIG<br />
+<br />
+If the version is 1, the topmost element of the stack popped and hashed, and its hash if checked against pk_script. If the comparison fails, the transaction is invalid. If the comparison succeed the popped element is executed as a script to validate the spend.<br />
+<br />
+Out script version are a BUIP039 extension point. They can be signaled with the OutV prefix.<br />
+<br />
+Legacy UTXO can be converted to this new format using the following procedure:
+
+
+<pre>
+Script pattern | Version | Script
+
+OP_DUP OP_HASH160 <pk_hash> OP_EQUALVERIFY OP_CHECKSIG | 0 | pk_hash
+OP_DUP OP_HASH256 <pk_hash> OP_EQUALVERIFY OP_CHECKSIG | 0 | pk_hash
+<pubkey> OP_CHECKSIG | 0 | double_sha256(pubkey)
+OP_HASH160 <script_hash> OP_EQUAL | 1 | script_hash
+anything | 1 | double_sha256(anything)
+</pre>
+
+NB: this may require output script to be duplicated in the witness to spend legacy UTXO. This will happen in a very minimal number of cases and is on purpose. Witness data can be put in cold storage while UTXO data need to be kept hot as normal node needs to query these data frequently when operating. Because of this, it is desirable to shift as much data as possible from the UTXO set to the witness data.<br />
+<br />
+'''Semantic'''<br />
+<br />
+- Signature malleability are prohibited as per BIP146<br />
+- OP_CHECKMULTISIG and OP_CHECKMULTISIGVERIFY dummy argument must be a null vector as per BIP147.<br />
+<br />
+EDIT: Revision, removing the lock_time field and reintroducing the sequence one. More revision to come as this converge toward FlexTrans.<br />
+EDIT2: Revision.<br />
+Output script are now just a hash. This is also an idea from SegWit and allow to shift data from the UTXO set to the witness data. Because this is a hard fork, it can be done in a way that is backward compatible.<br />
+Inputs now have a metadata field containing optional data identified via a tag. This is a natural extension point for future extension and an ideal place to store optional data such as the sequence field.<br />
+EDIT3: Use BUIP039 to extend this transaction format.

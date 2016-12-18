@@ -23,16 +23,11 @@ It has the following binary format:
 <pre>
 Field Size | Description | Data type | Comments
 
-================================================
 
 4 | version | int32_t | Transaction data format version (in this case, 7)
-
 1+ | tx_in count | var_int | Number of Transaction inputs
-
 41+ | tx_in | tx_in[] | A list of 1 or more transaction inputs or sources for coins
-
 1+ | tx_out count | var_int | Number of Transaction outputs
-
 9+ | tx_out | tx_out[] | A list of 1 or more transaction outputs or destinations for coins
 </pre>
 
@@ -47,16 +42,10 @@ TxIn consists of the following fields:
 <pre>
 Field Size | Description | Data type | Comments
 
-===================================================
-
 36 | previous_output | outpoint | The previous output transaction reference, as an OutPoint structure
-
 1+ | witness count | var_int | Number of witness data
-
 ? | witness | witness | Witness data
-
 1+ | metadata size | var_int | The size of the metadata field, in bytes
-
 ? | metadata | uint32_t | Optional metadata relative to this input
 </pre>
 
@@ -67,10 +56,7 @@ The OutPoint structure consists of the following fields:
 <pre>
 Field Size | Description | Data type | Comments
 
-===============================================
-
 32 | hash | char[32] | The hash of the referenced transaction
-
 4 | index | uint32_t | The index of the specific output in the transaction. The first output is 0, etc.
 </pre>
 
@@ -81,10 +67,7 @@ Witness consist of the following fields:
 <pre>
 Field Size | Description | Data type | Comments
 
-==================================================
-
 1+ | witness length | var_int | Witness length
-
 1+ | witness | uchar[] | Witness data
 </pre>
 
@@ -102,10 +85,7 @@ This BUIP defines the following tags:
 <pre>
 Tag | Description | Data type | Comments
 
-========================================
-
 10 | LockByBlock | uint32_t | BIP68/112/113 support
-
 11 | LockByTime | uint32_t | BIP68/112/113 support
 </pre>
 
@@ -124,14 +104,9 @@ TxOut consists of the following fields:
 <pre>
 Field Size | Description | Data type | Comments
 
-====================================================
-
 8 | value | int64_t | Transaction Value
-
 4 | script_version | int32_t | Script versioning capabilities
-
 1+ | pk_script length | var_int | Length of the pk_script
-
 ? | pk_script | uchar[] | Usually contains the public key as a Bitcoin script setting up conditions to claim this output
 </pre>
 
@@ -152,16 +127,10 @@ Legacy UTXO can be converted to this new format using the following procedure:
 <pre>
 Script pattern | Version | Script
 
-=========================================================================
-
 OP_DUP OP_HASH160 <pk_hash> OP_EQUALVERIFY OP_CHECKSIG | 0 | pk_hash
-
 OP_DUP OP_HASH256 <pk_hash> OP_EQUALVERIFY OP_CHECKSIG | 0 | pk_hash
-
 <pubkey> OP_CHECKSIG | 0 | double_sha256(pubkey)
-
 OP_HASH160 <script_hash> OP_EQUAL | 1 | script_hash
-
 anything | 1 | double_sha256(anything)
 </pre>
 

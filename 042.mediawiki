@@ -1,0 +1,59 @@
+<pre>
+BUIP042: New Members for Election #4
+Submitted: 2016-12-26
+Voting date: 2016-12-26
+Status: Passed
+</pre>
+
+'''Summary'''<br />
+<br />
+This BUIP lists the new membership applications for Bitcoin Unlimited which have been received since the previous membership BUIP voting day. New members are not able to vote on the current BUIPs, but will be able to in subsequent votes, provided that this BUIP is passed.<br />
+<br />
+1. [https://bitco.in/forum/members/1698/ ''@jake'']<br />
+[https://twitter.com/beijingbitcoins ''https://twitter.com/beijingbitcoins'']<br />
+''https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-6#post-30390''<br />
+<br />
+2. [https://bitco.in/forum/members/1888/ ''@mike'']<br />
+[https://twitter.com/memalley ''https://twitter.com/memalley'']<br />
+''https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-6#post-30776''<br />
+<br />
+3. [https://bitco.in/forum/members/316/ ''@jonny1000'']<br />
+[https://www.reddit.com/user/jonny1000 ''https://www.reddit.com/user/jonny1000'']<br />
+''https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-6#post-30969''<br />
+<br />
+4. [https://bitco.in/forum/members/1917/ ''@Rogerver'']<br />
+[https://twitter.com/rogerkver ''https://twitter.com/rogerkver'']<br />
+''https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-6#post-31067''<br />
+<br />
+5. [https://bitco.in/forum/members/166/ ''@dgenr8'']<br />
+[https://twitter.com/dgenr818 ''https://twitter.com/dgenr818'']<br />
+''https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-6#post-31163''<br />
+<br />
+6. [https://bitco.in/forum/members/1932/ ''@Emil Oldenburg'']<br />
+[https://twitter.com/emilolden ''https://twitter.com/emilolden'']<br />
+''https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-6#post-31180''<br />
+<br />
+7. [https://bitco.in/forum/members/1672/ ''@Haiyang'']<br />
+[https://twitter.com/ViaBTC ''https://twitter.com/ViaBTC'']<br />
+''https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-6#post-31181''<br />
+<br />
+8. [https://bitco.in/forum/members/1934/ ''@eurovive'']<br />
+''https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-6#post-31190''<br />
+<br />
+9. [https://bitco.in/forum/members/1945/ ''@Helvetian616'']<br />
+[https://www.reddit.com/user/Helvetian616 ''https://www.reddit.com/user/Helvetian616'']<br />
+''https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-6#post-31323''<br />
+<br />
+10. [https://bitco.in/forum/members/918/ ''@adamstgbit'']<br />
+[https://bitcointalk.org/index.php?topic=796276.40 ''https://bitcointalk.org/index.php?topic=796276.40'']<br />
+''https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-7#post-31750''<br />
+<br />
+<pre>
+------BEGIN BITCOIN SIGNED MESSAGE-----<br />
+BUIP042 jake mike jonny1000 Rogerver dgenr8 EmilOldenburg Haiyang eurovive Helvetian616 adamstgbit<br />
+-----BEGIN BITCOIN SIGNATURE-----<br />
+15TiujYmnHa33fjEnasBBm1eWcGx9YEXPL<br />
+H85EXm/myOT9ARnsK8YQr0Dz0UfKSZgD+feeIO7PcvVaT5tNTYynEYZOPB+xQE5yWpZgAcTwxUa55HffuddhzfM=<br />
+-----END BITCOIN SIGNED MESSAGE-----
+</pre>
+

@@ -1,7 +1,7 @@
 <pre>
 BUIP033: Parallel Validation
 Proposer: Peter Tschipper
-Submitted on: 2016-10-22
+Submitted: 2016-10-22
 Status: ??
 </pre>
 

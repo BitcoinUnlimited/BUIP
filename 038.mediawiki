@@ -1,7 +1,7 @@
 <pre>
 BUIP038: Revert "sticky gate"
 Proposer: Tom Harding
-Submitted on: 2016-11-27
+Submitted: 2016-11-27
 Sponsor: freetrader
 Status: Draft
 </pre>

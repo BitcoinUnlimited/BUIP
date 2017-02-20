@@ -227,14 +227,13 @@ This is the current list of submitted BUIPs.
 |-
 |[[038.mediawiki|BUIP038]]
 |Revert "sticky gate"
-|Tom Harding
+|Tom Harding (Sponsor: freetrader)
 |2016-11-27
-|Sponsor: freetrader
 |Draft
 |-
 |[[039.mediawiki|BUIP039]]
 |Upgrade via extension point
-|Amaury SECHET
+|Amaury SÉCHET
 |2016-12-04
 |Draft
 |-
@@ -249,4 +248,35 @@ This is the current list of submitted BUIPs.
 |Andrew Stone
 |2016-12-07
 |Draft
+|-
+|[[042.mediawiki|BUIP042]]
+|New Members for Election #4
+|Andrew Clifford
+|2016-12-16
+|Passed
+|-
+|[[043.mediawiki|BUIP043]]
+|Exploring the Bitcoin Network
+|Dr Saralees Nadarajah, @S Nadarajah (Sponsor: Peter Rizun)
+|2016-12-23
+|??
+|-
+|[[044.mediawiki|BUIP044]]
+|Development Process
+|Amaury SÉCHET
+|2017-01-09
+|??
+|-
+|[[045.mediawiki|BUIP045]]
+|Unified addresses format for BUIP037
+|Amaury SÉCHET
+|2017-01-12
+|??
+|-
+|[[046.mediawiki|BUIP046]]
+|Faster, Higher Quality Publication Process for the Bitcoin Research Journal Ledger
+|Christopher E. Wilmer (BU member, @chriswilmer)
+|2017-02-17
+|??
 |}
+

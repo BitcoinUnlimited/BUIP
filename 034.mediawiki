@@ -1,7 +1,7 @@
 <pre>
 BUIP034: Ecosystem Outreach for Onchain Scaling
 Proposer: Andrew Clifford (solex)
-Submitted on: 2016-10-23
+Submitted: 2016-10-23
 Status: ??
 </pre>
 

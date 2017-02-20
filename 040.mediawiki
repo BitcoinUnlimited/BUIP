@@ -1,7 +1,7 @@
 <pre>
 BUIP040: Emergent Consensus Parameters and Defaults for Large (>1MB) Blocks
 Proposer: Andrew Stone
-Submitted on: 2016-12-05
+Submitted: 2016-12-05
 Status: Draft
 </pre>
 

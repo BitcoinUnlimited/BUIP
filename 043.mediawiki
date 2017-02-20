@@ -1,0 +1,53 @@
+<pre>
+BUIP043: Exploring the Bitcoin Network
+Proposer: Dr Saralees Nadarajah, @S Nadarajah
+Sponsor: Peter Rizun
+Submitted: 2016-12-23
+Status: ??
+</pre>
+Project Title:''' Exploring the Bitcoin Network.<br />
+<br />
+'''Bitcoin Address:''' 12w4PcnfSC13yPvTxDDATjeYJ8qj742Bhb<br />
+<br />
+'''Motivation:''' Over the past few months there has been a significant growing notable interest in Bitcoin. For example, the UK government is considering paying out research grants in Bitcoin; an increasing number of IT companies are stockpiling Bitcoin to defend against ransomware; growing numbers in China are buying into Bitcoin and seeing it as an investment opportunity. Perhaps most significantly, the Chair of the Board of Governors of the US Federal Reserve has been encouraging central bankers to study new innovations in the financial industry. In particular, they expressed a need to learn more about financial innovations, including Bitcoin, Blockchain, and distributed ledger technologies. With this recent surge in interest, we believe that now is the time to start studying Bitcoin as a key piece of financial technology, and not just as a novelty.<br />
+<br />
+'''Objectives:''' Expand on existing research and analysis of the Bitcoin network. The focus will be on three main objectives: i) analyse the distribution of the Bitcoin network - distribution of degrees, transaction frequency, transaction sizes, costs, scalability, etc; ii) investigate using Extreme value and quantile regression methods which could be used to detect fraudulent transactions and anomalies in the network, by examining characteristics of Bitcoin addresses; iii) analyse speculative behaviour in the Bitcoin network, Bitcoin transactions, and financial markets.<br />
+<br />
+'''Project Duration:''' We expect the project to be completed within 12 months.<br />
+<br />
+'''Project Team:''' Dr Saralees Nadarajah, Senior Lecturer, School of Mathematics, University of Manchester, M13 9PL, UK; Dr Stephen Chan, EPSRC Doctoral prize Fellow, School of Mathematics, University of Manchester, M13 9PL, UK; Jeffrey Chu, PhD research student, School of Mathematics, University of Manchester, M13 9PL, UK.<br />
+<br />
+'''Summary of Current Work:''' We have already performed a preliminary statistical analysis of the exchange rate of Bitcoin against the US dollar, using a wide range of known parametric distributions in finance. We believe it is the most comprehensive using parametric distributions for any kind of exchange rate data. This was motivated by the fact that there exist many studies investigating the best fitting distributions for the exchange rates of major currencies; however, there are none (that we are aware of) for the exchange rate of Bitcoin. In addition, the exchange rate of Bitcoin versus the US dollar appears to behave very differently to the exchange rates of other major currencies. Using daily Bitcoin exchange rate data from September 2011 to May 2014 (approximately two and a half years) from the Bitstamp exchange, our results showed that the generalised hyperbolic distribution gave the best fit to the data, being consistent with the observation that Bitcoin exchange rates have somewhat complicated dynamics. Given our preliminary results, we believe that there is great scope to extend this analysis through more complex mathematical and computational methods.<br />
+<br />
+'''Description of Activities:''' To achieve the objectives stated above, we will complete the following activities:
+
+<ul>
+<li><blockquote><p>Review existing literature on approaches to scaling of Bitcoin.</p></blockquote></li>
+<li><blockquote><p>Collect the complete Bitcoin network data from its inception to present. This should include all Bitcoin addresses and transactions since Bitcoin was created.</p></blockquote></li>
+<li><blockquote><p>Collect the data on the cost of setting up a bitcoin node and the ongoing running and maintenance costs.</p></blockquote></li>
+<li><blockquote><p>Sort and clean data, creating specific data sets containing the degrees of each Bitcoin address, number of transactions in and out of each address, the sizes of all transactions etc.</p></blockquote></li>
+<li><blockquote><p>Fit a wide range of parametric distributions to each of the data sets, find the most appropriate fit.</p></blockquote></li>
+<li><blockquote><p>Analyse and estimate the cost of running a node for different periods in Bitcoins history ''(Expected to finish by month 3-4).''</p></blockquote></li>
+<li><blockquote><p>Analyse the Bitcoin transaction graph, and model the number, size and time of transactions, and the price of Bitcoin to examine whether individuals buy into Bitcoin to profit from its high volatility.</p></blockquote></li>
+<li><blockquote><p>Prediction and forecasting of the costs of running nodes in the future, based on the results of the analysis in the above tasks ''(Expected to finish by month 4-5).''</p></blockquote></li>
+<li><blockquote><p>Review existing literature on anomaly detection, and its application to financial markets.</p></blockquote></li>
+<li><blockquote><p>Analyse the Bitcoin network graph to identify any patterns in transactions which may indicate money laundering behaviour --- e.g. when one user in the network performs transactions with many other users, who then each perform transactions with another common node.</p></blockquote></li>
+<li><blockquote><p>Examine Bitcoin addresses with significantly different characteristics from others: transaction frequency or number of times an address pays or receives Bitcoins over a fixed time period; node degree or the number of users an address performs transactions with; transaction volume or the value of the transactions that an address is involved in.</p></blockquote></li>
+<li><blockquote><p>If these characteristics are significantly different then they could indicate anomalies, and could give an indication of the overall health of the Bitcoin system and whether there are attacks on the Bitcoin network ''(Expected to finish by month 5-8).''</p></blockquote></li>
+<li><blockquote><p>Investigate appropriate methods in operational research which can be utilised in determining the optimal time to set scaling in the context with price. Also utilise quantile regression methods to analyse the transactional quantiles and provide an indication of when to scale.</p></blockquote></li>
+<li><blockquote><p>Spatial analysis to study nodes globally and in regions of particular interest ''(Expected to finish by month 8-12).''</p></blockquote></li></ul>
+
+'''Anticipated Challenges and Uncertainties:'''
+
+<ul>
+<li><blockquote><p>We require the latest Bitcoin network data, however, we will need to determine a cut-off point as new Bitcoin transactions will be added constantly.</p></blockquote></li>
+<li><blockquote><p>Obtaining the whole Bitcoin data set may take significant time, in addition to modelling and constructing the Bitcoin network from the data. Analysing this graph will be time consuming due to the size of the graph and data.</p></blockquote></li>
+<li><blockquote><p>Modelling the Bitcoin transactions and price of Bitcoin will require the analysis of high frequency Bitcoin transaction data, as it is assumed that trading of Bitcoin for profit will be similar to the that of traditional financial securities.</p></blockquote></li>
+<li><blockquote><p>Obtaining and estimating the exact cost for running node may be complex as some costs such as time, effort, and utility may not have specifically defined values. These value themselves may need to be estimated based on real data.</p></blockquote></li></ul>
+
+'''Budget:''' The total amount requested for the proposed work is $15,000. We anticipate for results produced by this funding to be published in relevant leading journals. $1000 will cover the potential publication fees for journals. We will attend and present our results at one UK conference. The corresponding costs for the UK conference are 3 x $300 for travel; 3 x $200 for accommodation/subsistence; 3 x $300 for registration fees. The $11,600 would cover the compensation for the research time of Research Assistants (RA), over a 12-month academic period. The main objectives of the RA will be to obtain all the relevant Bitcoin data and conduct the analysis and estimations. I will be overseeing the project management and involved in the research itself. The total compensation for the RAs is costed at the basic salary, starting level for this grade.<br />
+<br />
+'''Impact:''' We believe that our proposed work would have a positive benefit for academics and also the Bitcoin community (miners and industry). We feel that our work could contribute to discussions on the scalability of Bitcoin unlimited from the perspective of the cost of running Bitcoin nodes, identifying optimal time for scaling, fraud detection and many others factors.<br />
+<br />
+''[edit renaming the BUIP to a temporary name until sponsorship is achieved]''
+

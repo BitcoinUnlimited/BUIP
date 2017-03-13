@@ -1,0 +1,88 @@
+<pre>
+BUIP048: New Members for Election #5
+Proposer: Andrew Clifford (@solex)
+Submitted on: 2017-03-09
+Voting date: 2017-03-10
+</pre>
+
+'''Summary'''<br />
+<br />
+This BUIP lists the new membership applications for Bitcoin Unlimited which have been received since the previous membership BUIP voting day. New members are not able to vote on the current BUIPs, but will be able to in subsequent votes, provided that this BUIP is passed.<br />
+<br />
+1. [https://bitco.in/forum/members/2092/ @jsmith_dev]<br />
+Twitter: https://twitter.com/jsmith_dev<br />
+Reddit: https://www.reddit.com/user/jsmith_dev/<br />
+Medium: https://medium.com/@jsmith_dev<br />
+https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-7#post-32805<br />
+<br />
+2. [https://bitco.in/forum/members/398/ @Windowly]<br />
+Expired member reapplication<br />
+https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-7#post-32968<br />
+<br />
+3. [https://bitco.in/forum/members/2134/ @Wildfire.ca]<br />
+https://www.reddit.com/user/WildFireca/<br />
+https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-7#post-33342<br />
+<br />
+4. [https://bitco.in/forum/members/2137/ @tkg]<br />
+[http://www.twitter.com/thekevgibson www.twitter.com/thekevgibson]<br />
+[http://www.reddit.com/u/c3vin www.reddit.com/user/c3vin]<br />
+https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-7#post-33387<br />
+<br />
+5. [https://bitco.in/forum/members/222/ @kyuupichan]<br />
+https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-7#post-33488<br />
+<br />
+6. [https://bitco.in/forum/members/2195/ @Diestor]<br />
+https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-7#post-33845<br />
+<br />
+7. [https://bitco.in/forum/members/2215/ @todu]<br />
+[http://reddit.com/u/todu http://reddit.com/user/todu]<br />
+http://twitter.com/todu77<br />
+https://bitcointalk.org/index.php?action=profile;u=2605<br />
+https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-8#post-34058<br />
+<br />
+8. [https://bitco.in/forum/members/2220/ @Jefferson Nunn]<br />
+https://www.reddit.com/user/mindragon<br />
+Bitcoin Talk: https://bitcointalk.org/index.php?action=profile;u=131102<br />
+https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-8#post-34111<br />
+<br />
+9. [https://bitco.in/forum/members/2228/ @Rhett Creighton]<br />
+https://github.com/heyrhett/<br />
+https://www.reddit.com/user/everettforth<br />
+https://bitcointalk.org/index.php?action=profile;u=383711<br />
+https://twitter.com/HeyRhett<br />
+https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-8#post-34224<br />
+<br />
+10. [https://bitco.in/forum/members/2279/ @pauleb]<br />
+https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-8#post-34802<br />
+<br />
+11. [https://bitco.in/forum/members/2281/ @cryosanth]<br />
+https://www.reddit.com/user/cryosanth<br />
+https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-8#post-34821<br />
+<br />
+12. [https://bitco.in/forum/members/2338/ @marcus]<br />
+https://bitco.in/forum/threads/how-to-get-involved.1871/#post-35328<br />
+https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-8#post-35332<br />
+<br />
+13. [https://bitco.in/forum/members/2348/ @Henry James]<br />
+https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-8#post-35386<br />
+<br />
+14. [https://bitco.in/forum/members/1943/ @torusJKL]<br />
+https://bitcointalk.org/index.php?action=profile;u=18980<br />
+https://bitcoin-otc.com/viewratingdetail.php?nick=torusJKL<br />
+https://www.bitrated.com/torusJKL<br />
+https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-8#post-35500<br />
+<br />
+15. [https://bitco.in/forum/members/2359/ @CubicEarth]<br />
+https://bitcointalk.org/index.php?action=profile;u=82210<br />
+https://www.reddit.com/user/CubicEarth<br />
+https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-8#post-35515<br />
+<br />
+<pre>
+------BEGIN BITCOIN SIGNED MESSAGE-----
+BUIP048 jsmith_dev Windowly Wildfire.ca tkg kyuupichan todu Diestor JeffersonNunn RhettCreighton pauleb cryosanth marcus HenryJames torusJKL CubicEarth
+-----BEGIN BITCOIN SIGNATURE-----
+15TiujYmnHa33fjEnasBBm1eWcGx9YEXPL
+H0gdOAagSTj/NZX8MzNbYPbXbBmZQLtJ+WIwUB/+TMkjArZjlmeq3QhZxWPpmDjdx0HrFG3ROctQznA8h9+lMyA=
+-----END BITCOIN SIGNED MESSAGE-----
+</pre>
+

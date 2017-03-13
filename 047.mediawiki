@@ -1,0 +1,40 @@
+<pre>
+BUIP047: The Future of Bitcoin - Development & Scaling Conference
+Proposer: Antony Zegers (@mengerian)
+Submitted on: 2017-02-23
+Stauss: ??
+</pre>
+
+'''Summary'''<br />
+<br />
+This is an Operational BUIP requesting BU membership approval for the allocation of $40,000 of BU funds to sponsor a medium sized conference.<br />
+<br />
+The purpose of the conference is to bring together noted Bitcoin figures, developers, academics, miners and enthusiasts to overview, discuss, critique and prioritize many of the leading enhancements to develop Bitcoin into the future, including improvements which enable a far higher capacity for transactional throughput on-chain.<br />
+<br />
+BU would be the primary sponsor, but the conference is under the banner of the “The Future of Bitcoin” group, formerly known as OnChain Scaling. BU will assist by sponsoring and helping to organize the conference, but the intent is for the conference not to be BU specific, and open and welcoming to other groups.<br />
+'''<br />
+Objectives'''<br />
+<br />
+Goals for the conference include:
+
+# This conference will build on the work of earlier Bitcoin development conferences, including the online On-Chain Scaling conferences and Bitcoin Unlimited’s Satoshi’s Vision conference, and will be extended to roughly 2-4 times the size (~50-100 attendees) of the latter as a two-day, rather than a one-day, event.
+# Provide a platform for diverse technical topics and approaches to future development of Bitcoin.
+# Intend to issue an open &quot;call for proposals&quot; to allot a portion of the sp
+# eaking slots.
+# Funding to pay expenses for key-note speakers/attendees. Partial expenses may be offered on a case-by-case basis.
+# Reaffirmation of Bitcoin as a peer-to-peer sound money, along with other potential use cases.
+# Make the case for multiple implementations, i.e. decentralized development, resolving the last major centralizing force within the Bitcoin ecosystem.
+# Presentations: Selected items drawn from the roadmaps of [https://bitco.in/forum/threads/bitcoin-unlimited-proposed-development-roadmap.1401/ Bitcoin Unlimited], [https://bitcoinclassic.com/roadmap.html Bitcoin Classic], [https://github.com/btcsuite/btcd BTCD], and [https://bitcoin.org/en/bitcoin-core/capacity-increases Bitcoin Core], and any others as appropriate.
+# Panel and breakout discussions to debate specific on-chain scaling changes
+# Networking: CTOs from Bitcoin ecosystem businesses will be invited to participate.
+# Continue the process of attracting paid developers to enhance BU full-node software on a per-project basis which are approved by technical BUIPs.
+# Publicity for BU itself as a growing centre of development excellence for Bitcoin full-node software.
+# Intent is to provide high-quality video recordings of the presentations and panel discussions available after the event. Possible live-streaming if deemed suitable.
+
+'''<br />
+Location and Date'''<br />
+<br />
+Arnhem, Netherlands (Provisional, subject to change).<br />
+<br />
+June 9-10 2017 (provisional date, may be re-scheduled if needed)
+

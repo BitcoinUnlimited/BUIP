@@ -278,5 +278,17 @@ This is the current list of submitted BUIPs.
 |Christopher E. Wilmer (BU member, @chriswilmer)
 |2017-02-17
 |??
+|-
+|[[047.mediawiki|BUIP047]]
+|The Future of Bitcoin - Development & Scaling Conference
+|Antony Zegers (@mengerian)
+|2017-02-23
+|??
+|-
+|[[048.mediawiki|BUIP048]]
+|New Members for Election #5
+|Andrew Clifford(@solex)
+|2017-03-09
+|??
 |}
 

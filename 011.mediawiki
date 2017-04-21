@@ -2,7 +2,7 @@
 BUIP011: Andrew Clifford for President
 Proposer: Andrew Clifford
 Submitted: 2016-01-12
-Status: closed, passed
+Status: passed
 </pre>
 
 I think that a lot of people will know my posts from bitcointalk, reddit, and now the excellent bitco.in/forum. As soon as I heard about Bitcoin I saw the potential benefits that a new non-fiat currency system could bring to the world. It’s been three years since and what I have strived to do is to use my knowledge to help Bitcoin succeed. Along the way I have learned so much more about economics, society, money, human nature, incentives, complex systems, the Bitcoin ecosystem, all from people who kindly spend their time informing others.<br />

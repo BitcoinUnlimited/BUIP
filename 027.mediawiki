@@ -1,5 +1,5 @@
 <pre>
-BUIP027: Satoshi's Vision - Development &amp; Scaling Conference
+BUIP027: Satoshi's Vision - Development & Scaling Conference
 Proposer: Andrew Clifford
 Submitted: 2016-09-31
 Status: passed

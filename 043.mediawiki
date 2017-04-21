@@ -3,7 +3,7 @@ BUIP043: Exploring the Bitcoin Network
 Proposer: Dr Saralees Nadarajah, @S Nadarajah
 Sponsor: Peter Rizun
 Submitted: 2016-12-23
-Status: ??
+Status: closed
 </pre>
 Project Title:''' Exploring the Bitcoin Network.<br />
 <br />

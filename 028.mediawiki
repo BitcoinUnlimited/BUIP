@@ -2,7 +2,7 @@
 BUIP028: Candidacy for Secretary role - digitsu
 Proposer: Jerry Chan
 Submitted: 2016-09-03
-Status: ??
+Status: closed
 </pre>
 BUIP028: Candidacy for Secretary role - digitsu<br />
 Hi fellow members,<br />

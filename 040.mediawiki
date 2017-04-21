@@ -2,7 +2,7 @@
 BUIP040: Emergent Consensus Parameters and Defaults for Large (>1MB) Blocks
 Proposer: Andrew Stone
 Submitted: 2016-12-05
-Status: Draft
+Status: passed
 </pre>
 
 Bitcoin Unlimited currently does not constrain SIGOPs (signature operations) or transaction size when accepting blocks (block generation is constrained to network norms). The Parallel Validation (PV) BUIP (passed) helps resolve this issue (and has many other usability advantages), but for PV to succeed, it requires that another miner first successfully mine a sibling block, and that the original block be orphaned, losing money for that miner.<br />

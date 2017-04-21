@@ -2,7 +2,7 @@
 BUIP003: Andrew Quentson (Aquent) for Secretary
 Proposer: Andrew Quentson
 Submitted: 2015-12-30
-Status: closed, passed
+Status: passed
 </pre>
 As you all know I have been a vocal supporter of bigger blocks since Gavin started his blog post series with many of my comments on reddit highly voted, some to triple digits, because I see the wisdom in Satoshi's vision. <br />
 <br />

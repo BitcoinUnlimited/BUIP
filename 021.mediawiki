@@ -2,7 +2,7 @@
 BUIP021: Proposal for implementation of node performance testing and safe block size estimation and broadcast
 Proposer: Peter Waterland
 Submitted: 2016-07-18
-Status: ??
+Status: draft
 </pre>
 '''Background:'''<br />
 A major concern raised over on-chain-scaling is the presumption that a rising blocksize will harm decentralisation of the network and lead to a falling number of non-validating nodes. No assessment of true individual node performance or means to gauge this currently exists for the bitcoin network. Armed with this knowledge it would be possible to objectively evaluate the potential performance increases the network could endure without losing nodes for purely technical reasons (rising cost excluded). If nodes on the network begin to broadcast a 'safe' block size threshold to which they can perform then miners will be confident in safely raising the block size in the future.<br />

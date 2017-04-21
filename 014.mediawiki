@@ -2,7 +2,8 @@
 BUIP014: Testing a Bitcoin Unlimited X-Relay Network for miners in mainland China
 Proposer: Andrew Clifford
 Submitted: 2016-03-03
-Status: Operational BUIP
+Status: passed
+Type: Operational BUIP
 </pre>
 <img src="https://raw.githubusercontent.com/sickpig/BUIP/new/buip031-to-036/media/china.gif" alt="China map">
 <br />

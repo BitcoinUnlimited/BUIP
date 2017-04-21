@@ -2,7 +2,7 @@
 BUIP046: Faster, Higher Quality Publication Process for the Bitcoin Research Journal Ledger
 Proposer: Christopher E. Wilmer (BU member, @chriswilmer)
 Sumbit date: 2017-02-17
-Status: ??
+Status: passed
 </pre>
 
 '''Proposer:''' Christopher E. Wilmer (BU member)<br />

@@ -2,7 +2,7 @@
 BUIP023: Miner block creation latency optimization
 Proposer: Andrew Stone
 Submitted: 2016-08-1
-Status: ??
+Status: draft
 </pre>
 
 The mining of empty or pre-validation blocks are a mechanism that can naturally or artifically reduce the transaction capacity of the bitcoin network (see [http://www.bitcoinunlimited.info/1txn ''www.bitcoinunlimited.info/1txn'']). These blocks are mined when miners have received the headers of the next likely block but have not yet produced the next block template (a block template is a block that has not yet been mined -- its SHA256 does not meet the current difficulty).<br />

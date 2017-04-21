@@ -2,7 +2,7 @@
 BUIP030: Website updates
 Proposer: Jerry Chan
 Submitted: 2016-09-29
-Status: ??
+Status: closed
 </pre>
 
 Given the launch of the renewed adoption campaign after a successful Satoshi's Vision conference, it seems that we need to update the website as part of the outreach initiative in order to get the information out there about BU and what it stands for, the team members, and the roadmap ahead. This will serve the goal of reinforcing our commitment to the client, instilling confidence on the miners that they can depend on the quality of the developer team, and that we have a strategic vision for Bitcoin, and not just trying to solve a short term problem.<br />

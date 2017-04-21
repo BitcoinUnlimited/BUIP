@@ -2,7 +2,7 @@
 BUIP006: Blocktorrent – a torrent-style block data transport
 Proposer: freetrader
 Submitted: 2016-01-07
-Status: Draft (under discussion)
+Status: closed
 Revision: 0
 </pre>
 '''''Background'''''<br />

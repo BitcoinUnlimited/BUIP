@@ -2,7 +2,7 @@
 BUIP044: Development Process
 Proposer: Amaury SÉCHET
 Submitted: 2017-01-09
-Status: ??
+Status: draft
 </pre>
 
 <br />

@@ -296,5 +296,24 @@ This is the current list of submitted BUIPs.
 |Andrew Clifford (@solex)
 |2017-03-09
 |passed
+|-
+|[[049.mediawiki|BUIP049]]
+|Amend AoC to change membership period
+|Windowly
+|2017-03-18
+|draft
+|-
+|[[050.mediawiki|BUIP050]]
+|Double yes with tie-break question
+|torusJKL
+|2017-03-18
+|draft
+|-
+|[[051.mediawiki|BUIP051]]
+|Set up dedicated Continuous Integration
+|freetrader
+|2017-04-15
+|draft
 |}
+
 

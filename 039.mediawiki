@@ -1,8 +1,8 @@
 <pre>
 BUIP039: Upgrade via extension point
-Proposer: Amaury SECHET
+Proposer: Amaury SÉCHET
 Submitted: 2016-12-04
-Status: Draft
+Status: draft
 </pre>
 
 <br />

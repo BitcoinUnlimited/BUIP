@@ -2,7 +2,7 @@
 BUIP042: New Members for Election #4
 Submitted: 2016-12-26
 Voting date: 2016-12-26
-Status: Passed
+Status: passed
 </pre>
 
 '''Summary'''<br />

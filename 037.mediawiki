@@ -2,7 +2,7 @@
 BUIP037: Hardfork SegWit
 Proposer: Amaury SÉCHET
 Submitted: 2016-11-12
-Status: Draft
+Status: draft
 </pre>
 
 '''Summary:'''<br />

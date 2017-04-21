@@ -13,7 +13,7 @@ This is the current list of submitted BUIPs.
 |Extensions to the Bitcoin Client
 |Andrew Stone
 |2015-11-26
-|closed, passed
+|passed
 |-
 |[[002.mediawiki|BUIP002]]
 |Multi-BIP Scaling Enabler
@@ -25,7 +25,7 @@ This is the current list of submitted BUIPs.
 |Andrew Quentson (Aquent) for Secretary
 |Andrew Quentson
 |2015-12-30
-|closed, passed
+|passed
 |-
 |[[004.mediawiki|BUIP004]]
 |RBF/double spending support
@@ -37,13 +37,13 @@ This is the current list of submitted BUIPs.
 |Settings information via coinbase-txn & user-agent
 |Andrew Clifford
 |2015-12-31 (Revision 1, user-agent, 2016-01-07)
-|Passed
+|passed
 |-
 |[[006.mediawiki|BUIP006]]
 |Blocktorrent – a torrent-style block data transport
 |freetrader
 |2016-01-07
-|Draft (under discussion)
+|closed
 |-
 |[[007.mediawiki|BUIP007]]
 |Lee Adams (redditchampsys) for president
@@ -55,13 +55,13 @@ This is the current list of submitted BUIPs.
 |Vote Andrew Stone for Developer
 |Andrew Stone (thezerg)
 |2016-01-09
-|passed, closed
+|passed
 |-
 |[[009.mediawiki|BUIP009]]
 |User-configurable public-key cryptography (let users choose from predefined cryptosystems)
 |Simon Liu
-|Draft (call for input and discussion)
 |2016-01-09
+|draft
 |-
 |[[010.mediawiki|BUIP010]]
 |Xtreme Thinblocks
@@ -73,7 +73,7 @@ This is the current list of submitted BUIPs.
 |Andrew Clifford for President
 |Andrew Clifford
 |2016-01-12
-|closed, passed
+|passed
 |-
 |[[012.mediawiki|BUIP012]]
 |Vote Trevin Hofmann for President
@@ -85,19 +85,19 @@ This is the current list of submitted BUIPs.
 |Upgrade alert system so that Bitcoin Unlimited can send message alerts to node
 |Simon Liu
 |2016-01-14 (rev 2. 25 Jan 2016, rev 3. 26 Jan 2016)
-|passed, closed
+|passed
 |-
 |[[014.mediawiki|BUIP014]]
 |Testing a Bitcoin Unlimited X-Relay Network for miners in mainland China
 |Andrew Clifford
 |2016-03-03
-|Operational BUIP
+|passed
 |-
 |[[015.mediawiki|BUIP015]]
 |Decentralize mining with the FAIR PoW algorithm and an user-configurable PoW setting
 |Simon Liu
 |2016-01-19
-|draft (call for input and discussion)
+|draft
 |-
 |[[016.mediawiki|BUIP016]]
 |Consensus with Classic on txn size limit
@@ -109,13 +109,13 @@ This is the current list of submitted BUIPs.
 |Datastream Compression
 |Peter Tschipper
 |03/20/2016
-|passed
+|draft
 |-
 |[[018.mediawiki|BUIP018]]
 |Bitnodes Seeding and User-Configurable DNS Seeds
 |Simon Liu
 |2016-04-02
-|passed (merged)
+|passed
 |-
 |[[019.mediawiki|BUIP019]]
 |New Members for Election #1
@@ -133,25 +133,25 @@ This is the current list of submitted BUIPs.
 |Proposal for implementation of node performance testing and safe block size estimation and broadcast
 |Peter Waterland
 |2016-07-18
-|??
+|draft
 |-
 |[[022.mediawiki|BUIP022]]
 |XInv
 |Peter Tschipper
 |2016-07-30
-|??
+|draft
 |-
 |[[023.mediawiki|BUIP023]]
 |Miner block creation latency optimization
 |Andrew Stone
 |2016-08-1
-|??
+|passed
 |-
 |[[024.mediawiki|BUIP024]]
 |Extension Blocks with Address Sharding
 |Andrew Stone
 |2016-08-03
-|??
+|draft
 |-
 |[[025.mediawiki|BUIP025]]
 |BU "Bronze Sponsor" at Scaling Bitcoin, Milan, Italy
@@ -160,7 +160,7 @@ This is the current list of submitted BUIPs.
 |passed
 |-
 |[[027.mediawiki|BUIP027]]
-|Satoshi's Vision - Development &amp; Scaling Conference
+|Satoshi's Vision - Development & Scaling Conference
 |Andrew Clifford
 |2016-09-31
 |passed
@@ -169,19 +169,19 @@ This is the current list of submitted BUIPs.
 |Candidacy for Secretary role - digitsu
 |Jerry Chan
 |2016-09-03
-|??
+|closed
 |-
 |[[029.mediawiki|BUIP029]]
 |Vote Trevin Hofmann for Secretary
 |Trevin Hofmann
 |2016-09-06
-|??
+|closed
 |-
 |[[030.mediawiki|BUIP030]]
 |Website updates
 |Jerry Chan
 |2016-09-29
-|??
+|closed
 |-
 |[[031.mediawiki|BUIP031]]
 |New Members for Election #2
@@ -223,72 +223,72 @@ This is the current list of submitted BUIPs.
 |Hardfork SegWit
 |Amaury SECHET
 |2016-11-12
-|Draft
+|draft
 |-
 |[[038.mediawiki|BUIP038]]
 |Revert "sticky gate"
 |Tom Harding (Sponsor: freetrader)
 |2016-11-27
-|Draft
+|closed
 |-
 |[[039.mediawiki|BUIP039]]
 |Upgrade via extension point
 |Amaury SÉCHET
 |2016-12-04
-|Draft
+|draft
 |-
 |[[040.mediawiki|BUIP040]]
 |Emergent Consensus Parameters and Defaults for Large (>1MB) Blocks
 |Andrew Stone
 |2016-12-05
-|Draft
+|passed
 |-
 |[[041.mediawiki|BUIP041]]
-|Prevent Minority Hash Power From Injecting Very Large Blocks
+|([[038.mediawiki|BUIP038]] Counter) Prevent Minority Hash Power From Injecting Very Large Blocks
 |Andrew Stone
 |2016-12-07
-|Draft
+|closed
 |-
 |[[042.mediawiki|BUIP042]]
 |New Members for Election #4
 |Andrew Clifford
 |2016-12-16
-|Passed
+|passed
 |-
 |[[043.mediawiki|BUIP043]]
 |Exploring the Bitcoin Network
 |Dr Saralees Nadarajah, @S Nadarajah (Sponsor: Peter Rizun)
 |2016-12-23
-|??
+|closed
 |-
 |[[044.mediawiki|BUIP044]]
 |Development Process
 |Amaury SÉCHET
 |2017-01-09
-|??
+|draft
 |-
 |[[045.mediawiki|BUIP045]]
-|Unified addresses format for BUIP037
+|Unified addresses format for [[037.mediawiki|BUIP037]]
 |Amaury SÉCHET
 |2017-01-12
-|??
+|draft
 |-
 |[[046.mediawiki|BUIP046]]
 |Faster, Higher Quality Publication Process for the Bitcoin Research Journal Ledger
 |Christopher E. Wilmer (BU member, @chriswilmer)
 |2017-02-17
-|??
+|passed
 |-
 |[[047.mediawiki|BUIP047]]
 |The Future of Bitcoin - Development & Scaling Conference
 |Antony Zegers (@mengerian)
 |2017-02-23
-|??
+|passed
 |-
 |[[048.mediawiki|BUIP048]]
 |New Members for Election #5
-|Andrew Clifford(@solex)
+|Andrew Clifford (@solex)
 |2017-03-09
-|??
+|passed
 |}
 

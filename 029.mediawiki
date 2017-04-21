@@ -2,7 +2,7 @@
 BUIP029: Vote Trevin Hofmann for Secretary
 Proposer: Trevin Hofmann
 Submitted: 2016-09-06
-Status: ??
+Status: closed
 </pre>
 
 -----BEGIN PGP SIGNED MESSAGE-----<br />

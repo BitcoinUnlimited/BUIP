@@ -2,7 +2,7 @@
 BUIP015: Decentralize mining with the FAIR PoW algorithm and an user-configurable PoW setting
 Proposer: Simon Liu
 Submitted: 2016-01-19
-Status: draft (call for input and discussion)
+Status: draft
 Revision: 2 (2016-05-11)
 </pre>
 

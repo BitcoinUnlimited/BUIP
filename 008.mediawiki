@@ -2,7 +2,7 @@
 BUIP008: Vote Andrew Stone for Developer
 Proposer: Andrew Stone (thezerg)
 Submitted: 2016-01-09
-Status: passed, closed
+Status: passed
 </pre>
 Biography: I am Andrew Stone (theZerg on this forum and bitcointalk). I am a software developer with a Bachelor of Science from Yale University and with 20 years of experience in startup companies working in networking and defense related applications. Many of these companies have been successful, with cumulative acquisitions of over a half a billion dollars and funding in the 10s of millions. My work is focused in the high availability and communications area of tightly coupled distributed applications. Software that I have written is deployed in every major and many minor telecom providers worldwide, serving at least 10s of millions of customers (due to our licensing agreement, we do not receive any data for the majority of our installations -- the 2 installations we do receive data from serve 10s of millions of people). I have travelled to 4 continents to consult with companies seeking to build high availability products. <br />
 In work unrelated to telecommunications, I wrote a game development system when I was 16 years old (https://en.wikipedia.org/wiki/Game-Maker) which was important in creating the concepts of &quot;remixing&quot; and was used by quite a few kids who are well-known in the gaming industry today. Recently, I taught myself hardware design, produced an open source hardware Arduino-compatible LED driver called the Lightuino, sold 200+ units worldwide, and used it to create interior lighting prototypes for several BMW and one Rolls-Royce vehicle.<br />

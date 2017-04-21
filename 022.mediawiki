@@ -2,7 +2,7 @@
 BUIP022: XInv
 Proposer: Peter Tschipper
 Submitted: 2016-07-30
-Status: ??
+Status: draft
 </pre>
 
 '''Summary'''<br />

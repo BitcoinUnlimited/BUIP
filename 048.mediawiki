@@ -2,6 +2,7 @@
 BUIP048: New Members for Election #5
 Proposer: Andrew Clifford (@solex)
 Submitted on: 2017-03-09
+Status: passed
 Voting date: 2017-03-10
 </pre>
 

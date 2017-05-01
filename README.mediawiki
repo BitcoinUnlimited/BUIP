@@ -310,10 +310,14 @@ This is the current list of submitted BUIPs.
 |draft
 |-
 |[[051.mediawiki|BUIP051]]
+|Add CompactBlocks support
+|freetrader
+|2017-04-13
+|draft
+|-
+|[[052.mediawiki|BUIP052]]
 |Set up dedicated Continuous Integration
 |freetrader
 |2017-04-15
 |draft
 |}
-
-

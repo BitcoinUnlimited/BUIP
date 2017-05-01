@@ -27,7 +27,9 @@ User preference switches are recommended to
 #allow the user to prefer CB to XTB with peers that support both
 
 === Notes: ===
+
 [1]This has already been implemented in Bitcoin XT, so hopefully together with the BIP152 specification it should be quite easy to port this feature to BU.
+
 [2]This porting work could be encouraged by making this a funded BUIP. The author has no advice for the effort and funding level required, but is open to suggestions, esp. from the XT developers who have already implemented this.
 
 ==Additional information==

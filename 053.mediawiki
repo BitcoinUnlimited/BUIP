@@ -1,0 +1,48 @@
+<pre>
+BUIP053: Tweakable client DoS responses
+Proposer: freetrader
+Submitted on: 2017-05-01
+Status: draft
+</pre>
+
+
+==Summary==
+
+In recent followup work on the denial-of-service (DoS) responses of the client, there have been calls for a clear policy in terms of treatment of misbehaving peers.
+
+Instead of a rigid "design guideline" based approach, which still hardcodes certain responses, it is proposed to move client DoS response firmly into the "user policy" arena by making the design guideline simply state "punishments for misbehaving peers should always be configurable by the user".
+
+==Motivation==
+
+The Bitcoin system's network environment is complex and always changing in unpredictable ways.
+
+Currently, the BU software contains some hardcoded responses of the type "if a peer exhibits behavior A, ban the peer" or "if a peer exhibits behavior B, increase the peer's denial-of-service score by so-and-so much".
+Once a client's DoS score reaches a certain level (100), the client is banned for a default period of 24 hrs.
+In some cases, the client's network response may also be to straightaway disconnect the peer.
+
+Hardcoded responses are inconvenient, as they make it necessary to deliver client updates (new releases) which could be avoided by issuing advisories to users to adjust configuration settings.
+
+They also prevent users from easily defending their own BU nodes, which may be subject to focused attacks.
+
+As an example, we have had reports (unverified) that a mining pool was being attacked in a specific way. Having tunable settings could give advanced users immediate remedy against such attacks, and be able to share effective measures with others.
+
+Configurable options allow the 'emergent consensus' / swarm intelligence to develop better and faster responses for the defense of the node network than can be done by a small group of developers.
+
+==Implementation considerations==
+
+It is proposed to convert all responses into Misbehaving() calls, with the strength of the response (the amount which to increase the client's DoS score) to be made into a specific "tweak" (a configurable parameter which can be set in the configuration files, but also changed at runtime).
+
+The value should range from 0 (do nothing) to whatever is necessary to get the peer banned immediately (currently 100 should achieve that).
+
+The built-in default values of these new "response" tweaks should be set to emulate current behavior as closely as possible.
+
+A default parameter file extract should be delivered as an example with the client, describing the response parameters (exactly to which defensive situation they apply). This will allow advanced users to easily include whichever of these in their own configurations, and adapt them as they need.
+
+The parameters would be changeable at runtime through RPC calls (this is an existing mechanism applying to all tweakable parameters).
+
+The GUI client should get a separate window tab for tweaking these DoS response levels.
+A slider bar is envisioned for each response parameter, preset to its configured value.
+
+==Further discussion==
+
+The author would welcome discussion of all aspects of this proposal, as it is currently only at the "concept" stage - although technically it does not require much beyond what is already available as features in the software. 

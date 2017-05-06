@@ -321,6 +321,12 @@ This is the current list of submitted BUIPs.
 |2017-04-15
 |draft
 |-
+|[[053.mediawiki|BUIP053]]
+|Tweakable client DoS responses
+|freetrader
+|2017-05-01
+|draft
+|-
 |[[054.mediawiki|BUIP054]]
 |Make AD optional and disabled by default
 |freetrader

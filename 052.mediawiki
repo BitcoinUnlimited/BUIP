@@ -38,7 +38,7 @@ This BUIP does not intend to prescribe a particular service or provider, but str
 
 A 'Startup' Travis instance (described as 'best for small teams') costs $129 / month, i.e. ~$1548 / year, and allows 2 concurrent jobs and unlimited build minutes / repositories / collaborators.
 
-A 'Small Business' Travis instance (described as 'best for growing teams') costs $129 / month, i.e. ~$2988 / year, and allows 5 concurrent jobs and unlimited build minutes / repositories / collaborators.
+A 'Small Business' Travis instance (described as 'best for growing teams') costs $249 / month, i.e. ~$2988 / year, and allows 5 concurrent jobs and unlimited build minutes / repositories / collaborators.
 
 $3K / year for reliable full-spectrum daily test status information accessible to all project members would be a good investment in the author's view.
 

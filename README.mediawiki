@@ -332,4 +332,10 @@ This is the current list of submitted BUIPs.
 |freetrader
 |2017-05-05
 |draft
+|-
+|[[055.mediawiki|BUIP055]]
+|Increase the Block Size Limit at a Fixed Block Height
+|Peter Rizun
+|2017-05-10
+|draft
 |}

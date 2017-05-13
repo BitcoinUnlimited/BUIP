@@ -1,0 +1,83 @@
+<pre>
+BUIP055: Increase the Block Size Limit at a Fixed Block Height
+Proposer: Peter Rizun
+Submitted on: 2017-05-10
+Status: draft
+</pre>
+
+==Abstract==
+
+This BUIP proposes to add functionality to automatically increase a node's block size limit at a specified block height. The default settings correspond to an 8 MB limit at block #488,888 (~18 October 2017).
+
+==Motivation==
+
+Due to the 1 MB block size limit enforced by many mining and non-mining nodes, miners can no longer respond to increasing demand for Bitcoin transactions by increasing the supply of block space. This has resulted in a sharp increase in transaction fees and has made transaction confirmation times unreliable.
+
+To alleviate this condition, node operators and miners must increase the maximum size of blocks their nodes accept. The deployment of [[001.mediawiki]] gave both groups the ability to increase their nodes' block size limits without restarting the client or recompiling executables from source code.
+
+With the benefit of hindsight, it has become clear that [[001.mediawiki|BUIP001]] was a success with operators of non-mining nodes: the median block size limit enforced by non-mining nodes running Bitcoin Unlimited is now 16 MB.
+
+However, [[001.mediawiki|BUIP001]] has been less successful with miners: the median block size limit enforced by miners running Bitcoin Unlimited is still 1 MB, despite the fact that a majority of the network hash power wants to mine larger blocks. Empirical evidence suggests that miners are typically unwilling to act independently, instead favoring to increase their nodes' block size limits in unison with the other miners.
+
+What is needed then is a simple coordination scheme to permit miners to increase their nodes’ block size limits in lock step. The specification described in this proposal is one such coordination scheme.
+
+==Specification==
+
+===Block size limit===
+
+If a node operator elects to use [[005.mediawiki|BUIP005]], three variables must be defined: ''current_limit'', ''new_limit'' and ''activation_height'', where
+
+- ''current_limit'' [default=1000000] is the block size limit presently enforced, measured in bytes,
+
+- ''new_limit'' [default=8000000] is the new block size limit, measured in bytes, and
+
+- ''activation_height'' [default=488888] is the block number when the new limit applies,
+
+with the requirement [1] that ''new_limit >= current_limit > 0''
+
+The maximum block size (''max_block_size'') for a given block is then calculated using the following logic:
+
+        if(BUIP055)
+        {
+            max_block_size = (block_height < activation_height) ? current_limit : new_limit;
+        }
+        else
+        {
+            ...other logic
+        }
+
+===Signature operations and transaction size===
+
+The maximum signature operations and transaction size are consistent with [[040.mediawiki|BUIP040]] and BIP100:
+
+        max_block_sigops = 20000*((max_block_size-1)/1000000 + 1)
+
+        max_tx_size = 1000000
+
+===Coinbase and user-agent signalling===
+
+Building on the format specified in [[005.mediawiki|BUIP005]], the relevant variables are signalled in the coinbase transaction as
+
+        "/EB<current_limit_MB>/EB<new_limit_MB>@<activation_height>/..."
+
+and in the user-agent string as
+
+        "<user-agent>(EB<current_limit_MB>;EB<new_limit_MB>@<activation_height>...)/"
+
+For example, using the default settings (and assuming AD is not signalled), the following strings would be included in the coinbase transaction and the user-agent string, respectively:
+
+        "/EB1/EB8@488888/"
+
+        "BitcoinUnlimited:1.1.0(EB1;EB8@488888)
+
+Note that the current and new block size limits are signalled in units of megabytes. Refer to [[005.mediawiki|BUIP005]] for further information.
+
+==Deployment==
+
+Miners can begin signalling for an increase to 8 MB at block #488,888 immediately, or modify the defaults to propose a different limit or activation height. If a sufficient fraction of the network hash power supports a given proposal, no further action is required: the network's block size limit will be automatically increased at the agreed-upon block height. If sufficient support is not obtained, then miners could modify their proposals (e.g., by pushing the activation date further into the future or by proposing a different block size limit) and try again.
+
+==Backwards compatibility==
+
+If a block larger than 1,000,000 bytes is mined into the most-work chain, nodes that continue to enforce the legacy block size limit will not recognize it as valid and ignore it. If the minority chain has non-negligible hashing power, the blockchain will bifurcate at that point.
+
+[1] Reindexing the chain could fail if the block size limit were repeatedly decreased without keeping track of prior block size limits.

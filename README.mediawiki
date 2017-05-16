@@ -338,4 +338,10 @@ This is the current list of submitted BUIPs.
 |Peter Rizun
 |2017-05-10
 |draft
+|-
+|[[056.mediawiki|BUIP056]]
+|Increase the Block Size Limit at a Support Threshold
+|Tomas van der Wansem (Sponsor: Zangelbert Bingledack)
+|2016-05-12
+|draft
 |}

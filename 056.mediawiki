@@ -46,6 +46,8 @@ Given a target block, let X,N be a number pair with the following conditions:
 
 If no number pair X,N exists, ''current_limit'' is used as ''max_block_size'' for the target block. Otherwise the highest value of X from all X,N pairs is used as the ''max_block_size'' for the target block.
 
+If max_block_size>1,000,000 is used for the target block and max_block_size>1,000,000 is not used for any ancestor of the target block and the size of the block is less then or equal to 1,000,000 then the block must be rejected.
+
 ===Signature operations and transaction size===
 
 The maximum signature operations and transaction size are consistent with [[040.mediawiki|BUIP040]] and BIP100:
@@ -76,6 +78,8 @@ The variables are related as:
 * Only block sets at least 10080 blocks deep are considered to allow for an activation period in which more mining power can join.
 
 * The block set is aligned with the difficulty period to minimize the risk of a chain split. Miners are strongly disincentives to stay on the minority as it will take at least ~8 weeks before difficulty adjustment with a 75% threshold.
+
+* The first time this mechanism is used, the chain is protected from a reorg to the chain with only small blocks.
 
 ===Alternatives===
 

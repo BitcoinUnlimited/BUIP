@@ -42,9 +42,17 @@ Given a target block, let X,N be a number pair with the following conditions:
 
 * 2016 >= N >= ''threshold''
 * ''current_limit'' < X <= ''new_limit''
-* There exists a block set, in which at least N% of the blocks signal a ''new_limit'' equal to or larger than X and a ''threshold'' equal to or smaller than N.
+* There exists a block set, in which at least N% of the blocks signal a ''new_limit'' equal to or larger than X and a ''threshold'' equal to or smaller than N. The percentage calculated should not be rounded.
 
 If no number pair X,N exists, ''current_limit'' is used as ''max_block_size'' for the target block. Otherwise the highest value of X from all X,N pairs is used as the ''max_block_size'' for the target block.
+
+===Signature operations and transaction size===
+
+The maximum signature operations and transaction size are consistent with [[040.mediawiki|BUIP040]] and BIP100:
+
+        max_block_sigops = 20000*((max_block_size-1)/1000000 + 1)
+
+        max_tx_size = 1000000
 
 ===Coinbase and user-agent signalling===
 
@@ -57,6 +65,11 @@ and in the user-agent string as
 
         "<user-agent>(EB<current_limit_MB>;FE<new_limit_MB>@<threshold>%...)/"
 
+The variables are related as:
+
+        current_limit = current_limit_MB * 1,000,000
+
+        new_limit = new_limit_MB * 1,000,000
 
 ==Rationale==
 

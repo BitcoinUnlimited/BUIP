@@ -342,6 +342,12 @@ This is the current list of submitted BUIPs.
 |[[056.mediawiki|BUIP056]]
 |Increase the Block Size Limit at a Support Threshold
 |Tomas van der Wansem (Sponsor: Zangelbert Bingledack)
-|2016-05-12
+|2017-05-12
+|draft
+|-
+|[[057.mediawiki|BUIP057]]
+|Add BIP 135 support (generalized BIP9 version bits)
+|Sancho Panza (Sponsor: Andrea Suisani)
+|2017-04-14
 |draft
 |}

@@ -14,7 +14,7 @@ This would be an addition to the existing free service provided by Travis.
 
 ==Motivation==
 
-Right now, BU is running on free instance of Travis CI, which is a great service for open source projects.
+Right now, BU is running on free instance of Travis CI [1], which is a great service for open source projects.
 However, this is limited in the build minutes, which means that BU cannot run the full suite of software tests (which can take up to a few hours to run through depending on hardware).
 
 Instead, it runs a limited subset of quicker tests (a kind of "smoke testing").
@@ -59,7 +59,12 @@ This would lack the nice interface etc., and would be more costly overall as peo
 
 One could make a separate BUIP for a project to aggregate this "ragtag" test data into something that's easily digestible for project members. I'm assuming this would end up costing more and not performing as well as using an experienced CI provider. The advantage is that it would be more decentralized.
 
+==Optional Item 1: upgrade existing Travis for speedier builds==
+
+As mentioned by @solex in the bitco.in forum thread [2], Travis has made an offer of upgrading the standard CI service that BU is currently, giving developers access to faster build times for the regular builds. This is offered at $2750 p.a.
 
 ==Additional information==
 
-https://travis-ci.com/plans
+[1] https://travis-ci.com/plans
+
+[2] https://bitco.in/forum/threads/buip052-set-up-dedicated-continuous-integration.2034/

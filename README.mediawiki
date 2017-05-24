@@ -364,7 +364,7 @@ This is the current list of submitted BUIPs.
 |draft
 |-
 |[[060.mediawiki|BUIP060]]
-|New Members for Election #5
+|New Members for Election #6
 |Andrew Clifford (@solex)
 |2017-05-22
 | ---

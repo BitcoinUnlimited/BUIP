@@ -357,6 +357,12 @@ This is the current list of submitted BUIPs.
 |2017-05-19
 |draft
 |-
+|[[059.mediawiki|BUIP059]]
+|Make "sticky gate" optional (disabled by default)
+|freetrader
+|2017-05-21
+|draft
+|-
 |[060.mediawiki|BUIP060]
 |New Members for Election #5
 |Andrew Clifford (@solex)

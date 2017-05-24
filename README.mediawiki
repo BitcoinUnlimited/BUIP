@@ -351,6 +351,12 @@ This is the current list of submitted BUIPs.
 |2017-04-14
 |draft
 |-
+|[[058.mediawiki|BUIP058]]
+|Dynamic checkpoints
+|freetrader
+|2017-05-19
+|draft
+|-
 |[060.mediawiki|BUIP060]
 |New Members for Election #5
 |Andrew Clifford (@solex)

@@ -51,6 +51,10 @@ The daily / nightly tests can also be run quite differently, requiring a differe
 
 The author is unaware of Bitcoin Core or other Satoshi-based clients publishing full test suite run data to the public. This is certainly not optimal, and a good chance for BU to improve upon current practice and provide a good example.
 
+==Optional Item 1: upgrade existing Travis for speedier builds==
+
+As mentioned by @solex in the bitco.in forum thread [2], Travis has made an offer of upgrading the standard CI service that BU is currently, giving developers access to faster build times for the regular builds. This is offered at $2750 p.a.
+
 ==Alternatives==
 
 Developers could set up dedicated test boxes at home / work and feed back test results into a common Git repository.
@@ -58,10 +62,6 @@ Developers could set up dedicated test boxes at home / work and feed back test r
 This would lack the nice interface etc., and would be more costly overall as people might have to acquire dedicated test hardware (although some of this could be obtained through sponsorship or donations).
 
 One could make a separate BUIP for a project to aggregate this "ragtag" test data into something that's easily digestible for project members. I'm assuming this would end up costing more and not performing as well as using an experienced CI provider. The advantage is that it would be more decentralized.
-
-==Optional Item 1: upgrade existing Travis for speedier builds==
-
-As mentioned by @solex in the bitco.in forum thread [2], Travis has made an offer of upgrading the standard CI service that BU is currently, giving developers access to faster build times for the regular builds. This is offered at $2750 p.a.
 
 ==Additional information==
 

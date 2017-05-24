@@ -1,0 +1,67 @@
+<pre>
+BUIP058 Dynamic checkpoints
+Proposer: freetrader
+Submitted on: 2017-05-19
+Status: draft
+</pre>
+
+
+==Summary==
+
+Add a feature which allows dynamic addition and removal of non-hardcoded checkpoints.
+
+Checkpoints denote blocks that must be present in a valid chain. A checkpoint is a tuple (chain_height, block_hash) indicating that the block at that height must always have the given hash.
+
+Currently, there are only some hardcoded checkpoints in src/chainparams.cpp (not frequently updated).
+
+
+==Motivation==
+
+To allow more flexible, persistent protection of a chain against re-organization [1], at the discretion of the operator.
+
+This could be particularly useful in a hard fork scenario such as the very contentious "breaking of the 1MB barrier".
+
+Having an advanced user option to add checkpoints saves the operator from having to use 'invalidateblock' as a way of fighting attacker re-org blocks, essentially saving effort and reducing chance of costly mistake.
+
+Since additional checkpoints may act to block re-organizations to a longer valid chain with more proof-of-work, this feature should be considered as an expert tool, probably only to be used by operators of mining nodes.
+
+
+==Implementation==
+
+An RPC call interface shall be added to add and remove dynamic checkpoints.
+
+Whenever a dynamic checkpoint is added or removed, the active chain shall be re-evaluated for compliance and if necessary, a re-organization performed in an attempt to achieve compliance with the stipulated checkpoints.
+
+The dynamic checkpoints shall be recorded in a human-readable checkpoint data file (e.g. checkpoints.csv) whenever the list changes.
+
+At startup, the client shall read this file, if present, and add any checkpoints from there to its list of built-in checkpoints used for chain processing.
+
+The client shall abort startup if the checkpoint data file is malformed (see Notes). If the file is not present, it shall proceed using only the built-in (hardcoded) checkpoints.
+
+The RPC interface does not need to be specially exposed through the GUI - it would be available through the Debug Console anyway.
+
+It shall not be possible to dynamically remove built-in checkpoints.
+
+
+==Notes==
+
+A checkpoint data file is malformed if it is syntactically invalid, or if it contains the following semantic problems:
+
+* duplicate entries
+* entries with conflicting hashes for identical height
+* entries with conflicting height for identical hashes
+
+There have been a number of suggestions for potential names of the RPC calls.
+
+Adding: 'mandateblock', 'requireblock', 'addcheckpoint'
+
+The removal call names could be formed by pre-prending 'un-', or substituting 'remove' for 'add'.
+
+I have intentionally not included some form of automatic addition of checkpoints in the form discussed in [2], to keep this BUIP functionally simple.
+
+
+==References==
+
+[1] https://bitcointalk.org/index.php?topic=437
+
+[2] https://bitco.in/forum/threads/buip...by-a-support-threshold.2111/page-2#post-39031

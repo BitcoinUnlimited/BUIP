@@ -350,4 +350,10 @@ This is the current list of submitted BUIPs.
 |Sancho Panza (Sponsor: Andrea Suisani)
 |2017-04-14
 |draft
+|-
+|[060.mediawiki|BUIP060]
+|New Members for Election #5
+|Andrew Clifford (@solex)
+|2017-05-22
+| ---
 |}

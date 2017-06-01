@@ -107,3 +107,7 @@ If a block larger than 1,000,000 bytes is mined into the most-work chain, nodes 
 [1] Reindexing the chain could fail if the block size limit were repeatedly decreased without keeping track of prior block size limits.
 
 [2] https://medium.com/@tl121/an-analyt...chain-with-two-block-size-limits-5642ab0325dc
+
+==Links==
+
+There is a provisional technical specification being worked on [[BUIP055/technical-specification.md|here]].

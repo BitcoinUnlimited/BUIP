@@ -79,9 +79,32 @@ which would remove the fork block.
 RATIONALE: To prevent the fork chain from being continually
 re-organized by an attacker.
 
-### REQ-6 (Replay protection)
+### REQ-6-1 (disallow special OP_RETURN-marked transactions)
 
-TBD
+Once the fork has activated, transactions containing an OP_RETURN output
+with a specific magic data value shall be considered invalid.
+
+RATIONALE: To give users on the legacy chain (or other fork chains)
+an opt-in way to exclude their transactions from processing on the BUIP055
+fork chain.
+
+### REQ-6-2 (opt-in signature shift via nHashType)
+
+Once the fork has activated, transactions shall not be deemed  invalid if
+adding a certain magic value to the nHashType before the hash is calculated
+results in a successful signature verification.
+
+RATIONALE: To give users on the BUIP055 chain an opt-in way to encumber
+replay of their transactions to the legacy chain (and other forks which may
+consider such transactions invalid).
+
+NOTE 1: It is possible for other hard forks to defeat this protection by
+implementing a compatible signature check that accepts transactions
+signed in this special way. However, this does require a counter hard fork.
+
+NOTE 2: The client shall still accept transactions whose signatures
+verify according to pre-fork rules, subject to the additional OP_RETURN
+constraint introduced by REQ-6-1.
 
 ### REQ-DISABLE (disable fork by setting fork time to 0)
 

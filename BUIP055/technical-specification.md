@@ -6,6 +6,25 @@ miner requests. It should be possible to change easily to a
 height-based fork - the sense of the requirement's would largely
 stay the same.
 
+Definitions applying below:
+
+MTP: the "median time past" value of a block, calculated from the
+nTime values of its past up to 11 ancestors, as obtained by the
+GetMedianTimePast(block.parent) call.
+
+"activation time": a block whose MTP is after this time
+shall comply with the new consensus rules introduced by this BUIP.
+
+"fork block": the first block in the active chain whose nTime is past the
+activation time.
+
+"Large block" means a block satisfying 1,000,000 bytes < block
+size <= EB, where EB is as adjusted by REQ-4-1 and a regular block
+is a block up to 1,000,000 bytes in size.
+
+"Core rules" means all blocks <= 1,000,000 bytes (Base block size).
+
+
 ## Requirements
 
 ### REQ-1 (fork by default)
@@ -22,31 +41,35 @@ require them to make additional configuration.
 NOTE 1: It will be possible to disable the fork behavior (see
 REQ-DISABLE)
 
-### REQ-2 (configurable fork time)
+### REQ-2 (configurable activation time)
 
-The client shall allow a "fork time" to be configured by the user,
+The client shall allow a "activation time" to be configured by the user,
 with a default value of 1501545600 (epoch time corresponding to Tue
 1 Aug 2017 00:00:00 UTC)
 
 RATIONALE: Make it configurable to adapt easily to UASF activation
 time changes.
 
-NOTE 1: Configuring a "fork time" value of zero (0) shall disable
+NOTE 1: Configuring a "activation time" value of zero (0) shall disable
 any BUIP055 hard fork special rules (see REQ-DISABLE)
 
 ### REQ-3 (fork block must be > 1MB)
 
 The client shall enforce a block size larger than 1,000,000 bytes
-for the first block with timestamp >= activation time
+for the fork block.
 
 RATIONALE: This both enforces the hard fork from the original 1MB
 chain, and also prevents a re-organization of the forked chain to
 the original chain.
 
+NOTE: It has been suggested not to accept a fork block > 8MB to avoid
+the risk of an attack block constructed much larger.
+TBD if this requirement should be amended to include that rule.
+
 ### REQ-4-1 (set EB to minimum of 8MB at fork)
 
-If BUIP055 is not disabled (see REQ-DISABLE) and the block timestamp
-is equal to or greater than the fork time, the client shall set EB
+If BUIP055 is not disabled (see REQ-DISABLE) and the MTP of a block
+is greater than or equal to the activation time, the client shall set EB
 to the maximum of 8,000,000 (bytes) and the user's configured EB.
 
 RATIONALE: To immediately allow up to 8MB blocks on the forked
@@ -54,30 +77,39 @@ chain, without considering them excessive. Effectively this will
 raise the allowed block size on the fork network to a minimum of 8MB
 regardless of user's EB configuration.
 
-NOTE: default EB value of 16,000,000 should ensure most clients will
+NOTE 1: BU's default EB value of 16,000,000 should ensure most clients will
 follow the chain without problems. This lifting would give time to
 others to raise their EB.
+
+NOTE 2: It has been suggested to replace this requirement with a startup
+check that the user's configured EB >= 8MB.
 
 ### REQ-4-2 (set MG to minimum of 8MB at fork)
 
 If BUIP055 is not disabled (see REQ-DISABLE), the client shall, for
-blocks generated with MTP >= fork time, set the mining generated
+blocks generated with MTP >= activation time, set the mining generated
 (MG) size to the maximum of 8,000,000 (bytes) and the user's
 configured MG.
 
-RATIONALE: To immediately generation of up to 8MB blocks on the
+RATIONALE: To immediately allow generation of up to 8MB blocks on the
 forked chain. Effectively this will raise the allowed block size for
 mining on the fork to a minimum of 8MB regardless of user's MG
 configuration.
 
+NOTE 1: It has been suggested that this requirement is miner policy
+and not needed in this BUIP.
+
 ### REQ-5 (Re-org Protection)
 
-Once the fork has activated (median time past of active chain tip
-exceeds fork time), the client shall not allow a re-organization
+Once the fork has activated (i.e. MTP(T.parent) of active chain tip T
+exceeds activation time), the client shall not allow a re-organization
 which would remove the fork block.
 
 RATIONALE: To prevent the fork chain from being continually
 re-organized by an attacker.
+
+NOTE: It has been suggested to remove this requirement entirely, since
+the re-org protection is already afforded by REQ-3. TBD
 
 ### REQ-6-1 (disallow special OP_RETURN-marked transactions)
 
@@ -108,26 +140,19 @@ constraint introduced by REQ-6-1.
 
 ### REQ-DISABLE (disable fork by setting fork time to 0)
 
-If the fork time is configured to 0, the client shall not enforce
+If the activation time is configured to 0, the client shall not enforce
 the new consensus rules of BUIP055, including the activation of the
-fork, the size constraint at a certain time, and the easing of EB/AD
-restrictions for any blocks. RATIONALE: To make it possible to use
-such a release as a compatible client with legacy chain / i.e. to
-decide to not follow the HF on one's node / make a decision at late
-stage without needing to change client.
+fork, the size constraint at a certain time, and the enforcing of EB/AD
+constraints at startup.
+
+RATIONALE: To make it possible to use such a release as a compatible
+client with legacy chain / i.e. to decide to not follow the HF on one's
+node / make a decision at late stage without needing to change client.
 
 
 ## Test Plan
 
 What follows are rough descriptions of test cases.
-
-Definitions applying below:
-
-"Large block" means a block satisfying 1,000,000 bytes < block
-size <= EB, where EB is as adjusted by REQ-4-1 and a regular block
-is a block up to 1,000,000 bytes in size.
-
-"Core rules" means all blocks <= 1,000,000 bytes (Base block size).
 
 NOTE: ** wording for excessive in 3, 4, 5, and invalid in 6, 7,
 needs to be considered carefully.  I recommend BUIP 55 forcing EB
@@ -144,7 +169,8 @@ core rules, as is presently the case.
 ### TEST-2
 
 If BUIP 55 is disabled, a regular block  is accepted at or
-after the "fork time" without being considered invalid.
+after the activation time (as determined by MTP(block.parent)
+without being considered invalid.
 
 ### TEST-3
 
@@ -153,28 +179,24 @@ have time < activation time.
 
 ### TEST-4
 
-If enabled, a large block is not considered excessive if its
-timestamp >= activation time <--- even after fork, it must be
-subject to EB unless it is the fork block, imo. We need something
-more precise than >= activation time for the fork block.  <-- I
-think we should not accept a fork block >8MB to avoid the risk of an
-attack block constructed much larger.
+If enabled, a large block B is not considered excessive if
+MTP(B.parent) >= activation time
 
 ### TEST-5
 
-If enabled, a large block is not considered excessive if its
-timestamp < activation time provided a prior block has timestamp >=
-activation time.
+If enabled, a large block B is not considered excessive if
+MTP(B.parent) < activation time, provided a prior block A has
+MTP(A.parent) >= activation time.
 
 ### TEST-6
 
-If enabled, a regular block that is the first >= activation time
-is considered invalid (satisfy REQ-3).
+If enabled, a regular block R that is the first such that
+MTP(R.parent) >= activation time is considered invalid (satisfy REQ-3).
 
 ### TEST-7
 
-If enabled, a regular block that is not the first >= activation
-time is considered valid.
+If enabled, a regular block R that is not the first such that
+MTP(R.parent) >= activation time is considered valid.
 
 ### TEST-8
 
@@ -189,7 +211,7 @@ disabled.  And vice versa (enabled -> disabled).
 
 ### TEST-10
 
-If enabled, if a large <8mb block is produced, ensure that the
+If enabled, if a large but < 8MB block is produced, ensure that the
 degenerate case of sigops heavy instructions does not unduly affect
 validation times above and beyond the standard expected if BUIP055
 is not enabled.

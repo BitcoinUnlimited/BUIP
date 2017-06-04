@@ -1,12 +1,18 @@
-# BUIP 055 Technical Specification (* time-based)
+# BUIP-UAHF Technical Specification
 
-(*) BUIP055 currently specifies a block height fork. This
-specification is currently based around a time-based fork due to
-miner requests. It should be possible to change easily to a
-height-based fork - the sense of the requirement's would largely
-stay the same.
 
-Definitions applying below:
+## Introduction
+
+This document described proposed requirements and design for a
+User-Assisted Hard Fork (UAHF).
+
+BUIP 55 specified a block height fork. This BUIP-UAHF specification is
+inspired by the idea of a flag day, but changed to a time-based fork due
+to miner requests. It should be possible to change easily to a height-based
+fork - the sense of the requirements would largely stay the same.
+
+
+## Definitions
 
 MTP: the "median time past" value of a block, calculated from the
 nTime values of its past up to 11 ancestors, as obtained by the
@@ -29,17 +35,18 @@ is a block up to 1,000,000 bytes in size.
 
 ### REQ-1 (fork by default)
 
-The client (with BUIP055 implementation) shall default to activating
+The client (with BUIP-UAHF implementation) shall default to activating
 a hard fork with new consensus rules as specified by the remaining
 requirements.
 
-RATIONALE:: It is better to make the BUIP055 active by default in a
+RATIONALE:: It is better to make the UAHF active by default in a
 special HF release version. Users have to download a version capable
 of HF anyway, it is more convenient for them if the default does not
 require them to make additional configuration.
 
 NOTE 1: It will be possible to disable the fork behavior (see
 REQ-DISABLE)
+
 
 ### REQ-2 (configurable activation time)
 
@@ -51,7 +58,8 @@ RATIONALE: Make it configurable to adapt easily to UASF activation
 time changes.
 
 NOTE 1: Configuring a "activation time" value of zero (0) shall disable
-any BUIP055 hard fork special rules (see REQ-DISABLE)
+any BUIP-UAHF hard fork special rules (see REQ-DISABLE)
+
 
 ### REQ-3 (fork block must be > 1MB)
 
@@ -66,9 +74,10 @@ NOTE: It has been suggested not to accept a fork block > 8MB to avoid
 the risk of an attack block constructed much larger.
 TBD if this requirement should be amended to include that rule.
 
+
 ### REQ-4-1 (set EB to minimum of 8MB at fork)
 
-If BUIP055 is not disabled (see REQ-DISABLE) and the MTP of a block
+If BUIP-UAHF is not disabled (see REQ-DISABLE) and the MTP of a block
 is greater than or equal to the activation time, the client shall set EB
 to the maximum of 8,000,000 (bytes) and the user's configured EB.
 
@@ -84,9 +93,10 @@ others to raise their EB.
 NOTE 2: It has been suggested to replace this requirement with a startup
 check that the user's configured EB >= 8MB.
 
+
 ### REQ-4-2 (set MG to minimum of 8MB at fork)
 
-If BUIP055 is not disabled (see REQ-DISABLE), the client shall, for
+If BUIP-UAHF is not disabled (see REQ-DISABLE), the client shall, for
 blocks generated with MTP >= activation time, set the mining generated
 (MG) size to the maximum of 8,000,000 (bytes) and the user's
 configured MG.
@@ -98,6 +108,7 @@ configuration.
 
 NOTE 1: It has been suggested that this requirement is miner policy
 and not needed in this BUIP.
+
 
 ### REQ-5 (Re-org Protection)
 
@@ -111,14 +122,16 @@ re-organized by an attacker.
 NOTE: It has been suggested to remove this requirement entirely, since
 the re-org protection is already afforded by REQ-3. TBD
 
+
 ### REQ-6-1 (disallow special OP_RETURN-marked transactions)
 
 Once the fork has activated, transactions containing an OP_RETURN output
 with a specific magic data value shall be considered invalid.
 
 RATIONALE: To give users on the legacy chain (or other fork chains)
-an opt-in way to exclude their transactions from processing on the BUIP055
+an opt-in way to exclude their transactions from processing on the BUIP-UAHF
 fork chain.
+
 
 ### REQ-6-2 (opt-in signature shift via nHashType)
 
@@ -126,7 +139,7 @@ Once the fork has activated, transactions shall not be deemed  invalid if
 adding a certain magic value to the nHashType before the hash is calculated
 results in a successful signature verification.
 
-RATIONALE: To give users on the BUIP055 chain an opt-in way to encumber
+RATIONALE: To give users on the BUIP-UAHF chain an opt-in way to encumber
 replay of their transactions to the legacy chain (and other forks which may
 consider such transactions invalid).
 
@@ -138,10 +151,11 @@ NOTE 2: The client shall still accept transactions whose signatures
 verify according to pre-fork rules, subject to the additional OP_RETURN
 constraint introduced by REQ-6-1.
 
+
 ### REQ-DISABLE (disable fork by setting fork time to 0)
 
 If the activation time is configured to 0, the client shall not enforce
-the new consensus rules of BUIP055, including the activation of the
+the new consensus rules of BUIP-UAHF, including the activation of the
 fork, the size constraint at a certain time, and the enforcing of EB/AD
 constraints at startup.
 
@@ -166,21 +180,25 @@ for fork block and a while after.
 If BUIP 55 is disabled a large block is considered to break
 core rules, as is presently the case.
 
+
 ### TEST-2
 
 If BUIP 55 is disabled, a regular block  is accepted at or
 after the activation time (as determined by MTP(block.parent)
 without being considered invalid.
 
+
 ### TEST-3
 
 If enabled, a large block is considered excessive if all blocks
 have time < activation time.
 
+
 ### TEST-4
 
 If enabled, a large block B is not considered excessive if
 MTP(B.parent) >= activation time
+
 
 ### TEST-5
 
@@ -188,20 +206,24 @@ If enabled, a large block B is not considered excessive if
 MTP(B.parent) < activation time, provided a prior block A has
 MTP(A.parent) >= activation time.
 
+
 ### TEST-6
 
 If enabled, a regular block R that is the first such that
 MTP(R.parent) >= activation time is considered invalid (satisfy REQ-3).
+
 
 ### TEST-7
 
 If enabled, a regular block R that is not the first such that
 MTP(R.parent) >= activation time is considered valid.
 
+
 ### TEST-8
 
 A small block more-work chain does not get re-orged to from a big
 block chain after activation has kicked in.
+
 
 ### TEST-9
 
@@ -209,17 +231,20 @@ Test that enabling after being disabled renders a small chain going
 past activation invalid that was previously valid owing to it being
 disabled.  And vice versa (enabled -> disabled).
 
+
 ### TEST-10
 
 If enabled, if a large but < 8MB block is produced, ensure that the
 degenerate case of sigops heavy instructions does not unduly affect
-validation times above and beyond the standard expected if BUIP055
+validation times above and beyond the standard expected if BUIP-UAHF
 is not enabled.
+
 
 ### TEST-11
 
 Test that linear scaling of 20,000 sigops / MB works for block
 sizes > 1MB (rounding block size up to nearest MB) (ref. BUIP040).
+
 
 ### TEST-12
 
@@ -227,7 +252,7 @@ sizes > 1MB (rounding block size up to nearest MB) (ref. BUIP040).
 clients.)
 
 Test what happens when the unmodified BU / Core / other clients are
-used on a datadir where the BUIP 055 client has been run. Should
+used on a datadir where the BUIP 55 client has been run. Should
 test again data from disabled (Core rules data, should be fine) ,
 and enabled (big block data stored - may need to rebuild DB? or
 provide tool to truncate the data back to pre-fork block?)

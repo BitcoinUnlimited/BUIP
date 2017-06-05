@@ -101,20 +101,26 @@ miners have indicated in the past that they would be willing to support
 such a size, and the current network is capable of handling it.
 
 
-### REQ-4-2 (set MG to minimum of 8MB at fork)
+### REQ-4-2 (require user to specify suitable *new* MG at startup)
 
-If BUIP-UAHF is not disabled (see REQ-DISABLE), the client shall, for
-blocks generated with MTP >= activation time, set the mining generated
-(MG) size to the maximum of 8,000,000 (bytes) and the user's
-configured MG.
+If BUIP-UAHF is not disabled (see REQ-DISABLE), the client shall require
+the user to specify a new mining generation limit (MG) greater than
+1,000,000 bytes but not exceeding 8,000,000 bytes.
 
-RATIONALE: To immediately allow generation of up to 8MB blocks on the
-forked chain. Effectively this will raise the allowed block size for
-mining on the fork to a minimum of 8MB regardless of user's MG
-configuration.
+RATIONALE: This ensures a suitable MG can be set at the activation time
+without having to magically increase MG against potential user wishes.
+It forces the user (miner) to decide on what size blocks they want to
+produce from the fork onwards.
 
-NOTE 1: It has been suggested that this requirement is miner policy
-and not needed in this BUIP.
+NOTE 1: The default value of MG in the released client needs to remain
+1MB so that the client can be used for mining prior to the fork.
+The default new MG value (when BUIP-UAHF is enabled) is recommended to be
+set to 8MB.
+
+NOTE 2: The DEFAULT_MAX_GENERATED_BLOCK_SIZE in the released client needs
+to remain 1,000,000 bytes so that the client will not generate invalid
+blocks before the fork activates. At activation time, however, the new
+MG value specified by the user (default: 8MB) will take effect.
 
 
 ### REQ-5 (removed)

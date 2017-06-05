@@ -75,23 +75,17 @@ the risk of an attack block constructed much larger.
 TBD if this requirement should be amended to include that rule.
 
 
-### REQ-4-1 (set EB to minimum of 8MB at fork)
+### REQ-4-1 (require EB configured to least 8MB at startup)
 
-If BUIP-UAHF is not disabled (see REQ-DISABLE) and the MTP of a block
-is greater than or equal to the activation time, the client shall set EB
-to the maximum of 8,000,000 (bytes) and the user's configured EB.
+If BUIP-UAHF is not disabled (see REQ-DISABLE), the client shall enforce
+that EB is configured to at least 8,000,000 (bytes) by raising an error
+during startup requesting the user to ensure adequate configuration.
 
-RATIONALE: To immediately allow up to 8MB blocks on the forked
-chain, without considering them excessive. Effectively this will
-raise the allowed block size on the fork network to a minimum of 8MB
-regardless of user's EB configuration.
+RATIONALE: To avoids a need to surreptitiously increase EB to 8MB blocks
+during fork activation for those users who had it configured to < 8M.
 
-NOTE 1: BU's default EB value of 16,000,000 should ensure most clients will
-follow the chain without problems. This lifting would give time to
-others to raise their EB.
-
-NOTE 2: It has been suggested to replace this requirement with a startup
-check that the user's configured EB >= 8MB.
+NOTE 1: BU's default EB value of 16,000,000 should ensure most BU users
+will be able follow the chain without problems.
 
 
 ### REQ-4-2 (set MG to minimum of 8MB at fork)

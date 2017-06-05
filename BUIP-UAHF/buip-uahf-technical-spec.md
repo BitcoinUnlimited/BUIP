@@ -75,7 +75,7 @@ the risk of an attack block constructed much larger.
 TBD if this requirement should be amended to include that rule.
 
 
-### REQ-4-1 (require EB configured to least 8MB at startup)
+### REQ-4-1 (require EB configured to at least 8MB at startup)
 
 If BUIP-UAHF is not disabled (see REQ-DISABLE), the client shall enforce
 that EB is configured to at least 8,000,000 (bytes) by raising an error

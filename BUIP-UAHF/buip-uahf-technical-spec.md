@@ -110,27 +110,7 @@ NOTE 1: It has been suggested that this requirement is miner policy
 and not needed in this BUIP.
 
 
-### REQ-5 (Re-org Protection)
-
-Once the fork has activated (i.e. MTP(T.parent) of active chain tip T
-exceeds activation time), the client shall not allow a re-organization
-which would remove the fork block.
-
-RATIONALE: To prevent the fork chain from being continually
-re-organized by an attacker.
-
-NOTE: It has been suggested to remove this requirement entirely, since
-the re-org protection is already afforded by REQ-3. TBD
-
-
-### REQ-6-1 (disallow special OP_RETURN-marked transactions)
-
-Once the fork has activated, transactions containing an OP_RETURN output
-with a specific magic data value shall be considered invalid.
-
-RATIONALE: To give users on the legacy chain (or other fork chains)
-an opt-in way to exclude their transactions from processing on the BUIP-UAHF
-fork chain.
+### REQ-5 (removed)
 
 
 ### REQ-6-2 (opt-in signature shift via nHashType)

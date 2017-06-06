@@ -30,6 +30,13 @@ is a block up to 1,000,000 bytes in size.
 
 "Core rules" means all blocks <= 1,000,000 bytes (Base block size).
 
+"BU tx/sigops rules" means the existing additional consensus rules (1) and
+(2) below, used by the Bitcoin Unlimited client for blocks larger than 1MB:
+1. maximum sigops per block is calculated based on the actual size of
+a block using
+max_block_sigops = 20,000 * (max(blocksize, 1,000,000) / 1,000,000)
+2. maximum allowed size of a single transaction is 1,000,000 bytes
+
 
 ## Requirements
 

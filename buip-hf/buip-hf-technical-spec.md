@@ -260,4 +260,42 @@ provide tool to truncate the data back to pre-fork block?)
 
 ## Design
 
-TBD
+
+### Implementation of Configurable Parameters
+
+Parameters shall be implemented as CTweaks using the prefix "fork."  There shall be three parameters.  The name of the parameter is given in bold, the "help" in italics, and additional commentary for this design document only follows in normal face.
+
+<dl>
+<dt>fork.time</dt>
+<dd><i>Unix epoch time in seconds that indicates when to fork.  The fork occurs on the block AFTER the median time of the last 11 blocks is greater than or equal to this time</i>
+<p>The default setting for this is 8MB.  [fulfills REQ-2]</p>
+</dd>
+
+<dt>fork.excessiveBlock</dt>
+<dd><i>The excessive block setting shall be set to this value on the fork block, if it is lower.</i>
+<p>The default for this setting is 8MB. [fulfills REQ-4-1]</p>
+</dd>
+
+<dt>fork.blockSize</dt>
+<dd><i>The mining maximum block size (mining.blockSize) shall be set to this value on the fork block.  This setting must be >= 1MB</i>
+<p>The default for this setting is 8MB [fulfills TBD req]</dd>
+</dl>
+
+
+### Determination of the fork block
+
+It is dangerous to determine the fork block globally because a chain re-org could change it.  Instead, whether the next block is a fork block or not is a property of the block on the chain tip.  There are two important pieces of information to provide:
+1. Is the next block the forking block? The first block on the fork -- this block MUST be greater than 1MB, so must be handled specially.
+2. Is the next block any block on the fork?  Subsequent on-fork blocks have different handling than pre-fork.
+
+Two member functions will be added to CBlock index to return this data:
+
+bool CBlockIndex::forkAtNextBlock(int time);
+bool CBlockIndex::IsforkActiveOnNextBlock(int time);
+
+These functions will be implemented using the existing "GetMedianTimePast()" function.
+
+So to determine whether the next block is the fork block on the currently active tip use:
+```c++
+chainActive.Tip().forkAtNextBlock(forkTime);
+```

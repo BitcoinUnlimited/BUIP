@@ -127,6 +127,16 @@ and not needed in this BUIP.
 ### REQ-5 (removed)
 
 
+### REQ-6-1 (disallow special OP_RETURN-marked transactions)
+
+Once the fork has activated, transactions containing an OP_RETURN output
+with a specific magic data value shall be considered invalid.
+
+RATIONALE: To give users on the legacy chain (or other fork chains)
+an opt-in way to exclude their transactions from processing on the BUIP-UAHF
+fork chain.
+
+
 ### REQ-6-2 (opt-in signature shift via hash type)
 
 Once the fork has activated, a transaction shall not be deemed invalid if

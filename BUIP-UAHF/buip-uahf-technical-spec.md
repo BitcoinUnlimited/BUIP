@@ -147,8 +147,8 @@ NOTE 2: The client shall still accept transactions whose signatures
 verify according to pre-fork rules, subject to the additional OP_RETURN
 constraint introduced by REQ-6-1.
 
-NOTE 3: If bit 6 is not set, only the traditional non-shifted nHashType
-will be used to compute the hash and verify the signature.
+NOTE 3: If bit 6 is not set, only the unmodified nHashType will be used
+to compute the hash and verify the signature.
 
 
 ### REQ-DISABLE (disable fork by setting fork time to 0)

@@ -61,14 +61,14 @@ NOTE 1: Configuring a "activation time" value of zero (0) shall disable
 any BUIP-UAHF hard fork special rules (see REQ-DISABLE)
 
 
-### REQ-3 (fork block must be > 1MB and <= 8MB)
+### REQ-3 (fork block must be > 1MB)
 
 The client shall enforce a block size larger than 1,000,000 bytes
-but not exceeding 8,000,000 for the fork block.
+for the fork block.
 
 RATIONALE: This enforces the hard fork from the original 1MB
-chain, prevents a re-organization of the forked chain to
-the original chain, and guards against an attacking much larger fork block.
+chain and prevents a re-organization of the forked chain to
+the original chain.
 
 
 ### REQ-4-1 (set EB to minimum of 8MB at fork)

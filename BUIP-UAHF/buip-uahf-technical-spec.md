@@ -113,11 +113,13 @@ and not needed in this BUIP.
 ### REQ-5 (removed)
 
 
-### REQ-6-2 (opt-in signature shift via nHashType)
+### REQ-6-2 (opt-in signature shift via hash type)
 
-Once the fork has activated, transactions shall not be deemed  invalid if
-adding a certain magic value to the nHashType before the hash is calculated
-results in a successful signature verification.
+Once the fork has activated, a transaction shall not be deemed invalid if
+the following are true in combination:
+- the nHashType has bit 6 set (mask 0x40)
+- adding a magic 'fork id' value to the nHashType before the hash is
+  calculated allows a successful signature verification
 
 RATIONALE: To give users on the BUIP-UAHF chain an opt-in way to encumber
 replay of their transactions to the legacy chain (and other forks which may
@@ -130,6 +132,9 @@ signed in this special way. However, this does require a counter hard fork.
 NOTE 2: The client shall still accept transactions whose signatures
 verify according to pre-fork rules, subject to the additional OP_RETURN
 constraint introduced by REQ-6-1.
+
+NOTE 3: If bit 6 is not set, only the traditional non-shifted nHashType
+will be used to compute the hash and verify the signature.
 
 
 ### REQ-DISABLE (disable fork by setting fork time to 0)

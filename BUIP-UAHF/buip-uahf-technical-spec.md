@@ -24,6 +24,9 @@ shall comply with the new consensus rules introduced by this BUIP.
 "fork block": the first block in the active chain whose nTime is past the
 activation time.
 
+"fork EB": the user-specified value that EB shall be set to at
+activation time. EB can be adjusted post-activation by the user.
+
 "Large block" means a block satisfying 1,000,000 bytes < block
 size <= EB, where EB is as adjusted by REQ-4-1 and a regular block
 is a block up to 1,000,000 bytes in size.
@@ -75,17 +78,17 @@ the risk of an attack block constructed much larger.
 TBD if this requirement should be amended to include that rule.
 
 
-### REQ-4-1 (require EB configured to at least 8MB at startup)
+### REQ-4-1 (require "fork EB" configured to at least 8MB at startup)
 
 If BUIP-UAHF is not disabled (see REQ-DISABLE), the client shall enforce
-that EB is configured to at least 8,000,000 (bytes) by raising an error
-during startup requesting the user to ensure adequate configuration.
+that the "fork EB" is configured to at least 8,000,000 (bytes) by raising
+an error during startup requesting the user to ensure adequate configuration.
 
-RATIONALE: To avoids a need to surreptitiously increase EB to 8MB blocks
-during fork activation for those users who had it configured to < 8M.
-
-NOTE 1: BU's default EB value of 16,000,000 should ensure most BU users
-will be able follow the chain without problems.
+RATIONALE: Users need to be able to run with their usual EB prior to the
+fork (e.g. some are running EB1 currently). The fork code needs to adjust
+this EB automatically to a > 1MB value. 8MB is chosen as a minimum since
+miners have indicated in the past that they would be willing to support
+such a size, and the current network is capable of handling it.
 
 
 ### REQ-4-2 (set MG to minimum of 8MB at fork)

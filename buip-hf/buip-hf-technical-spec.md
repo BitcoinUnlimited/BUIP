@@ -30,6 +30,20 @@ is a block up to 1,000,000 bytes in size.
 
 "Core rules" means all blocks <= 1,000,000 bytes (Base block size).
 
+"BU tx/sigops rules" means the existing additional consensus rules (1) and
+(2) below, as formalized by BUIP040 [1] and used by the Bitcoin Unlimited
+client's excessive checks for blocks larger than 1MB:
+1. maximum sigops per block is calculated based on the actual size of
+a block using
+max_block_sigops = 20000 * ceil((max(blocksize, 1000000) / 1000000))
+2. maximum allowed size of a single transaction is 1,000,000 bytes (1MB)
+NOTE 1: In plain English, the maximum allowed sigops per block is
+20K sigops per the size of the block, rounded up to nearest integer in MB.
+i.e. 20K if <= 1MB, 40K for the blocks > 1MB and up to 2MB, etc.
+NOTE 2: BU treats both rules (1) and (2) as falling under the Emergent
+Consensus rules (AD). Other clients may choose to implement them as
+firm rules at their own risk.
+
 
 ## Requirements
 
@@ -110,34 +124,16 @@ NOTE 1: It has been suggested that this requirement is miner policy
 and not needed in this BUIP.
 
 
-### REQ-5 (Re-org Protection)
-
-Once the fork has activated (i.e. MTP(T.parent) of active chain tip T
-exceeds activation time), the client shall not allow a re-organization
-which would remove the fork block.
-
-RATIONALE: To prevent the fork chain from being continually
-re-organized by an attacker.
-
-NOTE: It has been suggested to remove this requirement entirely, since
-the re-org protection is already afforded by REQ-3. TBD
+### REQ-5 (removed)
 
 
-### REQ-6-1 (disallow special OP_RETURN-marked transactions)
+### REQ-6-2 (opt-in signature shift via hash type)
 
-Once the fork has activated, transactions containing an OP_RETURN output
-with a specific magic data value shall be considered invalid.
-
-RATIONALE: To give users on the legacy chain (or other fork chains)
-an opt-in way to exclude their transactions from processing on the BUIP-UAHF
-fork chain.
-
-
-### REQ-6-2 (opt-in signature shift via nHashType)
-
-Once the fork has activated, transactions shall not be deemed  invalid if
-adding a certain magic value to the nHashType before the hash is calculated
-results in a successful signature verification.
+Once the fork has activated, a transaction shall not be deemed invalid if
+the following are true in combination:
+- the nHashType has bit 6 set (mask 0x40)
+- adding a magic 'fork id' value to the nHashType before the hash is
+  calculated allows a successful signature verification
 
 RATIONALE: To give users on the BUIP-UAHF chain an opt-in way to encumber
 replay of their transactions to the legacy chain (and other forks which may
@@ -150,6 +146,9 @@ signed in this special way. However, this does require a counter hard fork.
 NOTE 2: The client shall still accept transactions whose signatures
 verify according to pre-fork rules, subject to the additional OP_RETURN
 constraint introduced by REQ-6-1.
+
+NOTE 3: If bit 6 is not set, only the traditional non-shifted nHashType
+will be used to compute the hash and verify the signature.
 
 
 ### REQ-DISABLE (disable fork by setting fork time to 0)
@@ -256,6 +255,11 @@ used on a datadir where the BUIP 55 client has been run. Should
 test again data from disabled (Core rules data, should be fine) ,
 and enabled (big block data stored - may need to rebuild DB? or
 provide tool to truncate the data back to pre-fork block?)
+
+
+## References
+
+[1] https://bitco.in/forum/threads/buip040-passed-emergent-consensus-parameters-and-defaults-for-large-1mb-blocks.1643/
 
 
 ## Design

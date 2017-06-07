@@ -30,6 +30,20 @@ is a block up to 1,000,000 bytes in size.
 
 "Core rules" means all blocks <= 1,000,000 bytes (Base block size).
 
+"BU tx/sigops rules" means the existing additional consensus rules (1) and
+(2) below, as formalized by BUIP040 [1] and used by the Bitcoin Unlimited
+client's excessive checks for blocks larger than 1MB:
+1. maximum sigops per block is calculated based on the actual size of
+a block using
+max_block_sigops = 20000 * ceil((max(blocksize, 1000000) / 1000000))
+2. maximum allowed size of a single transaction is 1,000,000 bytes (1MB)
+NOTE 1: In plain English, the maximum allowed sigops per block is
+20K sigops per the size of the block, rounded up to nearest integer in MB.
+i.e. 20K if <= 1MB, 40K for the blocks > 1MB and up to 2MB, etc.
+NOTE 2: BU treats both rules (1) and (2) as falling under the Emergent
+Consensus rules (AD). Other clients may choose to implement them as
+firm rules at their own risk.
+
 
 ## Requirements
 
@@ -241,6 +255,11 @@ used on a datadir where the BUIP 55 client has been run. Should
 test again data from disabled (Core rules data, should be fine) ,
 and enabled (big block data stored - may need to rebuild DB? or
 provide tool to truncate the data back to pre-fork block?)
+
+
+## References
+
+[1] https://bitco.in/forum/threads/buip040-passed-emergent-consensus-parameters-and-defaults-for-large-1mb-blocks.1643/
 
 
 ## Design

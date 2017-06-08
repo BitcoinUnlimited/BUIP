@@ -137,7 +137,7 @@ RATIONALE: To give users on the legacy chain (or other fork chains)
 an opt-in way to exclude their transactions from processing on the BUIP-HF
 fork chain. The sunset clause block height is calculated as approximately
 1 year after currently planned UASF activation time (Aug 1 2017 00:00:00 GMT),
-rounded to an easier to remember number.
+rounded down to a human friendly number.
 
 NOTE: Transactions with such OP_RETURNs shall be considered valid again
 for block 530,001 and onwards.

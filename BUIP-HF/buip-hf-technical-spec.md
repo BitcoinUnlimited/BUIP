@@ -127,14 +127,20 @@ specified by the user (default: 8MB) will take effect.
 ### REQ-5 (removed)
 
 
-### REQ-6-1 (disallow special OP_RETURN-marked transactions)
+### REQ-6-1 (disallow special OP_RETURN-marked transactions with sunset clause)
 
 Once the fork has activated, transactions containing an OP_RETURN output
-with a specific magic data value shall be considered invalid.
+with a specific magic data value shall be considered invalid until
+block 530,000 inclusive.
 
 RATIONALE: To give users on the legacy chain (or other fork chains)
 an opt-in way to exclude their transactions from processing on the BUIP-HF
-fork chain.
+fork chain. The sunset clause block height is calculated as approximately
+1 year after currently planned UASF activation time (Aug 1 2017 00:00:00 GMT),
+rounded to an easier to remember number.
+
+NOTE: Transactions with such OP_RETURNs shall be considered valid again
+for block 530,001 and onwards.
 
 
 ### REQ-6-2 (opt-in signature shift via hash type)

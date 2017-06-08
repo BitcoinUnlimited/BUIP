@@ -80,13 +80,9 @@ any BUIP-UAHF hard fork special rules (see REQ-DISABLE)
 The client shall enforce a block size larger than 1,000,000 bytes
 for the fork block.
 
-RATIONALE: This both enforces the hard fork from the original 1MB
-chain, and also prevents a re-organization of the forked chain to
+RATIONALE: This enforces the hard fork from the original 1MB
+chain and prevents a re-organization of the forked chain to
 the original chain.
-
-NOTE: It has been suggested not to accept a fork block > 8MB to avoid
-the risk of an attack block constructed much larger.
-TBD if this requirement should be amended to include that rule.
 
 
 ### REQ-4-1 (set EB to minimum of 8MB at fork)

@@ -44,9 +44,11 @@ client's excessive checks for blocks larger than 1MB:
 a block using
 max_block_sigops = 20000 * ceil((max(blocksize, 1000000) / 1000000))
 2. maximum allowed size of a single transaction is 1,000,000 bytes (1MB)
+
 NOTE 1: In plain English, the maximum allowed sigops per block is
 20K sigops per the size of the block, rounded up to nearest integer in MB.
 i.e. 20K if <= 1MB, 40K for the blocks > 1MB and up to 2MB, etc.
+
 NOTE 2: BU treats both rules (1) and (2) as falling under the Emergent
 Consensus rules (AD). Other clients may choose to implement them as
 firm rules at their own risk.

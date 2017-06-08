@@ -143,7 +143,7 @@ Once the fork has activated, a transaction shall not be deemed invalid if
 the following are true in combination:
 - the nHashType has bit 6 set (mask 0x40)
 - adding a magic 'fork id' value to the nHashType before the hash is
-  calculated allows a successful signature verification
+  calculated allows a successful signature verification as per REQ-6-3
 
 RATIONALE: To give users on the BUIP-HF chain an opt-in way to encumber
 replay of their transactions to the legacy chain (and other forks which may
@@ -159,6 +159,19 @@ constraint introduced by REQ-6-1.
 
 NOTE 3: If bit 6 is not set, only the unmodified nHashType will be used
 to compute the hash and verify the signature.
+
+
+### REQ-6-3 (use adapted BIP143 hash algorithm for protected transactions)
+
+Once the fork has activated, any transaction that has bit 6 set in its
+hash type shall have its signature hash computed using a minimally revised
+form of the transaction digest algorithm specified in BIP143.
+
+RATIONALE: see Motivation section of BIP143 [2].
+
+NOTE 1: refer to [3] for the specificaton of the revised transaction
+digest based on BIP143. Revisions were made to account for non-Segwit
+deployment.
 
 
 ### REQ-DISABLE (disable fork by setting fork time to 0)
@@ -270,6 +283,10 @@ provide tool to truncate the data back to pre-fork block?)
 ## References
 
 [1] https://bitco.in/forum/threads/buip040-passed-emergent-consensus-parameters-and-defaults-for-large-1mb-blocks.1643/
+
+[2] https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki#Motivation
+
+[3] TODO: link to revised BIP143 transaction specification
 
 
 ## Design

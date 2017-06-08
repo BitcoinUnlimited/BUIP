@@ -24,6 +24,9 @@ shall comply with the new consensus rules introduced by this BUIP.
 "fork block": the first block in the active chain whose nTime is past the
 activation time.
 
+"fork EB": the user-specified value that EB shall be set to at
+activation time. EB can be adjusted post-activation by the user.
+
 "Large block" means a block satisfying 1,000,000 bytes < block
 size <= EB, where EB is as adjusted by REQ-4-1 and a regular block
 is a block up to 1,000,000 bytes in size.
@@ -85,23 +88,17 @@ chain and prevents a re-organization of the forked chain to
 the original chain.
 
 
-### REQ-4-1 (set EB to minimum of 8MB at fork)
+### REQ-4-1 (require "fork EB" configured to at least 8MB at startup)
 
-If BUIP-UAHF is not disabled (see REQ-DISABLE) and the MTP of a block
-is greater than or equal to the activation time, the client shall set EB
-to the maximum of 8,000,000 (bytes) and the user's configured EB.
+If BUIP-UAHF is not disabled (see REQ-DISABLE), the client shall enforce
+that the "fork EB" is configured to at least 8,000,000 (bytes) by raising
+an error during startup requesting the user to ensure adequate configuration.
 
-RATIONALE: To immediately allow up to 8MB blocks on the forked
-chain, without considering them excessive. Effectively this will
-raise the allowed block size on the fork network to a minimum of 8MB
-regardless of user's EB configuration.
-
-NOTE 1: BU's default EB value of 16,000,000 should ensure most clients will
-follow the chain without problems. This lifting would give time to
-others to raise their EB.
-
-NOTE 2: It has been suggested to replace this requirement with a startup
-check that the user's configured EB >= 8MB.
+RATIONALE: Users need to be able to run with their usual EB prior to the
+fork (e.g. some are running EB1 currently). The fork code needs to adjust
+this EB automatically to a > 1MB value. 8MB is chosen as a minimum since
+miners have indicated in the past that they would be willing to support
+such a size, and the current network is capable of handling it.
 
 
 ### REQ-4-2 (set MG to minimum of 8MB at fork)

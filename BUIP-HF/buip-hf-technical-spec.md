@@ -124,7 +124,26 @@ blocks before the fork activates. At activation time, however, the "fork MG"
 specified by the user (default: 8MB) will take effect.
 
 
-### REQ-5 (removed)
+### REQ-5 (max tx / max block sigops rules for blocks > 1 MB)
+
+Blocks larger than 1,000,000 shall be subject to "BU tx/sigops rules"
+as follows:
+
+1. maximum sigops per block shall be calculated based on the actual size of
+a block using
+`max_block_sigops = 20000 * ceil((max(blocksize_bytes, 1000000) / 1000000))`
+
+2. maximum allowed size of a single transaction shall be 1,000,000 bytes
+
+NOTE 1: Blocks up to and including 1,000,000 bytes in size shall be subject
+to existing pre-fork Bitcoin consensus rules.
+
+NOTE 2: Transactions exceeding 100,000 bytes (100KB) shall remain
+non-standard after the activation time, meaning they will not be relayed.
+
+NOTE 3: BU treats both rules (1) and (2) as falling under the Emergent
+Consensus rules (AD). Other clients may choose to implement them as
+firm rules at their own risk.
 
 
 ### REQ-6-1 (disallow special OP_RETURN-marked transactions)

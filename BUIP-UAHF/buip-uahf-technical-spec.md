@@ -27,6 +27,10 @@ activation time.
 "fork EB": the user-specified value that EB shall be set to at
 activation time. EB can be adjusted post-activation by the user.
 
+"fork MG": the user-specified value that MG shall be set to at activation
+time. It must be > 1MB. The user can adjust MG to any value once the
+fork has occurred (not limited to > 1MB after the fork).
+
 "Large block" means a block satisfying 1,000,000 bytes < block
 size <= EB, where EB is as adjusted by REQ-4-1 and a regular block
 is a block up to 1,000,000 bytes in size.
@@ -101,20 +105,21 @@ miners have indicated in the past that they would be willing to support
 such a size, and the current network is capable of handling it.
 
 
-### REQ-4-2 (set MG to minimum of 8MB at fork)
+### REQ-4-2 (require user to specify suitable *new* MG at startup)
 
-If BUIP-UAHF is not disabled (see REQ-DISABLE), the client shall, for
-blocks generated with MTP >= activation time, set the mining generated
-(MG) size to the maximum of 8,000,000 (bytes) and the user's
-configured MG.
+If BUIP-UAHF is not disabled (see REQ-DISABLE), the client shall require
+the user to specify a "fork MG" (mining generation size) greater than
+1,000,000 bytes.
 
-RATIONALE: To immediately allow generation of up to 8MB blocks on the
-forked chain. Effectively this will raise the allowed block size for
-mining on the fork to a minimum of 8MB regardless of user's MG
-configuration.
+RATIONALE: This ensures a suitable MG is set at the activation time so
+that a mining node would produce a fork block compatible with REQ-3.
+It also forces the user (miner) to decide on what size blocks they want to
+produce immediately after the fork.
 
-NOTE 1: It has been suggested that this requirement is miner policy
-and not needed in this BUIP.
+NOTE 1: The DEFAULT_MAX_GENERATED_BLOCK_SIZE in the released client needs
+to remain 1,000,000 bytes so that the client will not generate invalid
+blocks before the fork activates. At activation time, however, the "fork MG"
+specified by the user (default: 8MB) will take effect.
 
 
 ### REQ-5 (removed)

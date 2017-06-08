@@ -286,9 +286,7 @@ provide tool to truncate the data back to pre-fork block?)
 
 [2] https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki#Motivation
 
-[3] TODO: link to revised BIP143 transaction specification
+[3] [Digest for replay protected signature verification accross hard forks](replay-protected-sighash.md)
 
 
-## Design
-
-TBD
+END

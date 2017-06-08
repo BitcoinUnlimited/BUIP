@@ -1,12 +1,12 @@
-# BUIP-UAHF Technical Specification
+# BUIP-HF Technical Specification
 
 
 ## Introduction
 
-This document described proposed requirements and design for a
-User-Assisted Hard Fork (UAHF).
+This document described proposed requirements and design for a block size
+Hard Fork (HF).
 
-BUIP 55 specified a block height fork. This BUIP-UAHF specification is
+BUIP 55 specified a block height fork. This BUIP-HF specification is
 inspired by the idea of a flag day, but changed to a time-based fork due
 to miner requests. It should be possible to change easily to a height-based
 fork - the sense of the requirements would largely stay the same.
@@ -58,11 +58,11 @@ firm rules at their own risk.
 
 ### REQ-1 (fork by default)
 
-The client (with BUIP-UAHF implementation) shall default to activating
+The client (with BUIP-HF implementation) shall default to activating
 a hard fork with new consensus rules as specified by the remaining
 requirements.
 
-RATIONALE:: It is better to make the UAHF active by default in a
+RATIONALE:: It is better to make the HF active by default in a
 special HF release version. Users have to download a version capable
 of HF anyway, it is more convenient for them if the default does not
 require them to make additional configuration.
@@ -81,7 +81,7 @@ RATIONALE: Make it configurable to adapt easily to UASF activation
 time changes.
 
 NOTE 1: Configuring a "activation time" value of zero (0) shall disable
-any BUIP-UAHF hard fork special rules (see REQ-DISABLE)
+any BUIP-HF hard fork special rules (see REQ-DISABLE)
 
 
 ### REQ-3 (fork block must be > 1MB)
@@ -96,7 +96,7 @@ the original chain.
 
 ### REQ-4-1 (require "fork EB" configured to at least 8MB at startup)
 
-If BUIP-UAHF is not disabled (see REQ-DISABLE), the client shall enforce
+If BUIP-HF is not disabled (see REQ-DISABLE), the client shall enforce
 that the "fork EB" is configured to at least 8,000,000 (bytes) by raising
 an error during startup requesting the user to ensure adequate configuration.
 
@@ -109,7 +109,7 @@ such a size, and the current network is capable of handling it.
 
 ### REQ-4-2 (require user to specify suitable *new* MG at startup)
 
-If BUIP-UAHF is not disabled (see REQ-DISABLE), the client shall require
+If BUIP-HF is not disabled (see REQ-DISABLE), the client shall require
 the user to specify a "fork MG" (mining generation size) greater than
 1,000,000 bytes.
 
@@ -133,7 +133,7 @@ Once the fork has activated, transactions containing an OP_RETURN output
 with a specific magic data value shall be considered invalid.
 
 RATIONALE: To give users on the legacy chain (or other fork chains)
-an opt-in way to exclude their transactions from processing on the BUIP-UAHF
+an opt-in way to exclude their transactions from processing on the BUIP-HF
 fork chain.
 
 
@@ -145,7 +145,7 @@ the following are true in combination:
 - adding a magic 'fork id' value to the nHashType before the hash is
   calculated allows a successful signature verification
 
-RATIONALE: To give users on the BUIP-UAHF chain an opt-in way to encumber
+RATIONALE: To give users on the BUIP-HF chain an opt-in way to encumber
 replay of their transactions to the legacy chain (and other forks which may
 consider such transactions invalid).
 
@@ -164,7 +164,7 @@ to compute the hash and verify the signature.
 ### REQ-DISABLE (disable fork by setting fork time to 0)
 
 If the activation time is configured to 0, the client shall not enforce
-the new consensus rules of BUIP-UAHF, including the activation of the
+the new consensus rules of BUIP-HF, including the activation of the
 fork, the size constraint at a certain time, and the enforcing of EB/AD
 constraints at startup.
 
@@ -245,7 +245,7 @@ disabled.  And vice versa (enabled -> disabled).
 
 If enabled, if a large but < 8MB block is produced, ensure that the
 degenerate case of sigops heavy instructions does not unduly affect
-validation times above and beyond the standard expected if BUIP-UAHF
+validation times above and beyond the standard expected if BUIP-HF
 is not enabled.
 
 

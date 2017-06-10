@@ -1,5 +1,5 @@
 <pre>
-BUIP???: Demonstration of Miner Active Protocol Improvement
+BUIP???: Demonstration of Miner Active Protocol Upgrade
 Proposer: LIN Zheming
 Submitted on: ?
 Status: draft

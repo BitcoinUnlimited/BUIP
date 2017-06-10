@@ -3,7 +3,7 @@
 
 ## Introduction
 
-This document described proposed requirements for a block size Hard Fork (HF).
+This document describes proposed requirements for a block size Hard Fork (HF).
 
 BUIP 55 specified a block height fork. This BUIP-HF specification is
 inspired by the idea of a flag day, but changed to a time-based fork due

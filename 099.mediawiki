@@ -58,19 +58,31 @@ At this point, the protocol upgrade phase in.<br/>
 
 ==Benefits==
 
-1. 仅需要多数的矿工发信号后即可激活。在中本聪的比特币论文中，99.9% 的可能性下，55% 的矿工将在 340 个区块后确保成为最长链。这将最大可能减小通过控制少数算力而拖延网络升级的可能性。我们可以预见到在算力信号超过 51% 后，将迅速的在第一个宽限期后进行升级。<br/>
+1. 仅需要多数的矿工发信号后即可激活。在中本聪的比特币论文中，99.9% 的可能性下，55% 的矿工将在 340 个区块后确保成为最长链。这将最大可能减小通过控制少数算力而拖延网络升级的可能性。我们可以预见到在算力信号超过 51% 后，挖矿节点将迅速的在第一个宽限期内进行升级。<br/>
 2. 在两个宽限期内，钱包节点交易不受影响，有足够的时间升级钱包软件。<br/>
 3. 版本信息包含在 block header 中，并不影响 SPV 挖矿过程。（看起来是？）<br/>
 4. 在两个宽限期后，钱包节点将必须升级钱包，否则因没有算力支持将无法发送交易，也无法确认。相对于在节点间重新达成新的共识，这种状况并没有更糟糕。<br/>
 5. 钱包节点的账本将得到尊重和保护。使用链下钱包的用户将需要在钱包服务提供商的声明之后决定提至链上钱包或跟随。<br/>
 6. 将来的协议升级，可以在升级客户端版本同时绑定协议升级代码并进行独立的激活投票。这将预留足够的时间让节点升级软件以支持新的协议。即使矿工投票激活失败也不影响现状。<br/>
 
+1. The activation only required majority miners signal. Described in the paper by Satoshi Nakamoto, 55% miners will be in the longest chain after 340 blocks, with 99.9% certainty. This will minimize the possibility of delaying network upgrades by controlling a small number of hashing power. We can foresee that after 51% signaling, all miners will upgrade within the first grace period. <br/>
+2. During the first two grace periods, non-mining nodes will not be affected. They have enough time to upgrade their software. <br/>
+3. Versionbits included in block header, not influencing with the SPY mining. <br/>
+4. After two grace periods, all nodes must be upgraded. Otherwise they can not send transactions nor get any confirmations. Compared with forming new consensus among nodes, the situation is not worse at least. <br/>
+5. The ledger in non-mining wallet nodes is honored and reserved. Users of off-chain wallet service can decide whether to follow the service providers or not. <br/>
+6. Protocol upgrades in the future can be bonded with the upgrades of nodes, and the upgrades activate through miners vote independently. There would be enough time for nodes to be upgraded in order to support new protocols. Even it failed in miner activation, the situation could not be worse. <br/>
+
 ==Risks==
 
-1. 算力的波动会影响最长链的结果。因此越高的激活比例要求将减少短时间分叉的危险。
-2. 矿工可能发假信号来避免被孤立，但在钱包节点看来无法区分是否是假信号，只能升级。而钱包节点升级之后，矿工也将跟随。
-3. 钱包节点可能发假信号来仅升级版本号而不支持绑定的协议升级代码，但钱包节点数量无法判别，严肃的真实节点应当跟随可证实的矿工投票结果。
-4. 存在少部分矿工和钱包节点共谋，在新协议升级激活后依然使用老协议挖矿的可能。这种可能随时发生无法杜绝，但通过让沉默的大多数钱包节点升级的方式可以降低这种行为带来的利益。
+1. 算力的波动会影响最长链的结果。因此越高的激活比例要求将减少短时间分叉的危险。<br/>
+2. 矿工可能发假信号来避免被孤立，但在钱包节点看来无法区分是否是假信号，只能升级。而钱包节点升级之后，矿工也将跟随。<br/>
+3. 钱包节点可能发假信号来仅升级版本号而不支持绑定的协议升级代码，但钱包节点数量无法判别，严肃的真实节点应当跟随可证实的矿工投票结果。<br/>
+4. 存在少部分矿工和钱包节点共谋，在新协议升级激活后依然使用老协议挖矿的可能。这种可能随时发生无法杜绝，但通过让沉默的大多数钱包节点升级的方式可以降低这种行为带来的利益。<br/>
+
+1. The fluctuation of the hashing power will affect the result of the longest chain. Higher activating requirement means less dangerous of temporary fork. <br/>
+2. Miners could just signal to avoid being orphaned, but in the point of view of non-mining wallet nodes, they can't differ the false signal from true. They must upgrade assumes the signal are all true. After all the non-mining nodes upgrades, the miners signaling false signal should follow. <br/>
+3. Non-mining wallet nodes could false signal without supporting the new protocol. But since the total number of nodes can not be decided, serious nodes should follow the proven result provided by miners vote. <br/>
+4. Miners and non-mining nodes could have conspiracy that they could fork using old protocol consensus. It can't be eliminated as always. But through most passive non-mining nodes being upgraded, the benefit of such is reduced. <br/>
 
 ==Implementation==
 ___TBD___

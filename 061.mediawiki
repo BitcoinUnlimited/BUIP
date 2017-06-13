@@ -31,11 +31,14 @@ Apart from ensuring the asset security of wallet nodes, this method can be used 
 
 ==Proposal==
 
-1. 挖矿节点将使用 versionbits 版本位来定义支持信号。<br/>
-2. 挖矿节点将使用 tx version 来定义当前的交易版本。<br/>
+1. 挖矿节点将使用 versionbits 版本位来定义支持信号。BUIP 生效时，所有区块需要使用制定的 nVersion 来发送信号<br/>
+2. 挖矿节点将使用 tx version 来定义当前的交易版本。当前的 tx version 是 1，将允许 tx version 为 2 的交易，并在第二个宽限期之后，使 tx version 为 1 的交易非法。<br/>
+3. 在可选的第四阶段时，可以重新允许 tx version 是 1 的交易。<br/>
 
-1. Mining nodes signal by setting a version bit.<br/>
-2. Mining nodes will use tx version to define current version of transactions.<br/>
+1. Mining nodes signal by setting a version bit. While this BUIP is active, all blocks must set the chosen nVersion.<br/>
+2. Mining nodes will use tx version to define current version transactions. Current tx version is 1, and tx version 2 will be allowed. After the second grace period, tx version 1 will be regarded as invalid.<br/>
+3. TX version 1 can be re-enable in fourth stage described below.
+
 
 协议升级，将分成三步逐步实施。并有一个可选的第四步来集成协议升级代码。<br/>
 

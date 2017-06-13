@@ -1,7 +1,7 @@
 <pre>
 BUIP061: Demonstration of Phase in Full Network Upgrade Activated by Miners
 Proposer: LIN Zheming
-Submitted on: ?
+Submitted on: 2017-06-12
 Status: draft
 </pre>
 

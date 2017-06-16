@@ -1,0 +1,95 @@
+<pre>
+BUIP061: Demonstration of Phase in Full Network Upgrade Activated by Miners
+Proposer: LIN Zheming
+Submitted on: 2017-06-13
+Status: draft
+</pre>
+
+==Summary==
+
+本方法并不是来源于个人，而是中文比特币社区中集体智慧的结果。<br/>
+This idea was not created by an individual but is a product of collaboration in the Chinese bitcoin community between different interest groups.<br/>
+
+这是一种在协议升级时，对全网挖矿和非挖矿节点进行保护和激励的方法，避免不参与挖矿的节点没有升级的动力而受到损失。<br/>
+This method is put forth to incentivize and to protect mining nodes and non-mining nodes during protocol upgrading. With this incentive mechanism, the non-mining nodes will not suffer monetary loss from chain splitting.<br/>
+
+发信号的多数矿工在达到激活条件后第一个宽限期（一个难度周期）后设置新区块版本号，孤立未升级矿工的低版本号的块。通过最初的中本聪共识，在第一个宽限期结束后，所有矿工将升级至最新版本或使用最新版本。在第二个宽限期（一个难度周期）后，矿工将仅接受新版本的交易，未升级的客户端发送的旧版本交易将无法得到新节点的转播也无法进入新版本区块。这将在保护用户资产的同时，提醒不挖矿的钱包节点升级。并在升级代码中加入对协议进行改动的部分。钱包升级后将由挖矿节点投票实施该项改动，以达成协议改动的广泛部署。<br/>
+
+After the activation condition is met, majority miners will set a new block versionbits after the first grace period(a difficulty change of 2016 blocks). The blocks with lower versionbits will be orphaned. In terms of the Nakamoto Consensus, the end of the first grace period will force all mining nodes upgraded to signal a new version of consensus. After the second grace period ( a difficulty change of 2016 blocks), mining nodes will only accept transactions with new versionbits. Transactions from nodes not upgrading will not be relayed nor included in blocks with new versionbits. This will protect funds of non-mining nodes from utilizing replay attack and will function as a notification for them to upgrade. Codes dealing with protocol upgrade could be included in the upgrade. After the non-mining node upgrades, mining nodes will vote to activate the protocol upgrade and this will achieve the broad/widespread deployment of the protocol upgrade.<br/>
+
+在该项改动广泛部署至客户端之后，依然由其激活条件控制。<br/>
+The protocol upgrade depends on its activate condition independently even after the change deployed among nodes.<br/>
+
+==Motivation==
+
+鉴于最初的比特币协议并未考虑不参与挖矿的钱包节点，导致这些钱包节点的协议升级是被动的，懒惰的。当在升级方向上出现分歧时，矿工也不愿意在错误的链上挖矿，但矿工又没有任何方法可以确保正在延长的链是被钱包节点广泛接受的链。这将影响钱包节点的安全。<br/>
+In view of the fact that the original Bitcoin consensus did not consider the non-mining wallet nodes(as mentioned above), the result is that upgrading the consensus of these wallet nodes is passive and lazy. When there is disagreement in the direction of the upgrade, the miners have no mechanism to ensure that the chain being extended is the chain widely accepted by the wallet nodes. This also adversely affects the security of the wallet nodes.<br/>
+
+使用该方法可以在保证钱包节点资产安全的情况下，且通过增加激励让钱包节点升级协议。一旦钱包节点升级协议，保证矿工节点不仅工作在算力最长链上，还工作在比特币生态环境中其他钱包节点所使用的最长链上。在中本聪共识下不会出现分叉，以实现渐进式的协议升级。<br/>
+
+Apart from ensuring the asset security of wallet nodes, this method can be used to provide additional incentives to upgrade the protocol for the wallet nodes. Once the wallet nodes upgrade their protocol, the miners' nodes can be guaranteed to work - not only on the longest chain, but also on the longest chain used by other wallet nodes in the broader bitcoin sphere. Under the Nakamoto Consensus, there will be no persistent forks as protocol upgrades can be phased in.<br/>
+
+==Proposal==
+
+1. 挖矿节点将使用 versionbits 版本位来定义支持信号。BUIP 生效时，所有区块需要使用制定的 nVersion 来发送信号<br/>
+2. 挖矿节点将使用 tx version 来定义当前的交易版本。当前的 tx version 是 1，将允许 tx version 为 2 的交易，并在第二个宽限期之后，使 tx version 为 1 的交易非法。<br/>
+3. 在可选的第四阶段时，可以重新允许 tx version 是 1 的交易。<br/>
+
+1. Mining nodes signal by setting a version bit. While this BUIP is active, all blocks must set the chosen nVersion.<br/>
+2. Mining nodes will use tx version to define current version transactions. Current tx version is 1, and tx version 2 will be allowed. After the second grace period, tx version 1 will be regarded as invalid.<br/>
+3. TX version 1 can be re-enable in fourth stage described below.
+
+
+协议升级，将分成三步逐步实施。并有一个可选的第四步来集成协议升级代码。<br/>
+
+Protocol upgrading will phase in over three stages. We can have an optional fourth stage to integrate codes of protocol upgrade.<br/>
+
+1. 信号阶段。挖矿节点使用 versionbits 发送支持信号。挖矿节点在监测到 55% 的区块即前 1109/2016 个区块均发送了相同的支持信号，进入下一阶段。<br/>
+2. 矿工节点升级。经过了第一个宽限期 2016 的区块后，且总信号区块超过了 2218/4032，就开始使用新的区块版本打包区块，并同时开始孤立旧版本。此时所有节点和钱包，将可以使用新版本号发送交易，同时兼容旧版本号交易。<br/>
+3. 钱包节点升级。在挖矿节点监测到第二个宽限期 4032 个连续的新版本的区块后，开始拒绝旧版本号的交易，只打包／转播新版本号的交易。同时将从内存池中删除旧版本号的交易。<br/>
+4. （可选的）协议升级。在第三阶段中包含有第四阶段的升级代码。当我们确保钱包节点升级到支持新版本交易后，必然包含了第四阶段的升级代码。则此时可以通过矿工节点投票的方式完成全网络的协议升级。
+
+1. Signal stage: Mining nodes signal using BIP9. The next stage will be activated after 55% (1109) of 2016 blocks has the signal.<br/>
+
+2. Mining nodes upgrade stage: After a first grace period of 2016 blocks and total signalling blocks passed 2218 of 4032 blocks, miners broadcasting blocks with new versionbits in block headers will orphan blocks with old versionbits. At this stage all nodes can send transactions with new versionbits, and transactions with old versionbits will be compatible.<br/>
+
+3. Non-mining nodes upgrade stage: after 4032 continuous blocks with new versionbits, mining nodes will start to refuse transactions with old versionbits. Only transactions with new versionbits can be relayed and included in blocks. Transactions with old versionbits can be safely purged from memory pools.<br/>
+
+4. (Optional)Protocol Upgrade stage: The codes dealing with protocol upgrade can be integrated in the third stage. After the non-mining nodes upgrades to support newer version of transactions, the codes with protocol upgrade must be included and now we can use miner vote to activate and finish this upgrade.<br/>
+
+至此，协议升级完成。<br/>
+
+At this point, the protocol upgrade have phased in.<br/>
+
+==Benefits==
+
+1. 仅需要多数的矿工发信号后即可激活。在中本聪的比特币论文中，99.9% 的可能性下，55% 的矿工将在 340 个区块后确保成为最长链。这将最大可能减小通过控制少数算力而拖延网络升级的可能性。我们可以预见到在算力信号超过 51% 后，挖矿节点将迅速的在第一个宽限期内进行升级。<br/>
+2. 在两个宽限期内，钱包节点交易不受影响，有足够的时间升级钱包软件。<br/>
+3. 版本信息包含在 block header 中，并不影响 SPV 挖矿过程。（看起来是？）<br/>
+4. 在两个宽限期后，钱包节点将必须升级钱包，否则因没有算力支持将无法发送交易，也无法确认。相对于在节点间重新达成新的共识，这种状况并没有更糟糕。<br/>
+5. 钱包节点的账本将得到尊重和保护。使用链下钱包的用户将需要在钱包服务提供商的声明之后决定提至链上钱包或跟随。<br/>
+6. 将来的协议升级，可以在升级客户端版本同时绑定协议升级代码并进行独立的激活投票。这将预留足够的时间让节点升级软件以支持新的协议。即使矿工投票激活失败也不影响现状。<br/>
+
+1. The activation only requires majority miners signal. As described in the paper by Satoshi Nakamoto, 55% miners will be in the longest chain after 340 blocks, with 99.9% certainty. This will minimize the possibility of delaying network upgrades by controlling a small number of hashing power. We can foresee that after 51% signalling, all miners will upgrade within the first grace period. <br/>
+2. During the first two grace periods, non-mining nodes will not be affected. They have enough time to upgrade their software. <br/>
+3. Versionbits included in block header, not influencing the SPY mining. <br/>
+4. After two grace periods, all nodes must be upgraded. Otherwise they cannot send transactions or get any confirmations. Compared with forming new consensus among nodes, the situation is not worse than before. <br/>
+5. The ledger in non-mining wallet nodes is honored and reserved. Users of off-chain wallet services can decide whether or not to follow the service providers after they got the public notification from the service providers. <br/>
+6. Protocol upgrades in the future can be bonded with the upgrades of nodes, and the upgrades activate through miners vote independently. There would be enough time for nodes to be upgraded in order to support new protocols. Even in case of failing in miner activation, the situation will not worsen and the status quo will remain. <br/>
+
+
+==Risks==
+
+1. 算力的波动会影响最长链的结果。因此越高的激活比例要求将减少短时间分叉的危险。<br/>
+2. 矿工可能发假信号来避免被孤立，但在钱包节点看来无法区分是否是假信号，只能升级。而钱包节点升级之后，矿工也将跟随。<br/>
+3. 钱包节点可能发假信号来仅升级版本号而不支持绑定的协议升级代码，但钱包节点数量无法判别，严肃的真实节点应当跟随可证实的矿工投票结果。<br/>
+4. 存在少部分矿工和钱包节点共谋，在新协议升级激活后依然使用老协议挖矿的可能。这种可能随时发生无法杜绝，但通过让沉默的大多数钱包节点升级的方式可以降低这种行为带来的利益。<br/>
+
+1. The fluctuation of the hashing power will affect the result of the longest chain. Higher activating requirement means a lower risk of temporary fork. <br/>
+2. Miners could simply signal to avoid being orphaned, but from the perspective of non-mining wallet nodes, they can't distinguish the false signal from the true signal. They must upgrade with the assumption that the signals are all true. After all the non-mining nodes have upgraded, the miners signalling false signal should follow. <br/>
+3. Non-mining wallet nodes could false signal without supporting the new protocol but since the total number of nodes cannot be distinguished, genuine nodes should follow the proven result provided by miners vote. <br/>
+4. Miners and non-mining nodes could conspire to fork using old protocol consensus. It can't be eliminated, just like in the past but through most passive non-mining nodes being upgraded, their benefit is reduced. <br/>
+
+
+==Implementation==
+___TBD___

@@ -368,4 +368,10 @@ This is the current list of submitted BUIPs.
 |Andrew Clifford (@solex)
 |2017-05-22
 | ---
+|-
+|[[061.mediawiki|BUIP061]]
+|Demonstration of Phase in Full Network Upgrade Activated by Miners
+|LIN Zheming
+|2017-06-13
+|draft
 |}

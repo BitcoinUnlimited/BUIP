@@ -222,7 +222,7 @@ node / make a decision at late stage without needing to change client.
 
 [3] [Digest for replay protected signature verification accross hard forks](replay-protected-sighash.md)
 
-[4] https://github.com/BitcoinUnlimited/BUIP/blob/master/BUIP-HF/buip-hf-test-plan.md
+[4] https://github.com/BitcoinUnlimited/BUIP/blob/master/BUIP-HF/uahf-test-plan.md
 
 
 END

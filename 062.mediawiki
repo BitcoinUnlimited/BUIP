@@ -1,0 +1,49 @@
+<pre>
+BUIP062: Funded Development, aka Devpool
+Proposer: Andrew Clifford (@solex)
+Submitted on: 2017-08-24
+Status: draft
+</pre>
+
+==Motivation==
+
+Since BU was formed as an organization in November 2015 it has relied upon a combination of volunteer developers and some directly funded by BU supporters. A lot has been achieved, however, the practice of funding development authorised on a per project basis through directed BUIPs removes a lot of flexibility for general maintenance, housekeeping, refactoring, QA, none of which is functionally significant warranting a BUIP. Further, some BUIPs are passed authorising changes but do not have directed funding included.
+
+The drawbacks in this model are particularly acute now that two separate clients are being maintained, one for the existing 1MB network (and possible SW2X support), the other for the Bitcoin Cash network.
+
+==Objectives==
+
+The objective of this proposal is to enable funding of project development, short-name "Devpool", at the discretion of the Bitcoin Unlimited Lead Developer, @theZerg.
+
+==Project Duration==
+
+The funds authorised on this BUIP are for a maximum of one year. Any unspent funds revert to the consolidated fund, and a subsequent BUIP will need to be approved to continue funded development for a further year.
+
+==Project Team==
+
+Developers who wish to offer their services for project work are invited to PM theZerg directly on this forum or make contact via GitHub. Developers being paid are contractors who are responsible for their own accounting and tax reporting. Payment will be offered in either BTC or BCC (BCH), but not in fiat currency. Note, that in the event a BCC payment is required then BTC will be routed through an exchange (such as Shapeshift) to obtain the required BCC.
+
+==Summary of Approved Projects==
+
+# Passed BUIPs automatically qualify.
+# General maintenance, housekeeping, refactoring, QA and other discretionary work also qualify.
+
+==Description of Activities==
+
+The BU Developer has oversight of the projects, and work parcels, he allocates or executes work within project descriptions which he drafts and posts to this forum for general information.
+
+==Anticipated Challenges and Uncertainties==
+
+Standard development issues only.
+
+==Budget==
+
+The budget for the development pool is $160,000
+This is equivalent to a projected average of $80 per hour for 2000 hours. It is expected that several funded projects will be concurrent on occasion, but also that no funded projects might be active at other times, depending upon circumstances.
+
+The BU President and Secretary will co-authorise drawdown of these funds at the recommendation of the BU Developer when contracted developer invoices are presented for work completed.
+All projects to be individually named and separated in the annual accounts.
+
+==Impact==
+
+The overall pace and quality of BU development is expected to be improved by this initiative resulting in more BU full nodes in the global Bitcoin network, supporting large-blocks specifically and onchain-scaling generally.

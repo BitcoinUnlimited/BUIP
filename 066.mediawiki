@@ -1,0 +1,34 @@
+<pre>
+BUIP066: Ecosystem Outreach for Onchain Scaling, Part II
+Proposer: Andrew Clifford (@solex)
+Submitted on: 2017-09-02
+Status: draft
+</pre>
+
+==Motivation==
+
+In early November 2016 the operational [[034.mediawiki|BUIP034]] was approved.
+This BUIP requested $30,000 for expenditures necessary to take the messages of onchain scaling and the BU vision to decision-makers in as many of the Bitcoin ecosystem companies as possible. Also do what is possible to counter the small-blocker disinformation campaign which has been so effective in keeping Bitcoin capacity crippled. The approved funds for this purpose were spent in several different ways:
+Delegations were sent to China in late November 2016 and late March 2017 for meeting various mining pool owners, exchanges, mining hardware makers, and making presentations at events.
+A number of conferences were attended by BU officers, in each case representing the organization and while not always formally speaking, no opportunity was wasted to advance the cause of onchain scaling, decentralized development, and other aspects of BU's vision.
+A campaign of reddit advertising on r/Bitcoin and r/btc was undertaken in 2017 using this funding.
+Meetings and presentations at individual companies.
+Funding of the high-fee transaction website. http://www.blockbounties.info/
+
+The following summary was presented recently with the draft accounts:
+[[File:media/buip066.jpg|frameless|hi]]
+
+==Objectives==
+
+To continue with more outreach initiatives building on the results from BUIP034. It remains worthwhile to continue meeting CEOs, CTOs and staff in bitcoin businesses. There is also a new landscape since Bitcoin Cash has been launched because it is now possible to try and win back many of the use-cases which have been squeezed out from Bitcoin due to the high fees and transaction limit, so outreach efforts are not limited to simply persuading people that Bitcoin can scale, but to direct them to a Bitcoin that is ready to scale!
+
+==Funding==
+
+Budget: $30,000 over a six-month period commencing from the date of vote (if successful).
+Commitment of funds will only be made for focused initiatives and costs directly incurred in ecosystem outreach, of a similar nature to those undertaken in BUIP034. The elected BU officials: President, Secretary and Developer will jointly agree expenditures for outreach initiatives.
+
+==Impact==
+
+The stream is becoming unblocked on several fronts. Bitcoin Cash is ready and able to grow its global usage. Segwit2x may yet permit real scaling in Bitcoin. Whatever happens, 2017 is a crucial year for Bitcoin, especially with such a high price level where the market is expecting hundreds of times more volume than the meagre 3 TPS (or a similarly meagre Segwit 5 TPS)
+
+BU expenditures on outreach can only help realise true scaling initiatives so that Bitcoin investors' and users' expectations are met.

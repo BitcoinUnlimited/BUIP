@@ -374,4 +374,40 @@ This is the current list of submitted BUIPs.
 |LIN Zheming
 |2017-06-13
 |draft
+|-
+|[[062.mediawiki|BUIP062]]
+|Funded Development, aka Devpool
+|Andrew Clifford (@solex)
+|2017-08-24
+|draft
+|-
+|[[063.mediawiki|BUIP063]]
+|Support Bitcoin Cash with an official implementation
+|Andrew Clifford (@solex)
+|2017-09-01
+|draft
+|-
+|[[064.mediawiki|BUIP064]]
+|Support Segwit2x with an official implementation
+|Andrew Clifford (@solex)
+|2017-09-01
+|draft
+|-
+|[[065.mediawiki|BUIP065]]
+|Gigablock Testnet Initiative
+|Peter Rizun (@Peter R)
+|2017-08-28
+|draft
+|-
+|[[066.mediawiki|BUIP066]]
+|Ecosystem Outreach for Onchain Scaling, Part II
+|Andrew Clifford (@solex)
+|2017-09-02
+|draft
+|-
+|[[067.mediawiki|BUIP067]]
+|New Members for Election #7
+|Andrew Clifford (@solex)
+|2017-09-09
+| ---
 |}

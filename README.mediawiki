@@ -313,25 +313,25 @@ This is the current list of submitted BUIPs.
 |Add CompactBlocks support
 |freetrader
 |2017-04-13
-|draft
+|passed
 |-
 |[[052.mediawiki|BUIP052]]
 |Set up dedicated Continuous Integration
 |freetrader
 |2017-04-15
-|draft
+|passed
 |-
 |[[053.mediawiki|BUIP053]]
 |Tweakable client DoS responses
 |freetrader
 |2017-05-01
-|draft
+|passed
 |-
 |[[054.mediawiki|BUIP054]]
 |Make AD optional and disabled by default
 |freetrader
 |2017-05-05
-|draft
+|closed
 |-
 |[[055.mediawiki|BUIP055]]
 |Increase the Block Size Limit at a Fixed Block Height
@@ -355,7 +355,7 @@ This is the current list of submitted BUIPs.
 |Dynamic checkpoints
 |freetrader
 |2017-05-19
-|draft
+|withdrawn
 |-
 |[[059.mediawiki|BUIP059]]
 |Make "sticky gate" optional (disabled by default)

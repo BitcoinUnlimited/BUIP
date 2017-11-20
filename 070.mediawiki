@@ -21,13 +21,15 @@ Implement a new address format that only needs minimal changes on the wallet sid
 Use the new address format which has been implemented by BitPay in their Copay wallet by changing the version byte of the address.
 The version byte is set to 28 for p2pkh addresses and 40 for p2sh addresses.
 
-Example p2pkh
-Old format: 1422ciKobfkK2Zk3TpNSebmEBEtDHEP5nG
-New format: CKUvBkfsUiiqvheU9ZhNE7PFoN6d99oMoo
 
-Example p2sh
-Old format: 36XTMVtgJqqNYymsSvRonpUsbZRGkm1jvX
-New format: HBMZpJKmAA43B9euJc5xmD1QdDSHh9j6kR
+;Example p2pkh
+: Old format: 1422ciKobfkK2Zk3TpNSebmEBEtDHEP5nG
+: New format: CKUvBkfsUiiqvheU9ZhNE7PFoN6d99oMoo
+
+
+;Example p2sh
+: Old format: 36XTMVtgJqqNYymsSvRonpUsbZRGkm1jvX
+: New format: HBMZpJKmAA43B9euJc5xmD1QdDSHh9j6kR
 
 ==Development task==
 

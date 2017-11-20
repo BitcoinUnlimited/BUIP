@@ -38,5 +38,6 @@ Should there be no consensus on the specification than it is up to the Bitcoin U
 ==References==
 
 [https://github.com/Bitcoin-UAHF/spec/blob/master/cashaddr.md Specs: Address format for Bitcoin Cash]
+
 [https://lists.linuxfoundation.org/pipermail/bitcoin-ml/2017-November/000472.html bitcoin-ml discussion]
 

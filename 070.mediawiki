@@ -42,6 +42,8 @@ BUCash should develop the following:
 ==References==
 
 [https://support.bitpay.com/hc/en-us/articles/115004671663 BitPay's blog about the new address format]
+
 [https://bitpay.github.io/address-translator/ BitPay's address translator]
+
 [https://bitcoinclassic.com/news/release137uahf.html Basic support in Bitcoin Classic 1.3.7]
 

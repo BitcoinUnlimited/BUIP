@@ -410,4 +410,16 @@ This is the current list of submitted BUIPs.
 |Andrew Clifford (@solex)
 |2017-09-09
 | ---
+|-
+|[[070.mediawiki|BUIP070]]
+|Support BitPay's new Bitcoin Cash address format in BUCash
+|Gal Buki (@torusJKL)
+|2017-11-08
+| ---
+|-
+|[[076.mediawiki|BUIP076]]
+|Support Base32 address format in BUCash
+|Gal Buki (@torusJKL)
+|2017-11-17
+| ---
 |}

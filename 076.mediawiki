@@ -1,6 +1,6 @@
 <pre>
 BUIP076: Support Base32 address format in BUCash
-Proposer: Gal Buki
+Proposer: Gal Buki (@torusJKL)
 Submitted on: 2017-11-17
 Status: draft
 </pre>

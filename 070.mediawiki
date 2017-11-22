@@ -1,6 +1,6 @@
 <pre>
 BUIP070: Support BitPay's new Bitcoin Cash address format in BUCash
-Proposer: Gal Buki
+Proposer: Gal Buki (@torusJKL)
 Submitted on: 2017-11-08
 Status: draft
 </pre>

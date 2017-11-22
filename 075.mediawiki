@@ -1,0 +1,25 @@
+<pre>
+BUIP075: Counter BUIP of BUIP071
+Proposer: @torusJKL
+Submitted on: 2017-11-13
+Status: Draft
+</pre>
+
+
+==Summary==
+
+This BUIP is the same as BUIP071 with the following change.
+
+The text:
+
+<blockquote>
+Additionally, this BUIP, if passed, would give BU's Lead Developer the authority to provide a bespoke version of the "Bitcoin Core" branch for miners which creates empty SegWit blocks.
+</blockquote>
+
+is removed without providing any substitute.
+
+Should BUIP071 remove the above text and not place another with the same meaning in its place then this counter BUIP can be revoked and not made available for vote.
+
+==Conflict of interest==
+
+The author holds some BTC but mainly BCH.

@@ -4,7 +4,6 @@ Proposer: Gal Buki (@torusJKL)
 Submitted on: 2017-11-08
 Status: draft
 </pre>
-
 ==Motivation==
 
 Bitcoin and Bitcoin Cash share the same address format.
@@ -12,9 +11,11 @@ This had the effect that users have sent BTC or BCH to an address that was used 
 
 In addition users have sent BCH to SegWit addresses making them unspendable on the BCH chain even if the owner had the private key.
 
+
 ==Objectives==
 
 Implement a new address format that only needs minimal changes on the wallet side but would make the addresses distinguishable from each other such that users do not send funds to addresses from wallets that use the BTC chain.
+
 
 ==Solution==
 

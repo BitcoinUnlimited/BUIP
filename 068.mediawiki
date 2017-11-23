@@ -1,0 +1,49 @@
+<pre>
+BUIP068: The Future of Bitcoin 2 Conference
+Proposer: Antony Zegers (@Mengerian)
+Submitted on: 2017-11-01
+Status: Draft
+</pre>
+
+==Summary==
+
+This is an Operational BUIP requesting Bitcoin Unlimited (BU) membership approve the allocation of USD $50,000 of BU funds, plus an additional USD $10,000 contingency, to sponsor the next "The Future of Bitcoin" conference.
+
+The conference will build on the success of the last The Future of Bitcoin Conference, which was sponsored by Bitcoin Unlimited by [[047.mediawiki|BUIP 047]] [1], and was held in Arnhem [[https://www.thefutureofbitcoin.com/|June 29 - July 1 2017]] [2].
+
+==Location and Date==
+
+Proposed location: Tokyo, Japan
+
+Proposed date: 23-25 March 2018
+
+Both of these particulars may be subject to change if deemed necessary by conference organizers.
+
+==Objectives==
+
+The purpose of the conference is to bring together noted Bitcoin figures, developers, academics, miners and enthusiasts to overview, discuss, critique and prioritize many of the leading enhancements to develop Bitcoin and Bitcoin Cash into the future, including improvements which enable a far higher capacity for transactional throughput on-chain.
+
+Goals for the conference include:
+
+# BU will assist by sponsoring and helping to organize the conference, but the intent is for the conference not to be BU specific, and open and welcoming to other groups.
+
+# One of the themes of the prior conference was Bitcoin’s multiple implementations. This was very successful and provided a technical focus for the conference. This conference will broaden to include other topics, but the intention is to keep a primarily technical and research focus.
+
+# Attendance will be targeted to be around 1-2 times the size of the Arnhem conference (ie, 140-280 attendees). The duration of the conference will be extended to three days (Arnhem conference was two days).
+
+# Intent is to provide high-quality [[https://www.youtube.com/playlist?list=PLW5YLgBF2qh_1NKB3hW24cg26KSTCsTjY|video recordings and live-streaming]] of the presentations and panel discussions, similar to the last conference [3].
+
+# There will be an open “call for proposals” for presentations. The conference will do its best to make the program be inclusive and representative of various groups in the Bitcoin, Bitcoin Cash, and wider cryptocurrency community.
+
+# Funding to pay expenses for key-note speakers/attendees. Partial expenses may be offered on a case-by-case basis.
+
+# Publicity for Bitcoin Unlimited itself as a growing center of excellence for Bitcoin research and full-node software development.
+
+
+==References==
+
+[1] BUIP 047: https://bitco.in/forum/threads/buip047-the-future-of-bitcoin-development-scaling-conference.1848/
+
+[2] The Future of Bitcoin website: https://www.thefutureofbitcoin.com/
+
+[3] Videos of talks from Arnhem conference: https://www.youtube.com/playlist?list=PLW5YLgBF2qh_1NKB3hW24cg26KSTCsTjY

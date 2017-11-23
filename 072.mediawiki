@@ -1,0 +1,16 @@
+<pre>
+BUIP072: Partially re-weight BU's funds towards BCH
+Proposer: Peter Rizun (@Peter R)
+Submitted on: 2017-11-13
+Status: Draft
+</pre>
+
+==Go "partial Norway"==
+
+With the failure of the NYA network upgrade scheduled for Block 494,784, it has become increasingly clear that the BTC token has limited long term viability due to extremely high transaction fees and unreliable confirmations. This BUIP proposes to adjust BU's BTC holdings (presently 640 BTC) by trading 150 BTC in exchange for an additional 500 - 1000 BCH.
+
+The trades would be carried out over the months of November and December at the discretion of the President, Secretary and Lead Developer of BU (the three key holders). Coins will be stored in multisig wallets with keys held by the three BU officers at all points in time.
+
+==Conflict of Interest==
+
+The author holds both BTC and BCH tokens.

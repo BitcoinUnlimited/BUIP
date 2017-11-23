@@ -1,6 +1,6 @@
 <pre>
 BUIP075: Counter BUIP of BUIP071
-Proposer: @torusJKL
+Proposer: Gal Buki (@torusJKL)
 Submitted on: 2017-11-13
 Status: Draft
 </pre>

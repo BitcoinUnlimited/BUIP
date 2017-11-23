@@ -1,6 +1,6 @@
 <pre>
 BUIP 071: Make Bitcoin Cash the "Release" Version of Bitcoin Unlimited
-Proposer: @Peter R (Peter Rizun)
+Proposer: Peter Rizun (@Peter R)
 Submitted on: 2017-11-13
 Status: Draft
 </pre>

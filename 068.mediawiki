@@ -1,6 +1,6 @@
 <pre>
 BUIP068: The Future of Bitcoin 2 Conference
-Proposer: @Mengerian
+Proposer: Antony Zegers (@Mengerian)
 Submitted on: 2017-11-01
 Status: Draft
 </pre>

@@ -1,6 +1,6 @@
 <pre>
 BUIP072: Partially re-weight BU's funds towards BCH
-Proposer: @Peter R (Peter Rizun)
+Proposer: Peter Rizun (@Peter R)
 Submitted on: 2017-11-13
 Status: Draft
 </pre>

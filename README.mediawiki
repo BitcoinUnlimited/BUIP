@@ -413,7 +413,7 @@ This is the current list of submitted BUIPs.
 |-
 |[[068.mediawiki|BUIP068]]
 |The Future of Bitcoin 2 Conference
-|@Mengerian
+|Antony Zegers (@Mengerian)
 |2017-11-01
 |draft
 |-
@@ -423,15 +423,15 @@ This is the current list of submitted BUIPs.
 |2017-11-08
 | ---
 |-
-|[[071.mediawiki|BUIP 071]]
+|[[071.mediawiki|BUIP071]]
 |Make Bitcoin Cash the "Release" Version of Bitcoin Unlimited
-|@Peter R (Peter Rizun)
+|Peter Rizun (@Peter R)
 |2017-11-13
 |draft
 |-
 |[[072.mediawiki|BUIP072]]
 |Partially re-weight BU's funds towards BCH
-|@Peter R (Peter Rizun)
+|Peter Rizun (@Peter R)
 |2017-11-13
 |draft
 |-
@@ -449,7 +449,7 @@ This is the current list of submitted BUIPs.
 |-
 |[[075|BUIP075]]
 |Counter BUIP of BUIP071
-|@torusJKL
+|Gal Buki (@torusJKL)
 |2017-11-13
 |draft
 |-

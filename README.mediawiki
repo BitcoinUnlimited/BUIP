@@ -145,7 +145,7 @@ This is the current list of submitted BUIPs.
 |XInv
 |Peter Tschipper
 |2016-07-30
-|draft
+|passed
 |-
 |[[023.mediawiki|BUIP023]]
 |Miner block creation latency optimization
@@ -162,7 +162,13 @@ This is the current list of submitted BUIPs.
 |[[025.mediawiki|BUIP025]]
 |BU "Bronze Sponsor" at Scaling Bitcoin, Milan, Italy
 |Andrew Clifford
-|2916-09-10
+|2016-09-10
+|passed crowdfunded
+|-
+|[[026.mediawiki|BUIP026]]
+|Bounties for Software Exploits
+|Tim Potter (sponsored by Andrew Clifford)
+|2017-03-29
 |passed
 |-
 |[[027.mediawiki|BUIP027]]
@@ -187,7 +193,7 @@ This is the current list of submitted BUIPs.
 |Website updates
 |Jerry Chan
 |2016-09-29
-|closed
+|passed
 |-
 |[[031.mediawiki|BUIP031]]
 |New Members for Election #2
@@ -301,13 +307,13 @@ This is the current list of submitted BUIPs.
 |Amend AoC to change membership period
 |Windowly
 |2017-03-18
-|draft
+|closed
 |-
 |[[050.mediawiki|BUIP050]]
 |Double yes with tie-break question
 |torusJKL
 |2017-03-18
-|draft
+|closed
 |-
 |[[051.mediawiki|BUIP051]]
 |Add CompactBlocks support
@@ -337,19 +343,19 @@ This is the current list of submitted BUIPs.
 |Increase the Block Size Limit at a Fixed Block Height
 |Peter Rizun
 |2017-05-10
-|draft
+|passed
 |-
 |[[056.mediawiki|BUIP056]]
 |Increase the Block Size Limit at a Support Threshold
 |Tomas van der Wansem (Sponsor: Zangelbert Bingledack)
 |2017-05-12
-|draft
+|passed
 |-
 |[[057.mediawiki|BUIP057]]
 |Add BIP 135 support (generalized BIP9 version bits)
 |Sancho Panza (Sponsor: Andrea Suisani)
 |2017-04-14
-|draft
+|passed
 |-
 |[[058.mediawiki|BUIP058]]
 |Dynamic checkpoints
@@ -379,31 +385,31 @@ This is the current list of submitted BUIPs.
 |Funded Development, aka Devpool
 |Andrew Clifford (@solex)
 |2017-08-24
-|draft
+|passed
 |-
 |[[063.mediawiki|BUIP063]]
 |Support Bitcoin Cash with an official implementation
 |Andrew Clifford (@solex)
 |2017-09-01
-|draft
+|passed
 |-
 |[[064.mediawiki|BUIP064]]
 |Support Segwit2x with an official implementation
 |Andrew Clifford (@solex)
 |2017-09-01
-|draft
+|rejected
 |-
 |[[065.mediawiki|BUIP065]]
 |Gigablock Testnet Initiative
 |Peter Rizun (@Peter R)
 |2017-08-28
-|draft
+|passed
 |-
 |[[066.mediawiki|BUIP066]]
 |Ecosystem Outreach for Onchain Scaling, Part II
 |Andrew Clifford (@solex)
 |2017-09-02
-|draft
+|passed
 |-
 |[[067.mediawiki|BUIP067]]
 |New Members for Election #7

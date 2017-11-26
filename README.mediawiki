@@ -1,10 +1,10 @@
-Bitcoin Unlimited Improvement Proposal Archive and related documentation
+Bitcoin Unlimited Improvement Proposal Archive and related documentation.
 
-To submit a BUIP please post your proposal at https://bitco.in/forum/forums/bitcoin-unlimited.15/ .
+To submit a BUIP please post your proposal at https://bitco.in/forum/forums/bitcoin-unlimited.15/
 
 Once we agreed on the number to assign to your proposal and copy-editing it (if needed), your proposal will
 be voted by BU members. To pass, your proposal need to gather a majority BU members votes and at the same time
-reach the quorum (see https://www.bitcoinunlimited.info/articles, art. 2 for more details)
+reach the quorum (see https://www.bitcoinunlimited.info/resources/BUarticles.pdf, Article 2 for more details).
 
 This is the current list of submitted BUIPs.
 

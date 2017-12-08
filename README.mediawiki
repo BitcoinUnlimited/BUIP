@@ -471,15 +471,27 @@ This is the current list of submitted BUIPs.
 |2017-11-19
 |draft
 |-
-|[[078.survey|BUIP078]]
+|[[078.mediawiki|BUIP078]]
 |Enable Binary Contracts in Bitcoin Cash via OP_DATASIGVERIFY
 |Andrew Stone (@thezerg)
 |2017-11-19
 |draft
 |-
-|[[079.survey|BUIP079]]
+|[[079.mediawiki|BUIP079]]
 |Publication of BUIP vote and election dates in advance
 |Gal Buki (@torusJKL)
 |2017-11-19
+|draft
+|-
+|[[080.mediawiki|BUIP080]]
+|New Members for Election #8
+|Andrew Clifford (@solex)
+|2017-11-24
+|draft
+|-
+|[[081.survey|BUIP081]]
+|Unambiguous definition of 1 year membership period
+|Gal Buki (@torusJKL)
+|2017-11-26
 |draft
 |}

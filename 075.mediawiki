@@ -2,7 +2,7 @@
 BUIP075: Counter BUIP of BUIP071
 Proposer: Gal Buki (@torusJKL)
 Submitted on: 2017-11-13
-Status: Draft
+Status: passed
 </pre>
 
 

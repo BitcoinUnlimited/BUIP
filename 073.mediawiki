@@ -2,7 +2,7 @@
 BUIP073: Fully re-weight BU's funds towards BCH
 Proposer: @Norway
 Submitted on: 2017-11-13
-Status: Draft
+Status: closed
 </pre>
 
 ==Go "Bagatell Berserk"==

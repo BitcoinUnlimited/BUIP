@@ -415,67 +415,67 @@ This is the current list of submitted BUIPs.
 |New Members for Election #7
 |Andrew Clifford (@solex)
 |2017-09-09
-| ---
+|passed
 |-
 |[[068.mediawiki|BUIP068]]
 |The Future of Bitcoin 2 Conference
 |Antony Zegers (@Mengerian)
 |2017-11-01
-|draft
+|passed
 |-
 |[[070.mediawiki|BUIP070]]
 |Support BitPay's new Bitcoin Cash address format in BUCash
 |Gal Buki (@torusJKL)
 |2017-11-08
-| ---
+|passed
 |-
 |[[071.mediawiki|BUIP071]]
 |Make Bitcoin Cash the "Release" Version of Bitcoin Unlimited
 |Peter Rizun (@Peter R)
 |2017-11-13
-|draft
+|passed
 |-
 |[[072.mediawiki|BUIP072]]
 |Partially re-weight BU's funds towards BCH
 |Peter Rizun (@Peter R)
 |2017-11-13
-|draft
+|passed
 |-
 |[[073|BUIP073]]
 |Fully re-weight BU's funds towards BCH
 |@Norway
 |2017-11-13
-|draft
+|closed
 |-
 |[[074|BUIP074]]
 |Sell the Bitcoin Gold portion of BU's funds for BCH
 |@Windowly
 |2017-11-16
-|draft
+|passed
 |-
 |[[075|BUIP075]]
 |Counter BUIP of BUIP071
 |Gal Buki (@torusJKL)
 |2017-11-13
-|draft
+|passed
 |-
 |[[076.mediawiki|BUIP076]]
 |Support Base32 address format in BUCash
 |Gal Buki (@torusJKL)
 |2017-11-17
-| ---
+|passed
 |-
 |[[077.mediawiki|BUIP077]]
 |Enable representative tokens via OP_GROUP on Bitcoin Cash
 |Andrew Stone (@thezerg)
 |2017-11-19
-|draft
+|passed
 |-
 |[[078.mediawiki|BUIP078]]
 |Enable Binary Contracts in Bitcoin Cash via OP_DATASIGVERIFY
 |Andrew Stone (@thezerg)
 |2017-11-19
-|draft
+|passed
 |-
 |[[079.mediawiki|BUIP079]]
 |Publication of BUIP vote and election dates in advance
@@ -487,11 +487,11 @@ This is the current list of submitted BUIPs.
 |New Members for Election #8
 |Andrew Clifford (@solex)
 |2017-11-24
-|draft
+|passed
 |-
-|[[081.survey|BUIP081]]
+|[[081.mediawiki|BUIP081]]
 |Unambiguous definition of 1 year membership period
 |Gal Buki (@torusJKL)
 |2017-11-26
-|draft
+|closed
 |}

@@ -3,7 +3,7 @@ BUIP080: New Members for Election #8
 Proposer: Andrea Clifford (@solex)
 Submitted on: 2017-11-24
 Voting date:  2017-12-06
-Status: draft
+Status: passed
 </pre>
 
 ==Summary==

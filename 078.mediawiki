@@ -2,7 +2,7 @@
 BUIP078: Enable Binary Contracts in Bitcoin Cash via OP_DATASIGVERIFY
 Proposer: Andrew Stone (@thezerg)
 Submitted on: 2017-11-19
-Status: draft
+Status: passed
 </pre>
 
 ==Summary==

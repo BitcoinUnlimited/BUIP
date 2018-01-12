@@ -1,0 +1,36 @@
+<pre>
+BUIP084: Secure BCH coin splitting instructions
+Proposer: @79b79aa8
+Submitted on: 2018-01-11
+Status: draft
+</pre>
+
+==Background==
+
+While many dedicated hardware and online wallets enable BCH splitting, no well-documented, open source tool / instruction set is readily available to guide users to independently and securely claim their BCH.
+
+The absence of such a tool de-incentivizes security-minded long-term adopters from using the BCH network, especially in light of the present difficulty of transferring cold storage BTC to a wallet that enables splitting.
+
+==Motivation==
+
+To harness Bitcoin’s network effect in favor of Bitcoin Cash by facilitating the separation of BCH from cold storage BTC, thereby promoting BCH usage.
+To educate users about forking and wallet management.
+
+
+==Task==
+
+Document each step required for securely transferring BCH stored in a BTC wallet.dat file to a BCH address.
+Document each step required for securely transferring BCH stored in a BTC paper wallet, paper key or redeemable code to a BCH address.
+Explain any additional steps that may be taken for peace of mind (e.g. transferring the BTC to a fresh non-deterministically derived address after performing the split).
+Post a comprehensive, detailed, fully-vetted primer on the BU website.
+
+
+==Bounty==
+
+A 0.25 BCH reward shall be paid to the author of the first version of the instructions delivered to an elected BU official that is deemed ready for a round of vetting by the membership.
+0.25 BCH shall be reserved in case contracting any supplementary services (html coding, translation, etc.) is judged desirable by the leadership before publication on the BU website.
+
+
+==Timetable==
+
+Deliverable must be posted for comments no later than four weeks after BUIP approval in order to qualify for bounty.

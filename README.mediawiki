@@ -494,4 +494,22 @@ This is the current list of submitted BUIPs.
 |Gal Buki (@torusJKL)
 |2017-11-26
 |closed
+|-
+|[[082.mediawiki|BUIP082]]
+|opt-in malleability fix
+|Gal Buki (@torusJKL)
+|2017-12-25
+|draft
+|-
+|[[083.mediawiki|BUIP083]]
+|Andrew Clifford for President
+|Andrew Clifford (@solex)
+|2018-01-06
+|draft
+|-
+|[[084.mediawiki|BUIP084]]
+|Secure BCH coin splitting instructions
+|@79b79aa8
+|2017-01-11
+|draft
 |}

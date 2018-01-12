@@ -1,0 +1,32 @@
+<pre>
+BUIP082: opt-in malleability fix
+Proposer: Gal Buki (@torusJKL)
+Submitted on: 2017-12-25
+Status: draft
+</pre>
+
+==Background==
+
+Malleability is not an issue when working only with confirmed tx.
+But if an application wants to reference an unconfirmed tx based on its tx id it could fail if said id is changed (malleate).
+
+==Motivation==
+Allow applications to use unconfirmed tx based on a non-malleable id.
+This could open up Bitcoin Cash to new technology we do not know of today.
+
+==Task==
+The Bitcoin Unlimited lead developer shall engage in the discussion with other consensus implementations and propose a solution.
+The solution can be already proposed by others or a new one.
+
+The solution must be opt-in and mustn't require existing inputs to be moved first (e.g. with SegWit where the tx has to originate from a SegWit address).
+
+==Timetable==
+The malleability fix shall be developed and to be implemented to BUCash no later than in the scheduled HF of November 2018.
+
+==References==
+
+- [[https://lists.linuxfoundation.org/pipermail/bitcoin-ml/2017-August/000117.html|Malleability fix proposal]]
+
+- [[https://lists.linuxfoundation.org/pipermail/bitcoin-ml/2017-October/000331.html|Malleability Fix SIGHASH_ANYOUTPUT]]
+
+- [[https://reviews.bitcoinabc.org/D755|Start differenciating txid and txhash]]

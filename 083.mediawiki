@@ -1,0 +1,51 @@
+<pre>
+BUIP083: Andrew Clifford for President
+Propeser: Andrew Clifford (@solex)
+Submitted on: 2018-01-06
+Status: draft
+</pre>
+
+==Background==
+
+When I submitted my first [[https://bitco.in/forum/threads/closed-passed-buip011-vote-andrew-clifford-for-president.783/|BUIP]] for this position in January 2016 its focus was on providing background information. Bitcoin Unlimited was a new organization with the clear goal of onchain scaling for Bitcoin, and a wide remit to achieve this, under the direction of the membership.
+
+The BU organization originally followed in the footsteps of XT and Classic insofar as onchain scaling was concerned, but its members also wanted to create an environment for other market-driven solutions to flourish. The flagship example is emergent consensus for a variable block-size limit. Hence, all I promised in that application was:
+
+<blockquote>
+If elected President I will do all I can to advance Bitcoin Unlimited. It is very much needed in the current climate, and I am sure this is just the start of significant progress into a bright future.
+</blockquote>
+
+Today, two questions immediately arise. How much has BU advanced? How much of that is due to the actions by the its president? The answers to both are highly subjective and contain a grey-scale of valid opinion. Fortunately, the membership of BU are those most qualified to make such an assessment.
+
+What has been done is a matter of historical record, but this is somewhat complex to interpret, due to the focus of BU's technical and scaling efforts pivoting from Bitcoin BTC and now being productive only on Bitcoin Cash. The longer time goes on, the more "big-blockers" re-weight their investment towards BCH, the more success can be measured in seeing BTC play out to its end-game in the Core development "layer-1" vision, while BCH continues the original "2008 white paper" vision. With this context, the next two years for various areas can be considered.
+
+==Membership Decision-Making==
+
+The fundamental platform of BU's philosophy is democratic governance to try and avoid a future instance of dev capture, which has already happened in Bitcoin BTC, causing massive damage to its growth. The main priority of BU's president is administrative, to carefully maintain the organization's governance structure. This structure relies upon BU improvement processes (BUIPs).
+
+The rate of BUIP creation is healthy. There have been [[https://bitco.in/forum/threads/buip-index.1414/|80-odd]] covering operational, membership and development matters. A minority have been rejected by vote, while, of those successful, some have been implemented and some await resources. Despite occasional complications, it is correct to say that the BU membership's collective will is reflected in all passed BUIPs.
+
+For 2018-19, my focus will be to continue this process, leveraging all the hard-work expended by [[https://bitco.in/forum/members/6/|@awemany]] on the voting system, to ensure that BU remains a fully functioning global organization with membership decision-making.
+
+==Ecosystem Outreach==
+
+Increasing BU's full-node count remains a priority, and this means winning hearts and minds across the Bitcoin ecosystem. This has been done physically in meetings and conferences. Maintaining a consistent presence on the organization's own twitter [[https://twitter.com/BitcoinUnlimit|account]] keeps a high profile, as this important social media, where many influential people learn information. Maintaining a consistent technically-aware and "politics-lite" message, for years, is a test of discipline, especially in the face of non-stop, corporate funded troll attacks. The success of outreach has been tempered by the public disinformation campaign against BU's name.
+
+My support will continue for BU sponsorship of conferences, particularly, helping Antony Zegers (Mengerian) with the Tokyo event in March. Also, I support the idea of a conference in Vancouver, November 2018, in partnership with UBC. A BUIP will be raised for membership consideration after Tokyo is completed.
+
+==Software Environment==
+
+Andrew Stone (theZerg) had the inspiration to create BU, taking concrete action with help from like-minded participants of the GCBU thread. The early goal of providing a serious implementation for Bitcoin BTC provided focus for improvement, which has never diminished. Unfortunately for BTC we failed to achieve onchain scaling there. Now, the BU membership has rejected SegWit. As each month passes, it gets harder to see how BU will re-engage with BTC other than continuing to provide a compatible client so that users have a full-node non-segwit wallet alternative to Core's for accessing BTC funds.
+
+My focus in 2018-19 will be ongoing admin support for the BU development environment (Github and TravisCI) while helping to foster development in general for Bitcoin Cash through regular communication with other development teams and business stake-holders.
+
+==Organization: Change and Foundation==
+
+BU is regulated by its Articles of Federation, and all actions by the president must comply with an accurate reading of the clauses. Changes to the articles can only be done with a 66% majority. Although several BUIPs have attempted to improve various clauses, none have achieved critical mass to pass. Nevertheless, there is authorization in the articles for official registration. This was exercised, in August 2015, by registering a foundation in the Sate of Colorado. However, a subsequent legal investigation into the process of obtaining 501(c) non-profit status found that such grants by the IRS have in the last few years been stalled for open-source software projects, particularly those associated with cryptocurrency. The Colorado registration was closed in October 2016. It is unfortunate that a dead-end happened, but again this is due to the fast-changing environment caused by the black-swan event which is cryptocurrency.
+
+My priority is to complete a new official registration in a favourable jurisdiction. At present the Isle of Man is the front-runner. After this, we can engage in more formal academic partnerships, and better manage funded projects to advance Bitcoin Cash.
+
+==Final Words==
+
+''Continuation'' and ''improvement''. My promise is to continue what we have started with BU, improve all facets of its operation with the goal of doing BU's part to realise Satoshi's 2008 white paper vision for the world.
+

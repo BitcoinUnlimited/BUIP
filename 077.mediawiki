@@ -2,7 +2,7 @@
 BUIP077: Enable representative tokens via OP_GROUP on Bitcoin Cash
 Proposer: Andrew Stone (@thezerg)
 Submitted on: 2017-11-19
-Status: draft
+Status: passed
 </pre>
 
 ==Summary==

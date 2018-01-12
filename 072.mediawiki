@@ -2,7 +2,7 @@
 BUIP072: Partially re-weight BU's funds towards BCH
 Proposer: Peter Rizun (@Peter R)
 Submitted on: 2017-11-13
-Status: Draft
+Status: passed
 </pre>
 
 ==Go "partial Norway"==

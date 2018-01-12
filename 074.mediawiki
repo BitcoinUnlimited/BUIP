@@ -2,7 +2,7 @@
 BUIP074: Sell the Bitcoin Gold portion of BU's funds for BCH
 Proposer: @Windowly
 Submitted on: 2017-11-16
-Status: Draft
+Status: passed
 </pre>
 
 ==Summary==

@@ -493,7 +493,7 @@ This is the current list of submitted BUIPs.
 |Unambiguous definition of 1 year membership period
 |Gal Buki (@torusJKL)
 |2017-11-26
-|closed
+|passed
 |-
 |[[082.mediawiki|BUIP082]]
 |opt-in malleability fix
@@ -505,11 +505,11 @@ This is the current list of submitted BUIPs.
 |Andrew Clifford for President
 |Andrew Clifford (@solex)
 |2018-01-06
-|draft
+|passed
 |-
 |[[084.mediawiki|BUIP084]]
 |Secure BCH coin splitting instructions
 |@79b79aa8
 |2017-01-11
-|draft
+|passed
 |}

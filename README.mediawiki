@@ -512,4 +512,34 @@ This is the current list of submitted BUIPs.
 |@79b79aa8
 |2017-01-11
 |passed
+|-
+|[[085.mediawiki|BUIP085]]
+|Double spend relaying
+|Gal Buki (@torusJKL)
+|2018-02-04
+|draft
+|-
+|[[086.mediawiki|BUIP086]]
+|bitcoincash: URI format update
+|@Brendan Lee (sponsored by @torusJKL)
+|2018-02-09
+|draft
+|-
+|[[087.mediawiki|BUIP087]]
+|Utilization of "cash" denomination
+|@Ken Shishido
+|2018-03-18
+|draft
+|-
+|[[088.mediawiki|BUIP088]]
+|Double-spend proof creation and forwarding
+|Gal Buki (@torusJKL)
+|2018-03-29
+|draft
+|-
+|[[089.mediawiki|BUIP089]]
+|Blockchain Engineer Services Contract
+|Andrew Clifford (@solex)
+|2018-04-21
+|draft
 |}

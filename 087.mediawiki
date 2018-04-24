@@ -1,0 +1,61 @@
+<pre>
+BUIP087: Utilization of "cash" denomination
+Proposer: @Ken Shishido
+Submitted on: 2018-03-18
+Status: draft
+</pre>
+
+==Abstract==
+We propose "cash" as the standard term for 100 (one hundred) satoshi or 1/1,000,000 (one one-millionth) of a bitcoin cash (BCH). Further, we propose the unofficial ISO code "XCH" to represent a cash unit (millionth of a BCH unit).
+
+==Motivation==
+BCH strives for the worldwide adoption, and unit denomination and calculation must be easy for the average users for daily transactions. And, it needs to to be differentiated from Bitcoin Core (BTC) to avoid confusion.
+
+==Rationale==
+
+# Satoshi Nakamoto, the creator of Bitcoin, has described Bitcoin as "A Peer to Peer Electronic "Cash" System" in the white paper.
+# BTC now uses "bits" for 1/1,000,000 (one one-millionth). BCH can differentiate itself from "bits", and "cash" should be the easy word to use for all the people around the world.
+# "bits" is similar to "bitte, which is an obscene slang word in French and BCH would like to be user-friendly to the Francophone peoples.
+# Another unit name would not be needed in the future. Because a Starbucks coffee would be 3,000 cash today. (say $3.00 for a cup based on 1BCH being $1,000). When BCH price increases 1,000 times from today, it will be 3 cash for a coffee, which is easy enough for everyone in the world.
+# Governments around the world are phasing out the production and use of their cash, and cash has become the very small part of the money supply. BCH would like to take this opportunity to inherit the word "cash" and the function from the governments.
+# Using the ISO code XCH permits easy representation of Bitcoin Cash amounts in all mainstream fnancial and accounting computer systems. Eight decimal places is not supported in most financial systems and this is a massive hurdle to mainstream adoption.
+
+==Potential benefits of utilizing "cash" includes:==
+
+- Reduce user error on small bitcoin amounts.
+- Reduce unit bias for users that want a "whole" bitcoin.
+- Allow easier comparisons of prices for most users.
+- Allow easier bi-directional comparisons to fiat currencies.
+- Allows all UTXO amounts to need at most 2 decimal places, which can be easier to handle.
+- XCH conforms to the ISO 4217 standard for transnational currencies, and is supportable in legacy mainstream financial systems,
+
+==Specification==
+
+Definition:
+
+<ol style="list-style-type:lower-alpha">
+  <li>1 cash = 100 satoshi. Plural of "cash" is the same "cash". The term "cash" is should not be capitalized unless used at the start of a sentence.</li>
+  <li>the code XCH to be used to represent 1 cash , as above.</li>
+</ol>
+
+All BCH-denominated items are encouraged to also show the denomination in "cash", either as the default or as an option. Some wallet applications which show "bits" will need to be approached about changing over.
+
+As BCH grows in price versus fiat currencies, it's important to give users the ability to quickly and accurately calculate prices for transactions, savings and other economic activities.
+The idea of this BIP is to formalize this name. Additionally, "cash" is likely the only other denomination that will be needed for BCH as 0.01 cash = 1 satoshi, meaning that two decimal places will be sufficient to describe any current utxo.
+
+Existing terms used in BTC such as milli-bitcoin (mBTC) micro-bitcoin (µBTC) etc are irrelevant to BCH It is recommended that "µBCH" in the full node wallet be replaced with the option of "cash" or "XCH".
+
+==Credit==
+"cash" denomination has been discussed and proposed by many people before. Authors of this BUIP take no credit for inventing the term.
+
+==Precedence==
+[[http://www.handcash.io/|HandCash]] and [[https://www.electroncash.org/|Electron Cash (version 3.1.6)]] have already implemented "cash".
+
+==Reference==
+(Special thanks to Jimmy Song)
+https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-December/015399.html
+
+==Authors:==
+- Ken Shishido
+- Jonald Fyookball
+- Andrew Clifford [XCH proposal]

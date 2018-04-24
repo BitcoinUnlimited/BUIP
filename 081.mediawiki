@@ -2,7 +2,7 @@
 BUIP081: Unambiguous definition of 1 year membership period
 Proposer: Gal Buki (@torusJKL)
 Submitted on: 2017-11-26
-Status: closed
+Status: passed
 </pre>
 
 ==Motivation==

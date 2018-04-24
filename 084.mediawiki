@@ -2,7 +2,7 @@
 BUIP084: Secure BCH coin splitting instructions
 Proposer: @79b79aa8
 Submitted on: 2018-01-11
-Status: draft
+Status: passed
 </pre>
 
 ==Background==

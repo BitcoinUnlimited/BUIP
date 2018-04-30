@@ -542,4 +542,10 @@ This is the current list of submitted BUIPs.
 |Andrew Clifford (@solex)
 |2018-04-21
 |draft
+|-
+|[[090.mediawiki|BUIP090]]
+|New Members For Election #9
+|Andrew Clifford (@solex)
+|2018-04-25
+|draft
 |}

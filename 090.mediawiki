@@ -1,0 +1,47 @@
+<pre>
+BUIP080: New Members for Election #9
+Proposer: Andrea Clifford (@solex)
+Submitted on: 2018-04-25
+Voting date:  2018-05-07
+Status: draft
+</pre>
+
+==Summary==
+
+This BUIP lists the new membership applications for Bitcoin Unlimited which have been received since the previous membership BUIP voting day. New members are not able to vote on the current BUIPs, but will be able to in subsequent votes, provided that their entry in this BUIP is passed.
+
+#[[https://bitco.in/forum/members/4562/|@sken]]
+#*Links: [[https://github.com/floreslorca|Github]]: [[https://twitter.com/lorcacons/status/960544637831335936|Twitter]]
+#*BTC public key: 17whfha8RgFhdbaxmByGRzsRBxTYS3M8y4
+#*https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-13#post-61067
+#[[https://bitco.in/forum/members/6282/|@micropresident]]
+#*Links: [[https://github.com/schancel|Github]]
+#*BTC public key: 1J4o9cXz2ybPsgXQf1H4GrKAdfuLLxUbnY
+#*https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-13#post-61594
+#[[https://bitco.in/forum/members/7239/|@Daniel Lipshitz]]
+#*Links: [[http://www.gap600.com/|GAP600]]
+#*BTC public key:1HK2S5iXZZ4TYt1osvaLY6TqJMkkjEdpzA
+#*https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-13#post-61740
+#[[https://bitco.in/forum/members/365/|@Jonathan Vaage]]
+#*Links:
+#*BTC public key: 1581sovLFohMPPaxYG5gYLLGjmnemagc21
+#*https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-14#post-62491
+#[[https://bitco.in/forum/members/6774/|@reina]]
+#*Links: [[https://www.yours.org/@reinanakamoto|Yours]]: [[https://twitter.com/mindstatex|Twitter]]
+#*BTC public key: 1KSp6dmtF7EKZyaBpdWFL4qeG8nkMcb7LS
+#*https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-13#post-59891
+
+Prospective members are asked to provide a public key which they will use for voting. Bitcoin Unlimited is a participatory organization where we do ask that people devote a small amount of time, every couple of months to guide the direction of the software and org itself.
+
+More links to external posting history (e.g. Twitter, Medium, Facebook, Reddit) are welcome, and I'll add them here. In the current adversarial climate the links prove helpful to existing members to make their evaluation.
+
+edit: reina added
+
+<pre>
+------BEGIN BITCOIN SIGNED MESSAGE-----
+BUIP090 sken micropresident DanielLipshitz JonathanVaage
+-----BEGIN BITCOIN SIGNATURE-----
+15TiujYmnHa33fjEnasBBm1eWcGx9YEXPL
+IMscAe5dyfp7sQJNT/oklLzbWG4o678a9wq18WUgHg2nEncK9p+IFvTNXVJnPs+Dbhc4LlFFyxpuw2Qpf2ta5Nc=
+-----END BITCOIN SIGNED MESSAGE-----
+</pre>

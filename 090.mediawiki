@@ -35,13 +35,13 @@ Prospective members are asked to provide a public key which they will use for vo
 
 More links to external posting history (e.g. Twitter, Medium, Facebook, Reddit) are welcome, and I'll add them here. In the current adversarial climate the links prove helpful to existing members to make their evaluation.
 
-edit: reina added
+edit: reina added, also sig updated
 
 <pre>
 ------BEGIN BITCOIN SIGNED MESSAGE-----
-BUIP090 sken micropresident DanielLipshitz JonathanVaage
+BUIP090 sken micropresident DanielLipshitz JonathanVaage Reina
 -----BEGIN BITCOIN SIGNATURE-----
 15TiujYmnHa33fjEnasBBm1eWcGx9YEXPL
-IMscAe5dyfp7sQJNT/oklLzbWG4o678a9wq18WUgHg2nEncK9p+IFvTNXVJnPs+Dbhc4LlFFyxpuw2Qpf2ta5Nc=
+IGg3bPr52bpdUutGLhCW4K2MGynBi/QgLpxDZ9pbDm98cIhAV+TcdRoIrI8eycz06sIJ7IXmS7QeBpmLUbECIrA=
 -----END BITCOIN SIGNED MESSAGE-----
 </pre>

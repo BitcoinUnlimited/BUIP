@@ -373,7 +373,7 @@ This is the current list of submitted BUIPs.
 |New Members for Election #6
 |Andrew Clifford (@solex)
 |2017-05-22
-| ---
+|passed
 |-
 |[[061.mediawiki|BUIP061]]
 |Demonstration of Phase in Full Network Upgrade Activated by Miners
@@ -493,7 +493,7 @@ This is the current list of submitted BUIPs.
 |Unambiguous definition of 1 year membership period
 |Gal Buki (@torusJKL)
 |2017-11-26
-|passed
+|closed
 |-
 |[[082.mediawiki|BUIP082]]
 |opt-in malleability fix

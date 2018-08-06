@@ -145,7 +145,7 @@ This is the current list of submitted BUIPs.
 |XInv
 |Peter Tschipper
 |2016-07-30
-|passed
+|draft
 |-
 |[[023.mediawiki|BUIP023]]
 |Miner block creation latency optimization

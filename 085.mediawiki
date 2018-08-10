@@ -2,7 +2,7 @@
 BUIP085: Double spend relaying
 Proposer: Gal Buki (@torusJKL)
 Submitted on: 2018-02-04
-Status: draft
+Status: passed
 </pre>
 
 ==Background==

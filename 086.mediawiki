@@ -3,7 +3,7 @@ BUIP086: bitcoinash: URI format update
 Propser: Brendan Lee <brendanjlee@protonmail.com>
 Sponsored by: Gal Guki (@torusJKL)
 Submitted on: 2018-02-05
-Status: draft
+Status: passed
 </pre>
 
 

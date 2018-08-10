@@ -2,7 +2,7 @@
 BUIP088: Double-spend proof creation and forwarding
 Propser: Gal Buki (@torusJKL)
 Submitted on: 2018-03-29
-Status: draft
+Status: passed
 </pre>
 
 ==Background==

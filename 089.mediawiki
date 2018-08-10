@@ -2,7 +2,7 @@
 BUIP089: Blockchain Engineer Services Contract
 Proposer: Andrew Clifford (@solex)
 Submitted on: 2018-04-21
-Status: draft
+Status: passed
 </pre>
 
 ==Motivation==

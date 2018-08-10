@@ -2,7 +2,7 @@
 BUIP087: Utilization of "cash" denomination
 Proposer: @Ken Shishido
 Submitted on: 2018-03-18
-Status: draft
+Status: passed
 </pre>
 
 ==Abstract==

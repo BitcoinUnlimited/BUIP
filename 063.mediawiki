@@ -2,7 +2,7 @@
 BUIP063: Support Bitcoin Cash with an official implementation
 Proposer: Andrew Clifford (@solex)
 Submitted on: 2017-09-01
-Status: draft
+Status: passed
 </pre>
 
 ==Motivation==

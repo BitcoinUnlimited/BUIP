@@ -6,7 +6,7 @@
 
 '''This specification is still in the process of being written.'''
 
-Draft version 0.0.11
+Draft version 0.0.12
 
 -------
 
@@ -38,7 +38,7 @@ In the Bitcoin Cash Network, blocks are relayed from a peer possessing the block
 <A id='fig1'>
 {| class="wikitable" style="float:left"
 |[[File:media/buip093-messaging.png]] 
-|  A diagram of Graphene's messaging between the sender and receiver.
+|  A diagram of Graphene's messaging between the sender and receiver. ''M'' is the set of transactions that are in the block but missing from the receiver mempool. If ''M'' is too large, then the IBLT will not decode; in this case a fail-over block must be requested.
 |}</a>
 
 An overview of Graphene is presented in [[093.mediawiki#fig1|Figure 1]], which depicts the following steps between two peers that have confirmed that they are running the same version of the protocol. 

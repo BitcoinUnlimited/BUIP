@@ -6,7 +6,7 @@
 
 '''This specification is still in the process of being written.'''
 
-Draft version 0.0.19
+Draft version 0.0.20
 
 -------
 
@@ -119,7 +119,7 @@ The vAdditionalTxs field should include at least the coinbase transaction, since
 {|
  |'''Field Name'''||'''Type'''||'''Size'''||'''Purpose'''
  |-
- |ordered||bool||1 byte||True if order is important in the set
+ |ordered||uint8_t||1 byte||1 if order is important in the set and 0 otherwise
  |-
  |nReceiverUniverseItems||uint64_t||8 bytes||The number of transactions in the receiver's mempool
  |-

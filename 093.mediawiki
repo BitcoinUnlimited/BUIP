@@ -6,7 +6,7 @@
 
 '''This specification is still in the process of being written.'''
 
-Draft version 0.0.13
+Draft version 0.0.14
 
 -------
 
@@ -75,7 +75,7 @@ Graphene maintains this size advantage as block size grows. For example, for a b
 
 
 ===New Messages===
-Graphene introduces four new messages to the network protocol: '''get_grblk''', '''grblk''', '''get_grblktx''', and '''grblktx'''.
+Graphene introduces four new messages to the network protocol, which are indicated by the following command strings: '''get_grblk''', '''grblk''', '''get_grblktx''', and '''grblktx'''. For each Graphene message, the associated command string must be entered in the "command" field of the message. 
 
 ====get_grblk====
 The '''get_grblk''' message (suggested implementation name: '''GET_GRAPHENE''') transmits a single serialized '''CMempoolInfo''' data structure. It is used to both signal the desire to receive a Graphene block and to communicate the number of transactions in the receiver's mempool. 

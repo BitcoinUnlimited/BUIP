@@ -6,7 +6,7 @@
 
 '''This specification is still in the process of being written.'''
 
-Draft version 0.0.17
+Draft version 0.0.18
 
 -------
 
@@ -104,7 +104,7 @@ We describe each of these complex structures separately.
  |-
  |header||Block header||80 bytes||The header of the block being provided, encoded as per the header portion of the BLOCK message (NOT including the nTx field of the HEADERS message)
  |-
- |vAdditionalTxs||<nowiki>vector<CTransaction></nowiki>||variable||Transactions that the receiver is probably missing
+ |vAdditionalTxs||<nowiki>vector<CTransaction></nowiki>||variable||Transactions that the receiver is probably missing. Standard transaction Bitcoin serialization is used.
  |-
  |nBlockTxs||uint64_t||8 bytes||Number of Transactions in the block
  |-

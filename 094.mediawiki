@@ -16,10 +16,10 @@ The purpose of the BUIP is to determine whether the BU membership supports re-en
 
 Re-enabling op Codes:
 
-OP_MUL
-OP_LSHIFT
-OP_RSHIFT
-OP_INVERT
+* OP_MUL
+* OP_LSHIFT
+* OP_RSHIFT
+* OP_INVERT
 
 For further information, see https://www.yours.org/content/use-cases-for-re-enabled-op-codes-8b150b6a0deb
 

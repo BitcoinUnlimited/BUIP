@@ -18,8 +18,14 @@ Create new op codes:
 
 OP_CHECKDATASIG and OP_CHECKDATASIGVERIFY
 
-For further information, [specification links needed]
-For previous community discussion see https://www.reddit.com/r/btc/commen...m_source=embed&utm_name=null&utm_content=more
+For further information, see:
+
+* https://www.yours.org/content/the-story-of-op_checkdatasig-f79679d52b23 (article by @mengerian)
+* https://github.com/bitcoincashorg/bitcoincash.org/pull/93 OP_CHECKDATASIG{VERIFY} specification pull request
+
+For previous community discussion see:
+
+* https://www.reddit.com/r/btc/comments/96fxvy/op_checkdatasig_is_copying_blockstream_and_is
 
 ==Budget==
 
@@ -27,4 +33,4 @@ N/A
 
 ==Impact==
 
-BU does not desire unintended forks in the BCH blockchain, so the BU client will remain compatible with the final specification of the November upgrade. 
+BU does not desire unintended forks in the BCH blockchain, so the BU client will remain compatible with the final specification of the November upgrade.

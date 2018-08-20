@@ -1,5 +1,4 @@
-<pre>
-BUIP069: Academic paper - Mining, Taxation and Public Goods in Bitcoin
+<pre>BUIP069: Academic paper - Mining, Taxation and Public Goods in Bitcoin
 Proposer: Nicolai Dimitri (@Nic)
 Submitted on: 2018-07-16
 Status: draft
@@ -31,31 +30,29 @@ The starting view of this project is that a decision to introduce such contribut
 
 The objectives of this project are the following:
 
-* Conceptualise how a miner's contribution to a commonly managed fund, given by the share of his own revenue, could enter into his decision making, and what sort of role it could play. In a simple static model (Dimitri, Ledger 2017) I argued that revenues would affect only how much to invest in computational resources and not whether to invest. This result may need to be rivisited under the assumption that a deduction of revenues now could increase revenues later.
-
-* The reference model would still be strategic, game theoretic, plausibly as in Dimitri 2017, however now some of the main parameters would probably have to change and time will have to enter explicitly into the framework.
-
-* Indeed, for example, a preliminary sketch of some quantities of the model could be as follows. I would envisage that a miner's revenues, rather than being constant (as in Dimitri 2017) should now be seen as a function R(ns) of the share 0<s<1, of deducted revenues per miner, and the number of contributing miners n. In fact, if sR(ns) is the deducted sum for the contribution, then r(s)=(1-s)R(ns) would be the miner's net (of deduction) revenues. The shape of R(ns) would reflect how revenues are expected to change as a result of the deducted sums invested in the system improvement. Assuming R(ns) to be twice differentiable, the share maximising the miner's revenue s* could be found by considering the first derivative
+* Conceptualise how a miner's contribution to a commonly managed fund, given by the share of his own revenue, could enter into his decision making, and what sort of role it could play. In a simple static model (Dimitri, Ledger 2017 [[069.mediawiki#ref1|,<nowiki>[1]</nowiki>]]) I argued that revenues would affect only how much to invest in computational resources and not whether to invest. This result may need to be rivisited under the assumption that a deduction of revenues now could increase revenues later.
+* The reference model would still be strategic, game theoretic, plausibly as in Dimitri 2017 [[069.mediawiki#ref1|,<nowiki>[1]</nowiki>]], however now some of the main parameters would probably have to change and time will have to enter explicitly into the framework.
+* Indeed, for example, a preliminary sketch of some quantities of the model could be as follows. I would envisage that a miner's revenues, rather than being constant (as in Dimitri 2017 [[069.mediawiki#ref1|,<nowiki>[1]</nowiki>]]) should now be seen as a function ''R(ns)'' of the share ''0 &lt; s &lt; 1'', of deducted revenues per miner, and the number of contributing miners n. In fact, if ''sR(ns)'' is the deducted sum for the contribution, then ''r(s)=(1-s)R(ns)'' would be the miner's net (of deduction) revenues. The shape of ''R(ns)'' would reflect how revenues are expected to change as a result of the deducted sums invested in the system improvement. Assuming ''R(ns)'' to be twice differentiable, the share maximising the miner's revenue ''s*'' could be found by considering the first derivative
 
 
-        r'(s)=-R(ns)+(1-s)R'(ns)n
+''r’(s)=-R(ns)+(1-s)R’(ns)n''
 
 
-If s* is found by means of first order conditions, that is r'(s*)=0 then
+If ''s*'' is found by means of first order conditions, that is ''r’(s*)=0'' then
 
 
-        R'(ns*)/ R(ns*)= 1/((1-s*)n)
+''R’(ns*)/ R(ns*)= 1/((1-s*)n)''
 
 
 or also
 
 
-        s*=e(R(ns*))/(1+e(R(ns*)))
+''s*=e(R(ns*))/(1+e(R(ns*)))''
 
 
-where e(R(ns))=nsR'(ns)/R(ns) is the elasticity of the function R(ns) that is the % variation of R(ns) when ns changes by 1%.
+where ''e(R(ns))=nsR’(ns)/R(ns)'' is the elasticity of the function ''R(ns)'' that is the % variation of ''R(ns)'' when ns changes by 1%.
 
-If r is the miner's revenue with no deduction, and r(s*) the optimum miner's revenue with deduction, then if r(s*)>r it would be profitable for the miners to introduce the deduction to improve the system functioning.
+If r is the miner's revenue with no deduction, and ''r(s*)'' the optimum miner's revenue with deduction, then if ''r(s*)>r'' it would be profitable for the miners to introduce the deduction to improve the system functioning.
 
 
 ==Expected Impact==
@@ -81,3 +78,7 @@ The budget is computed based on the following considerations. The paper is expec
 </ol>
 
 Payment (ii) will be made conditional on approval by BU on satisfactory progress of the project. BU may ask for further progress before paying. Payment (iii) could be anticipated, if the final version would be ready and approved earlier than six months after the first instalment. It could also be delayed if BU would ask for more work before approval, or if the author would ask for more time.
+
+==References==
+
+<a id='ref1'><a id='ref1'><nowiki>[1]</nowiki> DIMITRI NICOLA: [[https://ledger.pitt.edu/ojs/index.php/ledger/article/download/96/67|Bitcoin Mining as a Contest]], Ledger, vol.2, 2017

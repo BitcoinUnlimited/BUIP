@@ -3,7 +3,7 @@
 
 '''Initial draft, comments welcome.'''
 
-Draft version 0.0.22
+Draft version 0.0.23
 
 -------
 
@@ -116,7 +116,7 @@ The vAdditionalTxs field should include at least the coinbase transaction, since
 {|
  |'''Field Name'''||'''Type'''||'''Size'''||'''Purpose'''
  |-
- |ordered||uint8_t||1 byte||1 if order is important in the set and 0 otherwise
+ |ordered||uint8_t||1 byte||1 if order is important in the set and 0 otherwise; other values are reserved for future use
  |-
  |nReceiverUniverseItems||uint64_t||8 bytes||The number of transactions in the receiver's mempool
  |-

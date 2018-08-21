@@ -242,6 +242,14 @@ Graphene is efficient when the parameters of the Bloom Filter and IBLT are set c
 We also note that the IBLT decode rate varies with the number of recovered items ''a''. In order to ensure a consistent decode rate (1 out of 240 blocks, for example), it is necessary to modify the number of hash functions and overhead used when constructing the IBLT. This, in turn, changes the value of ''t'', which affects the accuracy of method 1 above. Determining the combination of hash function quantity and overhead that yields the smallest IBLT for a given decode rate is an orthogonal optimization problem. We have released a stand-alone implementation of [https://github.com/umass-forensics/IBLT-optimization IBLTs in C++] (with a Python wrapper) and a script to determine such values. 
 
 
+==Improper and Unsolicited Messages==
+In order to ensure protocol compatibility among different implementations, we clarify proper peer behavior in the following two potentially ambiguous scenarios.
+
+1. A receiver peer should ban any other peer that sends any improperly formatted Graphene message. 
+
+2. A receiver peer is never banned by a potential sender for requesting a Graphene block, even if the receiver was never initially sent an ''inv'' message for the requested block by the potential sender. 
+
+
 ====Protocol design====
 A simple comparison of Graphene to related work is as follows. A block holds ''n=2000'' transactions, which the receiver holds in its mempool along with 4000 other transactions; in other words ''m=2000+4000=6000''.
 

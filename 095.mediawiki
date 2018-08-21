@@ -1,0 +1,36 @@
+<pre>
+BUIP095: BCH November upgrade - CHECKDATASIG & CHECKDATASIGVERIFY
+Proposer: Andrew Clifford (@solex)
+Submitted on: 2018-08-14
+Status: draft
+</pre>
+
+==Motivation==
+Bitcoin Cash is advancing through decentralized development. Perhaps this was easier early-on, but now the dust has settled from the fork and a year has passed, there are many different voices pushing and pulling development priorities. The upcoming 15 November 2018 general upgrade is a major event, hence it would help if Bitcoin Unlimited, as an organization, had an official position on the major elements of the upgrade. This position is determined by the membership.
+
+==Objective==
+
+The purpose of the BUIP is to determine whether the BU membership supports creating the following new op codes in the scheduled November upgrade (this is a forking change).
+
+==Summary of Proposed Changes==
+
+Create new op codes:
+
+OP_CHECKDATASIG and OP_CHECKDATASIGVERIFY
+
+For further information, see:
+
+* https://www.yours.org/content/the-story-of-op_checkdatasig-f79679d52b23 (article by @mengerian)
+* https://github.com/bitcoincashorg/bitcoincash.org/pull/93 OP_CHECKDATASIG{VERIFY} specification pull request
+
+For previous community discussion see:
+
+* https://www.reddit.com/r/btc/comments/96fxvy/op_checkdatasig_is_copying_blockstream_and_is
+
+==Budget==
+
+N/A
+
+==Impact==
+
+BU does not desire unintended forks in the BCH blockchain, so the BU client will remain compatible with the final specification of the November upgrade.

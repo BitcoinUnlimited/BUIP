@@ -560,4 +560,28 @@ This is the current list of submitted BUIPs.
 |Gal Buki (@torusJKL)
 |2018-08-01
 |draft
+|-
+|[[069.mediawiki|BUIP069]]
+|Academic paper - Mining, Taxation and Public Goods in Bitcoin
+|Nicolai Dimitri (@Nic)
+|2018-08-01
+|draft
+|-
+|[[094.mediawiki|BUIP094]]
+|BCH November upgrade - Re-enable Op Codes
+|Andrew Clifford (@solex)
+|2018-08-14
+|draft
+|-
+|[[095.mediawiki|BUIP095]]
+|BCH November upgrade - CHECKDATASIG & CHECKDATASIGVERIFY
+|Andrew Clifford (@solex)
+|2018-08-14
+|draft
+|-
+|[[096.mediawiki|BUIP096]]
+|BCH November upgrade - Enforced lexicographic transaction ordering
+|Andrew Clifford (@solex)
+|2018-08-14
+|draft
 |}

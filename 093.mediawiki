@@ -3,7 +3,7 @@
 
 '''Initial draft, comments welcome.'''
 
-Draft version 0.0.23
+Draft version 0.0.24
 
 -------
 
@@ -90,7 +90,7 @@ The '''grblktx''' (suggested NetMsgType implementation name: '''GRAPHENETX''') m
 ===New data structures===
 Graphene introduces several new data structures to the network protocol: '''CMemPoolInfo''', '''CGrapheneBlock''', '''CIblt''' '''CGrapheneBlockTx''', and '''CRequestGrapheneBlockTx'''.
 
-All data structures use the standard Bitcoin serialization format: they use little-endian for integers; vector encoding is Bitcoin standard (compact int length, vector values); and other specific use of the Bitcoin standard "compact int" encoding is noted in the tables below. For brevity, encoding that is identical to the same data structure in existing messages is omitted from our descriptions. Except for '''CGrapheneBlock''', the data structures are comprised of relatively simple c++ constructs, which we detail below. '''CGrapheneBlock''' contains '''CGrapheneSet''', which itself contains Bloom filter and IBLT data structures, denoted '''CBloomFilter''' and '''CIblt''', respectively.
+All data structures use the standard Bitcoin serialization format: they use little-endian for integers; vector encoding is Bitcoin standard (compact int length, vector values); and other specific use of the Bitcoin standard "compact int" encoding is noted in the tables below. For brevity, encoding that is identical to the same data structure in existing messages is omitted from our descriptions. Except for '''CGrapheneBlock''', the data structures are comprised of relatively simple C++ constructs, which we detail below. '''CGrapheneBlock''' contains '''CGrapheneSet''', which itself contains Bloom filter and IBLT data structures, denoted '''CBloomFilter''' and '''CIblt''', respectively.
 We describe each of these complex structures separately.
 
 ====CGrapheneBlock====

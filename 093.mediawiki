@@ -3,7 +3,7 @@
 
 '''Initial draft, comments welcome.'''
 
-Draft version 0.0.25
+Draft version 0.0.26
 
 -------
 
@@ -275,7 +275,7 @@ Graphene makes the assumption that the mempool of the receiver already contains 
 As noted above, future versions of this protocol will include a more efficient method of recovery. 
 
 ==References==
-<a id='ref1'><a id='ref1'><nowiki>[1]</nowiki> OZISIK, A. P. , ANDRESEN, G., BISSIAS G., HOUMANSADR, A. , and LEVINE, B. N. Graphene: [https://link.springer.com/chapter/10.1007%2F978-3-319-67816-0_24 A New Protocol for Block Propagation Using Set Reconciliation]. In Proc. of International Workshop on Cryptocurrencies and Blockchain Technology (ESORICS Workshop), (Sept 2017). [http://forensics.cs.umass.edu/graphene/graphene-short.pdf (2 page pdf summary)]</a>
+<a id='ref1'><a id='ref1'><nowiki>[1]</nowiki> OZISIK, A. P. , ANDRESEN, G., BISSIAS G., HOUMANSADR, A. , and LEVINE, B. N. Graphene: [https://link.springer.com/chapter/10.1007%2F978-3-319-67816-0_24 A New Protocol for Block Propagation Using Set Reconciliation]. In Proc. of International Workshop on Cryptocurrencies and Blockchain Technology (ESORICS Workshop), (Sept 2017). [http://cryptoeconomics.cs.umass.edu/graphene/graphene-short.pdf (2 page pdf summary)]</a>
 
 <a id='ref2'><nowiki>[2]</nowiki> GOODRICH, M., and MITZENMACHER, M. [https://ieeexplore.ieee.org/document/6120248/ Invertible bloom lookup tables]. In Proc. Annual Allerton Conf. on Communications, Control, and Computing (Sept 2011), pp. 792–799. [https://arxiv.org/abs/1101.2245 (pdf)] </a>
 

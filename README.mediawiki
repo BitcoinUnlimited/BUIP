@@ -590,4 +590,10 @@ This is the current list of submitted BUIPs.
 |Andrew Clifford (@solex)
 |2018-08-21
 |draft
+|-
+|[[098.mediawiki|BUIP098]]
+|Bitcoin Unlimited's Strategy for the November 2018 Hard Fork
+|Andrew Stone (@theZerg)
+|2018-08-21
+|draft
 |}

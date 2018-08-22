@@ -3,7 +3,7 @@
 
 '''Initial draft, comments welcome.'''
 
-Draft version 0.0.24
+Draft version 0.0.25
 
 -------
 
@@ -245,7 +245,7 @@ Using Graphene, the sender sends an INV, and the receiver responds with a '''get
 
 XTreme Thin Blocks [[093.mediawiki#ref5|<nowiki>[5</nowiki>]][[093.mediawiki#ref8|<nowiki>, 8</nowiki>]][[093.mediawiki#ref9|<nowiki>, 9]</nowiki>]] has the receiver start by sending a 3,956-byte Bloom Filter of the mempool with an FPR of ''f=1/m=1/2000=0.0005'', and 8-bytes for each of the ''n=2000'' transactions. The total is therefore 3956+8*2000= 19,956.
 
-Compact Blocks [[093.mediawiki#ref6|<nowiki>[6]</nowiki>]] would send over just the 8-bytes for each of the ''n=2000'' transactions, for a total of 8*2000= 16,000.
+Compact Blocks [[093.mediawiki#ref6|<nowiki>[6]</nowiki>]] would send over just the 6 bytes for each of the ''n=2000'' transactions, for a total of 6*2000= 12,000.
 
 The above is a simplistic comparison, as the actual operation of all three protocols is more involved. For example, XTreme Thin Blocks v12.1 and above performs "Bloom Filter Targeting", which significantly reduces the size of the Bloom filter it uses.
 

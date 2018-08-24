@@ -3,7 +3,7 @@
 
 '''Initial draft, comments welcome.'''
 
-Draft version 0.0.28
+Draft version 0.0.29
 
 -------
 
@@ -126,6 +126,8 @@ The vAdditionalTxs field should include at least the coinbase transaction, since
 |-
 |setIblt||CIblt||variable||IBLT containing items in set
 |}
+
+If the ''ordered'' field has value 1, then it is assumed that ordering information cannot be automatically inferred (e.g. there exists no canonical transaction ordering). In this case, the ''encodedRank'' field must encode the order of transactions. The order should be encoded by the sender as follows. First, vector ''L'' is formed by listing transactions in ascending lexicographical order according to their 32-byte ID. Second, each ID in ''L'' is visited in order (lowest index to highest) and its desired rank (distance from the first position in the list) is added to vector ''R''. Third, we populate boolean vector ''B'' by visiting each rank ''r'' in the order it appears in ''R'', interpreting ''r'' as a binary number with ceil(log(n)) bits, and adding each bit to ''B'' (lowest order bits first). Finally, the contents of field ''encodedRank'' are formed by interpreting consecutive groups of 8 bits from ''B'' as little-endian integers and packing them into a vector of ceil(n * ceil(log(n)) / 8) unsigned 8-bit integers (thus, the first bit from ''B'' will occupy the lowest order bit of the first integer added to ''encodedRank''). 
 
 ====CBloomFilter====
 ''CBloomFilter'' is Bitcoin's standard Bloom filter implementation with one adjustment, described below. It is used as part of the set reconciliation process in ''CGrapheneSet'' to filter out transactions from ''T'' that do not belong to the block.

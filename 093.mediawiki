@@ -3,7 +3,7 @@
 
 '''Initial draft, comments welcome.'''
 
-Draft version 0.0.27
+Draft version 0.0.28
 
 -------
 
@@ -97,16 +97,16 @@ We describe each of these complex structures separately.
 ''CGrapheneBlock'' is the fundamental data structure for Graphene block propagation. Assuming no unrecoverable failures arise, and combined with any missing transactions recovered from the sender, this data structure contains all information necessary to reconstruct the full block. It is sent as part of the '''grblk''' message.
 
 {|
- |'''Field Name'''||'''Type'''||'''Size'''||'''Purpose'''
- |-
- |header||Block header||80 bytes||The header of the block being provided, encoded as per the header portion of the BLOCK message (NOT including the nTx field of the HEADERS message)
- |-
- |vAdditionalTxs||<nowiki>vector<CTransaction></nowiki>||variable||Transactions that the receiver is probably missing. Standard transaction Bitcoin serialization is used.
- |-
- |nBlockTxs||uint64_t||8 bytes||Number of Transactions in the block
- |-
- |grapheneSet||CGrapheneSet||variable||Encapsulates Graphene set reconciliation logic
- |}
+|'''Field Name'''||'''Type'''||'''Size'''||'''Purpose'''
+|-
+|header||Block header||80 bytes||The header of the block being provided, encoded as per the header portion of the BLOCK message (NOT including the nTx field of the HEADERS message)
+|-
+|vAdditionalTxs||<nowiki>vector<CTransaction></nowiki>||variable||Transactions that the receiver is probably missing. Standard transaction Bitcoin serialization is used.
+|-
+|nBlockTxs||uint64_t||8 bytes||Number of Transactions in the block
+|-
+|grapheneSet||CGrapheneSet||variable||Encapsulates Graphene set reconciliation logic
+|}
 
 The vAdditionalTxs field should include at least the coinbase transaction, since it is not possible for it to be in the receiver's mempool.
 
@@ -114,37 +114,37 @@ The vAdditionalTxs field should include at least the coinbase transaction, since
 ''CGrapheneSet'' contains all information critical to the Graphene set reconciliation process, absent any block-specific details. It is the only non-standard data structure in ''CGrapheneBlock''.
 
 {|
- |'''Field Name'''||'''Type'''||'''Size'''||'''Purpose'''
- |-
- |ordered||uint8_t||1 byte||1 if order is important in the set and 0 otherwise; other values are reserved for future use
- |-
- |nReceiverUniverseItems||uint64_t||8 bytes||The number of transactions in the receiver's mempool
- |-
- |encodedRank||<nowiki>vector<unsigned char></nowiki>||ordered * ceil(n log(n))/8 bytes||Order information for items in set
- |-
- |setFilter||CBloomFilter||variable||Bloom filter containing items in set
- |-
- |setIblt||CIblt||variable||IBLT containing items in set
- |}
+|'''Field Name'''||'''Type'''||'''Size'''||'''Purpose'''
+|-
+|ordered||uint8_t||1 byte||1 if order is important in the set and 0 otherwise; other values are reserved for future use
+|-
+|nReceiverUniverseItems||uint64_t||8 bytes||The number of transactions in the receiver's mempool
+|-
+|encodedRank||<nowiki>vector<unsigned char></nowiki>||ordered * ceil(n log(n))/8 bytes||Order information for items in set
+|-
+|setFilter||CBloomFilter||variable||Bloom filter containing items in set
+|-
+|setIblt||CIblt||variable||IBLT containing items in set
+|}
 
 ====CBloomFilter====
 ''CBloomFilter'' is Bitcoin's standard Bloom filter implementation with one adjustment, described below. It is used as part of the set reconciliation process in ''CGrapheneSet'' to filter out transactions from ''T'' that do not belong to the block.
 
 {|
- |'''Field Name'''||'''Type'''||'''Size'''||'''Purpose'''
- |-
- |vData||<nowiki>vector<unsigned char></nowiki>||variable||Bit array for filter
- |-
- |isFull||bool||1 byte||True if every bit in vData is set to 1
- |-
- |isEmpty||bool||1 byte||True if every bit in vData is set to 0
- |-
- |nHashFuncs||unsigned int||2, 4 bytes||Number of hash functions used in filter
- |-
- |nTweak||unsigned int||2, 4, bytes||Additive offset for hash function inputs
- |-
- |nFlags||unsigned char||1 byte||Defines behavior for transaction insertion
- |}
+|'''Field Name'''||'''Type'''||'''Size'''||'''Purpose'''
+|-
+|vData||<nowiki>vector<unsigned char></nowiki>||variable||Bit array for filter
+|-
+|isFull||bool||1 byte||True if every bit in vData is set to 1
+|-
+|isEmpty||bool||1 byte||True if every bit in vData is set to 0
+|-
+|nHashFuncs||unsigned int||2, 4 bytes||Number of hash functions used in filter
+|-
+|nTweak||unsigned int||2, 4, bytes||Additive offset for hash function inputs
+|-
+|nFlags||unsigned char||1 byte||Defines behavior for transaction insertion
+|}
 
 The standard Bloom filter implementation does not always honor the false positive rate (FPR) requested during initialization. This behavior is problematic for Graphene because the FPR determines the number of erroneous transactions removed from IBLT ''I'', which affects the decode rate for ''I''. For this reason, it is required that ''nDesiredSize'' and ''nHashFuncs'' be defined slightly differently than in the standard ''CBloomFilter'' implementation, as follows.
 
@@ -160,16 +160,16 @@ nHashFuncs = (unsigned int)max(MIN_N_HASH_FUNC, int(vData.size() * 8 / nElements
 ''CIblt'' is an IBLT implementation that is part of the ''CGrapheneSet'' reconciliation process. In the absence of a reconciliation failure, ''CIblt'' will generate false positive list ''F'' and missing transaction cheap hashes ''M''.
 
 {|
- |'''Field Name'''||'''Type'''||'''Size'''||'''Encoding Details'''||'''Purpose'''
- |-
- |version||uint64_t||8 bytes||Compact size||Version bits
- |-
- |n_hash||uint8_t||1 byte||Standard||Number of hash functions used
- |-
- |is_modified||bool||1 byte||Standard||True if any items have been inserted into the IBLT
- |-
- |hashTable||<nowiki>vector<HashTableEntry></nowiki>||variable||Standard||Data cells for IBLT
- |}
+|'''Field Name'''||'''Type'''||'''Size'''||'''Encoding Details'''||'''Purpose'''
+|-
+|version||uint64_t||8 bytes||Compact size||Version bits
+|-
+|n_hash||uint8_t||1 byte||Standard||Number of hash functions used
+|-
+|is_modified||bool||1 byte||Standard||True if any items have been inserted into the IBLT
+|-
+|hashTable||<nowiki>vector<HashTableEntry></nowiki>||variable||Standard||Data cells for IBLT
+|}
 
 The Graphene protocol requires that IBLT '' I' '', created by the receiver, be subtracted from IBLT ''I'', originating from the sender. In order for this operation to succeed, it is critical that the IBLTs use the same quantity of hash functions, have the same number of cells, and that hash function ''i'' uses the same function and seed for both ''I'' and '' I' ''. Although the sender may use [https://github.com/umass-forensics/IBLT-optimization complex optimization techniques] to determine the number of cells and hash functions for ''I'', the receiver should simply copy those values provided that they are reasonably sized. The ''i''th hash function is the [http://code.google.com/p/smhasher/source/browse/trunk/MurmurHash3.cpp MurmurHash3] with seed ''i''.
 
@@ -177,48 +177,48 @@ The Graphene protocol requires that IBLT '' I' '', created by the receiver, be s
 ''HashTableEntry'' implements a single cell of the ''CIblt'' data structure.
 
 {|
- |'''Field Name'''||'''Type'''||'''Size'''||'''Purpose'''
- |-
- |count||uint32_t||4 bytes||Number of items
- |-
- |keySum||uint64_t||8 bytes||XOR of all keys
- |-
- |keyCheck||uint32_t||4 bytes||Error checking for keySum
- |-
- |valueSum||vector<nowiki><uint8_t></nowiki>||variable||XOR of all values
- |}
+|'''Field Name'''||'''Type'''||'''Size'''||'''Purpose'''
+|-
+|count||uint32_t||4 bytes||Number of items
+|-
+|keySum||uint64_t||8 bytes||XOR of all keys
+|-
+|keyCheck||uint32_t||4 bytes||Error checking for keySum
+|-
+|valueSum||vector<nowiki><uint8_t></nowiki>||variable||XOR of all values
+|}
 
 ====CMemPoolInfo====
 ''CMemPoolInfo'' provides a count of transactions in the receiver's mempool (plus orphan pool) and corresponds to the variable ''m'' in the description above. It is sent as part of the '''get_grblk''' message.
 
 {|
- |'''Field Name'''||'''Type'''||'''Size'''||'''Purpose'''
- |-
- |nTx||uint64_t||8 bytes||Number of transactions that appear in the union of the receiver's mempool and orphan pool
- |}
+|'''Field Name'''||'''Type'''||'''Size'''||'''Purpose'''
+|-
+|nTx||uint64_t||8 bytes||Number of transactions that appear in the union of the receiver's mempool and orphan pool
+|}
  
  
 ====CRequestGrapheneBlockTx====
 ''CRequestGrapheneBlockTx'' is used by the receiver to request missing transactions ''M'' according to their cheap hashes. It is sent as part of the '''get_grblktx''' message.
 
 {|
- |'''Field Name'''||'''Type'''||'''Size'''||'''Purpose'''
- |-
- |blockhash||uint256||32 bytes||The hash of the block corresponding to missing transactions
- |-
- |setCheapHashesToRequest||<nowiki>set<uint64_t></nowiki>||variable||Cheap hashes of missing transactions requested by receiver
- |}
+|'''Field Name'''||'''Type'''||'''Size'''||'''Purpose'''
+|-
+|blockhash||uint256||32 bytes||The hash of the block corresponding to missing transactions
+|-
+|setCheapHashesToRequest||<nowiki>set<uint64_t></nowiki>||variable||Cheap hashes of missing transactions requested by receiver
+|}
 
 ====CGrapheneBlockTx====
 ''CGrapheneBlockTx'' is returned as part of the '''grblktx''' message. It contains full transactions corresponding to the cheap hashes included in ''CRequestGrapheneBlockTx'' and is returned by the sender in response to a '''get_grblktx''' message.
 
 {|
- |'''Field Name'''||'''Type'''||'''Size'''||'''Purpose'''
- |-
- |blockhash||uint256||32 bytes||The hash of the block corresponding to missing transactions
- |-
- |vMissingTx||<nowiki>vector<CTransaction></nowiki>||variable||Missing transactions requested by receiver
- |}
+|'''Field Name'''||'''Type'''||'''Size'''||'''Purpose'''
+|-
+|blockhash||uint256||32 bytes||The hash of the block corresponding to missing transactions
+|-
+|vMissingTx||<nowiki>vector<CTransaction></nowiki>||variable||Missing transactions requested by receiver
+|}
 
 
 ==Protocol Versioning==

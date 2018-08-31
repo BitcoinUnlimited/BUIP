@@ -3,7 +3,7 @@
 
 '''Initial draft, comments welcome.'''
 
-Draft version 0.0.29
+Draft version 0.0.30
 
 -------
 
@@ -243,7 +243,7 @@ We also note that the IBLT decode rate varies with the number of recovered items
 ====Protocol design====
 A simple comparison of Graphene to related work is as follows. A block holds ''n=2000'' transactions, which the receiver holds in its mempool along with 4000 other transactions; in other words ''m=2000+4000=6000''.
 
-Using Graphene, the sender sends an INV, and the receiver responds with a '''get_grblk''' message, which includes the value ''m''. The sender computes that an IBLT that can recover ''a=27'' items and a Bloom filter of ''n'' items with a FPR of ''f=a/(m-n)=27/(6000-2000)=0.00675'' is minimal. In our test implementation, this results in 3,244 bytes total, the sum of a 643-byte IBLT and a 2,601-byte Bloom filter. Without a canonical transaction order, an expression of the transaction ordering must also be sent, increasing the total by 2,750 bytes to 5,994 bytes. (The receiver's IBLT is not sent over the network.)  
+Using Graphene, the sender sends a block announcement, and the receiver responds with a '''get_grblk''' message, which includes the value ''m''. The sender computes that an IBLT that can recover ''a=27'' items and a Bloom filter of ''n'' items with a FPR of ''f=a/(m-n)=27/(6000-2000)=0.00675'' is minimal. In our test implementation, this results in 3,244 bytes total, the sum of a 643-byte IBLT and a 2,601-byte Bloom filter. Without a canonical transaction order, an expression of the transaction ordering must also be sent, increasing the total by 2,750 bytes to 5,994 bytes. (The receiver's IBLT is not sent over the network.)  
 
 XTreme Thin Blocks [[093.mediawiki#ref5|<nowiki>[5</nowiki>]][[093.mediawiki#ref8|<nowiki>, 8</nowiki>]][[093.mediawiki#ref9|<nowiki>, 9]</nowiki>]] has the receiver start by sending a 3,956-byte Bloom Filter of the mempool with an FPR of ''f=1/m=1/2000=0.0005'', and 8-bytes for each of the ''n=2000'' transactions. The total is therefore 3956+8*2000= 19,956.
 

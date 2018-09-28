@@ -602,4 +602,28 @@ This is the current list of submitted BUIPs.
 |Andrew Stone (@theZerg)
 |2018-08-21
 |draft
+|-
+|[[101.mediawiki|BUIP101]]
+|Set the default value of max blocksize cap (hard limit) to 10 terabyte
+|Norway
+|2018-08-27
+|draft
+|-
+|[[103.mediawiki|BUIP103]]
+|Let's Build BCH! Hackathon @ Satoshi's Coffee-house
+|Will C. (Bitcoin Cash Association Mod, sponsor: @solex
+|2018-09-21
+|draft
+|-
+|[[104.mediawiki|BUIP104]]
+|BUIP104: Re-elect Peter Rizun for BU Secretary
+|Peter Rizun
+|2018-09-22
+|draft
+|-
+|[[105.mediawiki|BUIP105]]
+|New Members For Election #11
+|Andrew Clifford (@solex)
+|2018-09-22
+|draft
 |}

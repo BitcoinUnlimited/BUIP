@@ -553,19 +553,19 @@ This is the current list of submitted BUIPs.
 |Workshop on Instant Transactions for Bitcoin
 |Peter Rizun (@Peter R)
 |2018-08-06
-|draft
+|passed
 |-
 |[[092.mediawiki|BUIP092]]
 |Move the official BU repository and issue tracker to GitLab
 |Gal Buki (@torusJKL)
 |2018-08-01
-|draft
+|passed
 |-
 |[[069.mediawiki|BUIP069]]
 |Academic paper - Mining, Taxation and Public Goods in Bitcoin
 |Nicolai Dimitri (@Nic)
 |2018-08-01
-|draft
+|closed
 |-
 |[[093.mediawiki|BUIP093]]
 |Specification - Graphene Relay
@@ -577,19 +577,19 @@ This is the current list of submitted BUIPs.
 |BCH November upgrade - Re-enable Op Codes
 |Andrew Clifford (@solex)
 |2018-08-14
-|draft
+|passed
 |-
 |[[095.mediawiki|BUIP095]]
 |BCH November upgrade - CHECKDATASIG & CHECKDATASIGVERIFY
 |Andrew Clifford (@solex)
 |2018-08-14
-|draft
+|passed
 |-
 |[[096.mediawiki|BUIP096]]
 |BCH November upgrade - Enforced lexicographic transaction ordering
 |Andrew Clifford (@solex)
 |2018-08-14
-|draft
+|closed
 |-
 |[[097.mediawiki|BUIP097]]
 |New Members For Election #10

@@ -2,7 +2,7 @@
 BUIP091: Move the official BU repository and issue tracker to GitLab
 Propser: Gal Buki (@torusJKL)
 Submitted on: 2018-08-01
-Status: draft
+Status: passed
 </pre>
 
 ==Background==

@@ -1,8 +1,8 @@
 <pre>
-BUIP096: BCH November upgrade - Enforced lexicographic transaction ordering 
+BUIP096: BCH November upgrade - Enforced lexicographic transaction ordering
 Proposer: Andrew Clifford (@solex)
 Submitted on: 2018-08-14
-Status: draft
+Status: closed
 </pre>
 
 ==Motivation==

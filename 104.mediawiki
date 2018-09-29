@@ -1,0 +1,65 @@
+<pre>
+BUIP104: Re-elect Peter Rizun for BU Secretary
+Proposer: Peter Rizun
+Submitted on: 2018-09-22
+Status: draft
+</pre>
+
+==Summary==
+
+
+With this BUIP, I announce my running for a second term as BU Secretary.
+
+A post like this is an opportunity for reflection. A chance to look back at where we came from, where we've been; what went right along the way, and what could be improved for the future.
+
+==So where did we come from and where have we been?==
+
+BU was born from discussions that began in @cypherdoc's "Gold Collapsing. Bitcoin UP" thread on BitcoinTalk. We were frustrated by Core's unwillingness to increase Bitcoin's block size limit, and so we planned to take matters into our own hands by creating a competing client. This competing client would be built around the belief that the block size limit should be maintained above the free-market equilibrium block size, and built around the trust that a healthy market for block space would develop without intervention from developers.
+
+I remember Blockstream PR spokesman BRG444 laughing at the idea: "so you and Cypherdoc are going to compete with Core?"
+
+With a lot of help, that's exactly what we did. Andrew Stone (@theZerg) did the first round of heavy lifting by drafting Bitcoin Unlimited's Articles of Federation and implementing the "emergence consensus" logic to prevent chain splits due to block size, in a fork of Core. Next, Peter Tschipper joined the team and implemented Xtreme Thin Blocks (Xthin) -- a scaling breakthrough that reduced block propagation times by a factor of 6x and block propagation bandwidth by a factor of 25x.
+
+Andrea Suisani (@sickpig), Andrew Stone, Andrew Clifford (@solex), Peter Tschipper (@Peter Tschipper) and I later ran an experiment to demonstrate the drastic improvements made by Xthin. And it was Xthin that really put BU on the map. In addition to lighting a fire underneath Core to compete by releasing Compact Blocks, we also received an anonymous donation for 750 BTC (about $500k at the time) to allow us to continue our work making Bitcoin scale.
+
+With this new funding, BU grew at a faster pace. We organized the first "Satoshi's Vision" conference in San Francisco in September of that year (2016) which was attended by approximately 25 people. By the following spring, the big-block movement had so much momentum that BU's next conference in Arnhem, Netherlands had closer to 150 people (as well as a fantastic GCBU dinner organized by @Norway).
+
+BU was winning over miners too. By the spring of 2017, there were weeks when we approached 50% of the BTC hash power expressing support for the BU client!
+
+But BTC could not be saved. The NYA agreement -- which would fail later that November -- took the wind out of BU sails. And so BU, and @deadalnix + @freetrader with ABC, worked to fork the blockchain on August 1, 2017 to allow Bitcoin to continue without Core's segwit alteration.
+
+BU's scaling efforts continued with the Gigablock Testnet Initiative, where we successfully mined and propagated blocks over 1 GB in size. We also identified the next two bottlenecks to scaling: the accept-to-mempool bottleneck at 100 tx/sec, and the block propagation bottleneck at 500 tx/sec.
+
+Already the #4 coin on CoinmarketCap, BCH was thriving. The next Satoshi's Vision conference in Tokyo in the spring of 2018 saw over 400 attendees. The connections we made with Brian Levine and George Biasis at Scaling Bitcoin Stanford bore fruit this summer with Graphene block propagation. And BU nodes performed better than all other nodes during the September 2018 BCH stress tests.
+
+This week, BU developer @awemany discovered one of the most potentially-devestating bugs in the history of Bitcoin -- a bug that allowed a miner to create coins out of thin air -- and disclosed this bug responsibly to Bitcoin Core so that they could fix their software.
+
+From my vantage point, those are the highlights of where we came from and where we've been. I think it is accurate to say that BU began as an idea on social media, and became a center of excellence for Bitcoin research and development with several million dollars in funding reserves.
+
+==What went right, along the way?==
+
+From a very general perspective, I think what went right is that the people who make up BU are truly committed to the vision of Bitcoin as a global peer-to-peer electronic cash system. Seeing Bitcoin succeed and change the world is imporant to us, and, unlike what happened with Blockstream and the Core developers, I know that few here would sacrifice Bitcoin's future for a paycheque. (Of course, it helps that many of us actually invested in Bitcoin several years ago and thus cannot be easily tempted to sacrifice our beliefs for $.) In December of 2017 at the peak of the last growth spurt, we had over $12 million dollars in reserves -- $11.5 million dollars more than what we started with after our first big donation. And I believe this number will continue to increase.
+
+Moving away from generalities and into specifics, I think the big successes for BU can be grouped into three categories:
+
+# Maintaining a leading implementation of the Bitcoin Cash protocol.
+# Participating in scaling research (e.g., Xthin, Parallel Validation, Graphene, Gigablock Testnet)
+# Organizing conferences and workshops to advance Bitcoin (e.g., the events in San Francisco, Arnhem, Tokyo and next in Gargnano, Italy)
+
+==What could be improved?==
+
+If I were to identify one weakness of BU (and of my role here within BU) it would be trying to do too much. I think we should do a better job of less, than a lesser job of more. I think that trying "too much" is excusable for the first few years, because we didn't really know where our efforts were best focussed or what investments gave us the best return on our time and money. I think we have a better idea now. And so, I'd like to focus more closely on the three categories I listed above.
+
+==What I want to do next as Secretary:==
+
+In addition to continuing to assist with conference/workshop organization and helping to faciliate scaling research, I'd also like to do a few more projects to make Bitcoin Unlimited more of a finely-tuned machine. BU's Voting System (developed by @awemany as part of [[https://bitco.in/forum/threads/buip035-passed-new-bitcoin-unlimited-website.1569/|BUIP035]]) is a great example of how a bunch of development work can really pay off in making BU easier to manage. It used to be a time-consuming chore to manually check digital signatures for votes. Now it is automatic. In that spirit, I'd like to propose two further improvements:
+
+# I'd like to improve the website by adding a blog section where BU members can post articles. Ideally, BU members with blog permissions can login with their BU signing keys, rather than the traditional username/password method. Right now, the BU website is mostly static content. Keeping it updated with regular posts by members will bring more traffic, and with that traffic more users running BU and more donations from the community.
+# I'd like to streamline they way BU pays bills and generates financial reports(*). Right now, it can be time-consuming to collect invoices, organize them on Dropbox, manually create a payment proposal, and then get another BU officer to co-sign. Reimbursing 20 people's flights for a conference takes a surprising amount of time, especially when people give you their receipts in all sorts of varied formats. Furthermore, matching up payments from our Copay wallet with scanned reciepts when doing financial reports can be difficult because sometimes the payment notes are ambiguous or missing. An automated interface that enforced that claims must be submitted with proper notes and documentation, and billed against an explicit BUIP, would almost fully automate BU's finances, financial record keeping, and report preparation The officers would be notified of a claim, could visually verify that all the information was in order, and then choose to co-sign the reimbursement. The system would track all the details.
+
+(*) You might have noticed that I'm late preparing one this year (don't worry, we have 597.678 BTC and 816.436 BCH). I do not want this to continue.
+
+
+==Closing Remarks==
+
+I am blown away by all that BU has accomplished in its less than 3 years of existence. It has been a rewarding experience and an honour to have been part of that. I look forward to the next 3 years, as we work to regain for BCH what BS/Core squandered with BTC. Our goal is to grow BCH into a peer-to-peer electronic cash system that the entire world can use. Our goal is to change the world.

@@ -2,7 +2,7 @@
 BUIP092: Workshop on Instant Transactions for Bitcoin
 Proposer: Peter Rizun
 Submitted on: 2018-08-06
-Status: draft
+Status: passed
 </pre>
 
 ==Purpose==

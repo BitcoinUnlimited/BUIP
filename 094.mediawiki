@@ -2,7 +2,7 @@
 BUIP094: BCH November upgrade - Re-enable Op Codes
 Proposer: Andrew Clifford (@solex)
 Submitted on: 2018-08-14
-Status: draft
+Status: passed
 </pre>
 
 ==Motivation==

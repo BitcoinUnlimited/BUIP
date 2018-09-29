@@ -1,7 +1,7 @@
 <pre>BUIP069: Academic paper - Mining, Taxation and Public Goods in Bitcoin
 Proposer: Nicolai Dimitri (@Nic)
 Submitted on: 2018-07-16
-Status: draft
+Status: closed
 </pre>
 
 

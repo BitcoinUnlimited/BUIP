@@ -1,10 +1,9 @@
 
 -------
 
-'''Initial draft, comments welcome.'''
+Draft version 0.0.31
 
-Draft version 0.0.30
-
+'''Comments welcome.'''
 -------
 
 <pre>
@@ -222,7 +221,6 @@ The Graphene protocol requires that IBLT '' I' '', created by the receiver, be s
 |vMissingTx||<nowiki>vector<CTransaction></nowiki>||variable||Missing transactions requested by receiver
 |}
 
-
 ==Protocol Versioning==
 The Bitcoin P2P protocol has a message versioning facility and Graphene version should be included in that facility.
 
@@ -263,6 +261,156 @@ In order to ensure protocol compatibility among different implementations, we cl
 
 2. A receiver peer is never banned by a potential sender for requesting a Graphene block, even if the receiver was never initially sent an ''inv'' message for the requested block by the potential sender. 
 
+==Version 2.1==
+
+The second version of Graphene is implemented in two phases: 2.1 and 2.2. Graphene 2.1 uses the same messages as 1.0, but some of the data structures have changed. This section provides a comprehensive description of the data structures used in Graphene 2.1. The description corresponds to BU client Graphene version 4.
+
+===Data structures===
+The following data strcutures appear in the network protocol of Graphene 2.1: '''CMemPoolInfo''', '''CGrapheneBlock''', '''CIblt''', '''HashTableEntry''', '''CGrapheneBlockTx''', '''CRequestGrapheneBlockTx''', '''CVariableFastFilter'''.
+
+All data structures use the standard Bitcoin serialization format: they use little-endian order for integers; vector encoding is Bitcoin standard (compact int length, vector values); and other specific use of the Bitcoin standard "compact int" encoding is noted in the tables below. For brevity, encoding that is identical to the same data structure in existing messages is omitted from our descriptions. Except for '''CGrapheneBlock''', the data structures are comprised of relatively simple C++ constructs, which we detail below. '''CGrapheneBlock''' contains '''CGrapheneSet''', which itself contains Bloom filter and IBLT data structures, denoted '''CVariableFastFilter''' and '''CIblt''', respectively.
+We defer description of these data structures to separate specification documents. 
+
+====CGrapheneBlock====
+''CGrapheneBlock'' is the fundamental data structure for Graphene block propagation. Assuming no unrecoverable failures arise, and combined with any missing transactions recovered from the sender, this data structure contains all information necessary to reconstruct the full block. It is sent as part of the '''grblk''' message.
+
+{|
+|'''Field Name'''||'''Type'''||'''Size'''||'''Purpose'''
+|-
+|sipHashNonce||uint64_t||8 bytes||Entropy for SipHash
+|-
+|shorttxidk0||uint64_t||8 bytes||Left half of SipHash key
+|-
+|shorttxidk1||uint64_t||8 bytes||Right half of SipHash key
+|-
+|header||Block header||80 bytes||The header of the block being provided, encoded as per the header portion of the BLOCK message (NOT including the nTx field of the HEADERS message)
+|-
+|vAdditionalTxs||<nowiki>vector<CTransaction></nowiki>||variable||Transactions that the receiver is probably missing. Standard transaction Bitcoin serialization is used.
+|-
+|nBlockTxs||uint64_t||8 bytes||Number of Transactions in the block
+|-
+|grapheneSet||CGrapheneSet||variable||Encapsulates Graphene set reconciliation logic
+|-
+|version||uint64_t||8 bytes||Graphene block version
+|-
+|computeOptimized||bool||1 byte||1 if Graphene block uses CVariableFastFilter and 0 if it uses CBloomFilter
+|}
+
+The vAdditionalTxs field should include at least the coinbase transaction, since it is not possible for it to be in the receiver's mempool. The values ''shorttxidk0'' and ''shorttxidk1'' are derived from the first and last 64 bits in the following SHA256 hash ''h''. The sender generates the random 64 bit ''sipHashNonce'', whose bits are appended to the end of the block header bits. The SHA256 hash of the entire collection of bits is then hashed to form ''h''. 
+
+====CGrapheneSet====
+''CGrapheneSet'' contains all information critical to the Graphene set reconciliation process, absent any block-specific details. It is the only non-standard data structure in ''CGrapheneBlock''.
+
+{|
+|'''Field Name'''||'''Type'''||'''Size'''||'''Purpose'''
+|-
+|ordered||uint8_t||1 byte||1 if order is important in the set and 0 otherwise; other values are reserved for future use
+|-
+|nReceiverUniverseItems||uint64_t||8 bytes||The number of transactions in the receiver's mempool
+|-
+|shorttxidk0||uint64_t||8 bytes||Left half of SipHash key
+|-
+|shorttxidk1||uint64_t||8 bytes||Right half of SipHash key
+|-
+|version||uint64_t||8 bytes||Graphene set version
+|-
+|ibltSalt||uint32_t||4 bytes||Entropy for IBLT hash functions
+|-
+|computeOptimized||bool||1 byte||1 if Graphene set uses CVariableFastFilter and 0 if it uses CBloomFilter
+|-
+|encodedRank||<nowiki>vector<unsigned char></nowiki>||ordered * ceil(n log(n))/8 bytes||Order information for items in set
+|-
+|setFilter||CBloomFilter||variable||Bloom filter containing items in set
+|-
+|pFastFilter||CVariableFastFilter||variable|Fast Bloom filter containing items in set
+|-
+|setIblt||CIblt||variable||IBLT containing items in set
+|}
+
+Note that only one of ''setFilter'' and ''pFastFilter'' is used, the former when ''computeOptimized'' is set to 0 and the latter otherwise. Whichever is not used is assumed not to have been allocated any memory. Accordingly, implementations of Graphene version 2.1 need only include an implementation of either ''setFilter'' or ''pFastFilter''.
+
+If the ''ordered'' field has value 1, then it is assumed that ordering information cannot be automatically inferred (e.g. there exists no canonical transaction ordering). In this case, the ''encodedRank'' field must encode the order of transactions. The order should be encoded by the sender as follows. First, vector ''L'' is formed by listing transactions in ascending lexicographical order according to their 32-byte ID. Second, each ID in ''L'' is visited in order (lowest index to highest) and its desired rank (distance from the first position in the list) is added to vector ''R''. Third, we populate boolean vector ''B'' by visiting each rank ''r'' in the order it appears in ''R'', interpreting ''r'' as a binary number with ceil(log(n)) bits, and adding each bit to ''B'' (lowest order bits first). Finally, the contents of field ''encodedRank'' are formed by interpreting consecutive groups of 8 bits from ''B'' as little-endian integers and packing them into a vector of ceil(n * ceil(log(n)) / 8) unsigned 8-bit integers (thus, the first bit from ''B'' will occupy the lowest order bit of the first integer added to ''encodedRank''). 
+
+====CVariableFastFilter====
+''CVariableFastFilter'' is a new data structure that uses the entropy in a transaction's hash value to determine what bits to set in the Bloom filter. It is based on the existing implementation of [https://github.com/BitcoinUnlimited/BitcoinUnlimited/blob/release/src/fastfilter.h CFastFilter]. It is used as part of the set reconciliation process in ''CGrapheneSet'' to filter out transactions from ''T'' that do not belong to the block. Details can be found in the [https://github.com/BitcoinUnlimited/BitcoinUnlimited/tree/release/doc/variable-fast-filter.md release documentation].
+
+{|
+|'''Field Name'''||'''Type'''||'''Size'''||'''Purpose'''
+|-
+|vData||<nowiki>vector<unsigned char></nowiki>||variable||Bit array for filter
+|-
+|nHashFuncs||uint8_t||1 byte||Number of hash functions to be used for Bloom filter (must be between 1 and 32, inclusive)
+|-
+|nFilterBytes||uint32_t||4 bytes||Size of the Bloom filter data vector in bytes
+|-
+|nFilterItems||uint62_t||8 bytes||Size of the Bloom filter data vector in bits
+|}
+
+====CIblt====
+''CIblt'' is an IBLT implementation that is part of the ''CGrapheneSet'' reconciliation process. In the absence of a reconciliation failure, ''CIblt'' will generate false positive list ''F'' and missing transaction cheap hashes ''M''. Details can be found in the [https://github.com/BitcoinUnlimited/BitcoinUnlimited/tree/release/doc/iblt.md release documentation].
+
+{|
+|'''Field Name'''||'''Type'''||'''Size'''||'''Encoding Details'''||'''Purpose'''
+|-
+|version||uint64_t||8 bytes||Compact size||Version bits
+|-
+|mapHashIdxSeeds||<nowiki>map<uint8_t, uint32_t></nowiki>||variable||Mapping from hash function number (0 to ''n_hash - 1'') to random seed for that hash function
+|-
+|salt||uint32_t||4 bytes||Entropy for generating random seeds in ''mapHashIdxSeeds''
+|-
+|n_hash||uint8_t||1 byte||Standard||Number of hash functions used
+|-
+|is_modified||bool||1 byte||Standard||True if any items have been inserted into the IBLT
+|-
+|hashTable||<nowiki>vector<HashTableEntry></nowiki>||variable||Standard||Data cells for IBLT
+|}
+
+====HashTableEntry====
+''HashTableEntry'' implements a single cell of the ''CIblt'' data structure. Details can be found in the [https://github.com/BitcoinUnlimited/BitcoinUnlimited/tree/release/doc/iblt.md release documentation].
+
+{|
+|'''Field Name'''||'''Type'''||'''Size'''||'''Purpose'''
+|-
+|count||uint32_t||4 bytes||Number of items
+|-
+|keySum||uint64_t||8 bytes||XOR of all keys
+|-
+|keyCheck||uint32_t||4 bytes||Error checking for keySum
+|-
+|valueSum||vector<nowiki><uint8_t></nowiki>||variable||XOR of all values
+|}
+
+====CMemPoolInfo====
+''CMemPoolInfo'' provides a count of transactions in the receiver's mempool (plus orphan pool) and corresponds to the variable ''m'' in the description above. It is sent as part of the '''get_grblk''' message.
+
+{|
+|'''Field Name'''||'''Type'''||'''Size'''||'''Purpose'''
+|-
+|nTx||uint64_t||8 bytes||Number of transactions that appear in the union of the receiver's mempool and orphan pool
+|}
+ 
+====CRequestGrapheneBlockTx====
+''CRequestGrapheneBlockTx'' is used by the receiver to request missing transactions ''M'' according to their cheap hashes. It is sent as part of the '''get_grblktx''' message.
+
+{|
+|'''Field Name'''||'''Type'''||'''Size'''||'''Purpose'''
+|-
+|blockhash||uint256||32 bytes||The hash of the block corresponding to missing transactions
+|-
+|setCheapHashesToRequest||<nowiki>set<uint64_t></nowiki>||variable||Cheap hashes of missing transactions requested by receiver
+|}
+
+====CGrapheneBlockTx====
+''CGrapheneBlockTx'' is returned as part of the '''grblktx''' message. It contains full transactions corresponding to the cheap hashes included in ''CRequestGrapheneBlockTx'' and is returned by the sender in response to a '''get_grblktx''' message.
+
+{|
+|'''Field Name'''||'''Type'''||'''Size'''||'''Purpose'''
+|-
+|blockhash||uint256||32 bytes||The hash of the block corresponding to missing transactions
+|-
+|vMissingTx||<nowiki>vector<CTransaction></nowiki>||variable||Missing transactions requested by receiver
+|}
+
 ==Backward compatibility==
 Older clients remain fully compatible and interoperable after this change.
 
@@ -271,8 +419,6 @@ Older clients remain fully compatible and interoperable after this change.
 https://github.com/BitcoinUnlimited/BitcoinUnlimited/tree/release
 
 ==Future Improvements==
-
-Graphene makes the assumption that the mempool of the receiver already contains the transactions in the block. To relax this assumption, future versions of this specification will ask the sender to do the following between Steps 2 and 3.  For each transaction in the block, the sender determines if, for this receiver, he has previously sent or received an INV message. For any transactions where that is not the case, the entire transaction is sent to the receiver as part of the ''vAdditionalTxs'' data structure.
 
 As noted above, future versions of this protocol will include a more efficient method of recovery. 
 
@@ -299,6 +445,8 @@ As noted above, future versions of this protocol will include a more efficient m
 
 ==Appendix==
 
+===Minimizing IBLT and Bloom Filter size===
+
 The values for the simple (but less efficient) method of minimizing Graphene's Bloom filter and IBLT are derived as follows. Throughout, we assume that there are ''n'' transactions in the block, ''m'' in the receiver mempool, and ''x'' in the intersection between block and receiver mempool (note that the current Bitcoin Unlimited implementation assumes x = n-1). We derive the size of both Bloom filter and IBLT in terms of ''a'', the number of transactions that must be recovered from the IBLT.
 
 First, the [https://en.wikipedia.org/wiki/Bloom_filter#Optimal_number_of_hash_functions size of a Bloom filter] in bytes, ''T<sub>BF</sub>(a)'' is given by 
@@ -321,6 +469,14 @@ Taking the derivative of this equation with respect to ''a'', setting it equal t
 
 ''a = n / (1.4 * 8 * 17 * ln<sup>2</sup>(2))''.
 
+====When to use analytical optimum====
+
+We have developed a [https://github.com/bissias/graphene-experiments/blob/master/jupyter/graphene_size_optimization.ipynb heuristic] for determining when to optimize IBLT and Bloom filter size use the analytically (using the technique described above) and when to perform exhaustive search. For a block containing ''n'' transactions, we find that when ''n > 500'' and the receiver mempool contains at least ''0.25 n'' transactions not in the block, the analytical solution above can be used without increasing the block size by more than 10%.
+
+===Reducing IBLT decode failures===
+
+Due to variations in sender and receiver mempools, IBLT decode failures were frequent in Graphene version 1. One of the improvements in version 2 was the introduction of a [https://gist.github.com/bissias/561151fef0b98f6e4d8813a08aefe349 heuristic] for determining a suitable increase in the number of IBLT cells to compensate for for mempool difference.
+
 ==Acknowledgments==
 
 We are grateful for insightful feedback from Andrew Stone, Peter Tschipper, Andrea Suisani, Awemany, and Peter Rizun.
@@ -328,4 +484,3 @@ We are grateful for insightful feedback from Andrew Stone, Peter Tschipper, Andr
 ==Copyright==
 
 This document is placed in the public domain.
-

@@ -7,7 +7,7 @@ Status: draft
 
 ==Summary==
 
-In the interest of ensuring that the developmental playing field between Bitcoin Unlimited and corporations using its software remains level, re-license the Bitcoin Unlimited software under the GNU Public License version 3 (GPLv3) [1] and license new BU code exclusively under GPLv3.
+In the interest of ensuring that the developmental playing field between Bitcoin Unlimited and corporations using its software remains level, re-license the Bitcoin Unlimited software under the GNU Public License version 3 (GPLv3) [^1] and license new BU code exclusively under GPLv3.
 
 See [3]
 ==Motivation==
@@ -39,7 +39,7 @@ See [4]
 
 == Additional information ==
 
-[1] https://www.gnu.org/licenses/gpl.html
+[^1]: https://www.gnu.org/licenses/gpl.html
 [2] https://www.gnu.org/licenses/rms-why-gplv3.html
 [3] https://softwareengineering.stackex...der-the-mit-license-and-re-distribute-it-unde
 [4] https://gitlab.com/FloweeTheHub/thehub

@@ -1,5 +1,5 @@
 <pre>
-BUIP041 ([038.mediawiki|BUIP038] Counter): Prevent Minority Hash Power From Injecting Very Large Blocks
+BUIP041 (BUIP038 Counter): Prevent Minority Hash Power From Injecting Very Large Blocks
 Proposer: Andrew Stone
 Submitted: 2016-12-07
 Status: closed
@@ -7,7 +7,7 @@ Status: closed
 
 THE PROBLEM<br />
 <br />
-BUIP038 outlines an attack where a minority of the hash power can, at low probability, temporarily overwhelm the excessive block (EB) parameter of network nodes by temporarily out-producing the mining majority for accept depth (AD) blocks. Once a node’s EB is exceeded, it allows subsequent excessive blocks on that chain without delay for a period of time. This is colloquially called the “sticky gate” feature. So if a minority hash power is able to overwhelm a majority of hash power, that majority no longer limits block size which BUIP038 claims allows the minority to then add blocks of “any size at all” onto the blockchain.<br />
+[[038.mediawiki|BUIP038]] outlines an attack where a minority of the hash power can, at low probability, temporarily overwhelm the excessive block (EB) parameter of network nodes by temporarily out-producing the mining majority for accept depth (AD) blocks. Once a node’s EB is exceeded, it allows subsequent excessive blocks on that chain without delay for a period of time. This is colloquially called the “sticky gate” feature. So if a minority hash power is able to overwhelm a majority of hash power, that majority no longer limits block size which BUIP038 claims allows the minority to then add blocks of “any size at all” onto the blockchain.<br />
 <br />
 This is an interesting attack vector that is/can be defended against in several ways using the code today:<br />
 1. The AD can be increased, since the likelihood of a minority out-producing a majority over N blocks decreases exponentially as N increases<br />

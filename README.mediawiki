@@ -510,7 +510,7 @@ This is the current list of submitted BUIPs.
 |[[084.mediawiki|BUIP084]]
 |Secure BCH coin splitting instructions
 |@79b79aa8
-|2017-01-11
+|2018-01-11
 |passed
 |-
 |[[085.mediawiki|BUIP085]]

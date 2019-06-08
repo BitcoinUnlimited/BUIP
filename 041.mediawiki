@@ -1,5 +1,5 @@
 <pre>
-BUIP041 (BUIP038 Counter): Prevent Minority Hash Power From Injecting Very Large Blocks
+BUIP041 (<a href="038.mediawiki">BUIP038</a> Counter): Prevent Minority Hash Power From Injecting Very Large Blocks
 Proposer: Andrew Stone
 Submitted: 2016-12-07
 Status: closed

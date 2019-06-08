@@ -256,7 +256,7 @@ This is the current list of submitted BUIPs.
 |passed
 |-
 |[[041.mediawiki|BUIP041]]
-|([[038.mediawiki|BUIP038]] Counter) Prevent Minority Hash Power From Injecting Very Large Blocks
+|(BUIP038 Counter) Prevent Minority Hash Power From Injecting Very Large Blocks
 |Andrew Stone
 |2016-12-07
 |closed
@@ -280,7 +280,7 @@ This is the current list of submitted BUIPs.
 |draft
 |-
 |[[045.mediawiki|BUIP045]]
-|Unified addresses format for [[037.mediawiki|BUIP037]]
+|Unified addresses format for BUIP037
 |Amaury SÉCHET
 |2017-01-12
 |draft
@@ -441,19 +441,19 @@ This is the current list of submitted BUIPs.
 |2017-11-13
 |passed
 |-
-|[[073|BUIP073]]
+|[[073.mediawiki|BUIP073]]
 |Fully re-weight BU's funds towards BCH
 |@Norway
 |2017-11-13
 |closed
 |-
-|[[074|BUIP074]]
+|[[074.mediawiki|BUIP074]]
 |Sell the Bitcoin Gold portion of BU's funds for BCH
 |@Windowly
 |2017-11-16
 |passed
 |-
-|[[075|BUIP075]]
+|[[075.mediawiki|BUIP075]]
 |Counter BUIP of BUIP071
 |Gal Buki (@torusJKL)
 |2017-11-13

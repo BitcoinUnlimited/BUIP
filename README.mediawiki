@@ -550,13 +550,13 @@ This is the current list of submitted BUIPs.
 |voted
 |-
 |[[091.mediawiki|BUIP091]]
-|Workshop on Instant Transactions for Bitcoin
+|Move the official BU repository and issue tracker to GitLab
 |Peter Rizun (@Peter R)
 |2018-08-06
 |passed
 |-
 |[[092.mediawiki|BUIP092]]
-|Move the official BU repository and issue tracker to GitLab
+|Workshop on Instant Transactions for Bitcoin
 |Gal Buki (@torusJKL)
 |2018-08-01
 |passed

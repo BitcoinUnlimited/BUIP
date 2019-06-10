@@ -1,0 +1,26 @@
+<pre>
+BUIP121: Create formal BCH specifications
+Proposer: Jonathan Silverblood
+Submitted on: 2019-04-01
+Status: passed
+</pre>
+
+==Summary==
+The purpose of this BUIP is to develop and maintain a public specification for the Bitcoin Cash protocol.
+
+==Proposal==
+This BUIP proposes that we use bitcoin unlimited funds to:
+* Write a formal specification for Bitcoin Cash
+* Maintain a formal specification for Bitcoin Cash
+
+==Motivation==
+Having a proper and full documentation is beneficial to all projects that needs to interact with the Bitcoin Cash network.
+
+==Budget==
+A maximum expenditure cap of $20,000 is proposed for the technical author work involved.
+Due to the uncertain scope of the work, this is an estimate recommended by solex.
+
+==Background==
+Currently there is a lot of information on how Bitcoin and it's derivates operate, but it's shattered over a large number of resources and most of it is just descriptions of what the current codebases do.
+
+While developing projects I've repeatedly found myself in need of a specification and have been referred to the concept that the code is the specification, which is unhelpful. An example of a currently poorly documented procedure is the Bitcoin Message creation and verification process.

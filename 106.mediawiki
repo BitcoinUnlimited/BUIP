@@ -18,9 +18,7 @@ Changing the license from MIT to GPLv3 would at least obligate companies that di
 
 To quote from [2]:
 
-<pre>
-GPLv3 also provides users with explicit patent protection from the program's contributors and redistributors. With GPLv2, users rely on an implicit patent license to make sure that the company which provided them a copy won't sue them, or the people they redistribute copies to, for patent infringement.
-</pre>
+* GPLv3 also provides users with explicit patent protection from the program's contributors and redistributors. With GPLv2, users rely on an implicit patent license to make sure that the company which provided them a copy won't sue them, or the people they redistribute copies to, for patent infringement.*
 
 This patent protection clauses will provide a benefit to BU users considering the recent increase in patent registrations and patent litigation threats in the Bitcoin and general blockchain space.
 

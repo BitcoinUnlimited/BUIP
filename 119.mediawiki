@@ -1,0 +1,25 @@
+<pre>
+BUIP119: Implement sending to CashAccount
+Proposer: Jonathan Silverblood
+Submitted on: 2019-03-30
+Status: passed
+</pre>
+
+==Summary==
+The purpose of this BUIP is to build native support for sending to CashAccounts in Bitcoin Unlimited's node software. This means that in places where the user can normally enter a Bitcoin Cash address, entering a CashAccount should be supported.
+
+==Proposal==
+This BUIP proposes that we use bitcoin unlimited funds to:
+* Add code that parses and recognize when a user has entered a CashAccount
+* Add code that looks up and uses the payment data in a CashAccount
+
+==Motivation==
+There already exist a few wallets that support sending to Cash Accounts, and having a consistent and user friendly means to enter who we want to send money to is one of the main pain points for adoption. Adding support in Bitcoin Unlimited helps bring unity across the ecosystem.
+
+==Background==
+Cash Accounts is a protocol for on-chain name-to-payment data, and allows sending money over the Bitcoin Cash network to be less technical and more humane.
+
+==Links==
+* Website: https://www.cashaccount.info/
+* Specification: https://gitlab.com/cash-accounts/specification/blob/master/SPECIFICATION.md
+* Test data: https://gitlab.com/cash-accounts/specification/blob/master/TEST.md

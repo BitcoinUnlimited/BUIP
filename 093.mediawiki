@@ -1,7 +1,7 @@
 
 -------
 
-Draft version 0.1.0
+Draft version 0.1.1
 
 '''Comments welcome.'''
 -------
@@ -261,7 +261,7 @@ In order to ensure protocol compatibility among different implementations, we cl
 
 2. A receiver peer is never banned by a potential sender for requesting a Graphene block, even if the receiver was never initially sent an ''inv'' message for the requested block by the potential sender. 
 
-==Version 2.1==
+==Specification for Version 2.1==
 
 The second version of Graphene is implemented in two phases: 2.1 and 2.2. Graphene 2.1 uses the same messages as 1.0, but some of the data structures have changed. This section provides a comprehensive description of the data structures used in Graphene 2.1. The description corresponds to BU client Graphene version 4.
 
@@ -322,7 +322,7 @@ The vAdditionalTxs field should include at least the coinbase transaction, since
 |-
 |setFilter||CBloomFilter||variable||Bloom filter containing items in set
 |-
-|pFastFilter||CVariableFastFilter||variable|Fast Bloom filter containing items in set
+|pFastFilter||CVariableFastFilter||variable||Fast Bloom filter containing items in set
 |-
 |setIblt||CIblt||variable||IBLT containing items in set
 |}
@@ -330,6 +330,35 @@ The vAdditionalTxs field should include at least the coinbase transaction, since
 Note that only one of ''setFilter'' and ''pFastFilter'' is used, the former when ''computeOptimized'' is set to 0 and the latter otherwise. Whichever is not used is assumed not to have been allocated any memory. Accordingly, implementations of Graphene version 2.1 need only include an implementation of either ''setFilter'' or ''pFastFilter''.
 
 If the ''ordered'' field has value 1, then it is assumed that ordering information cannot be automatically inferred (e.g. there exists no canonical transaction ordering). In this case, the ''encodedRank'' field must encode the order of transactions. The order should be encoded by the sender as follows. First, vector ''L'' is formed by listing transactions in ascending lexicographical order according to their 32-byte ID. Second, each ID in ''L'' is visited in order (lowest index to highest) and its desired rank (distance from the first position in the list) is added to vector ''R''. Third, we populate boolean vector ''B'' by visiting each rank ''r'' in the order it appears in ''R'', interpreting ''r'' as a binary number with ceil(log(n)) bits, and adding each bit to ''B'' (lowest order bits first). Finally, the contents of field ''encodedRank'' are formed by interpreting consecutive groups of 8 bits from ''B'' as little-endian integers and packing them into a vector of ceil(n * ceil(log(n)) / 8) unsigned 8-bit integers (thus, the first bit from ''B'' will occupy the lowest order bit of the first integer added to ''encodedRank''). 
+
+====CBloomFilter====
+''CBloomFilter'' is Bitcoin's standard Bloom filter implementation with one adjustment, described below. It is used as part of the set reconciliation process in ''CGrapheneSet'' to filter out transactions from ''T'' that do not belong to the block.
+
+{|
+|'''Field Name'''||'''Type'''||'''Size'''||'''Purpose'''
+|-
+|vData||<nowiki>vector<unsigned char></nowiki>||variable||Bit array for filter
+|-
+|isFull||bool||1 byte||True if every bit in vData is set to 1
+|-
+|isEmpty||bool||1 byte||True if every bit in vData is set to 0
+|-
+|nHashFuncs||unsigned int||2, 4 bytes||Number of hash functions used in filter
+|-
+|nTweak||unsigned int||2, 4, bytes||Additive offset for hash function inputs
+|-
+|nFlags||unsigned char||1 byte||Defines behavior for transaction insertion
+|}
+
+The standard Bloom filter implementation does not always honor the false positive rate (FPR) requested during initialization. This behavior is problematic for Graphene because the FPR determines the number of erroneous transactions removed from IBLT ''I'', which affects the decode rate for ''I''. For this reason, it is required that ''nDesiredSize'' and ''nHashFuncs'' be defined slightly differently than in the standard ''CBloomFilter'' implementation, as follows.
+
+<code>
+nDesiredSize = (unsigned int)(ceil(-1 / LN2SQUARED * nElements * log(nFPRate) / 8));
+</code>
+<br />
+<code>
+nHashFuncs = (unsigned int)max(MIN_N_HASH_FUNC, int(vData.size() * 8 / nElements * LN2));
+</code>
 
 ====CVariableFastFilter====
 ''CVariableFastFilter'' is a new data structure that uses the entropy in a transaction's hash value to determine what bits to set in the Bloom filter. It is based on the existing implementation of [https://github.com/BitcoinUnlimited/BitcoinUnlimited/blob/release/src/fastfilter.h CFastFilter]. It is used as part of the set reconciliation process in ''CGrapheneSet'' to filter out transactions from ''T'' that do not belong to the block. Details can be found in the [https://github.com/BitcoinUnlimited/BitcoinUnlimited/tree/release/doc/variable-fast-filter.md release documentation].
@@ -471,11 +500,11 @@ Taking the derivative of this equation with respect to ''a'', setting it equal t
 
 ====When to use the analytical optimum====
 
-We have developed a [https://github.com/bissias/graphene-experiments/blob/master/jupyter/graphene_size_optimization.ipynb heuristic] for determining when to optimize IBLT and Bloom filter sizes analytically (using the technique described above) and when to perform exhaustive search. For a block containing ''n'' transactions, we find that when ''n > 500'' and the receiver mempool contains at least ''0.25 n'' transactions not in the block, the analytical solution above can be used without increasing the block size by more than 10%.
+We have developed a [https://github.com/bissias/graphene-experiments/blob/master/jupyter/graphene_size_optimization.ipynb heuristic] for determining when to optimize IBLT and Bloom filter sizes analytically (using the technique described above) and when to perform exhaustive search. For a block containing ''n'' transactions, we find that when ''n > 500'' and the receiver mempool contains at least ''0.25 n'' transactions not in the block, the analytical solution above can be used without increasing the block size by more than 10% from optimal.
 
 ===Reducing IBLT decode failures===
 
-Due to variations in sender and receiver mempools, IBLT decode failures were frequent in Graphene version 1. One of the improvements in version 2 was the introduction of a [https://gist.github.com/bissias/561151fef0b98f6e4d8813a08aefe349 heuristic] for determining a suitable increase in the number of IBLT cells to compensate for mempool difference.
+Due to variations in sender and receiver mempools, IBLT decode failures were frequent in Graphene version 1. One of the improvements in version 2 was the introduction of a [https://gist.github.com/bissias/561151fef0b98f6e4d8813a08aefe349 heuristic] for determining a suitable increase in the number of IBLT cells to compensate for mempool differences.
 
 ==Acknowledgments==
 

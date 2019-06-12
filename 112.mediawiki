@@ -33,4 +33,4 @@ BUIP112 Jonathan_Silverblood bitcartel
 15TiujYmnHa33fjEnasBBm1eWcGx9YEXPL
 H8yNy73rW+5ni1/PFoPiDrSyvGZhLmzaxHhNyz2lxFvLCdUEAQknX0hF+kq5Fv87kz07Zg4anFunFF4LoOi4RGg=
 -----END BITCOIN SIGNED MESSAGE-----
-<pre>
+</pre>

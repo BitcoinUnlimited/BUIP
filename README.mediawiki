@@ -749,7 +749,13 @@ This is the current list of submitted BUIPs.
 |-
 |[[126.mediawiki|BUIP126]]
 |BUIP126: Planet-on-a-LAN stress test model network
-|jtoomim
+|Jonathan Toomim
 |2019-05-13
+|draft
+|-
+|[[127.mediawiki|BUIP127]]
+|BUIP127: Planet-on-a-LAN stress test model network
+|Jonathan Toomim
+|2019-06-05
 |draft
 |}

@@ -14,20 +14,29 @@ I quote some of his statements as archived in the 'References' section below:
 
 Declaring to forthwith call Bitcoin Unlimited by the disparaging term 'Shitcoin Unlimited':
 
-As a member of BU, I will use the name "Shitcoin Unlimited" for BU as long as Shitcoin Unlimited is not supporting a client compatible with Bitcoin © - The original protocol.
+<blockquote>As a member of BU, I will use the name "Shitcoin Unlimited" for BU as long as Shitcoin Unlimited is not supporting a client compatible with Bitcoin © - The original protocol.</blockquote>
+
 Making good on the above while mocking officials of the organization:
-A consequence of this, is that @solex is the president of Shitcoin Unlimited.
+
+<blockquote>A consequence of this, is that @solex is the president of Shitcoin Unlimited.</blockquote>
+
 Misrepresenting what the BU organization stands for:
-For people who don't get it, the mocking name Shitcoin Unlimited for BU has an underlying message. It's a message saying the organization is supporting an unlimited number of shitcoins.
+
+<blockquote>For people who don't get it, the mocking name Shitcoin Unlimited for BU has an underlying message. It's a message saying the organization is supporting an unlimited number of shitcoins.</blockquote>
+
 Repeating the slur on BU:
-Suddenly, shit is moving in the right direction.
+
+<blockquote>Suddenly, shit is moving in the right direction.
 
 Not BTC (Shitcoin)
 
 Not BCH (Shitcoin Cash)
 
 Not BU (Shitcoin Unlimited)
+</blockquote>
+
 Plotting to remove the ability of elected officials to control BU funds:
+<blockquote>
 BU has a shit ton of money.
 
 What should happen to all this money if @solex @theZerg and @Peter R , elected by the members, comes out as Satoshi Nakamoto haters?
@@ -35,10 +44,15 @@ What should happen to all this money if @solex @theZerg and @Peter R , elected b
 Should the membership of BU (Shitcoin Unlimited) cut them off the stream of money?
 
 How do we do that?
+</blockquote>
+
 Unlike the case of BUIP122 where it was argued that his actions were not directed against BU, it is evident that his actions at this time are directed against Bitcoin Unlimited and undermine the public image and reputation of the Federation, its officers and other members.
 
 This violates the active Articles of Federation which a standing member must uphold:
+
+<blockquote>
 I further recognize that becoming a member of the Bitcoin Unlimited Federation and simultaneously working to undermine the Bitcoin Unlimited Vision will inflict substantial harm on the other members of the Bitcoin Unlimited Confederation
+</blockquote>
 
 ==References==
 

@@ -193,7 +193,7 @@ This is the current list of submitted BUIPs.
 |Website updates
 |Jerry Chan
 |2016-09-29
-|passed
+|closed
 |-
 |[[031.mediawiki|BUIP031]]
 |New Members for Election #2
@@ -568,10 +568,10 @@ This is the current list of submitted BUIPs.
 |closed
 |-
 |[[093.mediawiki|BUIP093]]
-|Specification - Graphene Relay
+|Graphene v.2 Improvements and Extensions
 |George Bissias (@bissias) and Brian Levine (@b-lev)
-|2018-08-21
-|draft
+|2018-09-21
+|passed
 |-
 |[[094.mediawiki|BUIP094]]
 |BCH November upgrade - Re-enable Op Codes

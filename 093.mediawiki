@@ -79,14 +79,15 @@ The total requested budget for this project is $50,000, or $5,000 per month of t
 
 ===Phase 2===
 
- *Mempool synchronization:*
+Mempool synchronization:
+
 * $2K: Protocol specification
 * $6K: Theoretical and experimental analysis
 * $8K: Prototype implementation
 * $4K: Prototype testing and refinement
 * $2.5K: Productize prototype
 
- *Graphene Extended*
+Graphene Extended
  
 * $1K: Protocol specification
 * $1.5K: Theoretical and experimental analysis

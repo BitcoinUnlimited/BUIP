@@ -1,0 +1,49 @@
+<pre>
+BUIP124: New Members for Election #13
+Proposer: solex
+Submitted on: 2019-05-03
+Status: voted
+</pre>
+
+==Summary==
+This BUIP lists the new applications for Bitcoin Unlimited membership received since the previous membership BUIP vote, and by 3 May 2019. New members are not able to vote on the current BUIPs, but will be able to in subsequent votes, provided that their entry in this BUIP is passed.
+
+# [[https://bitco.in/forum/members/4352/|@maplesyrupsucker]]
+#*Twitter: https://twitter.com/maplesyrupsuckr
+#*Memo: @maplesyrupsucker
+#*BCH/BTC public key: 1DHqGgv6X9zPNpW2h3T8oWQi6b2gEdzNEz
+#*https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-16#post-87610
+
+# [[https://bitco.in/forum/members/6286/|@LocalBitcolnCash]]
+#*Reddit: https://reddit.com/u/MobTwo
+#*BCH/BTC public key: 1Q9REfADp6oKKDDMsaNvpbRqgv7TMo3dSQ
+#*https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-17#post-90115
+
+# [[https://bitco.in/forum/members/4562/|@sken ]]
+#*sken is a declined BU member applying again to join. He was first declined in BUIP090
+#*Reddit: https://reddit.com/u/skenlrc
+#*github: floreslorca
+#*Twitter: https://twitter.com/sskknn00
+#*telegram: ssklk
+#*BCH/BTC public key: 12Hdfw24EgY9Akj9UUbKBGPJYVm9J4V2pU
+#*https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-17#post-90248
+
+# [[https://bitco.in/forum/members/537/|@Richy_T ]]
+#*Richy_T is an expired BU member applying to rejoin. He was first inducted in BUIP036
+#*BCH/BTC public key: 18aGLNEVjtmskE3Sj4KeW9EmqKyetdxn8o
+#*https://bitco.in/forum/threads/bitcoin-unlimited-membership-join-us.208/page-18#post-91486
+
+Prospective members are asked to provide a public key which they will use for voting. Bitcoin Unlimited is a participatory organization where we do ask that people devote a small amount of time, every couple of months to guide the direction of the software and org itself.
+
+Only legacy addresses are used in the voting system at present.
+
+More links to external posting history (e.g. Twitter, Medium, Facebook, Reddit) are welcome, and I'll add them here. In the current adversarial climate the links prove helpful to existing members to make their evaluation.
+
+<pre>
+------BEGIN BITCOIN SIGNED MESSAGE-----
+BUIP124 maplesyrupsucker LocalBitcolnCash sken Richy_T
+-----BEGIN BITCOIN SIGNATURE-----
+15TiujYmnHa33fjEnasBBm1eWcGx9YEXPL
+HwQnndQZYctKo5xsdiXLDb07ZkIZb0Uqfehv0/S+j5XwPlnPIdf2LEpqAIfVRDnI40XSYDcagSTqva6oN8EmhS0=
+-----END BITCOIN SIGNED MESSAGE-----
+</pre>

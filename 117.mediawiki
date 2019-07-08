@@ -1,0 +1,24 @@
+<pre>
+BUIP117: Open Letter from BU members to the BCH / BSV communities
+Proposer: Christoph Bergmann
+Submitted on: 2019-04-07
+Status: draft
+</pre>
+
+==Summary==
+After the recent drama about the role of Bitcoin Unlimited within or without BCH or BSV, I thought it would be nice to have an open letter signed by Bitcoin Unlimited members, directed to the BCH, but also the BSV community.
+
+To be honest: It makes me sick that BU has been attacked left and right for trying to act responsible facing a controversial hard fork and for having members voicing opinions which are not welcomed by some other. Adressing this in a clear way was the intention of the letter.
+
+Also, it could be very helpful to make clear where BU stands in the current situation of our unfortunately split Big Block Bitcoin project. The letter could detail out how other teams can cooperate with Bitcoin Unlimited. In my opinion, the strategic position of BU has never been stronger than today. Both BCH and BSV terribly need Bitcoin Unlimited, and it's about time to express this with a self-confident letter instead of saying sorry for staying sane.
+
+I wrote the letter in a rush, expressing a lot of what has gone through my head during the social media attacks against BU, both after the May hardfork (when BU was attacked for opposing nChain) and after the November hardfork (when BU was attacked for not opposing nChain hard enough). It reflects my personal take on the things, and I am very open to discuss and change it so it can find support of a maximum number of BU members.
+
+It's on github, so everybody can fork it, change it and make pull requests, which we can discuss openly and transparently. If someone doesn't know how to GitHub, I'm happy to help or to take his suggestions via personal message.
+
+Ideally the letter finds enough support that we can take it as a general BU statement. If not, we can publish it with the signature of every members which supports it.
+
+Her's the letter:
+
+https://github.com/theBergmann/openletterbu/blob/master/letter.md
+

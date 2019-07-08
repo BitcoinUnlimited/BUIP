@@ -5,7 +5,7 @@ Submitted: 2017-01-12
 Status: draft
 </pre>
 
-This is mostly an adaptation of [https://rusty.ozlabs.org/?p=578 ''Rusty Russel's work''] for BUIP037.<br />
+This is mostly an adaptation of [https://rusty.ozlabs.org/?p=578 ''Rusty Russel's work''] for [[037.mediawiki|BUIP037]].<br />
 <br />
 The address is composed of the following elements:<br />
 1. Prefix for type, followed by colon. Currently &quot;btc:&quot; or &quot;testnet:&quot;.<br />

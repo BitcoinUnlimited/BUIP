@@ -1,0 +1,31 @@
+<pre>
+BUIP116: Articles of Federation Clarification
+Proposer: Griffith 
+Submitted on: 2019-03-27
+Status: closed
+</pre>
+
+==Summary==
+There are currently inconsistency issues with the AOF that should be clarified.
+- There is currently no section 2.5
+- It is unclear between sections 2.9 and 2.10 if a no-confidence BUIP can be filed against a non-officer member or not. This is allowed via standard BUIP as was clarified by solex but it is unclear that this is the case.
+- It is unclear that section 2.9 applies only to removal from an officer position, not the BU organization entirely.
+
+==NOTE==
+It is important to point out that regardless of this BUIP passing, since it is already written in the articles, members can be kicked out via a standard BUIP. This BUIP simply adds a section to clearly define the rules regarding non-officer member removal as it is not immediately clear while reading the articles. It also clarifies that article 2.9 applies only to the removal of an officer from their officer position, not removal of an officer as a BU member entirely.
+
+==Proposal==
+this BUIP would fix these issues by making the following changes in the order stated:
+
+- section 2.6 has its number changed 2.5
+- section 2.7 has its number changed to 2.6
+- section 2.8 has its number changed to 2.7
+- a new section 2.8 is added with the following text in an effort to clarify non officer member removal:
+A member who does not hold an officer position (henceforth non-officer member) can be removed via a "no confidence" BUIP. This BUIP follows the normal schedule, however it must pass with a 75% super-majority of voters with at least 25% of members voting or greater than a 50% majority vote with at least 50% of members voting. A BUIP advocating for the removal of a particular non-officer member may not be occur within 4 months of a prior unsuccessful proposal advocating for the removal of that member. Multiple non-officer member removal BUIPs are not allowed. Submit them separately.
+- section 2.9 is amended to the following in an effort to clarify that this article only applies to removal from the officer position:
+An officer can be removed from their position via a "no confidence" BUIP. This BUIP follows the normal schedule, however it must pass with a 75% super-majority of voters, with at least a third of members voting. A BUIP advocating for the removal of a particular officer from their position may not be occur within 4 months of a prior unsuccessful proposal advocating for the removal of that officer. Removal proposals will be managed by an officer who is not affected by the BUIP. Multiple officer removal BUIPs are not allowed. Submit them separately.
+- section 2.10 is amended to the following to clarify the difference between sections 2.8 and 2.9:
+If actions of the President, Secretary, Developer, Pool Operator, or Member is in violation of these rules, that is grounds for removal. Any member may submit a "no confidence" BUIP against a non-officer member as per section VIII. Any member may submit a "no confidence" BUIP against an officer as per section IX. Members are exhorted to vote based on their belief as to whether the individual broke these rules rather than their personal opinion of the individual. A removed member may re-apply for membership. A removed officer may re-run for any position.
+
+==Motivation==
+Clarification of the articles is needed due to an inconsistency that makes it unclear what the process for member removal is as well as the distinction between removal from an officer position and member removal.

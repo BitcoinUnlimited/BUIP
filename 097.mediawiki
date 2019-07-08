@@ -1,5 +1,5 @@
 <pre>
-BUIP080: New Members for Election #10
+BUIP097: New Members for Election #10
 Proposer: Andrew Clifford (@solex)
 Submitted on: 2018-08-21
 Voting date:  2018-08-27

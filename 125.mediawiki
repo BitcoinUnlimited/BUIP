@@ -1,0 +1,62 @@
+<pre>
+BUIP125: Remove Norway from membership
+Proposer: freetrader
+Submitted on: 2019-05-21
+Status: draft
+</pre>
+
+==Summary==
+
+This BUIP will remove member #51 @Norway, aka Stein H Ludvigsen as he identifies himself, from membership rosters as well as strip him of all voting powers immediately upon conclusion of voting.
+
+The member has recently turned to actions which will continue to reflect negatively on Bitcoin Unlimited if it tolerates such behavior from a member.
+I quote some of his statements as archived in the 'References' section below:
+
+Declaring to forthwith call Bitcoin Unlimited by the disparaging term 'Shitcoin Unlimited':
+
+<blockquote>As a member of BU, I will use the name "Shitcoin Unlimited" for BU as long as Shitcoin Unlimited is not supporting a client compatible with Bitcoin © - The original protocol.</blockquote>
+
+Making good on the above while mocking officials of the organization:
+
+<blockquote>A consequence of this, is that @solex is the president of Shitcoin Unlimited.</blockquote>
+
+Misrepresenting what the BU organization stands for:
+
+<blockquote>For people who don't get it, the mocking name Shitcoin Unlimited for BU has an underlying message. It's a message saying the organization is supporting an unlimited number of shitcoins.</blockquote>
+
+Repeating the slur on BU:
+
+<blockquote>Suddenly, shit is moving in the right direction.
+
+Not BTC (Shitcoin)
+
+Not BCH (Shitcoin Cash)
+
+Not BU (Shitcoin Unlimited)
+</blockquote>
+
+Plotting to remove the ability of elected officials to control BU funds:
+<blockquote>
+BU has a shit ton of money.
+
+What should happen to all this money if @solex @theZerg and @Peter R , elected by the members, comes out as Satoshi Nakamoto haters?
+
+Should the membership of BU (Shitcoin Unlimited) cut them off the stream of money?
+
+How do we do that?
+</blockquote>
+
+Unlike the case of BUIP122 where it was argued that his actions were not directed against BU, it is evident that his actions at this time are directed against Bitcoin Unlimited and undermine the public image and reputation of the Federation, its officers and other members.
+
+This violates the active Articles of Federation which a standing member must uphold:
+
+<blockquote>
+I further recognize that becoming a member of the Bitcoin Unlimited Federation and simultaneously working to undermine the Bitcoin Unlimited Vision will inflict substantial harm on the other members of the Bitcoin Unlimited Confederation
+</blockquote>
+
+==References==
+
+[1] https://web.archive.org/web/20190521185027/https://bitco.in/forum/threads/gold-collapsing-bitcoin-up.16/page-1465
+
+[2] https://web.archive.org/web/20190521214038/https://bitco.in/forum/threads/gold-collapsing-bitcoin-up.16/page-1466
+

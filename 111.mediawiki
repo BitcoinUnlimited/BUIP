@@ -1,0 +1,24 @@
+<pre>
+BUIP111: Use BTC over BCH or BSV
+Proposer: torusJKL
+Submitted on: 2019-01-01
+Status: draft
+</pre>
+
+==Background==
+On November 2015 the BCH network split into two (noteworthy) chains.
+BCHABC with the ABC rules (hereafter BCH) and BCHBSV with the SV rules (hereafter BSV).
+
+Although BCH has a higher market value it is not clear which chain (BCH or BSV) will become the dominant one. 
+
+==Motivation==
+No matter which of the two chains will become the dominant one we want BU to be funded well and not take any risk by selling one or the other coin prematurely.
+
+BU should keep an equal amount of BCH and BSV (number of coins, not fiat value) until the outcome can be assesed better.
+
+==Task==
+Whenever services need to be paid BU should sell/convert primarely BTC.
+If this is not possible BU should try to keep the amount of BCH and BSV (number of coins, not fiat value) as similar as possible.
+
+==Timetable==
+Ungoing until canceled by a new BUIP.

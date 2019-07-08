@@ -256,7 +256,7 @@ This is the current list of submitted BUIPs.
 |passed
 |-
 |[[041.mediawiki|BUIP041]]
-|([[038.mediawiki|BUIP038]] Counter) Prevent Minority Hash Power From Injecting Very Large Blocks
+|(BUIP038 Counter) Prevent Minority Hash Power From Injecting Very Large Blocks
 |Andrew Stone
 |2016-12-07
 |closed
@@ -280,7 +280,7 @@ This is the current list of submitted BUIPs.
 |draft
 |-
 |[[045.mediawiki|BUIP045]]
-|Unified addresses format for [[037.mediawiki|BUIP037]]
+|Unified addresses format for BUIP037
 |Amaury SÉCHET
 |2017-01-12
 |draft
@@ -441,19 +441,19 @@ This is the current list of submitted BUIPs.
 |2017-11-13
 |passed
 |-
-|[[073|BUIP073]]
+|[[073.mediawiki|BUIP073]]
 |Fully re-weight BU's funds towards BCH
 |@Norway
 |2017-11-13
 |closed
 |-
-|[[074|BUIP074]]
+|[[074.mediawiki|BUIP074]]
 |Sell the Bitcoin Gold portion of BU's funds for BCH
 |@Windowly
 |2017-11-16
 |passed
 |-
-|[[075|BUIP075]]
+|[[075.mediawiki|BUIP075]]
 |Counter BUIP of BUIP071
 |Gal Buki (@torusJKL)
 |2017-11-13
@@ -510,7 +510,7 @@ This is the current list of submitted BUIPs.
 |[[084.mediawiki|BUIP084]]
 |Secure BCH coin splitting instructions
 |@79b79aa8
-|2017-01-11
+|2018-01-11
 |passed
 |-
 |[[085.mediawiki|BUIP085]]
@@ -550,13 +550,13 @@ This is the current list of submitted BUIPs.
 |voted
 |-
 |[[091.mediawiki|BUIP091]]
-|Workshop on Instant Transactions for Bitcoin
+|Move the official BU repository and issue tracker to GitLab
 |Peter Rizun (@Peter R)
 |2018-08-06
 |passed
 |-
 |[[092.mediawiki|BUIP092]]
-|Move the official BU repository and issue tracker to GitLab
+|Workshop on Instant Transactions for Bitcoin
 |Gal Buki (@torusJKL)
 |2018-08-01
 |passed
@@ -625,5 +625,137 @@ This is the current list of submitted BUIPs.
 |New Members For Election #11
 |Andrew Clifford (@solex)
 |2018-09-22
+|draft
+|-
+|[[106.mediawiki|BUIP106]]
+|BUIP106: License Bitcoin Unlimited software under GPLv3
+|freetrader
+|2018-12-07
+|draft
+|-
+|[[107.mediawiki|BUIP107]]
+|BUIP107: Sell the BCH portion of BU's funds for BSV
+|Windowly
+|2018-12-15
+|closed
+|-
+|[[108.mediawiki|BUIP108]]
+|BUIP108: Support for the BCH and BSV chains
+|torusJKL
+|2018-12-30
+|closed
+|-
+|[[109.mediawiki|BUIP109]]
+|BUIP109: Andrew Stone for Developer
+|Andrew Stone
+|2018-12-30
+|passed
+|-
+|[[110.mediawiki|BUIP110]]
+|BUIP110: Funded Development, aka Devpool2
+|solex
+|2018-12-31
+|passed
+|-
+|[[111.mediawiki|BUIP111]]
+|BUIP111: Use BTC over BCH or BSV
+|torusJKL
+|2019-01-01
+|draft
+|-
+|[[112.mediawiki|BUIP112]]
+|BUIP112: New Members for Election #12
+|solex
+|2019-01-11
+|passed
+|-
+|[[113.mediawiki|BUIP113]]
+|BUIP113: Support Bitcoin SV with an Official Implementation
+|Griffith
+|2019-04-14
+|closed
+|-
+|[[114.mediawiki|BUIP114]]
+|BUIP114: Drop support for the BSV HF Config Parameters in BUCash
+|Griffith
+|2019-03-27
+|passed
+|-
+|[[115.mediawiki|BUIP115]]
+|BUIP115: Drop support for BTC
+|Griffith
+|2019-03-27
+|passed
+|-
+|[[116.mediawiki|BUIP116]]
+|BUIP116: Articles of Federation Clarification
+|Griffith
+|2019-03-27
+|closed
+|-
+|[[117.mediawiki|BUIP117]]
+|BUIP117: Open Letter from BU members to the BCH / BSV communities
+|Christoph Bergmann
+|2019-04-07
+|draft
+|-
+|[[118.mediawiki|BUIP118]]
+|BUIP118: Implement CashAccount lookup features
+|Jonathan Silverblood
+|2019-03-30
+|passed
+|-
+|[[119.mediawiki|BUIP119]]
+|BUIP119: Implement sending to CashAccount
+|Jonathan Silverblood
+|2019-03-30
+|passed
+|-
+|[[120.mediawiki|BUIP120]]
+|BUIP120: Replace LevelDB with an immutable stateless storage design
+|Jonathan Silverblood
+|2019-03-28
+|passed
+|-
+|[[121.mediawiki|BUIP121]]
+|BUIP121: Create formal BCH specifications
+|Jonathan Silverblood
+|2019-04-01
+|passed
+|-
+|[[122.mediawiki|BUIP122]]
+|BUIP122: Remove Norway from membership
+|imaginary_username
+|2019-04-14
+|closed
+|-
+|[[123.mediawiki|BUIP123]]
+|BUIP123: Remove imaginary username from membership
+|bitsko
+|2019-04-14
+|closed
+|-
+|[[124.mediawiki|BUIP124]]
+|BUIP124: New Members for Election #13
+|solex
+|2019-05-03
+|voted
+|-
+|[[125.mediawiki|BUIP125]]
+|BUIP125: Remove Norway from membership
+|freetrader
+|2019-05-21
+|draft
+|-
+|[[126.mediawiki|BUIP126]]
+|BUIP126: Planet-on-a-LAN stress test model network
+|Jonathan Toomim
+|2019-05-13
+|draft
+|-
+|[[127.mediawiki|BUIP127]]
+|BUIP127: Planet-on-a-LAN stress test model network
+|Jonathan Toomim
+|2019-06-05
 |draft
 |}

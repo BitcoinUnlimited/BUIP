@@ -2,7 +2,7 @@
 BUIP104: Re-elect Peter Rizun for BU Secretary
 Proposer: Peter Rizun
 Submitted on: 2018-09-22
-Status: draft
+Status: passed
 </pre>
 
 ==Summary==

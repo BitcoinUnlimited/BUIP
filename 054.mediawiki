@@ -2,7 +2,7 @@
 BUIP054: Make AD optional and disabled by default
 Proposer: freetrader
 Submitted on: 2017-05-05
-Status: draft
+Status: closed
 </pre>
 
 

@@ -2,7 +2,7 @@
 BUIP082: opt-in malleability fix
 Proposer: Gal Buki (@torusJKL)
 Submitted on: 2017-12-25
-Status: draft
+Status: passed 
 </pre>
 
 ==Background==

@@ -2,7 +2,7 @@
 BUIP101: Set the default value of max blocksize cap (hard limit) to 10 terabyte
 Proposer: Norway
 Submitted on: 2018-08-27
-Status: draft
+Status: closed 
 </pre>
 
 ==Motivation==

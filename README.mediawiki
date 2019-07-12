@@ -115,7 +115,7 @@ This is the current list of submitted BUIPs.
 |Datastream Compression
 |Peter Tschipper
 |03/20/2016
-|draft
+|passed
 |-
 |[[018.mediawiki|BUIP018]]
 |Bitnodes Seeding and User-Configurable DNS Seeds
@@ -127,7 +127,7 @@ This is the current list of submitted BUIPs.
 |New Members for Election #1
 |Andrew Clifford
 |2016-04-29
-|passed
+|voted
 |-
 |[[020.mediawiki|BUIP020]]
 |Implement bit-0 soft-forks (BIPs 9,68,112,113)
@@ -199,7 +199,7 @@ This is the current list of submitted BUIPs.
 |New Members for Election #2
 |Andrew Clifford (solex)
 |2016-09-30
-|passed
+|voted
 |-
 |[[032.mediawiki|BUIP032]]
 |Vote Peter R for Secretary
@@ -229,7 +229,7 @@ This is the current list of submitted BUIPs.
 |New Members for Election #3
 |Andrew Clifford
 |2016-11-05
-|passed
+|voted
 |-
 |[[037.mediawiki|BUIP037]]
 |Hardfork SegWit
@@ -265,7 +265,7 @@ This is the current list of submitted BUIPs.
 |New Members for Election #4
 |Andrew Clifford
 |2016-12-16
-|passed
+|voted
 |-
 |[[043.mediawiki|BUIP043]]
 |Exploring the Bitcoin Network
@@ -301,7 +301,7 @@ This is the current list of submitted BUIPs.
 |New Members for Election #5
 |Andrew Clifford (@solex)
 |2017-03-09
-|passed
+|voted
 |-
 |[[049.mediawiki|BUIP049]]
 |Amend AoC to change membership period
@@ -331,7 +331,7 @@ This is the current list of submitted BUIPs.
 |Tweakable client DoS responses
 |freetrader
 |2017-05-01
-|passed
+|closed
 |-
 |[[054.mediawiki|BUIP054]]
 |Make AD optional and disabled by default
@@ -373,7 +373,7 @@ This is the current list of submitted BUIPs.
 |New Members for Election #6
 |Andrew Clifford (@solex)
 |2017-05-22
-|passed
+|voted
 |-
 |[[061.mediawiki|BUIP061]]
 |Demonstration of Phase in Full Network Upgrade Activated by Miners
@@ -415,13 +415,19 @@ This is the current list of submitted BUIPs.
 |New Members for Election #7
 |Andrew Clifford (@solex)
 |2017-09-09
-|passed
+|voted
 |-
 |[[068.mediawiki|BUIP068]]
 |The Future of Bitcoin 2 Conference
 |Antony Zegers (@Mengerian)
 |2017-11-01
 |passed
+|-
+|[[069.mediawiki|BUIP069]]
+|Academic paper - Mining, Taxation and Public Goods in Bitcoin
+|Nicolai Dimitri (@Nic)
+|2018-08-01
+|closed
 |-
 |[[070.mediawiki|BUIP070]]
 |Support BitPay's new Bitcoin Cash address format in BUCash
@@ -487,7 +493,7 @@ This is the current list of submitted BUIPs.
 |New Members for Election #8
 |Andrew Clifford (@solex)
 |2017-11-24
-|passed
+|voted
 |-
 |[[081.mediawiki|BUIP081]]
 |Unambiguous definition of 1 year membership period
@@ -499,7 +505,7 @@ This is the current list of submitted BUIPs.
 |opt-in malleability fix
 |Gal Buki (@torusJKL)
 |2017-12-25
-|draft
+|passed
 |-
 |[[083.mediawiki|BUIP083]]
 |Andrew Clifford for President
@@ -551,21 +557,15 @@ This is the current list of submitted BUIPs.
 |-
 |[[091.mediawiki|BUIP091]]
 |Move the official BU repository and issue tracker to GitLab
-|Peter Rizun (@Peter R)
+|Gal Buki (@torusJKL)
 |2018-08-06
 |passed
 |-
 |[[092.mediawiki|BUIP092]]
 |Workshop on Instant Transactions for Bitcoin
-|Gal Buki (@torusJKL)
+|Peter Rizun (@Peter R)
 |2018-08-01
 |passed
-|-
-|[[069.mediawiki|BUIP069]]
-|Academic paper - Mining, Taxation and Public Goods in Bitcoin
-|Nicolai Dimitri (@Nic)
-|2018-08-01
-|closed
 |-
 |[[093.mediawiki|BUIP093]]
 |Graphene v.2 Improvements and Extensions
@@ -595,37 +595,37 @@ This is the current list of submitted BUIPs.
 |New Members For Election #10
 |Andrew Clifford (@solex)
 |2018-08-21
-|draft
+|voted
 |-
 |[[098.mediawiki|BUIP098]]
 |Bitcoin Unlimited's Strategy for the November 2018 Hard Fork
 |Andrew Stone (@theZerg)
 |2018-08-21
-|draft
+|passed
 |-
 |[[101.mediawiki|BUIP101]]
 |Set the default value of max blocksize cap (hard limit) to 10 terabyte
 |Norway
 |2018-08-27
-|draft
+|closed
 |-
 |[[103.mediawiki|BUIP103]]
 |Let's Build BCH! Hackathon @ Satoshi's Coffee-house
 |Will C. (Bitcoin Cash Association Mod, sponsor: @solex
 |2018-09-21
-|draft
+|passed
 |-
 |[[104.mediawiki|BUIP104]]
 |BUIP104: Re-elect Peter Rizun for BU Secretary
 |Peter Rizun
 |2018-09-22
-|draft
+|passed
 |-
 |[[105.mediawiki|BUIP105]]
 |New Members For Election #11
 |Andrew Clifford (@solex)
 |2018-09-22
-|draft
+|voted
 |-
 |[[106.mediawiki|BUIP106]]
 |BUIP106: License Bitcoin Unlimited software under GPLv3
@@ -667,7 +667,7 @@ This is the current list of submitted BUIPs.
 |BUIP112: New Members for Election #12
 |solex
 |2019-01-11
-|passed
+|voted
 |-
 |[[113.mediawiki|BUIP113]]
 |BUIP113: Support Bitcoin SV with an Official Implementation
@@ -754,7 +754,7 @@ This is the current list of submitted BUIPs.
 |draft
 |-
 |[[127.mediawiki|BUIP127]]
-|BUIP127: Planet-on-a-LAN stress test model network
+|BUIP127: Partially re-weight funds, 50% BTC to BCH
 |Jonathan Toomim
 |2019-06-05
 |draft

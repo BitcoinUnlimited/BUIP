@@ -2,7 +2,7 @@
 BUIP035: New Bitcoin Unlimited Website
 Proposer: Peter Rizun (Peter R)
 Submitted: 2016-11-04
-Status: ??
+Status: passed
 </pre>
 
 '''1. Project Title'''<br />

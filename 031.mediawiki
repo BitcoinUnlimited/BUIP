@@ -3,7 +3,7 @@ BUIP031: New Members for Election #2
 Proposer: Andrew Clifford (solex)
 Submitted: 2016-09-30
 Voting date: 2016-10-05
-Status: passed
+Status: voted
 </pre>
 <br />
 '''Summary'''<br />

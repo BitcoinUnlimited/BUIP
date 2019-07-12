@@ -2,8 +2,8 @@
 BUIP060: New Members for Election #6
 Proposer: Andrew Clifford (@solex)
 Submitted on: 2017-05-22
-Status: passed
 Voting date: 2017-05-29
+Status: voted
 </pre>
 
 ==Summary==

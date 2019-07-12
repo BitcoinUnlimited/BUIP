@@ -3,7 +3,7 @@ BUIP103: Let's Build BCH! Hackathon @ Satoshi's Coffee-house
 Proposer: Will C. (Bitcoin Cash Association Mod)
 Submitted on: 2018-09-21
 Sponsor: Anrew Clifford (@solex)
-Status: draft
+Status: passed
 </pre>
 
 ==Summary==

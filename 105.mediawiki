@@ -3,7 +3,7 @@ BUIP105: New Members for Election #11
 Proposer: Andrew Clifford (@solex)
 Submitted on: 2018-09-22
 Voting date:  2018-10-05 to 2018-10-09
-Status: draft
+Status: voted
 </pre>
 
 ==Summary==

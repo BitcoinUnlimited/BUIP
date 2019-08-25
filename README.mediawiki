@@ -758,4 +758,16 @@ This is the current list of submitted BUIPs.
 |Jonathan Toomim
 |2019-06-05
 |draft
+|-
+|[[128.mediawiki|BUIP128]]
+|BUIP128: Fund the Developer
+|Andrew Stone
+|2019-08-11
+|draft
+|-
+|[[129.mediawiki|BUIP129]]
+|BUIP129: Finish and Productize the BU voting system
+|Andrew Stone
+|2019-08-11
+|draft
 |}

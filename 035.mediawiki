@@ -21,7 +21,7 @@ The current [https://www.bitcoinunlimited.info/ ''Bitcoin Unlimited (BU) website
 <br />
 The objective of this project is to build a new Bitcoin Unlimited website that targets three groups: new users, full-node operators, and miners. The website will visually explain BU’s central technologies, have multi-language support, show real-time network statistics on the emergent block size limit, include an automated BUIP voting system, and be easier to maintain.<br />
 <br />
-<img src="https://raw.githubusercontent.com/sickpig/BUIP/new/buip031-to-036/media/035_image1.jpeg">
+<img src="media/035_image1.jpeg">
 <br />
 [[https://www.dropbox.com/s/ykj9ycodaoarf8v/bu_website_mockup.pdf?dl=0 ''Link to full mock-up'']]<br />
 <br />

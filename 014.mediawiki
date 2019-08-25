@@ -5,7 +5,7 @@ Submitted: 2016-03-03
 Status: passed
 Type: Operational BUIP
 </pre>
-<img src="https://raw.githubusercontent.com/sickpig/BUIP/new/buip031-to-036/media/china.gif" alt="China map">
+<img src="media/china.gif" alt="China map">
 <br />
 '''Donation address'''<br />
 <br />

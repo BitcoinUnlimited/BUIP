@@ -1,0 +1,16 @@
+<pre>
+BUIP128: Fund the Developer
+Proposer: Andrew Stone
+Submitted on: 2019-08-11
+Status: draft
+</pre>
+
+
+== Summary ==
+
+I lost my independent majority funder last spring due to the cryptocurrency "winter". Although my job as Developer must be voluntary, the Articles allow me to be funded for other work. My specific work as a voluntary Developer can be interpreted narrowly as getting other people to implement BUIPs, clicking the merge button, and running releases. But the reality is that in-depth code reviews and my own contributions to Bitcoin Unlimited is a full time job.
+
+== Budget ==
+
+This BUIP authorizes 100,000 USD a year (paid monthly in crypto of course) to continue this work. Legally, this is not employment -- its a services/consulting agreement.
+

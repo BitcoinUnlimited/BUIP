@@ -15,7 +15,7 @@ A website allowing an external entity to register and manage a vote. This websit
 
 A mobile “Activity” (embeddable in any mobile app) that handles voting, connecting to any registered entity. Embed this activity into an app that integrates with the website described above.
 
-= Voting System Requirements =
+== Voting System Requirements ==
 
 Hjálmarsson, et. al provides a summary of voting requirements:
 

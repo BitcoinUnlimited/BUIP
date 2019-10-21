@@ -770,4 +770,40 @@ This is the current list of submitted BUIPs.
 |Andrew Stone
 |2019-08-11
 |draft
+|-
+|[[130.mediawiki|BUIP130]]
+|New Members for Election #14
+|Andrew Clifford
+|TBD
+|draft
+|-
+|[[131.mediawiki|BUIP131]]
+|Reserved for George Bissias
+|George Bissias
+|TBD
+|draft
+|-
+|[[132.mediawiki|BUIP132]]
+|Ecosystem Outreach & Marketing for BU & On-chain Scaling
+|Sponsored by solex 2019-10-03
+|2019-09-30
+|draft
+|-
+|[[133.mediawiki|BUIP133]]
+|Electron Cash Improvements
+|Sponsored by imaginary_username and solex 2019-10-03
+|2019-10-03
+|draft
+|-
+|[[134.mediawiki|BUIP134]]
+|Fund another Developer
+|Peter Tschipper
+|2019-10-05
+|draft
+|-
+|[[135.mediawiki|BUIP135]]
+|Use OKCoin Donation to fund DoubleSpend Proofs
+|Andrew Stone
+|2019-10-14
+|draft
 |}

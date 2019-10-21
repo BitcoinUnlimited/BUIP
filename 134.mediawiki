@@ -1,0 +1,36 @@
+<pre>
+BUIP134 Fund another Developer
+Proposer: Peter Tschipper
+Submitted on: 2019-10-05
+Status: draft
+</pre>
+
+== Summary ==
+
+I lost my independent funding in September of this year and would like to continue working on the Bitcoin Unlimited project as a full time developer as I have been doing for almost the last 4 years, for the first year I worked free and then later someone stepped forward to fund me.
+
+== Contributions to this project ==
+
+Over the last years, for those that may not be aware, and aside from the daily grind of fixing bugs, reviewing code and implementing small features, I’ve made the following significant contributions:
+
+Xthinblocks
+
+Parallel Validation
+
+Implemented compact blocks and worked with George Bissias to get the first graphene implementation working on main net. We now seamlessly support all three block relay types in BU.
+
+Created the first Bitcoin implementation of CPFP that has the ability to efficiently mine long unconfirmed chains (currently merged in dev)
+
+You can view my daily contribs here : https://github.com/ptschip
+
+== What I’d like to do this next year, time permitting ==
+
+Giga net testing support and development: I currently have a handful of PR’s waiting for testing and merging which will improve block and tx propagation under heavy loads.
+
+Double spend proof implementation.
+
+Research and implement rocksdb in order to see if it can solve some of our issues around database flushing under stress and also improve general performance.
+
+Test an implementation using UDP. This has been on my list for a while, always slips down on the priority scale but would be great to get something that uses both TCP and UDP and can switch back and forth based on reliability of the connection which can be monitored using the request manager.
+
+

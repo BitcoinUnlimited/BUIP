@@ -770,4 +770,58 @@ This is the current list of submitted BUIPs.
 |Andrew Stone
 |2019-08-11
 |draft
+|-
+|[[130.mediawiki|BUIP130]]
+|New Members for Election #14
+|Andrew Clifford (solex)
+|TBD
+|draft
+|-
+|[[131.mediawiki|BUIP131]]
+|Bobtail Prototype Extending Storm on Bitcoin Unlimited
+|Geroge Bissias
+|2019-11-06
+|draft
+|-
+|[[132.mediawiki|BUIP132]]
+|Ecosystem Outreach & Marketing for BU & On-chain Scaling
+|singularity (sponsored Andrew Clifford, solex)
+|2019-09-30
+|draft
+|-
+|[[133.mediawiki|BUIP133]]
+|Electron Cash Improvements
+|Jonald Fyookball (sponsored by imaginary_username and Andrew Clifford)
+|2019-10-03
+|draft
+|-
+|[[134.mediawiki|BUIP134]]
+|Fund another Developer
+|Peter Tschipper
+|2019-10-05
+|draft
+|-
+|[[135.mediawiki|BUIP135]]
+|Use OKCoin Donation to fund DoubleSpend Proofs
+|Andrew Stone (theZerg)
+|2019-10-14
+|draft
+|-
+|[[136.mediawiki|BUIP136]]
+|Andrew Clifford for president
+|Andrew Clifford
+|2019-11-09
+|draft
+|-
+|[[137.mediawiki|BUIP137]]
+|Funded development (aka Devpool3)
+|Andrew Clifford
+|2019-11-09
+|draft
+|-
+|[[138.mediawiki|BUIP138]]
+|Fund BU's Chief Scientist
+|Peter Rizun
+|2019-11-10
+|draft
 |}

@@ -1,0 +1,27 @@
+<pre>
+BUIP132: Ecosystem Outreach & Marketing for BU & On-chain Scaling
+Proposer: singularity (sponsored Andrew Clifford)
+Submitted on: 2019-09-30
+Status: draft
+</pre>
+
+== Motivation ==
+
+In September 2017 the operational BUIP066 was approved. This BUIP requested $30,000 for expenditures necessary to continue with further outreach initiatives building on the results from BUIP034. Since then there have been a number of things that have happened within the ecosystem, including a long bear-cycle. Even through this cycle BCH has managed to hold on as one of the top four biggest cryptocurrencies, and retained a lot of its community. It is important now that BU refocuses its efforts in being a leader within the space, and bringing Bitcoin to the world.
+
+== Objectives ==
+
+To continue with more outreach initiatives building on the results from BUIP066. BU is an important and valuable entity within the BCH ecosystem. Its consistent focus on bringing peer-to-peer electronic cash to as many people as possible has not wavered, and it is important that its efforts do not go to waste. By using resources to communicate BU’s core message and initiatives, not only to the BCH ecosystem but also to the wider cryptocurrency industry, BUs impact can be amplified. The goal of this BUIP is to expand the reach BU has within the wider Bitcoin industry and provide the quality branding that BU deserves to match its excellent work.
+
+== Funding ==
+
+Budget: $30,000 over a six-month period commencing from the date of vote (if successful).
+
+Commitment of funds will only be made for focused initiatives and costs directly incurred in ecosystem outreach, social media communication, messaging, branding and other awareness strategies.
+
+The elected BU officials: President, Secretary and Developer will jointly agree expenditures for outreach initiatives.
+
+== Impact ==
+
+By better communicating the excellent work that BU does within the ecosystem through the use of visually rich, digestible and branded messaging, BU will become an even more capable leader for the BCH ecosystem. It will allow BU to communicate complex but crucial subjects more effectively while reaching a wider audience. This BUIP will encourage further engagement and participation of not only the BU membership but also the wider BCH community in BU, which will offer significant advantages over the long-term.
+ 

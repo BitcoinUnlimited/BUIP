@@ -1,0 +1,150 @@
+<pre>
+BUIP133: Electron Cash Ecosystem Improvements
+Proposer: Jonald Fyookball (Sponsored by: imaginary_username and Andrew Clifford 3 Oct 2019)
+Submitted on: 2019-11-09
+Status: draft
+</pre>
+
+
+== Motivation ==
+
+The Electron Cash wallet is a focal point for the Bitcoin Cash application layer. There are a number of projects that can add value and strengthen the software and ecosystem, but currently most efforts are on a volunteer basis. The Electron Cash group seeks $51,200 in order to accomplish the following projects:
+
+
+== Goals ==
+
+=== Project #1: “Faster SPV Server” ===
+
+Get Electron Cash “talking” to electrs and/or bchd rather than just ElectrumX
+
+Synopsis: ElectrumX is the server software that Electron Cash uses in order to interact with the blockchain. It suffers from performance and feature limitations, which either need to be fixed, or Electron Cash should use other server software. It would be a good time investment to get Electron Cash “talking” to other SPV services such as bchd or BU’s electrs.
+
+Obstacles / Challenges / Goals: There is a very fast SPV server implementation from BU called electrs but it still needs some feature additions. Calin Culianu has offered to work with the BU team in ironing out any final touches to get electrs to be at least as good or better than ElectrumX in terms of featureset. Electrs, being entirely native code, runs much faster than ElectrumX and is multi-core. It needs a few niceties such as SSL support and “Server Federation” (creating a mini p2p network of servers). This software is built-in to BU optionally and thus has the potential to be installed on many full nodes on the network. Additionally, bchd gRPC shows promise (is native, is fast, is deployed in many places) but needs a few minor feature additions as well. Working with these teams, Electron Cash could get them to the 100% feature level needed -- development and coordination time is needed.
+
+Resources Needed: Development time from one or more of the Electron Cash and/or collaboration with Dagurval or another BU developer and/or bchd developers such as Chris Pacia.
+
+Estimated Cost: 200+ hours developer time.
+
+=== Project #2: “CashShuffle iOS” ===
+
+CashShuffle is loved by all. It needs to come to Electron Cash’s iOS implementation.
+Synopsis: The Bitcoin Cash ecosystem has by and large had a positive reaction to Electron Cash’s CashShuffle. Many users are asking for an iOS port of the subsystem to work in the existing Electron Cash for iOS wallet app.
+
+Resources Needed: Development time from Calin Culianu.
+Estimated Cost: 100 hours development time
+
+=== Project #3: “Android Phase 4” ===
+
+The Android version of Electron Cash has one more phase to complete its core feature set. Finishing this brings the basic wallet to completion and makes it ready for enhancements like SLP and CashShuffle/Fusion.
+
+Synopsis: Here are the specific features being added:
+
+*Wallets:
+**Rename (including closed wallets)
+**Export (including closed wallets)
+**Delete (add ability to delete closed wallets)
+*Send:
+**Export and import unbroadcast transactions
+*Addresses
+**Freeze
+**Sign / verify
+**Private key
+**Encrypt / decrypt
+*Coins screen
+
+*Settings:
+**Transactions:
+**Use multiple change addresses
+*Show notification if payment received when app in background
+
+Resources Needed: Development time from Malcolm Smith or other android developer
+Estimated Cost: 100 hours development time
+
+=== Project #4: “EC/SLP Merge” ===
+
+SLP (Token) Integration into the Electron Cash main codebase and discontinuing development on the EC-SLP Branch
+
+Synopsis: The Electron Cash main codebase does not support spending/creating SLP tokens. It needs this functionality, and the Electron Cash SLP codebase needs to be discontinued, in the interests of efficiency and simplicity for both users and developers.
+
+Obstacles / Challenges: Careful review of the Electron Cash SLP pieces that will be brought into Electron Cash must be done. Electron Cash regular is a somewhat more complex wallet than EC-SLP, because of CashShuffle, and care must be taken to not impact its performance needs. Code review and rewriting of existing pieces from EC-SLP is anticipated, as well as some reworking of the UI.
+
+Resources Needed: Development time from one or more of the Electron Cash and/or SLP developers such as Calin Culianu, James Cramer, Axel Gembe, Mark Lundeberg or others.
+
+Estimated Cost: 250-350 hours developer time.
+
+=== Project #5: “Skin System” ===
+
+A skinning system based on the existing ui’s QT framework. This allows the wallet to have various designs and color themes.
+Synopsis: The idea to create a skin system is not for novelty purposes. This actually is our most viable idea for the Electron Cash developers create a business model that will sustain development in the future. Everybody loves skins and we will monetize it.
+
+Resources Needed: Development time from Axel Gembe, Calin Culianu or other QT specialist python developers.
+
+Estimated Cost: 400 hours development time
+
+=== Project #6: “SLP iOS” ===
+
+Simple Ledger Protocol has taken the BCH world by storm. It needs to come to Electron Cash’s iOS implementation.
+
+Synopsis: Many users are asking for an iOS port of the subsystem to work in the existing Electron Cash for iOS wallet app.
+
+Resources Needed: Development time from Calin Culianu.
+
+Estimated Cost: 200 hours development time
+
+=== Project #7: “Private Reusable Addresses” ===
+
+Make Electron Cash implement imaginary_username’s “reusable address” specification.
+
+Synopsis: Reusable addresses allow for an identifier such as a CashAccount to be used to derive non-repeating addresses for discrete repeated payments to the same person, using a new address each time, so that one does not have to choose between privacy and usability - one can have good privacy while only giving out an address just once. Enables convenient, no-compromise handles for mass adoption.
+
+Resources Needed: Development time from one or more of the Electron Cash developers such as Calin Culianu, in conjunction with server-side work such as bchd modifications from Josh Ellithorpe, as well as specification/protocol work from imaginary_username.
+
+Estimated Cost: 100-300 hours development time across multiple developers..
+
+=== Project #8: “Keyserver” ===
+
+Allow Electron Cash to integrate with Cashweb’s Keyserver software.
+
+Synopsis: Harry Barber and Shammah Chancellor have written “keyserver” software for storing blockchain-related data in a separate peer-to-peer network that is tightly integrated with the BCH blockchain.
+
+Goals / Outcomes: This key piece of infrastructure allows wallets to come alive. You can register data or share data with your friends all from within your wallet. Send contact vCards or lookup your friend’s aliases or addresses, send them instant messages, or store authenticated data for sharing with others -- all signed and associated with your bitcoin address.
+
+Resources Needed: Harry and Shammah are already developing the GUI pieces needed for Electron Cash to integrate with this service, but more development time from one or more of the Electron Cash developers such as Calin Culianu would be helpful.
+
+Estimated Cost: 50 hours development time.
+
+=== Project #9: “More Robust and Private backend” ===
+Make Electron Cash more robust against server withholding, leak less privacy to its SPV servers.
+
+Synopsis
+
+A longstanding drawback of Electron Cash’s model of fetching all transactions from a single server is that the server can withhold transactions from the client, resulting in complications for receiving payment.
+
+On top of that, Electron Cash publishes its entire list of addresses to a single server to which it connects, potentially leaking privacy to the server which can trivially find address/spending linkages. Right now the only real mitigation is via running your own server, Tor is a slight improvement.
+
+Both of these can be fixed with a more intelligent strategy which it can distribute load to add redundancy across servers, while not revealing “too much” to any one server. Electron-cash then becomes more reliable and robust for receiving payments.
+
+Resources Needed: Development time from one or more of the Electron Cash developers such as Calin Culianu.
+
+Estimated Cost: 100-200 hours developer time.
+
+=== Project #10 “Continuing Support and Protocol scalability” ===
+
+Electron Cash needs constant upkeep and bug fixing. New libraries and hardware wallets appear periodically and the code needs maintenance frequently. It is a mostly volunteer effort but some funding would make things much better.
+Apply unfinished protocol tweaks to enable massive scale.
+
+Synopsis:
+
+The Electron-Cash/Electrumx protocol contains a few weak points that hinders its scalability, particularly when it comes to massive wallets made more common by Cashshuffle, as well as big single-address wallets common for commercial and donation uses. We have identified a few protocol weak points such as transmission pagination and status update algorithm that could use tweaking to prepare for better scaling, which is in line with the BCH roadmap.
+
+Resources Needed: Protocol discussion from Electron-cash developers, as well as review from wider BCH development community
+
+Estimated Cost: 100 hours of developer time
+
+Cost Summary for all Projects:
+
+Total cost: 1600-2000 hours of developer time.
+Discount rate: $32/hr @ 1600 hours = $51,200
+
+Jonald_fyookball and imaginary_username can report back on progress as the goals are being fulfilled, members can also track them at https://github.com/Electron-Cash/Electron-Cash. Even a part of the goals should bring tremendous value to the BCH ecosystem, while the funding brings stability and predictability to Electron-cash development, which is currently largely staffed by volunteers.
+

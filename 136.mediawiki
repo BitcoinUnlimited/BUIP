@@ -1,0 +1,38 @@
+<pre>
+BUIP136: Andrew Clifford for President
+Proposer: Andrew Clifford
+Submitted on: 2019-11-09
+Status: draft
+</pre>
+
+== Background ==
+
+The fourth anniversary of Bitcoin Unlimited's foundation is on 19 November 2019, shortly after the date of this post. For two months the organization boot-strapped itself as a collective of like-minded people concerned about the prospects of Bitcoin (BTC) , where Core Dev was rejecting onchain scaling.
+
+The first election of BU president was completed on 21 January 2016, so each term expires on the same date every two years. As the next BU membership vote commences 25 November and the following one will occur after 21 January 2020, it is expedient to conduct the vote for president earlier, when other BUIPs are being considered.
+
+== Ecosystem Outreach ==
+
+Two years ago I mentioned that BU, as an org, maintains a consistent technically-aware and "politics-lite" message. This is a test of discipline, especially in the face of non-stop, corporate-funded troll attacks. Sadly, we see lately, that just delivering good software and advancing BCH is not enough. Poisonous words and memes do sway some members of the community who are not aware of the full picture. So, I will support a more active campaign to explain what BU is doing and correct the toxic rewriting of history, when it occurs.
+
+My support will continue for Bitcoin Cash community events and helping worthy causes such as the Bitcoin Cash City conference gain sponsorship.
+
+== Software Environment ==
+
+The Bitcoin Unlimited developers have steadily constructed by far the most advanced and scalable version of Bitcoin software which exists today. It can handle much higher volumes than the prevailing level on BCH.
+
+About two months ago, BCH was hit by spam-like transactions and its mempool choked up due to 2MB being used as a mining default. Afterwards, I was shocked to see 2MB blocks being defended as appropriate, that it is "polite" to other full nodes on the network. Hmm.
+
+Let's see what is not polite. A few months earlier, BSV enabled 2GB blocks and one of its miners promptly produced a monster block which knocked some of their major users off the network including its flagship Yours service. Hmm again.
+
+Where is the middle-ground for onchain-scaling? My personal view is that 100 TPS is a very reasonable medium-term target for BCH to handle, especially if this is organic volume from many different businesses and use-cases. This means 32MB blocks will be common, well above 2MB, but nowhere near 2GB. That is the middle-ground, and I am proud that the BU devs have created the most capable software for handling that level of business. I see the president's role as facilitating a constructive environment for such middle-ground development.
+
+Admin support continues for the BU development environment (Github/Gitlab and TravisCI) while helping to foster development in general for Bitcoin Cash through regular communication with other development teams and business stake-holders.
+
+== Incorporation ==
+
+I still want to complete a new official registration in a favourable jurisdiction, yet this this remains incomplete. Unfortunately, the regulatory environment in the last year or so has become very unfriendly to organizations in the cryptocurrency space, and new barriers are raised even as earlier ones are overcome. I am wondering whether the BTC price passing $10k finally triggered alarm bells in mainstream finance and entrenched interests? What was previously seen a revolutionary innovation is now seen as a black-swan threat requiring mitigation.
+
+== Final Words ==
+
+My objective will be to continue good stewardship of the BU voting process, ensuring the membership's collective will is reflected in all passed BUIPs. I remain committed to advancing Bitcoin Cash as the decentralized, p2p cash, scalable Bitcoin with most potential. As previously, the mission has not changed: I will continue what we have started with BU, improve all facets of its operation with the goal of doing BU's part to realise Satoshi's 2008 white paper vision for the world.

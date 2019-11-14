@@ -2,7 +2,7 @@
 BUIP126: Planet-on-a-LAN stress test model network
 Proposer: jtoomim
 Submitted on: 2019-05-13
-Status: draft
+Status: passed
 </pre>
 
 

@@ -745,31 +745,31 @@ This is the current list of submitted BUIPs.
 |Remove Norway from membership
 |freetrader
 |2019-05-21
-|draft
+|passed
 |-
 |[[126.mediawiki|BUIP126]]
 |Planet-on-a-LAN stress test model network
 |Jonathan Toomim
 |2019-05-13
-|draft
+|passed
 |-
 |[[127.mediawiki|BUIP127]]
 |Partially re-weight funds, 50% BTC to BCH
 |Jonathan Toomim
 |2019-06-05
-|draft
+|closed
 |-
 |[[128.mediawiki|BUIP128]]
 |Fund the Developer
 |Andrew Stone
 |2019-08-11
-|draft
+|passed
 |-
 |[[129.mediawiki|BUIP129]]
 |Finish and Productize the BU voting system
 |Andrew Stone
 |2019-08-11
-|draft
+|passed
 |-
 |[[130.mediawiki|BUIP130]]
 |New Members for Election #14

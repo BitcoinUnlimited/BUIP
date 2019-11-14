@@ -2,7 +2,7 @@
 BUIP127: Partially re-weight funds, 50% BTC to BCH
 Proposer: Jonathan Toomim
 Submitted on: 2019-06-05
-Status: draft
+Status: closed
 </pre>
 
 

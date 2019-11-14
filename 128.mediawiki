@@ -2,7 +2,7 @@
 BUIP128: Fund the Developer
 Proposer: Andrew Stone
 Submitted on: 2019-08-11
-Status: draft
+Status: closed
 </pre>
 
 

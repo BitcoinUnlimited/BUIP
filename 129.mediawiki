@@ -2,7 +2,7 @@
 BUIP129: Finish and Productize the BU voting system
 Proposer: Andrew Stone
 Submitted on: 2019-08-11
-Status: draft
+Status: passed
 </pre>
 
 == Summary ==

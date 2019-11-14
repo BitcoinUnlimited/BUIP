@@ -2,7 +2,7 @@
 BUIP125: Remove Norway from membership
 Proposer: freetrader
 Submitted on: 2019-05-21
-Status: draft
+Status: passed
 </pre>
 
 ==Summary==

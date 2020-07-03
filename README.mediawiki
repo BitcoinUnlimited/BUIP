@@ -1,4 +1,9 @@
-Bitcoin Unlimited Improvement Proposal Archive and related documentation.
+## The official repo has been over GitLab.com
+
+## see https://gitlab.com/bitcoinunlimited/BUIP
+
+
+# Bitcoin Unlimited Improvement Proposal Archive and related documentation.
 
 To submit a BUIP please post your proposal at https://bitco.in/forum/forums/bitcoin-unlimited.15/
 

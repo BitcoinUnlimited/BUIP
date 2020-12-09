@@ -15,6 +15,7 @@ This is the current list of submitted BUIPs.
 
 | Number                              | Title                                                                                                | Proposer                                                                | Submit                                              | Status             |
 |-------------------------------------|------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|-----------------------------------------------------|--------------------|
+<<<<<<< HEAD
 | [BUIP001](001.md) | Extensions to the Bitcoin Client                                                                     | Andrew Stone                                                            | 2015-11-26                                          | passed             |
 | [BUIP002](002.md) | Multi-BIP Scaling Enabler                                                                            | Andrew Clifford                                                         | 2015-12-30                                          | passed             |
 | [BUIP003](003.md) | Andrew Quentson (Aquent) for Secretary                                                               | Andrew Quentson                                                         | 2015-12-30                                          | passed             |
@@ -150,3 +151,20 @@ This is the current list of submitted BUIPs.
 | [BUIP136](136.md) | Andrew Clifford for president                                                                        | Andrew Clifford                                                         | 2019-11-09                                          | passed              |
 | [BUIP137](137.md) | Funded development (aka Devpool3)                                                                    | Andrew Clifford                                                         | 2019-11-09                                          | passed              |
 | [BUIP138](138.md) | Fund BU's Chief Scientist                                                                            | Peter Rizun                                                             | 2019-11-10                                          | passed              |
+| [BUIP139](139.md) | Multiple OP_RETURN with less rules                                       | Jonathan Silverblood | 2019-11-14 | draft
+| [BUIP140](140.md) | Multiple OP_RETURN with shared size limit                                | Jonathan Silverblood | 2019-11-14 | draft
+| [BUIP141](141.md) | Restrict voting rights for Non-publicly identified members               | torusJKL             | 2019-11-20 | rejected
+| [BUIP142](142.md) | Create Bitcoin Cash testdata                                             | Jonathan Silverblood | 2020-01-08 | rejected
+| [BUIP143](143.md) | Refuse the Coinbase Tax                                                  | Andrew Stone         | 2020-01-27 | passed
+| [BUIP144](144.md) | Voluntary pay out to config list of addresses from mined block coinbases | freetrader           | 2020-01-25 | draft
+| [BUIP146](146.md) | Additional funding for bitcoin cash specification                        | Jonathan Silverblood | 2020-01-12 | passed
+| [BUIP146](146.md) | Add config parameter to delay mining transactions                        | Jonathan Silverblood | 2019-05-11 | rejected
+| [BUIP147](147.md) | Fund Developer 2                                                         | Griffith             | 2020-06-03 | passed
+| [BUIP148](148.md) | Ecosystem Outreach & Marketing for BU & On-chain Scaling 2               | Singularity          | 2020-06-05 | passed
+| [BUIP149](149.md) | Delimited OP_RETURNs                                                     | Jonathan Silverblood | 2020-06-27 | rejected
+| [BUIP150](150.md) | B.U. Incorporated office admin                                           | Andrew Clifford      | 2020-08-30 | passed
+| [BUIP151](151.md) | Further Development of the Bobtail/Storm Protocol                        | George Bissias       | 2020-08-31 | passed
+| [BUIP152](152.md) | Announcing Wally Wallet                                                  | Andrew Stone         | 2020-08-31 | passed
+| [BUIP153](153.md) | BU Blockparty - Let's Get Building On Bitcoin Cash!                      | Singularity          | 2020-08-31 | passed
+| [BUIP154](154.md) | Re-elect Peter R for BU Secretary                                        | Peter R              | 2020-09-01 | passed
+| [BUIP155](155.md) | New Members for Election #15                                             | Andrew Clifford      | 2020-08-31 | voted

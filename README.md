@@ -15,7 +15,6 @@ This is the current list of submitted BUIPs.
 
 | Number                              | Title                                                                                                | Proposer                                                                | Submit                                              | Status             |
 |-------------------------------------|------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|-----------------------------------------------------|--------------------|
-<<<<<<< HEAD
 | [BUIP001](001.md) | Extensions to the Bitcoin Client                                                                     | Andrew Stone                                                            | 2015-11-26                                          | passed             |
 | [BUIP002](002.md) | Multi-BIP Scaling Enabler                                                                            | Andrew Clifford                                                         | 2015-12-30                                          | passed             |
 | [BUIP003](003.md) | Andrew Quentson (Aquent) for Secretary                                                               | Andrew Quentson                                                         | 2015-12-30                                          | passed             |
@@ -168,3 +167,11 @@ This is the current list of submitted BUIPs.
 | [BUIP153](153.md) | BU Blockparty - Let's Get Building On Bitcoin Cash!                      | Singularity          | 2020-08-31 | passed
 | [BUIP154](154.md) | Re-elect Peter R for BU Secretary                                        | Peter R              | 2020-09-01 | passed
 | [BUIP155](155.md) | New Members for Election #15                                             | Andrew Clifford      | 2020-08-31 | voted
+| [BUIP156](156.md) | Andrew Stone for Developer                                               | Andrew Stone         | 2020-11-22 | draft
+| [BUIP157](157.md) | Continue funding a Developer                                             | Peter Tschipper      | 2020-11-30 | draft
+| [BUIP158](158.md) | Funding for SysAdmin/Developer                                           | sickpig              | 2020-11-30 | draft
+| [BUIP159](159.md) | Ecosystem Outreach & Marketing for BU & On-chain Scaling 2021            | singularity          | 2020-12-02 | draft
+| [BUIP160](160.md) | BCH Developer On-ramp System                                             | singularity          | 2020-12-02 | draft
+| [BUIP161](161.md) | Bitcoin Unlimited Website Refresh                                        | singularity          | 2020-12-02 | draft
+| [BUIP162](162.md) | The BU Mining Reward Guarantee                                           | singularity          | 2020-12-02 | draft
+| [BUIP163](163.md) | Ongoing Publication Grant to the Journal Ledger                          | Andrew Clifford      | 2020-12-05 | draft

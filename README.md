@@ -150,8 +150,8 @@ This is the current list of submitted BUIPs.
 | [BUIP136](136.md) | Andrew Clifford for president                                                                        | Andrew Clifford                                                         | 2019-11-09                                          | passed              |
 | [BUIP137](137.md) | Funded development (aka Devpool3)                                                                    | Andrew Clifford                                                         | 2019-11-09                                          | passed              |
 | [BUIP138](138.md) | Fund BU's Chief Scientist                                                                            | Peter Rizun                                                             | 2019-11-10                                          | passed              |
-| [BUIP139](139.md) | Multiple OP_RETURN with less rules                                       | Jonathan Silverblood | 2019-11-14 | draft
-| [BUIP140](140.md) | Multiple OP_RETURN with shared size limit                                | Jonathan Silverblood | 2019-11-14 | draft
+| [BUIP139](139.md) | Multiple OP_RETURN with less rules                                       | Jonathan Silverblood | 2019-11-14 | no quorum
+| [BUIP140](140.md) | Multiple OP_RETURN with shared size limit                                | Jonathan Silverblood | 2019-11-14 | passed
 | [BUIP141](141.md) | Restrict voting rights for Non-publicly identified members               | torusJKL             | 2019-11-20 | rejected
 | [BUIP142](142.md) | Create Bitcoin Cash testdata                                             | Jonathan Silverblood | 2020-01-08 | rejected
 | [BUIP143](143.md) | Refuse the Coinbase Tax                                                  | Andrew Stone         | 2020-01-27 | passed
@@ -167,11 +167,11 @@ This is the current list of submitted BUIPs.
 | [BUIP153](153.md) | BU Blockparty - Let's Get Building On Bitcoin Cash!                      | Singularity          | 2020-08-31 | passed
 | [BUIP154](154.md) | Re-elect Peter R for BU Secretary                                        | Peter R              | 2020-09-01 | passed
 | [BUIP155](155.md) | New Members for Election #15                                             | Andrew Clifford      | 2020-08-31 | voted
-| [BUIP156](156.md) | Andrew Stone for Developer                                               | Andrew Stone         | 2020-11-22 | draft
-| [BUIP157](157.md) | Continue funding a Developer                                             | Peter Tschipper      | 2020-11-30 | draft
-| [BUIP158](158.md) | Funding for SysAdmin/Developer                                           | sickpig              | 2020-11-30 | draft
-| [BUIP159](159.md) | Ecosystem Outreach & Marketing for BU & On-chain Scaling 2021            | singularity          | 2020-12-02 | draft
-| [BUIP160](160.md) | BCH Developer On-ramp System                                             | singularity          | 2020-12-02 | draft
-| [BUIP161](161.md) | Bitcoin Unlimited Website Refresh                                        | singularity          | 2020-12-02 | draft
-| [BUIP162](162.md) | The BU Mining Reward Guarantee                                           | singularity          | 2020-12-02 | draft
-| [BUIP163](163.md) | Ongoing Publication Grant to the Journal Ledger                          | Andrew Clifford      | 2020-12-05 | draft
+| [BUIP156](156.md) | Andrew Stone for Developer                                               | Andrew Stone         | 2020-11-22 | passed
+| [BUIP157](157.md) | Continue funding a Developer                                             | Peter Tschipper      | 2020-11-30 | passed
+| [BUIP158](158.md) | Funding for SysAdmin/Developer                                           | sickpig              | 2020-11-30 | passed
+| [BUIP159](159.md) | Ecosystem Outreach & Marketing for BU & On-chain Scaling 2021            | singularity          | 2020-12-02 | passed
+| [BUIP160](160.md) | BCH Developer On-ramp System                                             | singularity          | 2020-12-02 | passed
+| [BUIP161](161.md) | Bitcoin Unlimited Website Refresh                                        | singularity          | 2020-12-02 | passed
+| [BUIP162](162.md) | The BU Mining Reward Guarantee                                           | singularity          | 2020-12-02 | passed
+| [BUIP163](163.md) | Ongoing Publication Grant to the Journal Ledger                          | Andrew Clifford      | 2020-12-05 | passed
